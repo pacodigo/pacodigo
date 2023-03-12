@@ -150,9 +150,6 @@
 	</div>
 	<hr>
 	
-		<div id="tempHumiData">Temp/Humidity-1: waiting for data after connecting  </div><hr>
-
-		<div id="tempHumiData2">Temp/Humidity-2: waiting for data after connecting</div><hr>
 	<br>
 	
 	
@@ -311,10 +308,14 @@ var renderChart = function() {
 }
 
 if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-80) + 'px';
+
+/*
 window.onresize = function(){
 	if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-80) + 'px';
 //	$('div_v').style.width = (window.innerWidth-50) + 'px';
 }
+*/
+
 var pack_samples = 8;
 function hex(number, length) {
     var str = (number.toString(16)).toUpperCase();
@@ -583,7 +584,7 @@ function mueveReloj(){
     hora = momentoActual.getHours();
     minuto = momentoActual.getMinutes();
     segundo = momentoActual.getSeconds();
-    horaImprimible = hora + ":" + minuto + "h";
+	horaImprimible = hora + ":" + (minuto.toString()).padStart(2, "0") + "h";
 	$("labelDcha").innerHTML = horaImprimible;
     setTimeout("mueveReloj()",5000);
 }
