@@ -10,9 +10,15 @@
         var audio = document.getElementById("audio");
         audio.play();
       }
+
+      function playAudio() {
+        url="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+        new Audio(url).play();
+      }
+      
     </script>
 
-    <input type="button" value="PLAY" onclick="play()">
+    <input type="button" value="PLAY" onclick="playAudio()">
     <audio id="audio" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
 
   </body>
