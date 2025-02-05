@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+</head>
+	<title>DomoWeb</title>
+	<meta name="viewport" content="user-scalable=no">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"-->
+</head>
+
+<style>
+.button {
+  width: calc(100% / 2.5);
+  border: none;
+  color: white;
+  border-radius: 16px;
+  font-size: 150px;
+  margin: 15px 15px 30px 30px;
+}
+.button1 {
+	height: 95px;
+	font-size: 50px;
+	background-color: red;} 
+.button2 {
+	height: 95px;
+	font-size: 50px;
+	background-color: green;} 
+.button3 {
+	width: 300px;
+	height: 100px;
+	background-color: #1a73e8;
+    border: none;
+	border-radius: 4px;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 54px;
+    margin: 6px 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;}
+.button4 {
+	height: 95px;
+	font-size: 50px;
+	background-color: #ff3391;} 
+
+hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.classtime{
+    box-shadow: 2px 2px 5px black;
+    margin-left: 0px;
+    margin-right: auto;
+	font-size: 100px;
+
+}
+
+
+</style>
+
+
+<body  bgcolor=black>  
+
+  <br>
+
+  <div style="display: none; height: auto; width: auto; font-size: 50px;">
+	<label>Respuesta:</label>
+	<!--input type="text" id="respuestaLabel2" value="" placeholder="..."-->
+	<label id="respuestaLabel">-</label>
+	<br>
+  </div>
+  
+  
+  <!-- BOTONERA RF SECCIÓN -->
+  <div style="height: auto; width: 100%; text-align: center;;; ; ">
+  
+   <button class="button button1" type="button" onclick="envioDatos('EnviaPorRF,24,1000101#');">1 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('EnviaPorRF,24,1000100#');">1 Off</button>
+   <br>
+   <button class="button button1" type="button" onclick="envioDatos('rf2on');">2 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('rf2off');">2 Off</button>
+   <br><!--
+   <button class="button button1" type="button" onclick="envioDatos('rf3on');">3 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('rf3off');">3 Off</button>
+   <br>     -->
+   <button class="button button1" type="button" onclick="envioDatos('rf4on');">4 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('rf4off');">4 Off</button>
+   <br>
+   <button class="button button1" type="button" onclick="envioDatos('rf5on');" style="color: yellow">5 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('rf5off');"style="color: yellow">5 Off</button>
+   <br>
+   <button class="button button1" type="button" onclick="envioDatos('rf6on');">6 On</button>
+   <button class="button button2" type="button" onclick="envioDatos('rf6off');">6 Off</button>
+   <br> <br>  
+  </div>
+
+	<hr><br><br>
+	
+	<!-- RELOJ SECCIÓN -->
+	<div style="column-gap: 20px;width:100%; display: flex; align-items: center;justify-content: center;">
+		<input type="time" class="classtime" name="time" id="timetocalefa" style="height: 100%; width: 50%;  display: flex; justify-content: center;" step="900" />
+		<button class="button button3" style= "border-radius: 66px;" type="button" onclick="decrementarHora();">-</button>
+		<button class="button button3" style= "border-radius: 66px;" type="button" onclick="incrementarHora();">+</button>
+		<button class="button button3" style="" type="button" onclick="enviarProgramaCalefa();"> Enviar</button>
+	</div>
+	<br>
+	<label style="zoom: 2.5;color: brown;">&nbsp; &nbsp;&nbsp; &nbsp; Apagar:</label>
+	<input type="checkbox" name="checkbox" id="checkboxApagarCalefa" value='1' checked style="zoom: 5;">
+
+	<br><br><hr><br>
+	
+	
+	<!-- getInfo -->
+	<div style = "display:flex;    justify-content: center;     align-items: center;">
+	  <button class="button3"  style="background-color: #9400d3; width: 400px;" type="button" onclick="getInfo();">Info</button>
+	</div>
+  
+	<br><br><hr><br>
+	
+	
+	<!-- HIFI -->
+	<div style = "display:flex;    justify-content: center;     align-items: center;">
+	  <button class="button3"  style="background-color: orange; width: 30%;" type="button" onclick="cambiarComandoHiFi();">Cambia</button>
+	  <label id ="labelHiFi" style="zoom: 3;color: brown;width: 40%; text-align: center;">NULL</label>
+	  <button class="button3"  style="background-color: orange; width: 30%;" type="button" onclick="enviarComandoHifi();">Enviar</button>
+	</div>
+	<br>
+	<div style = "display:flex;    justify-content: center;     align-items: center;">
+	  <button class="button3"  style="background-color: orange; width: 30%;" type="button" onclick="envioDatos('EnviaPorRF,24,1000010#');">Vol -</button>
+	  <button class="button3"  style="background-color: orange; width: 30%;" type="button" onclick="envioDatos('EnviaPorRF,24,1000020#');">Vol +</button>
+	</div>
+
+	<br><br><hr><br>
+
+
+	<!-- OTROS -->
+	<div style = "display:flex; margin-left: 30px; column-gap: 40px ;  justify-content: left;     align-items: center;">
+		<button class="button4" type="button" onclick="enviarHora();">enviarHora</button>
+		<button class="button4" type="button" onclick="anularProgs();">anulProgs</button>
+	</div>
+	<br><br><hr>
+	<div style="zoom: 3;">
+		<a href="http://" + IP_Server + "/info">PacoWeb</a>
+		<br>
+		<a href="https://open.spotify.com/embed/track/1q8gelFgFYUwoWpQV7WNCe">Spotyfy</a>
+		<br>
+		<a href="https://open.spotify.com" target="_blank" >Spotyfy2</a>
+	</div>
+	<br><br>
+
+
+
+<script>
+
+// Constantes:
+const IP_Server = "192.168.1.100";
+//const IP_Server = "192.168.5.1";
+
+
+// ______________ FUNCIONES DE LA PÁGINA ______________
+
+let indiceSeleccionHiFi = 0;
+let opcionesHiFi = [
+	["Apagar", "EnviaPorRF,24,1000090#"], 
+	["Radio","EnviaPorRF,24,1000030#"],
+	["BT","EnviaPorRF,24,1000070#"],
+	["PC","EnviaPorRF,24,1000050#"],
+	["TV","EnviaPorRF,24,1000060#"]
+	];
+
+
+window.onload = function() {
+	console.log("Página cargada...");
+	// Ponemos la hora:
+	let hora = new Date();
+	hora.setHours(hora.getHours() + 8);   	// Añadimos 8 horas.
+	let horaentexto = ("0" + hora.getHours()).slice(-2) + ":" + ("0" + hora.getMinutes()).slice(-2);
+	document.querySelector('#timetocalefa').value = horaentexto;
+	document.querySelector('#labelHiFi').innerText = opcionesHiFi[indiceSeleccionHiFi][0];
+}
+
+function cambiarComandoHiFi(){
+	indiceSeleccionHiFi++;
+	if (indiceSeleccionHiFi > opcionesHiFi.length)
+		indiceSeleccionHiFi=0;
+	document.querySelector('#labelHiFi').innerText = opcionesHiFi[indiceSeleccionHiFi][0];
+}
+function enviarComandoHifi(){
+	envioDatos (opcionesHiFi[indiceSeleccionHiFi][1]);
+}
+
+
+function anularProgs(){
+envioDatos('anularp4');
+envioDatos('anularp3');
+}
+
+function incrementarHora(){
+	let date = new Date();
+	let timeInput = document.querySelector('#timetocalefa').value;
+	date.setHours(timeInput.split(':')[0]);
+	date.setMinutes(timeInput.split(':')[1]);
+	date.setMinutes(date.getMinutes() + 10);
+	let horaentexto = ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+	document.querySelector('#timetocalefa').value = horaentexto;
+}
+function decrementarHora(){
+	let date = new Date();
+	let timeInput = document.querySelector('#timetocalefa').value;
+	date.setHours(timeInput.split(':')[0]);
+	date.setMinutes(timeInput.split(':')[1]);
+	date.setMinutes(date.getMinutes() - 10);
+	let horaentexto = ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+	document.querySelector('#timetocalefa').value = horaentexto;
+}
+function enviarProgramaCalefa(){
+	// http://192.168.1.105/setprog02006005rf2off#
+	// http://192.168.1.105/setprog01001738rf1off#
+	let timeInput = document.querySelector('#timetocalefa').value;
+	let dateInicio = new Date();
+	let dateFin = new Date();
+	dateFin.setHours(timeInput.split(':')[0]);
+	dateFin.setMinutes(timeInput.split(':')[1]);
+	dateInicio.setHours(dateFin.getHours());
+	dateInicio.setMinutes(dateFin.getMinutes() - 15);		// Encendemos calefa 15 minutos antes.
+	let comandoEncendido = "";
+	comandoEncendido = "setprog0350" + String(dateInicio.getHours()).padStart(2, "0") + String(dateInicio.getMinutes()).padStart(2, "0") + "rf5on#"
+	envioDatos (comandoEncendido);
+	console.log (comandoEncendido);
+	
+	if (document.querySelector('#checkboxApagarCalefa').checked == true){
+		let comandoApagado="";
+		comandoApagado = "setprog0450" + String(dateFin.getHours()).padStart(2, "0") + String(dateFin.getMinutes()).padStart(2, "0") + "rf5off#"
+		envioDatos (comandoApagado);
+	}
+	else
+		envioDatos ("anularp4");
+}
+
+
+
+
+function getInfo(){		
+	fetch("http://" + IP_Server + "/info")			//"http://192.168.1.105/info"
+	.then(response => response.text()) 	//.then(response => response.text()) 
+	.then(respuesta => {				// Respuesta exitosa.
+		alert (respuesta);
+		})
+	.catch(err => {
+		alert("ERROR: " + err);
+		});	   
+}
+
+
+function enviarHora(){
+	//let comando = "clk=" + (new Date()).getHours() + ":" + (new Date()).getMinutes();
+	let comando = "clk=" + String(new Date().getHours()).padStart(2, "0") + ":" + String(new Date().getMinutes()).padStart(2, "0");
+	envioDatos (comando);
+}
+
+function envioDatos (datos){
+	const raiz = "http://" + IP_Server + "/";
+	let ruta = raiz + datos;
+	
+	//document.querySelector('#respuestaLabel').innerText=".";
+	document.body.style.background = "#5a5a5a";   //CCCC66  #9c9c9c
+	setTimeout(() => {
+		document.body.style.background = "#000000";
+	}, "150");
+	
+	
+	fetch(ruta, {
+	    method: "GET",
+		headers: {"Content-type": "text/html"}
+	})
+	.then(response => response.text()) 	//.then(response => response.text()) 
+	.then(respuesta => {				// Respuesta exitosa.
+		console.log("Datos: " + respuesta);
+		//document.querySelector('#respuestaLabel').innerText = respuesta.substring(0, 3);;
+		//document.body.style.background = "#000000";
+		})
+	.catch(err => {
+		console.log("ERROR: " + err);
+		alert ("ERROR: " + err);
+		//document.querySelector('#respuestaLabel').innerText=("ERROR: " + err);
+		});
+}
+
+
+function aviso(){
+	alert ("Aviso.");
+	
+	
+	
+	
+	
+	
+	
+	/*
+	  First name:<br>
+  <input type="text" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+  
+   <button type="button" onclick="aviso();">Aviso</button><br>
+   <button type="button" onclick="envioHttp();">envioHttp</button><br>
+   <button type="button" onclick="enciendeAmbiente();">enciendeAmbiente</button><br>
+   <button type="button" onclick="apagaAmbiente();">apagaAmbiente</button><br>
+	
+	
+	
+	
+	
+	function test(){
+	
+	// datos mandados con la solicutud POST
+	let _datos = {
+	  titulo: "foo",
+	  principal: "bar", 
+	  Id:1
+	}
+
+	fetch('https://api.github.com/users/manishmshiva', {
+	  mode: 'no-cors',
+	  method: "GET",
+	  //body: JSON.stringify(_datos),
+	  headers: {"Content-type": "application/json; charset=UTF-8"}
+	})
+	.then(response => response.text()) 
+	.then(respuesta => {
+		console.log ("Respuesta exitosa.");
+		console.log("Datos: " + respuesta);
+		console.log (respuesta);
+		})
+	.catch(err => {
+		console.log(err);
+		});
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	// INFO:
+	https://mycode.blog/navya/cheat-sheet-html-input-types
+	
+	
+	
+	// Parte PROGRAMA DE ENCENDIDO:
+	setprog02006005rf2off#!   Configura un programa y lo activa.    setprog + NºProg + Dia + Hora + Min + Accion + #
+		dia = 00  --> Cualquier día
+		dia = 40  --> Día de diario (L a V)
+		dia = 41  --> Fin de semana (S y D)
+		dia = 50  --> Solo se ejecuta una vez y pasa a Inactivo
+         
+	https://openwebinars.net/blog/centrar-div-horizontalmente-con-css/
+	
+	Colores:
+	https://htmlcolorcodes.com/es/
+	
+	*/
+	
+}
+
+</script>
+</body></html>
+
