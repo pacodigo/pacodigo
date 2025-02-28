@@ -1,0 +1,223 @@
+<!-- 
+https://es.javascript.info/debugging-chrome 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>TWeb</title>
+    </head>
+    
+    <body>
+		<h1> Datos Radar 3D e Insignia.</h1>
+			
+		<textarea 
+			id="textarea_Entrada"
+			rows="20" 
+			cols="80"
+			ondblclick=value="">Datos entrada</textarea>
+		
+		<textarea 
+			id="textarea_Salida"
+			rows="25" 
+			cols="80"
+			readonly
+			>Logs
+		</textarea>
+    	
+		<p><br></p>
+	
+		<p>  
+		 <input type="file" id="file-input" />
+			<button onclick = procesado()>Procesado</button>
+		</p>
+		<input type="checkbox" id="CB_emplRadio"> Incluir emplazamientos radio
+		<p> 
+		<button onclick = procesadoParrafos()> procesadoParrafos </button>
+		</p>
+					
+<script>
+			
+	window.onload = function() {
+		console.log("Página cargada...");
+		document.getElementById('textarea_Entrada').value = "Ok.";
+		cargaDesdeInternet();
+	}	
+			
+	function cargaDesdeInternet(){
+		fetch('https://pacodigo.github.io/pacodigo/ElBar.txt')
+			.then(response => response.text())
+			.then((data) => {
+				document.getElementById('textarea_Entrada').value = data;
+			})
+	}
+			
+			
+	function procesado(){
+		divideLineas(document.getElementById('textarea_Entrada').value);			
+		}
+	/*
+	function divideLineas (textoEntrada){
+		var ficheroSalida= "SALIDA:";
+		var numDatos=0;
+		
+		var arrayDeLineas = textoEntrada.split('\n');
+		for (i=0; i<arrayDeLineas.length ; i++){
+			var lineaDatos = i.toString() + ")  " + calcularPuntaje(arrayDeLineas[i]).info + arrayDeLineas[i] + "\n";
+			ficheroSalida = ficheroSalida + lineaDatos;			
+		}
+	document.getElementById('textarea_Salida').value = ficheroSalida;				
+	}	
+		*/
+	
+	var arrayParrafos = [];
+	function procesadoParrafos(){
+		let parrafo = {
+			personaje: "NULO",		// Clave / Valor. En la Clave personaje se almacena el Valor NULO
+			texto: "-",
+			pagina: 50,
+			numLineaParrafo: 0
+			};
+	
+		var indiceParrafos = 0;
+		//var indiceLineas = 0;
+		
+		//arrayParrafos[0] = parrafo;
+		arrayParrafos[indiceParrafos] = { ...parrafo};		// clonamos el objeto usando el operador de propagación
+		//arrayParrafos.push (parrafo);
+		
+		var textoEntrada = document.getElementById('textarea_Entrada').value;
+		var arrayDeLineas = textoEntrada.split('\n');
+		for (i=0; i<arrayDeLineas.length ; i++){
+			var linea = arrayDeLineas[i];
+			console.log ("PL: " + linea);
+			var infoDeLineaLocal = infoDeLinea (linea);
+			console.log ("infoDeLineaLocal: " + infoDeLineaLocal.info);
+			console.log ("indiceParrafos: " + indiceParrafos);
+			if (infoDeLineaLocal.esPersonaje){						// Es un Personaje
+				console.log ("Es personaje");
+				indiceParrafos++;
+				arrayParrafos[indiceParrafos] = { ...parrafo};		// clonamos el objeto usando el operador de propagación
+				//arrayParrafos.push (parrafo);
+				
+				//arrayParrafos[indiceParrafos] = new Object;
+				arrayParrafos[indiceParrafos].personaje = linea;
+				arrayParrafos[indiceParrafos].texto = "";
+				
+			}
+			else {
+				console.log ("NO es personaje");
+				console.log(arrayParrafos[indiceParrafos]);
+				console.log("Linea: "+ linea);
+				arrayParrafos[indiceParrafos].texto = ((arrayParrafos[indiceParrafos].texto) + "\n" + linea);
+				console.log ("Indice: " + indiceParrafos + " Texto: " + arrayParrafos[indiceParrafos].texto);
+				console.log(arrayParrafos[indiceParrafos]);
+			}	
+			console.log (arrayParrafos);
+		}
+	}
+
+
+function infoDeLinea (lineaTexto){
+//function calcularPuntaje(clave) {
+    var especiales = '!#$%&^~*_-',
+        mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        minusculas = 'abcdefghijklmnopqrstuvwxyz',
+		jorge = 'JORGE',
+        digitos = '0123456789';
+		       
+     var numCarEspeciales = 0,
+         numMayusculas = 0,
+         numMinusculas = 0,
+         numDigitos = 0,
+		 puntosJorge =0,
+		 longitudCadena = 0;
+		
+	var esPersonaje 	= false,
+		esJorge 		= false,
+		esPagina 		= false,
+		numPagina 		= 0;
+		
+	
+	longitudCadena = lineaTexto.length;
+  
+     for (var i = 0; i < lineaTexto.length; i++) {
+         if (especiales.includes(lineaTexto[i]))
+             numCarEspeciales++;
+         if (mayusculas.includes(lineaTexto[i]))
+             numMayusculas++;
+		 if (minusculas.includes(lineaTexto[i]))
+             numMinusculas++;
+		if (digitos.includes(lineaTexto[i]))
+             numDigitos++;
+		 if (jorge.includes(lineaTexto[i]))
+             puntosJorge++;	
+     }
+     
+	
+	if ((2 < longitudCadena) && (longitudCadena < 7) && (puntosJorge > 3))
+		esJorge = true;
+	if ((2 < longitudCadena) && (longitudCadena < 27) && (numMayusculas > numMinusculas))
+		esPersonaje = true;
+	if ((1 < longitudCadena) && (longitudCadena < 4) && ((numDigitos/longitudCadena)==1)){
+		esPagina = true;
+		numPagina = Number (lineaTexto);
+		}
+		
+	//console.log (numDigitos);
+	//console.log (longitudCadena);
+	//console.log (numDigitos/longitudCadena);
+	
+	 
+	 var cadenaInfo="";
+	 cadenaInfo = "Long: " + longitudCadena;
+	 cadenaInfo = cadenaInfo + ". EsJorge: " + esJorge + ". EsPersonaje: " + esPersonaje; 
+	 cadenaInfo = cadenaInfo + ". EsPagina: " + esPagina;
+	 
+	 cadenaInfo = cadenaInfo + ".> \n";
+	 
+	 
+     return {
+         esJorge: 		esJorge,
+		 esPersonaje: 	esPersonaje,
+		 esPagina:		esPagina,
+		 numPagina:		numPagina,
+		 info: 			cadenaInfo
+     }
+}
+
+
+
+
+
+	// Fichero de entrada:
+	document.getElementById('file-input').addEventListener('change', leerArchivo, false);
+	function leerArchivo(e) {
+		var archivo = e.target.files[0];
+		if (!archivo) {
+			return;
+		}
+		var lector = new FileReader();
+		lector.onload = function(e) {
+			var contenido = e.target.result;
+			document.getElementById('textarea_Entrada').value = contenido;
+		}
+		lector.readAsText(archivo);
+	}
+
+			
+			
+
+			
+			
+			
+			
+			
+			
+		
+			
+			
+			
+		</script>
+    </body>
+</html>
