@@ -29,7 +29,7 @@ https://es.javascript.info/debugging-chrome
 
 
  
-    <body style="background: grey; width:360px">
+    <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
@@ -37,7 +37,7 @@ https://es.javascript.info/debugging-chrome
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
 		</div>	
-	
+		<hr>
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
@@ -46,7 +46,7 @@ https://es.javascript.info/debugging-chrome
 		
 		<br><hr>
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%;" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
+			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
 		</div>
 		<br><hr>
 		
@@ -57,24 +57,25 @@ https://es.javascript.info/debugging-chrome
 		
 		<br><hr>
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 95%" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
+			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 95%; color: white; background-color: black " readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
-		
+		<br><br><br>
+		<div style = "background: grey;">
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
 		<p>  
 		 <input type="file" id="file-input" />
-			<button onclick = test()>test</button>
 		</p>
-		<input type="checkbox" id="CB_emplRadio"> Incluir emplazamientos radio
+		<button onclick = test()>test</button>
 		<p> 
-		<button onclick = procesadoParrafos()> procesadoParrafos </button>
+		<input type="checkbox" id="CB_emplRadio"> Acortar texto
 		</p>
-		
 		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
 		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
+		
+		</div>
 					
 <script>
 			
