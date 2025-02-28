@@ -4439,6 +4439,7 @@ Que bonito, que interesante.
 
 FRANCISCO ELIZONDO
 Si, gracias. Pues eso, que le he pintado aqui uno al jefe, y han pasado ya noventa dias desde que acabe, y oye, no me pagan.
+
 JORGE
 Nome digas.
 
@@ -4783,7 +4784,8 @@ lSi? (Pasa el telefono a JORGE.) Su conferencia.
 JORGE
 Gracias. (Coge el telefono.) l Carmen? jHola! lC6mo estas?
 Yo muy bien. lTu? Me acuerdo mucho de ti. Aburrido. Si. No hay policia. Llevo aqui un mes y todavia no he visto un polida, ni un militar, es una maravilla. Otro mes. Claro. No. Es un mes solo. No, no puedo. Pero esto ya lo hemos hablado, carifio. Te echo mucho de menos. SL Yo tambien. Trabajo cada dia, mi amor, no puedo. lEstas bien? Que te pasa. Si no me lo quieres decir por telefono c6mo me lo vas a decir. (Se rfe un poco.) No me estoy rienð do. Carino... Note enfades, que te pasa.
-JORGE escucha.
+
+Jorge escucha.
 
 CARMEN
 Carmen le esta diciendo que esta ernbarazada. Que ha ido al medico. Que le han hecho analisis.
@@ -4793,14 +4795,8 @@ Que dices.
 
 CARMEN
 Que esta de dos meses. Que tiene que volver a Madrid. Que se tienen que casar. Que no ha dicho nada a sus padres. Que el es el primero que lo sabe.
+
 163
-
-
-
-
-ALFREDO 5ANZOL
-
-
 
 JORGE
 ,Pero estas segura? ,Quien te ha hecho los analisis?
@@ -4825,18 +4821,15 @@ No te preocupes. Ahora misrno me pongo a arreglar las cosas. No te preocupes. En
 
 164
 
-EL BAR QUE SE TRAGO A TODOS LOS ESPANOLES
-
-
-
 Carmen. Escucha. Que estes embarazada me hace feliz.
 ,Me oyes? Yo tambien te quiero. Mucho.
-JORGE cuelgael telefono.
+Jorge cuelgael telefono.
 
 
 XXVI
 
-CARMEN y JORGE se encuentran en Madrid.
+NOTA
+Carmen y Jorge se encuentran en Madrid.
 
 JORGE
 Hola.
@@ -4861,21 +4854,17 @@ Claro. Te estaba mirando. GORGE se ticercn a CARMEN.) ,Te
 puedo tocar la tripa?
 
 CARMEN
-SL
+Si
+
 165
 
-
-
-ALFREDO SANZOL
-
-
 JORGE
-GORGE toca la tripa de CARMEN.) zNotas algo?
+Notas algo?
 
 CARMEN
 No. El pecho Io tengo mas hinchado. Solo eso.
 
-JORGE y CARMEN se besan con suavidad.
+Jorge y Carmen se besan con suavidad.
 
 CARMEN
 Despues de que nos casemos, ztienes que volver a Dinamarca?
@@ -4894,6 +4883,7 @@ zNo  te la pueden mandar por correo certificado?
 
 JORGE
 Si, es verdad. Lo que pasa es que no se muy bien d6nde Ia tengo. Carmen, yo me quiero casar contigo, eso no Io podemos poner en duda. Nosvamos a casar.
+
 CARMEN
 Pero...
 
@@ -4908,7 +4898,7 @@ EL BAR QUE SE TRAGO A TODOS LOS ESPA1':0LES
 A JORGE se le estan saltando las ldgrimas sin querer. Le esta viniendo una emoci6n que no puede controlar.
 
 CARMEN
-zQue te pasa?
+Que te pasa?
 
 JORGE
 Nada. Soy tonto, se me saltan las lagrimas... (Se echa mano a la cartera y saca una Joto de carnet. Se la enseiia a CARMEN.) Mira.
@@ -4926,28 +4916,23 @@ JORGE
 SL Estuve estudiando, pero no solo estuve estudiando. Meordene.
 
 CARMEN
-LFuiste cura?
+¿Fuiste cura?
 
 JORGE
 Soy. Soy cura.
 
 CARMEN
-LC6mo que eres cura? LAhora eres cura?
+¿cómo que eres cura? ¿Ahora eres cura?
 
 JORGE
 Si, pero he pedido la dispensa. Estoy esperando a que me
+
 167
-
-
-
-ALFREDO 5ANZOL
-
-
 
 la deny nova a tardar. Aun no la tengo, pero oye... Oye. Estoy esperando y no va a tardar.
 
 CARMEN
-lC6mo no me has dicho antes que eras cura?
+¿Cómo no me has dicho antes que eras cura?
 
 JORGE
 Nopodia.
@@ -4959,7 +4944,7 @@ JORGE
 No, no podia porque no habrias querido conocerme. Y yo... yo te amo, Carmen, y tu no, no habrias querido...
 
 CARMEN
-lY tu que sabes lo que hubiese querido yo o no hubiese querido yo? lC6mo apareces ahora con esa foto? jEstoy embarazada de ti!
+¿Y tu que sabes lo que hubiese querido yo o no hubiese querido yo? ¿Cómo apareces ahora con esa foto?. Estoy embarazada de ti!
 
 JORGE
 Si, y estoy muy feliz.
@@ -4972,10 +4957,8 @@ La dispensa va a llegar ya. La voy a conseguir ya.
 
 CARMEN
 Intentalo. Consigue la dispensa, pero, no se que decirte ahora, conmigo no cuentes. En este momento prefiero tenerlo sola. No se si quiero tenerlo contigo. No lo se. Creo que es mejor que yo haga mi vida y tu la tuya y,
+
 168
-
-EL BAR QUE SE TRAGO A TOOOS LOS ESPANOLES
-
 
 luego ya veremos. Ahora no puedo decirte que quiero esperarte porque no es verdad. Ahora no puedo decirte nada. Me siento muy sola. Tengo la sensaci6n de estar saliendo de un suefio y me duele. No te conozco. Nose quien eres. Hace un segundo lo sabia y ahora no. No tieð nes ningun derecho a ocultarme la verdad como lo has hecho. Has sido un egoista. Un egoista. Si tenias miedo de que yo no quisiese tener una relaci6n con un cura, dejame esa decision a mi. Podria haber dicho que si o podria haber dicho que no, pero era mi decision. Te habia idealizado y ahora me pareces un cobarde. Tu tienes derecho a decir la verdad y a vivir con las personas que asumen tu verdad. Las personas que te aman no se van a asustar de tu verdad. Los pacatos y los hip6critas no queð rran escuchar que eres un cura y que quieres dejar de serlo, pero esa gente no es la gente con la que tu quieres vivir. Yo no soy una pacata, ni una hip6crita, y no tenias ningun derecho a mentirme. Ninguno.
 
@@ -4994,13 +4977,8 @@ No lose, Jorge.
 
 JORGE
 lQue no sabes?
+
 169
-
-
-
-ALFREDO 5ANZOL
-
-
 
 CARMEN
 Tengo que pensar.
@@ -5014,13 +4992,19 @@ CARMEN se va.
 
 JORGE
 Carmen... No me dejes asi.
-CARMEN sigue caminando.
+Carmen sigue caminando.
 
 JORGE
 Te llamare para casarnos.
 
 CARMEN
 Adi6s, Jorge.
+
+
+
+
+
+
 
 EL BAR QUE SE TRAGO A TODOS LOS ESPANOLES
 
