@@ -4310,6 +4310,7 @@ Y llegan al restaurante.
 
 144
 
+JORGE
 Cuando llegamos al restaurante estaba feliz. En el pecho sentia pena, una presi6n aqui, por no haber vivido hasta ahora algo parecido. Tengo treinta y tres anos y he perð dido la vida, pense.
 
 CARMEN
@@ -4330,16 +4331,11 @@ Buenas tardes. tAtin se puede comer?
 
 145
 
-
-
-ALFREDO SANZOL
-
-
 CAMARERO
-Si. Claro. Por supuesto. lPara dos?
+Si. Claro. Por supuesto. ¿Para dos?
 
 JORGE
-SL
+Si
 
 CAMARERO
 Aquella mesita, por favor. (Se sientan a la mesa.) lDe beber que desean?
@@ -4359,27 +4355,24 @@ Muybien.
 CAMARERO
 Les dejo las cartas para que echen un vistazo, y ahora les cuento Io que tenemos fuera de carta.0 si les parece se lo cuento ya.
 
-CARMEN yJORGE asienten.
+CARMEN y jorge asienten.
 
 CAMARERO
 Tenemos un estofado de gamo inocente y aspecto ingeð nuo con setas variadas en salsa de nata de la casa, que es una maravilla. Tambien tenemos pastel de jabali peludito y aspecto de intrepido con sus simpaticos colmillos que servimos despues de darle un golpecito al horno y cubrir
+
 146
 
-
-EL BAR QUESE TRAG6 A TODOS LOS ESPA1'10LES
-
-
 con frutas del bosque. Riquisimo. Mientras se lo van penð sando voy a por la bebida. Con permiso.
-     Se va el CAMARERO. CARMEN
-lTu  has escuchado que ha dicho gamo inocente?
-
-JORGE
-Y jabali peludito.
-
-Se parten de la risa.
+Se va el CAMARERO. 
 
 CARMEN
-Que tio mas surrealista, lno?
+¿Tu  has escuchado que ha dicho gamo inocente?
+
+JORGE
+Y jabali peludito. (Se parten de la risa.)
+
+CARMEN
+Que tio mas surrealista, ¿no?
 
 Desde hace un rato, un sefior mira a CARMEN ya JORGE y alwra que los ve relajados aprovecha para acercarse.
 
@@ -4390,25 +4383,21 @@ JORGE
 (Al principio, JORGE no lo conoce, pero luego cae.) iHombre, Patxi! jAspaldiko! (iCuanto tiempo!).
 
 FRANCISCO ELIZONDO
-;_Zer moduz? (lQue tal estas?).
+Zer moduz? (Que tal estas?).
 
 JORGE
-GORGE se levanta.) jOso ondo! Eta zu? (jMuy bien! ly tu?).
+(Jorge se levanta.) Oso ondo! Eta zu? (Muy bien! y tu?).
 
 FRANCISCO ELIZONDO
 Que  alegria verte. Un abrazo, hombre.
 
 147
 
-
-
-ALFREDO SANZOL
-
-
-JORGE y FRANCISCO ELIZONDO sedan un abrnzo.
+NOTA
+Jorge y FRANCISCO ELIZONDO sedan un abrnzo.
 
 FRANC1SCO ELIZONDO
-Perdona que os rnoleste, l,eh?
+Perdona que os moleste, eh?
 
 JORGE
 No nos molestas. Mira, te presento. Ella es Carmen.
@@ -4432,15 +4421,12 @@ FRANCISCO ELIZONDO
 Que  interesante. Entonces hablas perfectamente ingles.
 
 JORGE
-Ingles y ranees. CARMEN sonr[e.
+Ingles y Franees. CARMEN sonr[e.
+
 FRANCISCO ELIZONDO
 Saber idiornas es nuestra unica salvaci6n. Pero sentaos, sentaos.
 
 148
-
-EL BAR QUESE TRAGO A TODOS LOS ESPANOLF.S
-
-
 
 JORGE
 l,Que vida llevas? LQue haces por aqui?
@@ -4464,13 +4450,8 @@ Madremia.
 
 FRANCISCO ELIZONDO
 Y esta siendo muy muy rnuy desagradable. Porque vengo aqui, y se hacen los sorprendidos. Me dicen que los plazos son los plazos, y que me espere porque el dineð ro me llegara en el plazo acordado. A mi me dijeron que
+
 149
-
-
-
-ALFREDO SANZOL
-
-
 
 me iban a pagar en dos mitades. Una mientras estuviese aqui pintando y la otra al acabar.
 
@@ -4483,7 +4464,7 @@ No.
 JORGE
 Estos son unos ladrones.
 
-FRANCISCO ELIZONDO
+CISCO ELIZONDO
 Calla.
 
 JORGE
@@ -4502,10 +4483,6 @@ JORGE
 Y al jefe,lio conociste?
 
 150
-
-EL BAR QUE SE TRAGO A TOOOS LOS ESPA1'l0LES
-
-
 
 FRANCISCO ELIZONDO
 Un dia se asom6 a preguntar que tal iba. Me dijo que le gustaba mucho lo que estaba haciendo y ya esta.
@@ -4533,12 +4510,8 @@ Estoy viviendo en Madrid, lsabes?
 
 FRANCISCO ELIZONDO
 Pues silo sabia, Jorge. Note voy a engaflar. Y tambien me se todo. Todo de todo. Porque ya sabes que vayas
+
 151
-
-
-
-ALFREDO 5ANZOL
-
 
 donde vayas, habra un navarro que le contara a otro navarro la vida y milagros de otro navarro. En fin, dame otro abrazo, que me voy.
 
@@ -4565,16 +4538,9 @@ CARMEN
 Un momentito.
 
 CAMARERO
-Muy bien.
-
-El CAMARERO sale.
-
+Muy bien. (El CAMARERO sale.)
 
 152
-
-EL BAR QUESE TRAGO A TODOS LOS ESPANOLES
-
-
 
 JORGE
 l Tu te crees que es normal que Franco le pida un planisð ferio celeste a un tio que ha estado en la ca.reel por comuð nista? Pues no. Se lo ha pedido para no pagarle, para torturarlo sicol6gicamente.
@@ -4602,13 +4568,8 @@ Yo tengo toda la libertad del mundo para hacer todo lo que quiero. Nunca he sent
 
 JORGE
 LEstas hablando en serio?
+
 153
-
-
-
-
-ALFREDO 5ANZOL
-
 
 CARMEN
 Totaimente. Llevamos casi treinta afios de paz. A ver cuando has visto tu eso en Espana antes.
@@ -4630,10 +4591,8 @@ Pues mira, ahora que lo preguntas yo creo que nosotros nunca sabremos que es la 
 
 154
 
-EL 0,\R QUE SE TRAc6 A TOOOS LOS ESPAJs;OLES
-
-
 gestionar la responsabilidad que exige el ejercicio de la libertad.
+
 CARMEN
 En eso estoy totalmente de acuerdo. Yo creo que lo mas
 importante de la libertad es la capacidad de ponerse limið tes a uno mismo para que los demas sean libres. lMe entiendes?
@@ -4662,13 +4621,8 @@ vencidos en la guerra.
 
 JORGE
 Eso tambien es propaganda franquista. lSi nosotros no
+
 155
-
-
-
-
-ALFREDO SANZOL
-
 
 hemos conocido la libertad, c6mo se la vamos a ensenar a nuestros hijos?
 
@@ -4680,15 +4634,12 @@ Digo en general, los hijos.
 
 CARMEN
 Ah, yo que se. Diga, este se esta volviendo loco.
-JORGE se rfe. Vuelve a entrar FRANCISCO ELIZONDO al resð taurante y se dirige a la mesa deellos.
+Jorge se rfe. Vuelve a entrar FRANCISCO ELIZONDO al resð taurante y se dirige a la mesa deellos.
 
 FRANCISCO ELIZONDO
 Oye, perdonad, solo una cosica, antes de irme. No me gustaria que mi historia del planisferio sirviera para frivoð lizar sabre esta dictadura y hacer chistes sabre Franco y su senora. Esto en lo que vivimos es una dictadura fascisð ta de clasea traves de la cual se ha exteqninado a un tanto por ciento muy elevado de la poblaci6n espanola. Vosotros dos sois hijos de vencedores, no sois culpables de nada, eso es verdad, peroen el futuro si que sereis culð pables si no os preocupais por conocer la historia real. La clase social fascista que tiene los medios de producci6n en este pais no los va a soltar porque llegue la democracia. Llegara la democracia a cambio de no recordar a nadie que la riqueza esta en sus manos gracias a la guerra ya su colaboraci6n con el nazismo. Aqui no estamos hablando mas que de una cosa. En manos de quien esta la propieð dad. Loque me deben por haber hecho mi trabajo es la metafora de una deuda. Lo que debe la clase social fascisð ta a toda la poblaci6n espanola esquilmada. No nos vamos a conformar con las migajas y nuestra lucha dura-
 
 156
-
-EL BAR QUE SE TRAC6 A TOOOS LOS ESPA:S:OLES
-
 
 ra generaciones, ya lo se, pero vamos a ganar con leyes, no con armas. Lo digo para que conste. Perdonadme de nuevo. Me alegro mucho de veros. Adi6s.
 Se acerca el CAMARERO algo nervioso. FRANCISCO ELIZONDO se va. El CAMARERO lomira.
@@ -4713,17 +4664,11 @@ Se quedan en. silencio los dos.
 JORGE
 No hace falta hacer montones. Loque hace falta es hacer
 juicios.
+
 157
-
-
-
-ALFREDO SANZOL
-
 
 CAMARERO
 Usted es el cliente. Usted tiene la raz6n.
-
-
 
 El MEDICO apunta.
 
@@ -4732,13 +4677,16 @@ MEDICO
 EL BAR QUE SE TRAGQ A TODOS I.OS ESPAl'IOLES
 
 El CAMARERO se va.
+
 CARMEN
 A ver si ahora vamos a acabar los dos en Ia carcel.
+
 JORGE
 Si nos ponen en la misma ceida a mi no me importa.
+
 CARMEN
 Anda, mira que fresco nos salido el intelectual.
-Se rfen los dos. JORGE le cage la mano y se la besa.
+Se rfen los dos. Jorge le cage la mano y se la besa.
 Musica. Percusi6n de jazz. Transici6n de tiempo. En algun lugar se tiene que leer: TRES MESES DESPUES.
 La musica continua durante la siguiente escena.
 
@@ -4822,35 +4770,9 @@ jQue exagerada!
 
 
 
-
-
 161
 
-
-
-ALFREDO 5ANZOL
-
-EL BAR QUE SETRAGO A TOOOSLOS ESPAi\lOLES
-
-
-
-
-
-
-
-
-
 JORGE
-
-XXV
-
-Aahrus, Dinamarca. Un bar de espaiioles con bandera repuð blicana. JORGE llama par telefono.
-
-ella para que me Harne ahora. Porque trabaja en Telef6nica. Que no le llarno porque ella trabaja en Telef6nica. Venga, adi6s, que cuelgo. Adi6s. Oye... lOye?
-
-Cuelga. Mira el telefono. Mira el reloj. Suena el telefono.
-JORGE mira al camarero. El camarero se acerca y descuelga.
-
  Evaristo, lque tal estais? Yo muy bien. lTu que tal estas? Me alegro. Oye, escuchame. Mira, estoy en Dinamarca. Sf. En una ciudad que se llama Aahrus. Desde hace una semana. He venido a aprender c6mofuncionan lascalefacð ciones que vamos a poner en Madrid. En casa de una famið lia que me alquila una habitaci6n. Debajo de la casa hay un bar de espafioles y no como mal. He tenido suerte. Verdura muy poca. Judias y coles, pero pequefias. Oye, escucharne. A ver c6rno hacernos esto. Tienes que ir al obispado para enterarte de c6rno va lo mio.l Tu te acuerð das de un cura de Olite que era muy amigo de la madre? Eso es, el que me llev6 al serninario. Pues te vas al obispað do y preguntas por el. Jesusrnari Martinez de Iriarte. No le digas a nadie que eres mi hermano. Di que vas para inforð marte sobre un tema de nulidad de matrimonio. Porque el lleva esos ternas. Ycuando estes con el le dices que eres mi herrnano y que vas de mi parte. lMe entiendes? Y oye. A ver. Te cuento una cosa. Mehan entrado las prisas porque he conocido a una chica. Si. Ya lose. Ya lose, pero no, no es eso. Me quiero casar. Que me quiero casar con ella. jNo! Ella no sabe nada. jC6mo se lo voy a decir! jNo puedo decirle! Perque saldria corriendo. Cuando tenga la dispenð sa en la mano ledigo que me quiero casar con ella y le digo tarnbien lo otro. jAntes no se lo voy a decir, Evaristo! jParece mentira que no sepas el mundo en el que vivimos! Claro. Claro, ni mas ni menos. Haz lo que te he dicho, por favor, lde acuerdo? Tengo que colgar que he quedado con
 
 162
