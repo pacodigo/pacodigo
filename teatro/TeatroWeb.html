@@ -1,0 +1,323 @@
+<!-- 
+https://es.javascript.info/debugging-chrome 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>TWeb</title>
+    </head>
+	
+	
+	<style>
+		.button {
+		  border: none;
+		  color: white;
+		  border-radius: 10px;
+		  font-size: 20px;
+		 height: 44px;						
+		 margin: 8px 10px 8px 10px;
+		 padding: 8px 12px;
+		}
+		hr {
+			height: 10px;
+			border: 0;
+			box-shadow: 0 10px 10px -10px #8c8b8b inset;
+		}
+</style>
+
+
+ 
+    <body>
+		<h1> Datos Radar 3D e Insignia.</h1>
+			
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
+			<input type="number" name="number" id="idPagina" value=1 />
+		</div>	
+		<br><hr>
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<input type="number" name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
+		</div>	
+		
+		<br><hr>
+		
+		
+		<textarea id="textarea_Entrada" rows="3" style="width: 100%" ondblclick=value="" ">Datos entrada</textarea>
+		<br><hr>
+		<textarea id="idCajaParrafoAnterior" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
+		<div id="idDivCajaParrafoMio">
+			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
+		</div>
+		<p><br></p>
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="next();">Next</button>
+		</div>	
+		
+	
+		<p>  
+		 <input type="file" id="file-input" />
+			<button onclick = test()>test</button>
+		</p>
+		<input type="checkbox" id="CB_emplRadio"> Incluir emplazamientos radio
+		<p> 
+		<button onclick = procesadoParrafos()> procesadoParrafos </button>
+		</p>
+		
+		             <button class="btn" id="convertBtn">
+                    Play Converted Sound
+                </button>
+					
+<script>
+			
+	window.onload = function() {
+		console.log("Página cargada...");
+		document.getElementById('textarea_Entrada').value = "Ok.";
+		cargaDesdeInternet();
+	}	
+			
+	function cargaDesdeInternet(){
+		fetch('https://pacodigo.github.io/pacodigo/ElBar.txt')
+			.then(response => response.text())
+			.then((data) => {
+				document.getElementById('textarea_Entrada').value = data;
+				procesadoParrafos();
+			})
+	}
+	
+	function conmutaVisibilidad(){
+		console.log("Pinchado.");
+		if (document.getElementById('idDivCajaParrafoMio').style.visibility!="hidden")		
+			document.getElementById('idDivCajaParrafoMio').style.visibility="hidden";
+		else
+			document.getElementById('idDivCajaParrafoMio').style.visibility="initial";
+	}
+		
+	function cambioNumPaginaEvent(){
+		var numPagina = parrafoSolicitado = document.querySelector('#idPagina').value;
+		var encontrado=false;
+		//for (i=0; i<indicesParrafosDePaco.length ; i++){
+		var i=0;
+		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
+			var indiceParrafos = indicesParrafosDePaco[i];
+			if (arrayParrafos[indiceParrafos].pagina > numPagina-1){			// Encontrado
+				encontrado = true; 
+				document.querySelector('#idParrafo').value = indiceParrafos;
+				cambioNumParrafoEvent();
+				}
+			i++;
+		}
+	}
+			
+	function cambioNumParrafoEvent(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
+		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+	}
+
+	function getTodaInfoDeParrafo(indiceParrafos){
+		var infoProcesada = (arrayParrafos[indiceParrafos].personaje + "\n" + arrayParrafos[indiceParrafos].texto);
+		infoProcesada = infoProcesada + ("\nPágina: " + arrayParrafos[indiceParrafos].pagina);
+		infoProcesada = infoProcesada + ("\nNúm.Línea: " + arrayParrafos[indiceParrafos].numLineaParrafo);
+		return (infoProcesada);
+	}
+
+	function actual(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		texto = arrayParrafos[indiceMiParrafo-1].texto;
+		alert (texto);
+	}
+	
+	function next(){
+		document.querySelector('#idParrafo').value++;
+		cambioNumParrafoEvent();
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		texto = arrayParrafos[indiceMiParrafo-1].texto;
+		alert (texto);
+	}
+	
+	
+	var arrayParrafos = [];
+	var indicesParrafosDePaco = [];
+	
+	function procesadoParrafos(){
+		let parrafo = {				// Objeto "parrafo"
+			personaje: 	"NULO",		// Clave / Valor. En la Clave personaje se almacena el Valor NULO
+			texto: 		"",
+			pagina: 	111,
+			numLineaParrafo: 0,
+			persoEsPaco: false
+			};
+	
+		var indiceParrafos = 0;
+		var indiceLineas = 0;
+		var numPaginaDetectada = 0;
+		
+		arrayParrafos[indiceParrafos] = { ...parrafo};		// Creamos un nuevo objeto en el array en pos [0] y clonamos el objeto usando el operador de propagación. Copiamos su contenid
+		
+		var textoEntrada = document.getElementById('textarea_Entrada').value;
+		var arrayDeLineas = textoEntrada.split('\n');
+		for (i=0; i<arrayDeLineas.length ; i++){
+			var linea = arrayDeLineas[i];
+			var infoDeLineaLocal = infoDeLinea (linea);
+			if (!infoDeLineaLocal.obviarLinea){
+				if (infoDeLineaLocal.esPersonaje){						// Es un Personaje
+					indiceParrafos++;
+					arrayParrafos[indiceParrafos] = { ...parrafo};		// Creamos nuevo objeto (equivalente a arrayParrafos[indiceParrafos] = new Object;) y clonamos el objeto usando el operador de propagación
+					arrayParrafos[indiceParrafos].personaje = linea;
+					arrayParrafos[indiceParrafos].numLineaParrafo = i;
+					arrayParrafos[indiceParrafos].pagina = numPaginaDetectada;
+					if (infoDeLineaLocal.esJorge){
+						arrayParrafos[indiceParrafos].persoEsPaco = true;
+						indicesParrafosDePaco.push(indiceParrafos);
+					}
+				}
+				else if (infoDeLineaLocal.esPagina)
+					numPaginaDetectada = infoDeLineaLocal.numPagina;
+				else {													// No es Personaje
+					arrayParrafos[indiceParrafos].texto = ((arrayParrafos[indiceParrafos].texto) + "\n" + linea);
+				}	
+			}
+		}
+		var infoProcesada = ("Lineas: " + i + "\nParrafos: " + arrayParrafos.length + "\nMis Parrafos: " +  indicesParrafosDePaco.length);
+		//alert (infoProcesada);
+		document.getElementById('idCajaParrafoAnterior').value = infoProcesada;
+		console.log (arrayParrafos);
+	}
+
+
+
+function infoDeLinea (lineaTexto){
+    var especiales = '!#$%&^~*_-',
+        mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        minusculas = 'abcdefghijklmnopqrstuvwxyz',
+		jorge = 'JORGE',
+        digitos = '0123456789';
+	var	quitar1 = 'ELBARQUESETRAG0ATODOSLOSESPAÑOLES';
+	var quitar2 = 'ALFREDOSANZOL';
+		       
+    var numCarEspeciales 	= 0;
+    var numMayusculas 		= 0;
+    var numMinusculas 		= 0;
+    var numDigitos 			= 0;
+	var puntosJorge 		= 0;
+	var longitudCadena = lineaTexto.length;
+	var puntosQuitar1 = 0;
+	var puntosQuitar2 = 0;
+		
+	var esPersonaje 	= false;
+	var	esJorge 		= false;
+	var	esPagina 		= false;
+	var	numPagina 		= 0;
+	var obviarLinea		= false;
+	
+    for (var i = 0; i < lineaTexto.length; i++) {
+        if (especiales.includes(lineaTexto[i]))
+            numCarEspeciales++;
+        if (mayusculas.includes(lineaTexto[i]))
+            numMayusculas++;
+		if (minusculas.includes(lineaTexto[i]))
+            numMinusculas++;
+		if (digitos.includes(lineaTexto[i]))
+            numDigitos++;
+		if (jorge.includes(lineaTexto[i]))
+            puntosJorge++;	
+		if (quitar1.includes(lineaTexto[i]))
+			puntosQuitar1++;
+		if (quitar2.includes(lineaTexto[i]))
+			puntosQuitar2++;
+     }
+     
+	if ((2 < longitudCadena) && (longitudCadena < 7) && (puntosJorge > 3))
+		esJorge = true;
+	if ((2 < longitudCadena) && (longitudCadena < 27) && (numMayusculas > numMinusculas))
+		esPersonaje = true;
+	if ((1 < longitudCadena) && (longitudCadena < 4) && ((numDigitos/longitudCadena)==1)){
+		esPagina = true;
+		numPagina = Number (lineaTexto);
+		}
+	if ((puntosQuitar1>20) || (puntosQuitar2 > 10))
+		obviarLinea = true;
+	
+	var cadenaInfo="";
+	cadenaInfo = "Long: " + longitudCadena;
+	cadenaInfo = cadenaInfo + ". EsJorge: " + esJorge + ". EsPersonaje: " + esPersonaje; 
+	cadenaInfo = cadenaInfo + ". EsPagina: " + esPagina;
+	cadenaInfo = cadenaInfo + ".> \n";
+	  
+	return {
+		esJorge: 		esJorge,
+		esPersonaje: 	esPersonaje,
+		esPagina:		esPagina,
+		numPagina:		numPagina,
+		obviarLinea:	obviarLinea,
+		info: 			cadenaInfo
+	 }
+}
+
+
+
+
+
+	// Fichero de entrada:
+	document.getElementById('file-input').addEventListener('change', leerArchivo, false);
+	function leerArchivo(e) {
+		var archivo = e.target.files[0];
+		if (!archivo) {
+			return;
+		}
+		var lector = new FileReader();
+		lector.onload = function(e) {
+			var contenido = e.target.result;
+			document.getElementById('textarea_Entrada').value = contenido;
+		}
+		lector.readAsText(archivo);
+	}
+
+			
+			
+
+
+
+
+
+
+
+const convertBtn = document.getElementById("convertBtn");
+
+convertBtn.addEventListener('click', function () {
+    const speechSynth = window.speechSynthesis;
+ 	const enteredText = "Hola Paco";			//const enteredText = text.value;
+    
+    //if (!speechSynth.speaking && enteredText.trim().length) {
+	if (true){
+        const newUtter = new SpeechSynthesisUtterance(enteredText);
+        speechSynth.speak(newUtter);
+        convertBtn.textContent = "Sound is Playing..."
+    } 
+    setTimeout(() => {
+        convertBtn.textContent = "Play Converted Sound"
+    }, 1000);
+});
+
+
+			
+			
+			
+			
+			
+			
+		
+			
+			
+			
+		</script>
+    </body>
+</html>
