@@ -32,12 +32,7 @@ https://es.javascript.info/debugging-chrome
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
-		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
-			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
-		</div>	
-		<hr>
+
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
@@ -57,9 +52,17 @@ https://es.javascript.info/debugging-chrome
 		
 		<br><hr>
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 95%; color: white; background-color: black " readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
+			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black " readonly onclick="document.querySelector('body').requestFullscreen();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
+		
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
+			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
+		</div>	
+		<hr>
+		
 		<br><br><br>
 		<div style = "background: grey;">
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
@@ -94,6 +97,10 @@ https://es.javascript.info/debugging-chrome
 			.catch(err => {
 				alert("ERROR: " + err);
 			});	 
+	}
+	
+	function test(){
+		document.querySelector("body").requestFullscreen();
 	}
 	
 	function conmutaVisibilidad(){
