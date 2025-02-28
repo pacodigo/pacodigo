@@ -16,7 +16,7 @@ https://es.javascript.info/debugging-chrome
 		  color: white;
 		  border-radius: 10px;
 		  font-size: 20px;
-		 height: 44px;						
+		 height: 50px;						
 		 margin: 8px 10px 8px 10px;
 		 padding: 8px 12px;
 		}
@@ -30,31 +30,36 @@ https://es.javascript.info/debugging-chrome
 
  
     <body style="background: grey; width:360px">
-		<h2> Ver.: 28-2-25</h1>
+		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
-			<input type="number" name="number" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
+			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
 		</div>	
-		<br><hr>
-		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
-			<input type="number" name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
-		</div>	
-		
-		<br><hr>
-		<textarea id="idCajaParrafoAnterior" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
-		<div id="idDivCajaParrafoMio">
-			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
-		</div>
 	
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="next();">Next</button>
+			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
 		
+		<br><hr>
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%;" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
+		</div>
+		<br><hr>
+		
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
+			<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
+		</div>
+		
+		<br><hr>
+		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
+			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 95%" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
+		</div>
+		<br><hr>
 		
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
