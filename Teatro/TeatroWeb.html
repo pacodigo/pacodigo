@@ -28,13 +28,13 @@ https://es.javascript.info/debugging-chrome
 
 
  
-    <body>
-		<h1> Datos Radar 3D e Insignia.</h1>
+    <body style="background: grey; width:360px">
+		<h2> Ver.: 28-2-25</h1>
 			
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
-			<input type="number" name="number" id="idPagina" value=1 />
+			<input type="number" name="number" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
 		</div>	
 		<br><hr>
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
@@ -44,20 +44,19 @@ https://es.javascript.info/debugging-chrome
 		</div>	
 		
 		<br><hr>
-		
-		
-		<textarea id="textarea_Entrada" rows="3" style="width: 100%" ondblclick=value="" ">Datos entrada</textarea>
-		<br><hr>
 		<textarea id="idCajaParrafoAnterior" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
 		<div id="idDivCajaParrafoMio">
 			<textarea id="idCajaParrafoMio" 	rows="10" style="width: 100%" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
 		</div>
-		<p><br></p>
+	
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
 			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="next();">Next</button>
 		</div>	
 		
+		
+		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
+		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
 		<p>  
 		 <input type="file" id="file-input" />
@@ -68,25 +67,26 @@ https://es.javascript.info/debugging-chrome
 		<button onclick = procesadoParrafos()> procesadoParrafos </button>
 		</p>
 		
-		             <button class="btn" id="convertBtn">
-                    Play Converted Sound
-                </button>
+		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
+		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
 					
 <script>
 			
 	window.onload = function() {
 		console.log("Página cargada...");
-		document.getElementById('textarea_Entrada').value = "Ok.";
 		cargaDesdeInternet();
 	}	
 			
 	function cargaDesdeInternet(){
-		fetch('https://pacodigo.github.io/pacodigo/ElBar.txt')
+		fetch('https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt')
 			.then(response => response.text())
 			.then((data) => {
-				document.getElementById('textarea_Entrada').value = data;
+				textoObraEnBruto = data;
 				procesadoParrafos();
 			})
+			.catch(err => {
+				alert("ERROR: " + err);
+			});	 
 	}
 	
 	function conmutaVisibilidad(){
@@ -98,15 +98,14 @@ https://es.javascript.info/debugging-chrome
 	}
 		
 	function cambioNumPaginaEvent(){
-		var numPagina = parrafoSolicitado = document.querySelector('#idPagina').value;
-		var encontrado=false;
-		//for (i=0; i<indicesParrafosDePaco.length ; i++){
+		var numPagina = document.querySelector('#idPagina').value;
+		var encontrado = false;
 		var i=0;
 		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
 			var indiceParrafos = indicesParrafosDePaco[i];
-			if (arrayParrafos[indiceParrafos].pagina > numPagina-1){			// Encontrado
+			if (arrayParrafos[indiceParrafos].pagina >= numPagina){			// Encontrado
 				encontrado = true; 
-				document.querySelector('#idParrafo').value = indiceParrafos;
+				document.querySelector('#idParrafo').value = i+1;
 				cambioNumParrafoEvent();
 				}
 			i++;
@@ -131,7 +130,7 @@ https://es.javascript.info/debugging-chrome
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
 		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
 		texto = arrayParrafos[indiceMiParrafo-1].texto;
-		alert (texto);
+		decir (texto);
 	}
 	
 	function next(){
@@ -140,12 +139,13 @@ https://es.javascript.info/debugging-chrome
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
 		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
 		texto = arrayParrafos[indiceMiParrafo-1].texto;
-		alert (texto);
+		decir (texto);
 	}
 	
 	
 	var arrayParrafos = [];
 	var indicesParrafosDePaco = [];
+	var textoObraEnBruto ="";
 	
 	function procesadoParrafos(){
 		let parrafo = {				// Objeto "parrafo"
@@ -162,7 +162,7 @@ https://es.javascript.info/debugging-chrome
 		
 		arrayParrafos[indiceParrafos] = { ...parrafo};		// Creamos un nuevo objeto en el array en pos [0] y clonamos el objeto usando el operador de propagación. Copiamos su contenid
 		
-		var textoEntrada = document.getElementById('textarea_Entrada').value;
+		var textoEntrada = textoObraEnBruto;
 		var arrayDeLineas = textoEntrada.split('\n');
 		for (i=0; i<arrayDeLineas.length ; i++){
 			var linea = arrayDeLineas[i];
@@ -239,7 +239,7 @@ function infoDeLinea (lineaTexto){
 		esJorge = true;
 	if ((2 < longitudCadena) && (longitudCadena < 27) && (numMayusculas > numMinusculas))
 		esPersonaje = true;
-	if ((1 < longitudCadena) && (longitudCadena < 4) && ((numDigitos/longitudCadena)==1)){
+	if ((1 < longitudCadena) && (longitudCadena < 5) && ((numDigitos/(longitudCadena-1))==1)){
 		esPagina = true;
 		numPagina = Number (lineaTexto);
 		}
@@ -250,6 +250,7 @@ function infoDeLinea (lineaTexto){
 	cadenaInfo = "Long: " + longitudCadena;
 	cadenaInfo = cadenaInfo + ". EsJorge: " + esJorge + ". EsPersonaje: " + esPersonaje; 
 	cadenaInfo = cadenaInfo + ". EsPagina: " + esPagina;
+	cadenaInfo = cadenaInfo + ". ObviarLinea: " + obviarLinea;
 	cadenaInfo = cadenaInfo + ".> \n";
 	  
 	return {
@@ -276,7 +277,8 @@ function infoDeLinea (lineaTexto){
 		var lector = new FileReader();
 		lector.onload = function(e) {
 			var contenido = e.target.result;
-			document.getElementById('textarea_Entrada').value = contenido;
+			textoObraEnBruto = contenido;
+			procesadoParrafos();
 		}
 		lector.readAsText(archivo);
 	}
@@ -284,34 +286,17 @@ function infoDeLinea (lineaTexto){
 			
 			
 
+function decir (enteredText){
+    const speechSynth = window.speechSynthesis;   
+	speechSynth.cancel();
+	const newUtter = new SpeechSynthesisUtterance(enteredText);
+	speechSynth.speak(newUtter);
+}
 
 
 
 
-
-
-const convertBtn = document.getElementById("convertBtn");
-
-convertBtn.addEventListener('click', function () {
-    const speechSynth = window.speechSynthesis;
- 	const enteredText = "Hola Paco";			//const enteredText = text.value;
-    
-    //if (!speechSynth.speaking && enteredText.trim().length) {
-	if (true){
-        const newUtter = new SpeechSynthesisUtterance(enteredText);
-        speechSynth.speak(newUtter);
-        convertBtn.textContent = "Sound is Playing..."
-    } 
-    setTimeout(() => {
-        convertBtn.textContent = "Play Converted Sound"
-    }, 1000);
-});
-
-
-			
-			
-			
-			
+		
 			
 			
 		
