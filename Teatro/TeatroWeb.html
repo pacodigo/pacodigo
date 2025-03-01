@@ -32,16 +32,22 @@ https://es.javascript.info/debugging-chrome
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
-
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
 			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
 		
-		<br><hr>
+		<div id="idDivPaginas" style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
+			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
+			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
+		</div>
+		
+		
+		<hr>
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<textarea id="idCajaParrafoAnterior" rows="11" style="font-size: 15pt; width: 95%; color: white; background-color: black" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
+			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
 		</div>
 		<br><hr>
 		
@@ -52,15 +58,11 @@ https://es.javascript.info/debugging-chrome
 		
 		<br><hr>
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaParrafoMio" rows="11" style="font-size: 15pt; width: 95%; color: white; background-color: black " readonly onclick="document.querySelector('body').requestFullscreen();">idCajaParrafoMio </textarea>
+			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="toggleFullScreen();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
 		
-		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
-			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
-		</div>	
+	
 		<hr>
 		
 		<br><br><br>
@@ -99,8 +101,22 @@ https://es.javascript.info/debugging-chrome
 			});	 
 	}
 	
-	function test(){
-		document.querySelector("body").requestFullscreen();
+	function conmutaVisualizacionDiv(divID){
+	    var x = document.getElementById(divID);
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+	
+	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
+		conmutaVisualizacionDiv("idDivPaginas");
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen();
+		} else {
+			document.exitFullscreen();
+		}
 	}
 	
 	function conmutaVisibilidad(){
