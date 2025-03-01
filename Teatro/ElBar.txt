@@ -4788,7 +4788,7 @@ nosotros nos han metido en el cuerpo un miedo total a ser libres. De hecho, tú 
 CARMEN
 Sí, porque la gente no sabe ser libre.
 
-JORGE	.
+JORGE
 Ya, pero eso hasta que no vivamos en una democracia no
 lo sabremos.
 
@@ -4799,7 +4799,6 @@ vencidos en la guerra.
 JORGE
 Eso también es propaganda franquista. ¿Si nosotros no
 155
-
 hemos conocido la libertad, cómo se la vamos a enseñar a nuestros hijos?
 
 CARMEN
@@ -4811,16 +4810,7 @@ Digo en general, los hijos.
 CARMEN
 Ah, yo qué sé. Digo, este se está volviendo loco.
 
-
-
-
-
-
-
-
-rá generaciones, ya lo sé, pero vamos a ganar con leyes, no con armas. Lo digo para que conste. Perdonadme de nuevo. Me alegro mucho de veros. Adiós.
-
-Se acerca el CAMARERO algo nervioso. se va. El CAMARERO lo mira.
+XXXX
 
 CAMARERO
 Perdonen que me meta donde no me llaman, ¿pero no les
@@ -4841,13 +4831,14 @@ Es verdad, perdone.
 
 Oye, perdonad, solo una cosica, antes de irme. No me gustaría que mi historia del planisferio sirviera para frivo­ lizar sobre esta dictadura y hacer chistes sobre Franco y su señora. Esto en lo que vivimos es una dictadura fascis­ ta de clase a través de la cual se ha exteqninado a un tanto
 
-CAMARERO
-Que cada uno puede pensar como quiera, pero luego ya
-saben que los rumores crecen solos y empiezan a decir que a este restaurante viene cierta gente o viene de la otra clase, ya saben, y al final el pato lo pago yo.
 
 por ciento muy elevado de la población española. Vosotros dos sois hijos de vencedores, no sois culpables de nada, eso es verdad, pero en el futuro sí que seréis cul­ pables si no os preocupáis por conocer la historia real. La clase social fascista que tiene los medios de producción en este país no los va a soltar porque llegue la democracia. Llegará la democracia a cambio de no recordar a nadie que la riqueza está en sus manos gracias a la guerra y a su colaboración con el nazismo. Aquí no estamos hablando más que de una cosa. En manos de quién está la propie­ dad. Lo que me deben por haber hecho mí trabajo es la metáfora de una deuda. Lo que debe la clase social fascis­ ta a toda la población española esquilmada. No nos vamos a conformar con las migajas y nuestra lucha dura-
 
 156
+
+CAMARERO
+Que cada uno puede pensar como quiera, pero luego ya
+saben que los rumores crecen solos y empiezan a decir que a este restaurante viene cierta gente o viene de la otra clase, ya saben, y al final el pato lo pago yo.
 
 JORGE
 Perdone, sí, tiene toda la razón.
@@ -4855,21 +4846,12 @@ Perdone, sí, tiene toda la razón.
 CAMARERO
 Si llegan a entrar aquí los rusos durante la guerra, ¿qué
 pasa? ¿Que no habrían matado gente? ¿Qué tenemos que hacer, poner las fotos de los muertos en dos montones y ver cual es el montón más grande?
-
 Se quedan en silencio los dos.
 
 JORGE
 No hace falta hacer montones. Lo que hace falta es hacer
 juicios.
 157
-
-
-
-
-
-
-ALFREDO 5ANZOL
-
 
 CAMARERO
 Usted es el cliente. Usted tiene la razón.
@@ -5003,29 +4985,27 @@ MÉDICO
 ALFREDO 5ANZOL
 
 
+
 XXV
 
 EL BAR QUE SE TRAGÓ A TODOS LOS ESPA1'10LES
 
 
-ella para que me llame ahora. Porque trabaja en Telefónica. Que no le llamo porque ella trabaja en Telefónica. Venga, adiós, que cuelgo. Adiós. Oye... ¿Oye?
 
 
-
+AUTOR
+JORGE llama por teléfono.
 
 JORGE
-
-A hrus, Dinamarc(l. Un bar de españoles con bandera repu­ blicana. JORGE llama por teléfono.
-
+ Evaristo, ¿qué tal estáis? Yo muy bien. ¿Tú qué tal estás? Me alegro. Oye, escúchame. Mira, estoy en Dinamarca. Sí. En una ciudad que se llama Aahrus. Desde hace una semana. He venido a aprender cómofuncionan las calefac­ ciones que vamos a poner en Madrid. En casa de una fami­ lia que me alquila una habitación. Debajo de la casa hay un bar de españoles y no corno mal. He tenido suerte. Verdura muy poca. Judías y coles, pero pequeñas. Oye, es úcharne. A ver cómo hacemos esto. Tienes que ir al obispado para enterarte de cómo va lo mío. ¿Tú te acuer­ das de un cura de Olite que era muy amigo de la madre? Eso es, el que me llevó al seminario. Pues te vas al obispa­ do y preguntas por él. Jesúsmari Martínez de Iriarte. No le digas a nadie que eres mi hermano. Di que vas para infor­ marte sobre un terna de nulidad de matrimonio. Porque él lleva esos temas. Y cuando estés con él le dices que eres mi hermano y que vas de mi parte. ¿Me entiendes? Y oye. A ver. Te cuento una cosa. Me han entrado las prisas porque he conocido a una chica. Sí. Ya lo sé. Ya lo sé, pero no, no es eso. Me quiero casar. Que me quiero casar con ella. ¡No! Ell nosabe nada. ¡Cómo se lo voy a decir! ¡No puedo decirle! Porque saldría corriendo. Cuando tenga la dispen­ sa en la mano ledigo que me quiero casar con ella y le digo también lo otro. ¡Antes no se lo voy a decir, Evaristo!
+¡Parece mentira que no sepas el mundo en el que vivimos!
+Claro. Claro, ni más ni menos. Haz lo que te he dicho, por favor, ¿de acuerdo? Tengo que colgar que he quedado con
+ella para que me llame ahora. Porque trabaja en Telefónica. Que no le llamo porque ella trabaja en Telefónica. Venga, adiós, que cuelgo. Adiós. Oye... ¿Oye?
+162
 
 Cuelga. Mira el teléfono. Mira el reloj. Suena el teléfono.
 JORGE mira al camarero. El camarero se acerca y descuelga.
 
- Evaristo, ¿qué tal estáis? Yo muy bien. ¿Tú qué tal estás? Me alegro. Oye, escúchame. Mira, estoy en Dinamarca. Sí. En una ciudad que se llama Aahrus. Desde hace una semana. He venido a aprender cómofuncionan las calefac­ ciones que vamos a poner en Madrid. En casa de una fami­ lia que me alquila una habitación. Debajo de la casa hay un bar de españoles y no corno mal. He tenido suerte. Verdura muy poca. Judías y coles, pero pequeñas. Oye, es úcharne. A ver cómo hacemos esto. Tienes que ir al obispado para enterarte de cómo va lo mío. ¿Tú te acuer­ das de un cura de Olite que era muy amigo de la madre? Eso es, el que me llevó al seminario. Pues te vas al obispa­ do y preguntas por él. Jesúsmari Martínez de Iriarte. No le digas a nadie que eres mi hermano. Di que vas para infor­ marte sobre un terna de nulidad de matrimonio. Porque él lleva esos temas. Y cuando estés con él le dices que eres mi hermano y que vas de mi parte. ¿Me entiendes? Y oye. A ver. Te cuento una cosa. Me han entrado las prisas porque he conocido a una chica. Sí. Ya lo sé. Ya lo sé, pero no, no es eso. Me quiero casar. Que me quiero casar con ella. ¡No! Ell nosabe nada. ¡Cómo se lo voy a decir! ¡No puedo decirle! Porque saldría corriendo. Cuando tenga la dispen­ sa en la mano ledigo que me quiero casar con ella y le digo también lo otro. ¡Antes no se lo voy a decir, Evaristo!
-¡Parece mentira que no sepas el mundo en el que vivimos!
-Claro. Claro, ni más ni menos. Haz lo que te he dicho, por favor, ¿de acuerdo? Tengo que colgar que he quedado con
-
-162
 
 CAMARERO
 ¿Sí? (Pasa el teléfono a JORGE.) Su conferencia.
@@ -5045,13 +5025,6 @@ Qué dices.
 CARMEN
 Que está de dos meses. Que tiene que volver a Madrid. Que se tienen que casar. Que no ha dicho nada a sus padres. Que él es el primero que lo sabe.
 163
-
-
-
-
-
-ALFREDO 5ANZOL
-
 
 JORGE
 ¿Pero estás segura? ¿Quién te ha hecho los análisis?
@@ -5073,20 +5046,15 @@ Que sus padres no saben nada. Que no ha podido ni llo­ rar de los nervios que t
 
 JORGE
 No te preocupes. Ahora mismo me pongo a arreglar las cosas. No te preocupes. En cuanto tenga el billete te llamo. ¿Vale? En cuanto tenga el billete te llamo. Carmen,
-
 164
-
-Et.BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
 Carmen. Escucha. Que estés embarazada me hace feliz.
 ¿Me oyes? Yo también te quiero. Mucho.
-
 JORGE cuelga el teléfono.
 
 
 XXVI
 
+AUTOR
 CARMEN y JORGE se encuentran en Madrid.
 
 JORGE
@@ -5107,18 +5075,13 @@ Sí.
 CARMEN
 ¿No me vas a dar un beso?
 
-JORGE	•
+JORGE
 Claro. Te estaba mirando. (JORGE se aceren a CARMEN1 .) lTe
 puedo tocar la tripa?
 
 CARMEN
 Sí.
 165
-
-
-
-ALFREDO 5ANZOL
-
 
 JORGE
 GORGE toca la tripa de CARMEN.) ¿Notas algo?
@@ -5154,10 +5117,6 @@ Pero...
 
 166
 
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAl'.:OLES
-
-
 A JORGE se le están saltando las lágrimas sin querer. Le está viniendo una emoción que no puede controlar.
 
 CARi\1EN
@@ -5180,7 +5139,7 @@ Anda, eso es un clériman. ¿Estudiaste en el seminario?
 JORGE
 Sí. Estuve estudiando, pero no solo estuve estudiando. Meordené.
 
-CARi\1EN
+CARMEN
 ¿Fuiste cura?
 
 JORGE
@@ -5191,15 +5150,7 @@ CARMEN
 
 JORGE
 Sí, pero he pedido la dispensa. Estoy esperando a que me
-
 167
-
-
-
-
-ALFREDO 5ANZOL
-
-
 la deny no va a tardar. Aún no la tengo, pero oye... Oye. Estoy esperando y no va a tardar.
 
 CARMEN
@@ -5226,10 +5177,13 @@ Jorge, eres un cura.
 JORGE
 La dispensa va a llegar ya. La voy a conseguir ya.
 
-EL BAR QUESE TRACÓ A TODOS LOS ESPA!ÍIOLES
-
-
+CARMEN
+Inténtalo. Consigue la dispensa, pero, no sé qué decirte ahora, conmigo no cuentes. En este momento prefiero tenerlo sola. No sé si quiero tenerlo contigo. No lo sé. Creo que es mejor que yo haga mi vida y tú la tuya y,
+168
 luego ya veremos. Ahora no puedo decirte que quiero esperarte porque no es verdad. Ahora no puedo decirte nada. Me siento muy sola. Tengo la sensación de estar saliendo de un sueño y me duele. No te conozco. No sé quién eres. Hace un segundo lo sabía y ahora no. No tie­ nes ningún derecho a ocultarme la verda co o lo_ has hecho. Has sido un egoísta. Un egoísta. S1 temas miedo de que yo no quisiese tener una relación con un cura, déjame esa decisión a mí. Podría ha er  i  o quesí,º podría haber dicho que no, pero era rm dec1s1on. Te hab1a idealizado y ahora me pareces un cobarde. Tú tienes derecho a decir la verdad y a vivir con las personas que asumen tu verdad. Las personas que te aman no se vana asustar de tu verdad. Los pacatos y los hipócritas no que­ rrán escuchar que eres un cura y que quieres dejar de serlo, pero esa gente no es la gente con la que tú quieres vivir. Yo no soy una pacata, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
+
+CARMEN-PACO
+ ...Yo no soy una pacata, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
 
 JORGE
 No.
@@ -5241,30 +5195,12 @@ JORGE	.
 No me dejes así. No... Me he equivocado, pero ent1 nde,
 que yo no... Yo no sabía cómo hacerlo... No he sabido... Voy a conseguir la dispensa y nos vamos a casar.
 
-
-
-CARMEN
-Inténtalo. Consigue la dispensa, pero, no sé qué decirte ahora, conmigo no cuentes. En este momento prefiero tenerlo sola. No sé si quiero tenerlo contigo. No lo sé. Creo que es mejor que yo haga mi vida y tú la tuya y,
-168
-
 CARMEN
 No lo sé, Jorge.
 
 JORGE
 ¿Qué no sabes?
-
-
-
-
-
-
 169
-
-
-
-
-ALFREDO 5ANZOL
-
 
 CARMEN
 Tengo que pensar.
@@ -5274,12 +5210,12 @@ No me digas eso, yo soy el mismo. Yo...
 
 CARMEN
 No eres el mismo. No has confiado en mí. Y yo ahora no sé si confío en ti. Lo siento.
-
 CARMEN se va.
 
 JORGE
 Carmen... No me dejes así.
 
+AUTOR
 CARMEN sigue caminando.
 
 JORGE
@@ -5288,16 +5224,18 @@ Te llamaré para casarnos.
 CARMEN
 Adiós, Jorge.
 
-EL BAR QUESE TRAGó A TODOS LOS ESPAJ\:OLES
+XXVII
+Música. JORGE se viste con traje de cura. Llama a su hennano.
 
-
+JORGE
+Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. En cuanto te cuelgue voy a llamar a Martínez de Iriarte para que me diga con quién tengo que hablar en el Vaticano. Evaristo,
+170
 ¿tú podrías mandarme algo de dinero? Todo lo que pue­ das. Gracias. Te lo devolveré. Gracias. Un abrazo. Te llamo desde Roma.
-
 JORGE cuelga.
-
 
 XXVIII
 
+AUTOR
 Música. Aeropuerto de Fiumicino, Roma, Italia. La gente está consternada. Una MONJA de rodillas reza. Una chica llora desconsolada. Corros de gente hablando. JORGE sale del avióny se encuentra con el cuadro. No entiende qué pasa. Se acerca a la MONJA que reza de rodillas.
 
 JORGE
@@ -5305,25 +5243,6 @@ Disculpe, ¿sabe usted qué pasa?
 
 MONJA
 El papa ha muerto.
-
-
-
-
-
-
-
-
-
-
-
-
-
-JORGE
-
-
-XXVII
-
-Música. JORGE se viste con traje de cura. Llama a su hennano.
 
 JORGE
 ¿Cuándo?
@@ -5334,26 +5253,11 @@ Ahora. Pobre Juan XXIII. Pobre Giovannino.
 JORGE
 Sí. Pobre. Pobre Juan XXIII.
 
-Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. En cuanto te cuelgue voy a llamar a Martínez de Iriarte para que me diga con quién tengo que hablar en el Vaticano. Evaristo,
-170
-
-
-Seva.
-
-
-
-
-
 171
-
-
-
-ALFREDO 5ANZOL
-
 
 XXIV
 
-
+XXXXX
 
 
 JORGE
