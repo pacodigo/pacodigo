@@ -12,14 +12,18 @@ https://es.javascript.info/debugging-chrome
 	
 	<style>
 		.button {
-		  background-color: grey;
-		  border: none;
-		  color: white;
-		  border-radius: 10px;
-		  font-size: 20px;
-		 height: 50px;						
-		 margin: 8px 10px 8px 10px;
-		 padding: 8px 12px;
+			background-color: grey;
+			border: none;
+			color: white;
+			border-radius: 10px;
+			font-size: 20px;
+			height: 50px;						
+			margin: 8px 10px 8px 10px;
+			padding: 8px 12px;
+		}
+		.btn {
+			font-size: 20px;
+			height: 40px;	
 		}
 		hr {
 			height: 10px;
@@ -35,7 +39,7 @@ https://es.javascript.info/debugging-chrome
 			
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
-			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
 			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
 		
@@ -68,17 +72,15 @@ https://es.javascript.info/debugging-chrome
 		
 			
 		<br><br><br>
-		<div style = "background: grey;">
+		<div style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
-		<p>  
-		 <input type="file" id="file-input" />
-		</p>
-		<button onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
-		<p> 
-		<input type="checkbox" id="CB_emplRadio"> Acortar texto
-		</p>
+		<p> <input class="btn" type="file" id="file-input" /> </p>
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+		<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
+		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+		<p> <input type="checkbox" id="CB_emplRadio"> Acortar texto </p>
 		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
 		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
 		
@@ -119,6 +121,10 @@ https://es.javascript.info/debugging-chrome
 		} else {
 			document.exitFullscreen();
 		}
+	}
+	
+	function bodyFullScreen(){
+		document.querySelector('body').requestFullscreen();
 	}
 	
 	function conmutaVisibilidad(){
