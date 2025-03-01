@@ -12,6 +12,7 @@ https://es.javascript.info/debugging-chrome
 	
 	<style>
 		.button {
+		  background-color: grey;
 		  border: none;
 		  color: white;
 		  border-radius: 10px;
@@ -33,14 +34,14 @@ https://es.javascript.info/debugging-chrome
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-			<button class="button"  style="background-color: orange; width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
 		
 		<div id="idDivPaginas" style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
-			<button class="button"  style="background-color: orange; width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
+			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
+			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
 		</div>
 		
@@ -51,20 +52,21 @@ https://es.javascript.info/debugging-chrome
 		</div>
 		<br><hr>
 		
-		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
-			<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
+		<div id ="idDivControlSpeaking">
+			<div style = "display:flex;    justify-content: center;     align-items: center;">
+				<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
+				<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
+			</div>
+			<br><hr>
 		</div>
 		
-		<br><hr>
+		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
 			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="toggleFullScreen();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
 		
-	
-		<hr>
-		
+			
 		<br><br><br>
 		<div style = "background: grey;">
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
@@ -73,7 +75,7 @@ https://es.javascript.info/debugging-chrome
 		<p>  
 		 <input type="file" id="file-input" />
 		</p>
-		<button onclick = test()>test</button>
+		<button onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
 		<p> 
 		<input type="checkbox" id="CB_emplRadio"> Acortar texto
 		</p>
