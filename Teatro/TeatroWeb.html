@@ -37,13 +37,9 @@ https://es.javascript.info/debugging-chrome
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
-		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
-			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
-		</div>	
-		
+				
 		<div id="idDivPaginas" style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
+			<button class="button"  style="width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivPaginas');">X</button>
 			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
 			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
 			<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
@@ -61,8 +57,15 @@ https://es.javascript.info/debugging-chrome
 				<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
 				<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
 			</div>
-			<br><hr>
 		</div>
+		
+		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
+		</div>	
+
+		<br><hr>
 		
 		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
@@ -79,6 +82,7 @@ https://es.javascript.info/debugging-chrome
 		<p> <input type="file" id="file-input" /> </p>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivPaginas");>idDivPaginas</button>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button>		
 		<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
 		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
 		<p> <input type="checkbox" id="CB_emplRadio"> Acortar texto </p>
@@ -274,7 +278,7 @@ function infoDeLinea (lineaTexto){
 			puntosQuitar2++;
      }
      
-	if ((2 < longitudCadena) && (longitudCadena < 7) && (puntosJorge > 3))
+	if ((2 < longitudCadena) && (longitudCadena < 8) && (puntosJorge > 4)) //if ((2 < longitudCadena) && (longitudCadena < 7) && (puntosJorge > 3))
 		esJorge = true;
 	if ((2 < longitudCadena) && (longitudCadena < 27) && (numMayusculas > numMinusculas))
 		esPersonaje = true;
