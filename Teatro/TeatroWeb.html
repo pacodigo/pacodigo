@@ -41,9 +41,9 @@ https://es.javascript.info/debugging-chrome
 		<div id ="idDivOpciones" style="font-size: 15pt" >
 			<div style = "display:flex; justify-content: center;align-items: center; color:blue;">
 				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-				<input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta</input>
-		        <input style = "zoom:2;" type="checkbox" id="idCbVoz" checked>Voz</input>
-				<input style = "zoom:2;" type="checkbox" id="idSilenciarme" >Silenc</input>
+				
+		        <input style = "zoom:1.5;" type="checkbox" id="idCbVoz" checked>Voz</input>
+				<input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" >Silenc</input>
 				<button class="button"  style=" width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
 			</div>
 		</div>
@@ -102,6 +102,7 @@ https://es.javascript.info/debugging-chrome
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
 		<p> <input type="file" id="file-input" /> </p>
+		<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
 		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
@@ -233,11 +234,11 @@ https://es.javascript.info/debugging-chrome
 		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
 		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
 		
-		//if (vozOn){
-		if (document.getElementById("idCbVoz").checked){
+		if (document.getElementById("idCbVoz").checked){					// Si Voz=On
 			var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
 			if (document.getElementById("idCbAcortaTexto").checked)
 				decir (acortarTexto(textoParrafoAnterior));
+				//decirConcatenado (acortarTexto(textoParrafoAnterior),1);
 			else
 				decir (textoParrafoAnterior);		
 			// Parte respuesta:
@@ -438,10 +439,13 @@ function infoDeLinea (lineaTexto){
 			parrafoSolicitado++;
 			decirConcatenado ("Sile.",0);			// Añado un silencio en plan cutre.
 			}
-		document.querySelector('#idParrafo').value = parrafoSolicitado;
-		cambioNumParrafoEvent();
 		decirConcatenado ("Fin.", 1);
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+		//cambioNumParrafoEvent();
+		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
+		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
 	}
+
 
 	function decirConcatenado (enteredText, volumen){
 		const speechSynth = window.speechSynthesis;   
