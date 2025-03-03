@@ -41,9 +41,8 @@ https://es.javascript.info/debugging-chrome
 		<div id ="idDivOpciones" style="font-size: 15pt" >
 			<div style = "display:flex; justify-content: center;align-items: center; color:blue;">
 				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-				
-		        <input style = "zoom:1.5;" type="checkbox" id="idCbVoz" checked>Voz</input>
-				<input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" >Silenc</input>
+		        <input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input>
+				<input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input>
 				<button class="button"  style=" width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
 			</div>
 		</div>
@@ -60,7 +59,7 @@ https://es.javascript.info/debugging-chrome
 		</div>
 		-->
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
+			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">idCajaParrafoAnterior </textarea>
 		</div>
 		<br><hr>
 		<!--
@@ -80,10 +79,9 @@ https://es.javascript.info/debugging-chrome
 	
 		
 		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>
-			
-			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="cambioNumParrafoEvent();">Act</button>
-			<button class="button"  style="width: 20%; " type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">P+</button>
+			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>	
+			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
+			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');">X</button>
 			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCa</button>
 		</div>	
 		
@@ -91,7 +89,7 @@ https://es.javascript.info/debugging-chrome
 		
 		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="toggleFullScreen();">idCajaParrafoMio </textarea>
+			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
 		
@@ -186,10 +184,16 @@ https://es.javascript.info/debugging-chrome
 	
 	function conmutaVisibilidad(){
 		console.log("Pinchado.");
+		/*
 		if (document.getElementById('idDivCajaParrafoMio').style.visibility!="hidden")		
 			document.getElementById('idDivCajaParrafoMio').style.visibility="hidden";
 		else
 			document.getElementById('idDivCajaParrafoMio').style.visibility="initial";
+		*/
+		if (document.getElementById('idCajaParrafoMio').style.color!="white")		
+			document.getElementById('idCajaParrafoMio').style.color="white";
+		else
+			document.getElementById('idCajaParrafoMio').style.color="black";
 	}
 
 /*		
@@ -442,6 +446,7 @@ function infoDeLinea (lineaTexto){
 		decirConcatenado ("Fin.", 1);
 		document.querySelector('#idParrafo').value = parrafoSolicitado;
 		//cambioNumParrafoEvent();
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
 		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
 		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
 	}
