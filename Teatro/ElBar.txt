@@ -1,5 +1,6 @@
 
 CURA DEL PUEBLO
+Versión: 3/3
 ¿Quieres que demos una vuelta?
 
 JORGE 
@@ -10,7 +11,7 @@ CURA DEL PUEBLO
 ¿Te gustaría que Dios te amara más que a los demás?
 
 JORGE
-Dios arna a todos igual.
+Dios amna a todos igual.
 
 CURA DEL PUEBLO
 ¿Te gustaría defraudar a Dios?
@@ -30,7 +31,7 @@ MADRE DE JoRGE
 ¿Has hablado con el cura?
 
 JORGE
-Sí.
+Si
 
 MADRE DE JORGE
 ¿Estás seguro de que quieres ir?
