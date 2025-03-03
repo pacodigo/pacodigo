@@ -68,10 +68,10 @@ https://es.javascript.info/debugging-chrome
 		-->
 		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>
-			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
 			<button id = "idBotonVoz" class="button"  style="width: 20%;" type="button" onclick="botonVoz();">V</button>
 			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">P+</button>
-			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCat</button>
+			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCa</button>
 		</div>	
 		
 		<br><hr>
@@ -225,9 +225,15 @@ https://es.javascript.info/debugging-chrome
 			if (document.getElementById("idCbAcortaTexto").checked)
 				decir (acortarTexto(textoParrafoAnterior));
 			else
-				decir (textoParrafoAnterior);
-		}
+				decir (textoParrafoAnterior);		
+			// Parte respuesta:
+			if (!document.getElementById("idSilenciarme").checked){
+				var textoMiParrafo = arrayParrafos[indiceMiParrafo].texto;
+				decirConcatenado ("O:" + textoMiParrafo, 1);
+			}
+		}			
 	}
+
 
 	function getTodaInfoDeParrafo(indiceParrafos){
 		var infoProcesada = (arrayParrafos[indiceParrafos].personaje + "\n" + arrayParrafos[indiceParrafos].texto);
