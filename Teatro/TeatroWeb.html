@@ -37,7 +37,7 @@ https://es.javascript.info/debugging-chrome
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 			
-				
+		<!--		
 		<div id="idDivPaginas">
 			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
 				<button class="button"  style="width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivPaginas');">X</button>
@@ -47,12 +47,12 @@ https://es.javascript.info/debugging-chrome
 			</div>
 			<hr>
 		</div>
-		
+		-->
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
 			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick="conmutaVisibilidad();">idCajaParrafoAnterior </textarea>
 		</div>
 		<br><hr>
-		
+		<!--
 		<div id ="idDivControlSpeaking">
 			<div style = "display:flex;    justify-content: center;     align-items: center;">
 				<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
@@ -65,7 +65,15 @@ https://es.javascript.info/debugging-chrome
 			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
 			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
-
+		-->
+		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<button id = "idBotonVoz" class="button"  style="width: 10%;" type="button" onclick="botonVoz();">Voz</button>
+			<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
+			<button class="button"  style="width: 30%; background-color: blue;" type="button" onclick="macroConcatena();">ConCat</button>
+		</div>	
+		
 		<br><hr>
 		
 		
@@ -81,15 +89,17 @@ https://es.javascript.info/debugging-chrome
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
 		<p> <input type="file" id="file-input" /> </p>
-		<button class="btn" onclick = conmutaVisualizacionDiv("idDivPaginas");>idDivPaginas</button>
+		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivPaginas");>idDivPaginas</button>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
-		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button>		
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
 		<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
 		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
-		<p> <input type="checkbox" id="CB_emplRadio"> Acortar texto </p>
+		<p> <input type="checkbox" id="idCbAcortaTexto" checked> Acortar texto </p>
+		<p> <input type="checkbox" id="idSilenciarme" > Silenciarme </p>
 		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
 		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
-		
+		<br>
+		<button class="btn" onclick = "test ()"> Test </button>
 		</div>
 					
 <script>
@@ -109,6 +119,34 @@ https://es.javascript.info/debugging-chrome
 			.catch(err => {
 				alert("ERROR: " + err);
 			});	 
+	}
+	
+	var vozOn = false;
+	function botonVoz(){
+		if (!vozOn){		// Paso a Voz ON
+			vozOn = true;
+			document.getElementById('idBotonVoz').style.backgroundColor = 'orange';
+		}
+		else{
+			vozOn = false;	// Voz Off
+			decir("");		// Interrumpimos si hay speaking actual.
+			document.getElementById('idBotonVoz').style.backgroundColor = 'grey';
+		}
+	}
+	
+	function acortarTexto (textoEntrada){
+		var arrayDePalabras = textoEntrada.split(' ');
+		var numPalabras = arrayDePalabras.length;
+		var numMaxPalabras = 10;
+		var respuesta ="Recortado: ";
+		if (numPalabras > numMaxPalabras){
+			for (indicePalabras = (numPalabras-numMaxPalabras); indicePalabras<numPalabras; indicePalabras++){
+			respuesta = respuesta + " " + arrayDePalabras[indicePalabras];
+			}
+		}
+		else 
+			respuesta = textoEntrada;
+		return (respuesta);	
 	}
 	
 	function conmutaVisualizacionDiv(divID){
@@ -140,7 +178,8 @@ https://es.javascript.info/debugging-chrome
 		else
 			document.getElementById('idDivCajaParrafoMio').style.visibility="initial";
 	}
-		
+
+/*		
 	function cambioNumPaginaEvent(){
 		var numPagina = document.querySelector('#idPagina').value;
 		var encontrado = false;
@@ -155,12 +194,39 @@ https://es.javascript.info/debugging-chrome
 			i++;
 		}
 	}
-			
+	*/
+	function devuelveRegistroDePagina (numPagina){
+		var encontrado = false;
+		var i=0;
+		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
+			var indiceParrafos = indicesParrafosDePaco[i];
+			if (arrayParrafos[indiceParrafos].pagina >= numPagina){			// Encontrado
+				encontrado = true; 
+				return (i+1);
+				}
+			i++;
+		}
+		return(0);
+	}
+
+	
 	function cambioNumParrafoEvent(){
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		if (parrafoSolicitado<0){		// Num párrafo negativo >> Ha metido una pagina
+			var paginaSolicitada = -parrafoSolicitado;
+			parrafoSolicitado = devuelveRegistroDePagina(paginaSolicitada);
+			document.querySelector('#idParrafo').value = parrafoSolicitado;
+		}
 		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
 		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
 		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+		if (vozOn){
+			var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
+			if (document.getElementById("idCbAcortaTexto").checked)
+				decir (acortarTexto(textoParrafoAnterior));
+			else
+				decir (textoParrafoAnterior);
+		}
 	}
 
 	function getTodaInfoDeParrafo(indiceParrafos){
@@ -169,7 +235,7 @@ https://es.javascript.info/debugging-chrome
 		infoProcesada = infoProcesada + ("\nNúm.Línea: " + arrayParrafos[indiceParrafos].numLineaParrafo);
 		return (infoProcesada);
 	}
-
+/*
 	function actual(){
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
 		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
@@ -186,7 +252,7 @@ https://es.javascript.info/debugging-chrome
 		decir (texto);
 	}
 	
-	
+*/	
 	var arrayParrafos = [];
 	var indicesParrafosDePaco = [];
 	var textoObraEnBruto ="";
@@ -327,20 +393,47 @@ function infoDeLinea (lineaTexto){
 		lector.readAsText(archivo);
 	}
 
-			
-			
-
-function decir (enteredText){
-    const speechSynth = window.speechSynthesis;   
-	speechSynth.cancel();
-	const newUtter = new SpeechSynthesisUtterance(enteredText);
-	speechSynth.speak(newUtter);
-}
+	function decir (enteredText){
+		const speechSynth = window.speechSynthesis;   
+		speechSynth.cancel();
+		const newUtter = new SpeechSynthesisUtterance(enteredText);
+		speechSynth.speak(newUtter);
+	}
 
 
+	function macroConcatena(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		for (i=0; i<5; i++){
+			var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+			var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
+			if (document.getElementById("idCbAcortaTexto").checked)
+				textoParrafoAnterior= acortarTexto(textoParrafoAnterior);
+			var textoMiParrafo = arrayParrafos[indiceMiParrafo].texto;
+			decirConcatenado ("U:" + textoParrafoAnterior, 1);
+			decirConcatenado ("Silencio.",0);			// Añado un silencio en plan cutre.
+			if (document.getElementById("idSilenciarme").checked)
+				decirConcatenado (textoMiParrafo, 0);		//decirConcatenado (textoMiParrafo, 0.5);
+			else
+				decirConcatenado ("O:" + textoMiParrafo, 1);
+			parrafoSolicitado++;
+			decirConcatenado ("Sile.",0);			// Añado un silencio en plan cutre.
+			}
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+		cambioNumParrafoEvent();
+		decirConcatenado ("Fin.", 1);
+	}
+
+	function decirConcatenado (enteredText, volumen){
+		const speechSynth = window.speechSynthesis;   
+		const newUtter = new SpeechSynthesisUtterance(enteredText);
+		newUtter.volume = volumen;
+		speechSynth.speak(newUtter);
+	}
 
 
-		
+
+
+
 			
 			
 		
