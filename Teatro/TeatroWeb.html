@@ -36,7 +36,18 @@ https://es.javascript.info/debugging-chrome
  
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
-			
+		
+
+		<div id ="idDivOpciones" style="font-size: 15pt" >
+			<div style = "display:flex; justify-content: center;align-items: center; color:blue;">
+				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+				<input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta</input>
+		        <input style = "zoom:2;" type="checkbox" id="idCbVoz" checked>Voz</input>
+				<input style = "zoom:2;" type="checkbox" id="idSilenciarme" >Silenc</input>
+				<button class="button"  style=" width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
+			</div>
+		</div>
+		
 		<!--		
 		<div id="idDivPaginas">
 			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
@@ -66,11 +77,13 @@ https://es.javascript.info/debugging-chrome
 			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
 		</div>	
 		-->
+	
+		
 		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>
-			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-			<button id = "idBotonVoz" class="button"  style="width: 20%;" type="button" onclick="botonVoz();">V</button>
-			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">P+</button>
+			
+			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="cambioNumParrafoEvent();">Act</button>
+			<button class="button"  style="width: 20%; " type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">P+</button>
 			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCa</button>
 		</div>	
 		
@@ -89,13 +102,12 @@ https://es.javascript.info/debugging-chrome
 		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 	
 		<p> <input type="file" id="file-input" /> </p>
-		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivPaginas");>idDivPaginas</button>
-		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
+		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
 		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
 		<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
 		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
-		<p> <input type="checkbox" id="idCbAcortaTexto" checked> Acortar texto </p>
-		<p> <input type="checkbox" id="idSilenciarme" > Silenciarme </p>
+
 		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
 		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
 		<br>
@@ -120,7 +132,7 @@ https://es.javascript.info/debugging-chrome
 				alert("ERROR: " + err);
 			});	 
 	}
-	
+	/*
 	var vozOn = false;
 	function botonVoz(){
 		if (!vozOn){		// Paso a Voz ON
@@ -133,7 +145,7 @@ https://es.javascript.info/debugging-chrome
 			document.getElementById('idBotonVoz').style.backgroundColor = 'grey';
 		}
 	}
-	
+	*/
 	function acortarTexto (textoEntrada){
 		var arrayDePalabras = textoEntrada.split(' ');
 		var numPalabras = arrayDePalabras.length;
@@ -220,7 +232,9 @@ https://es.javascript.info/debugging-chrome
 		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
 		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
 		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
-		if (vozOn){
+		
+		//if (vozOn){
+		if (document.getElementById("idCbVoz").checked){
 			var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
 			if (document.getElementById("idCbAcortaTexto").checked)
 				decir (acortarTexto(textoParrafoAnterior));
