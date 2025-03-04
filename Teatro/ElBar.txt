@@ -1,6 +1,7 @@
 
 CURA DEL PUEBLO
 Versión: 4/3
+Hasta página 185 Incluida
 ¿Quieres que demos una vuelta?
 
 JORGE 
@@ -5249,18 +5250,6 @@ Sí. Pobre. Pobre Juan XXIII.
 
 XXIV
 
-XXXXX
-
-
-JORGE
-Claro.
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-
-Enla puerta del Palazzo del Sant'Uficio, Ciudad del Vaticano.
-
 CRISÓSTOMO CARLUCCI
 Lo siento mucho. Como puede comprender, hasta que no haya nuevo papa hay una serie de procedimientos que quedan paralizados.
 
@@ -5283,6 +5272,9 @@ CR!SÓSTOMO CARLUCCI
 La paciencia es la mejor ayuda. Ahora, si me permite, tengo que irme.
 
 172
+
+JORGE
+Claro.
 
 CRISÓSTOMO CARLUCC!
 Encantado de conocerle.
@@ -5332,7 +5324,7 @@ TX!STORRO
 Perdona, ¿tú eres Jorge Arizmendi?
 
 JORGE
-Sí.
+Si.
 
 TXISTORRO
 ¿No me conoces?
@@ -5348,10 +5340,6 @@ JORGE
 TXISTORRO
 Pues claro que soy Txistorro, dame un abrazo me cago en mi puta vida, qué alegría más grande.
 174
-
-
-EL BI\R QUE SE TRAGó A TODOS LOS ESPAÑOLES
-
 
 JORGE y TXISTORRO se abrazan, TXISTORRO bastante más efusivo.
 
@@ -5382,13 +5370,6 @@ Exactamente.
 TXISTORRO
 Qué pena, ¿verdad? Juan XXIII se hacía de querer. Yo he sido feliz con él. Ha hecho mucho este papa, pero... asíes
 175
-
-
-
-ALFREDO5ANZOL
-
-
-
 la vida. Dios se lo ha querido llevar, y cuando nos quiera llevar a nosotros igual será. Cuentico cuentao por la chi­ menea se ha escapau. ¿Cómo estás, Jorge? Cuéntame qué vida llevas. ¿Qué haces en Roma? ¿Qué te estás toman­ do? ¿Quieres un vino? ¿Quieres algo de comer? ¿Que has venido de turismo o tienes papeleo que hacer o qué?
 
 JORGE
@@ -5407,12 +5388,6 @@ JORGE
 ¡Hombre! Yo me hice cura con mucha vocación.
 
 176
-
-
-EL BAR QUESE TRACó A TOOOS LOS ESPAÑOLES
-
-
-
 
 TXISTORRO
 Con más que muchos que andan por ahí echando sermo­ nes a los que tienen dudas. Joder, Jorge. ¿Y esa tristeza tan grande que tienes en el pecho? ¿Eh? Esa tristeza no es por dejar de ser cura.
@@ -5442,11 +5417,6 @@ TXISTORRO
 Pues hay que darse prisa.
 177
 
-
-
-ALFREDO 5ANZOL
-
-
 JORGE
 ¿Prisa? Si han cerrado todo. He hablado con uno que tra­ baja en el Palacio del Santo Oficio y me ha dicho que hasta que no haya nuevo papa está todo parado. Y las dispensas las firma el papa, Txistorro. No tengo nada que hacer.
 
@@ -5471,11 +5441,6 @@ Sí, porque a la primera me los devolvieron «por falta de humildad».
 TXISTORRO
 ¿Por falta de humildad? (Se ríe.) ¡Qué cabrón! Qué orgullo­ sico has sido toda tu puta vida. En el Vaticano hay que ir
 178
-
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
 
 con la cabeza gacha, amigo. Aquí se dan unas collejas muy grandes a los gallicos. Así que, lo primero, la cresta te la peinas para atrás. Aquí por lo bajo, y con mucha suerte, algo se puede conseguir, pero levantando la cabecica no sacas ni esto. A ver,Jorge. Tú de dinero, ¿cómo andas?
 
@@ -5507,12 +5472,6 @@ JORGE
 Aquí arriba hay una pensión.
 179
 
-
-
-ALFREDO 5ANZOL
-
-
-
 TX!STORRO
 Ven a mi casa. Yo vivo de patrona, pero hay una habita­ ción libre. Si vienes no hay ningún problema.
 
@@ -5535,8 +5494,7 @@ TXIST0RRO
 Hasta mañana.
 
 JORGE
-Adiós.
-
+Adios.
 
 
 XXXI
@@ -5576,12 +5534,6 @@ Ahora mismo.
 
 181
 
-
-
-ALFREDO SANZOL
-
-
-
 TXISTORRO coge el sobre con mucho cuidado. Se lo da a JORGE y este loguarda en un bolsillo interior de la chaqueta. CRISÓSTOMO CARLUCCI les mira.
 
 TXJSTORRO
@@ -5604,20 +5556,21 @@ Buenos días.
 
 CRISÓSTOMO CARLUCCI 110 dice nada. Ellos se van.
 
-
 XXXII
 
-
-EL DAR QUE SE TRAGÓ A TODOS LOS ESf'AJ(;OLES
-
-
-
-TXISTORRO
-Oye, te digo la verdad, yo tenía otra imagen de este hom­ bre. Si no, ni se me ocurre intentarlo.
+AUTOR
+TXISTORRO y JORGE en la calle frente al Palacio del Santo Oficio.
 
 JORGE
-Qué vergüenza cuando te ha dicho que quitaras el sobre
-de la mesa.
+¡Qué vergüenza! ¡Madre mía, qué vergüenza!
+
+182
+
+TXISTORRO
+Oye, te digo la verdad, yo tenía otra imagen de este hom­bre. Si no, ni se me ocurre intentarlo.
+
+JORGE
+Qué vergüenza cuando te ha dicho que quitaras el sobre de la mesa.
 
 TXISTORRO
 Te confieso que yo también me he quedado cortado. No me lo esperaba. Que por otra parte me alegro. Te quiero decir. Justo ahora no nos viene bien encontrarnos con gente honrada, pero para la vida en general a mí sí me viene bien. Te hace recuperar la fe en el ser humano.
@@ -5638,59 +5591,21 @@ Sí, pero no ha habido suerte.
 
 
 
-
-
-
-
-JORGE
-
-TXISTORRO y JORGE en la calle frente al Palacio del Santo Oficio.
-
-
 Con su permiso, creo que no es la clase de hombre que necesitan.
-
-¡Qué vergüenza! ¡Madre mía, qué vergüenza!
-
-182
 
 TXISTORRO
 Ya nos hemos dado cuenta.
 
-
-
 183
-
-
-
-
-ALFREDO SANZOL
-
-
-
-
 Marce] van Gal
-
-
-
-
 es la persona con la que tienen que
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-
-JORGE
-A mí me duele el pecho. Me duele el pecho de vergüenza.
-
-hablar. Es un consejo.
 
 TXJSTORRO
 ¿Quién es usted?
 
-
+ANTONIO LAZZARONI
 Nadie, no quiero nada, solo ayudar. Digan que van de parte del padre Lazzaroni. Marce! van Gal está también en el Palacio del Santo Oficio. Planta tercera, oficina nueve. Él les puede ayudar. Buenos días.
-
-ANTONIO LAZZARONI desaparece como apareció.
+ANTONIO desaparece como apareció.
 
 JORGE
 Vámonos de aquí.
@@ -5712,6 +5627,8 @@ No perdemos nada. El no ya lo tenemos.
 
 184
 
+JORGE
+A mí me duele el pecho. Me duele el pecho de vergüenza.
 
 TXISTORRO
 Oye, Jorge, ¿tú a qué has venido a Roma, a buscar tu dis-
@@ -5726,6 +5643,7 @@ JORGE le pasa el sobre a TXISTORRO. TXISTORRO se lo guarda en un bolsillo de la 
 
 XXXIII
 
+AUTOR
 JORGE y TXISTORRO sentados frente a la mesa de MARCEL
 VAN GAL, que no se encuentra en el despacho. Esperan. Hablan en voz baja.
 
@@ -5741,12 +5659,6 @@ Si tarda tanto es que está muy ocupado.
 TXISTORRO
 ¿Qué crees que va a ser, niño o niña?
 185
-
-
-
-ALFREDO 5ANZOL
-
-
 
 JORGE
 ¿Quién?
