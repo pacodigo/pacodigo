@@ -40,10 +40,10 @@ https://es.javascript.info/debugging-chrome
 
 		<div id ="idDivOpciones" style="font-size: 15pt" >
 			<div style = "display:flex; justify-content: center;align-items: center; color:blue;">
-				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
 		        <input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input>
 				<input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input>
-				<button class="button"  style=" width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
+				<button class="button"  style=" width: 10%; height: 30px;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
 			</div>
 		</div>
 		
@@ -89,7 +89,7 @@ https://es.javascript.info/debugging-chrome
 		
 		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="conmutaVisibilidad();">idCajaParrafoMio </textarea>
+			<textarea id="idCajaParrafoMio" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="clickEnCajaParrafoMio();">idCajaParrafoMio </textarea>
 		</div>
 		<br><hr>
 		
@@ -145,6 +145,22 @@ https://es.javascript.info/debugging-chrome
 		}
 	}
 	*/
+	
+	function clickEnCajaParrafoMio(){
+		if (document.getElementById("idCbVoz").checked){
+			var parrafoSolicitado = document.querySelector('#idParrafo').value;	
+			var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+			var textoMiParrafo = arrayParrafos[indiceMiParrafo].texto;
+				decir (textoMiParrafo);
+		}
+		else {
+			if (document.getElementById('idCajaParrafoMio').style.color!="white")		
+				document.getElementById('idCajaParrafoMio').style.color="white";
+			else
+				document.getElementById('idCajaParrafoMio').style.color="black";
+		}
+	}
+	
 	function acortarTexto (textoEntrada){
 		var arrayDePalabras = textoEntrada.split(' ');
 		var numPalabras = arrayDePalabras.length;
@@ -160,6 +176,7 @@ https://es.javascript.info/debugging-chrome
 		return (respuesta);	
 	}
 	
+	/*
 	function conmutaVisualizacionDiv(divID){
 	    var x = document.getElementById(divID);
 		if (x.style.display === "none") {
@@ -168,9 +185,8 @@ https://es.javascript.info/debugging-chrome
 			x.style.display = "none";
 		}
 	}
-	
+	*/
 	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
-		conmutaVisualizacionDiv("idDivPaginas");
 		if (!document.fullscreenElement) {
 			document.documentElement.requestFullscreen();
 		} else {
@@ -182,19 +198,7 @@ https://es.javascript.info/debugging-chrome
 		document.querySelector('body').requestFullscreen();
 	}
 	
-	function conmutaVisibilidad(){
-		console.log("Pinchado.");
-		/*
-		if (document.getElementById('idDivCajaParrafoMio').style.visibility!="hidden")		
-			document.getElementById('idDivCajaParrafoMio').style.visibility="hidden";
-		else
-			document.getElementById('idDivCajaParrafoMio').style.visibility="initial";
-		*/
-		if (document.getElementById('idCajaParrafoMio').style.color!="white")		
-			document.getElementById('idCajaParrafoMio').style.color="white";
-		else
-			document.getElementById('idCajaParrafoMio').style.color="black";
-	}
+
 
 /*		
 	function cambioNumPaginaEvent(){
