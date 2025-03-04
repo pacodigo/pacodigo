@@ -101,6 +101,9 @@ https://es.javascript.info/debugging-chrome
 		
 			<p> <input type="file" id="file-input" /> </p>
 			<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
+			 <label for="quantity">Max palabras:</label>
+			<input id="idMaxPalabras" type="number" name="quantity" min="10" max="50" value="10">
+			<p></p>
 			<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
 			<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
 			<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
@@ -184,7 +187,7 @@ https://es.javascript.info/debugging-chrome
 	function acortarTexto (textoEntrada){
 		var arrayDePalabras = textoEntrada.split(' ');
 		var numPalabras = arrayDePalabras.length;
-		var numMaxPalabras = 10;
+		var numMaxPalabras = document.querySelector('#idMaxPalabras').value;	; 	//Antes 10
 		var respuesta ="Recorta: ";	//Antes: "Recortado: "
 		if (numPalabras > numMaxPalabras){
 			for (indicePalabras = (numPalabras-numMaxPalabras); indicePalabras<numPalabras; indicePalabras++){
@@ -450,7 +453,6 @@ function infoDeLinea (lineaTexto){
 		speechSynth.speak(newUtter);
 	}
 
-
 	function macroConcatena(){
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
 		for (i=0; i<5; i++){
@@ -476,7 +478,6 @@ function infoDeLinea (lineaTexto){
 		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
 	}
 
-
 	function decirConcatenado (enteredText, volumen){
 		const speechSynth = window.speechSynthesis;   
 		const newUtter = new SpeechSynthesisUtterance(enteredText);
@@ -486,15 +487,6 @@ function infoDeLinea (lineaTexto){
 
 
 
-
-/*
-			margin: 8px 10px 8px 10px;
-			padding: 8px 12px;
-			*/
-			
-		
-			
-			
 			
 		</script>
     </body>
