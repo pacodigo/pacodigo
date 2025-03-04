@@ -1,6 +1,6 @@
 
 CURA DEL PUEBLO
-Versión: 3/3
+Versión: 4/3
 ¿Quieres que demos una vuelta?
 
 JORGE 
@@ -4489,7 +4489,7 @@ Un restaurante en El Pardo
 
 
 JORGE
-Cuando llegamos al restaurante estaba feliz. En el pecho sentía pena, una presión aquí, por no haber vivido hasta ahora algo parecido. Tengo treinta y tres años y he per­ dido la vida, pensé.
+Cuando llegamos al restaurante estaba feliz. En el pecho sentía pena, una presión aquí, por no haber vivido hasta ahora algo parecido. Tengo treinta y tres años y he perdido la vida, pensé.
 
 CARMEN
 Estaba un poco asustada porque me sentía demasiado contenta, y cuando estábamos entrando al restaurante... me suelta...
@@ -4512,7 +4512,7 @@ CAMARERO
 Sí. Claro. Por supuesto. ¿Para dos?
 
 JORGE
-Sí.
+Si.
 
 CAMARERO
 Aquella mesita, por favor. (Se sientan a la mesa.) ¿De beber qué desean?
@@ -4565,7 +4565,7 @@ FRANCISCO ELIZONDO
 ¿Zer moduz? (¿Qué tal estás?).
 
 JORGE
-ÜORGE se levanta.) ¡Oso ondo! Eta zu? (¡Muy bien! ¿  tu..
+Jorge se levanta. ¡Oso ondo! Eta zu? (¡Muy bien! ¿y  tu?
 
 FRANCISCO ELIZONDO
 Qué alegría verte. Un abrazo, hombre.
@@ -4603,7 +4603,7 @@ FRANCISCO ELIZONDO
 Que interesante. Entonces hablas perfectamente inglés.
 
 JORGE
-Inglés y francés. CARMEN sonríe
+Inglés y francés.
 
 FRANCISCO ELIZONDO
 Saber idiomas es nuestra única salvación. Pero sentaos, sentaos.
@@ -4649,7 +4649,7 @@ FRANCISCO ELIZONDO
 Calla.
 
 JORGE
-Unos ladrones. Una amiga de Barcelona que tiene una tienda de antigüedades en el Pueblo Español me contó que estuvieron estos dos de visita por allí, y La Collares se llevó una silla del siglo xv111. Bueno, pues aún están esperando a que paguen.
+Unos ladrones. Una amiga de Barcelona que tiene una tienda de antigüedades en el Pueblo Español me contó que estuvieron estos dos de visita por allí, y La Collares se llevó una silla del siglo 18. Bueno, pues aún están esperando a que paguen.
 
 FRANCISCO ELIZONDO
 No me digas eso que me pongo malo.
@@ -4708,7 +4708,7 @@ CARMEN
 Qué simpático tu amigo.
 
 JORGE
-Sí, es una marav.illa de hombre. Más bueno que el pan.
+Sí, es una maravilla de hombre. Más bueno que el pan.
 ¿Sabes lo que pasa? Que este, de chaval, con dieciocho años, estuvo en la cárcel por líos con el Partido Comunista, y cuando salió no se quiso exiliar, y ahora lo van a volver loco.
 
 CAMARERO
@@ -4722,7 +4722,7 @@ Muy bien.
 
 152
 JORGE
-¿Tú te crees que es normal que Franco le pida un planis­ ferio celeste a un tío que ha estado en la cárcel por comu­ nista? Pues no. Se lo ha pedido para no pagarle, para torturarlo sicológicamente.
+¿Tú te crees que es normal que Franco le pida un planis­ferio celeste a un tío que ha estado en la cárcel por comu­nista? Pues no. Se lo ha pedido para no pagarle, para torturarlo sicológicamente.
 
 CARMEN
 Sería un poco retorcido, ¿no?
@@ -4766,13 +4766,13 @@ CARMEN
 ¿En Estados Unidos te sentías libre?
 
 JORGE
-Pues mira, ahora que lo preguntas yo creo que nosotros nunca sabremos qué es la libertad. Porque, me parece, y no estoy seguro, ¿eh?, pero me parece que la libertad se aprende de niño. Si desde niño no te permiten hacerte responsable de tu libertad, si te hacen creer que la liber­ tad es obedecer órdenes, no hay manera de aprender a
+Pues mira, ahora que lo preguntas yo creo que nosotros nunca sabremos qué es la libertad. Porque, me parece, y no estoy seguro, ¿eh?, pero me parece que la libertad se aprende de niño. Si desde niño no te permiten hacerte responsable de tu libertad, si te hacen creer que la liber­ tad es obedecer órdenes, no hay manera de aprender a gestionar la responsabilidad que exige el ejercicio de la libertad.
 
 154
 
 CARMEN
-En eso estoy totalmente de acuerdo. Yo creo que lo i_ná_s
-importante de la libertad es la capacidad de po erse lum­ tes a uno mismo para que los demás sean hbres. ¿Me
+En eso estoy totalmente de acuerdo. Yo creo que lo mas
+importante de la libertad es la capacidad de ponerse límites a uno mismo para que los demás sean libres. ¿Me
 entiendes?
 
 JORGE
@@ -4790,8 +4790,7 @@ CARMEN
 Sí, porque la gente no sabe ser libre.
 
 JORGE
-Ya, pero eso hasta que no vivamos en una democracia no
-lo sabremos.
+Ya, pero eso hasta que no vivamos en una democracia no lo sabremos.
 
 CARMEN
 Cuando llegue la democracia vendrá la revancha de los
@@ -4811,7 +4810,6 @@ Digo en general, los hijos.
 CARMEN
 Ah, yo qué sé. Digo, este se está volviendo loco.
 
-XXXX
 
 CAMARERO
 Perdonen que me meta donde no me llaman, ¿pero no les
@@ -4847,11 +4845,10 @@ Perdone, sí, tiene toda la razón.
 CAMARERO
 Si llegan a entrar aquí los rusos durante la guerra, ¿qué
 pasa? ¿Que no habrían matado gente? ¿Qué tenemos que hacer, poner las fotos de los muertos en dos montones y ver cual es el montón más grande?
-Se quedan en silencio los dos.
+Se quedan en silencio.
 
 JORGE
-No hace falta hacer montones. Lo que hace falta es hacer
-juicios.
+No hace falta hacer montones. Lo que hace falta es hacer juicios.
 157
 
 CAMARERO
@@ -4995,7 +4992,7 @@ EL BAR QUE SE TRAGÓ A TODOS LOS ESPA1'10LES
 
 
 AUTOR
-JORGE llama por teléfono.
+Dinamarca. Un bar de españoles con bandera republicana. Jorge llama por teléfono.
 
 JORGE
  Evaristo, ¿qué tal estáis? Yo muy bien. ¿Tú qué tal estás? Me alegro. Oye, escúchame. Mira, estoy en Dinamarca. Sí. En una ciudad que se llama Aahrus. Desde hace una semana. He venido a aprender cómofuncionan las calefac­ ciones que vamos a poner en Madrid. En casa de una fami­ lia que me alquila una habitación. Debajo de la casa hay un bar de españoles y no corno mal. He tenido suerte. Verdura muy poca. Judías y coles, pero pequeñas. Oye, es úcharne. A ver cómo hacemos esto. Tienes que ir al obispado para enterarte de cómo va lo mío. ¿Tú te acuer­ das de un cura de Olite que era muy amigo de la madre? Eso es, el que me llevó al seminario. Pues te vas al obispa­ do y preguntas por él. Jesúsmari Martínez de Iriarte. No le digas a nadie que eres mi hermano. Di que vas para infor­ marte sobre un terna de nulidad de matrimonio. Porque él lleva esos temas. Y cuando estés con él le dices que eres mi hermano y que vas de mi parte. ¿Me entiendes? Y oye. A ver. Te cuento una cosa. Me han entrado las prisas porque he conocido a una chica. Sí. Ya lo sé. Ya lo sé, pero no, no es eso. Me quiero casar. Que me quiero casar con ella. ¡No! Ell nosabe nada. ¡Cómo se lo voy a decir! ¡No puedo decirle! Porque saldría corriendo. Cuando tenga la dispen­ sa en la mano ledigo que me quiero casar con ella y le digo también lo otro. ¡Antes no se lo voy a decir, Evaristo!
@@ -5071,21 +5068,21 @@ CARMEN
 Gracias. Tú también. Has venido muy pronto.
 
 JORGE
-Sí.
+Si.
 
 CARMEN
 ¿No me vas a dar un beso?
 
 JORGE
-Claro. Te estaba mirando. (JORGE se aceren a CARMEN1 .) lTe
+Claro. Te estaba mirando. (JORGE se aceren a CARMEN). ¿Te
 puedo tocar la tripa?
 
 CARMEN
-Sí.
+Si.
 165
 
 JORGE
-GORGE toca la tripa de CARMEN.) ¿Notas algo?
+(JORGE toca la tripa de CARMEN.) ¿Notas algo?
 
 CARMEN
 No. El pecho lo tengo más lúnchado. Solo eso.
@@ -5096,7 +5093,7 @@ CARMEN
 Después de que nos casemos, ¿tienes que volver a Dinamarca?
 
 JORGE
-Sí.
+Si.
 
 CARMEN
 He comenzado a hacer los papeles. Necesito tu partida de nacimiento.
@@ -5120,13 +5117,13 @@ Pero...
 
 A JORGE se le están saltando las lágrimas sin querer. Le está viniendo una emoción que no puede controlar.
 
-CARi\1EN
+CARMEN
 ¿Qué te pasa?
 
 JORGE
 Nada. Soy tonto, se me saltan las lágrimas... (Se echa
 mano a la cartera y saca una foto de carnet. Se la enseña a
-CARMEN.) Mira.
+Carmen). Mira.
 
 CARMEN
 Qué  guapo, qué joven estás.
@@ -5138,7 +5135,7 @@ CARMEN
 Anda, eso es un clériman. ¿Estudiaste en el seminario?
 
 JORGE
-Sí. Estuve estudiando, pero no solo estuve estudiando. Meordené.
+Sí. Estuve estudiando, pero no solo estuve estudiando. Me ordené.
 
 CARMEN
 ¿Fuiste cura?
@@ -5152,7 +5149,7 @@ CARMEN
 JORGE
 Sí, pero he pedido la dispensa. Estoy esperando a que me
 167
-la deny no va a tardar. Aún no la tengo, pero oye... Oye. Estoy esperando y no va a tardar.
+la den y no va a tardar. Aún no la tengo, pero oye... Oye. Estoy esperando y no va a tardar.
 
 CARMEN
 ¿Cómo no me has dicho antes que eras cura?
@@ -5183,9 +5180,6 @@ Inténtalo. Consigue la dispensa, pero, no sé qué decirte ahora, conmigo no cu
 168
 luego ya veremos. Ahora no puedo decirte que quiero esperarte porque no es verdad. Ahora no puedo decirte nada. Me siento muy sola. Tengo la sensación de estar saliendo de un sueño y me duele. No te conozco. No sé quién eres. Hace un segundo lo sabía y ahora no. No tie­ nes ningún derecho a ocultarme la verda co o lo_ has hecho. Has sido un egoísta. Un egoísta. S1 temas miedo de que yo no quisiese tener una relación con un cura, déjame esa decisión a mí. Podría ha er  i  o quesí,º podría haber dicho que no, pero era rm dec1s1on. Te hab1a idealizado y ahora me pareces un cobarde. Tú tienes derecho a decir la verdad y a vivir con las personas que asumen tu verdad. Las personas que te aman no se vana asustar de tu verdad. Los pacatos y los hipócritas no que­ rrán escuchar que eres un cura y que quieres dejar de serlo, pero esa gente no es la gente con la que tú quieres vivir. Yo no soy una pacata, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
 
-CARMEN-PACO
- ...Yo no soy una pacata, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
-
 JORGE
 No.
 
@@ -5193,7 +5187,7 @@ CARMEN
 Prefiero que no nos veamos durante un tiempo.
 
 JORGE	.
-No me dejes así. No... Me he equivocado, pero ent1 nde,
+No me dejes así. No... Me he equivocado, pero entiende,
 que yo no... Yo no sabía cómo hacerlo... No he sabido... Voy a conseguir la dispensa y nos vamos a casar.
 
 CARMEN
