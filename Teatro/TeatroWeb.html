@@ -57,7 +57,7 @@ https://es.javascript.info/debugging-chrome
 		</div>
 		-->
 		<div style = "display:flex;    justify-content: center;     align-items: center;">
-			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">idCajaParrafoAnterior </textarea>
+			<textarea id="idCajaParrafoAnterior" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onmousedown="longClickAction('ratonAbajo');" onmouseup="longClickAction('ratonArriba');">idCajaParrafoAnterior </textarea>
 		</div>
 		<br><hr>
 		<!--
@@ -93,7 +93,7 @@ https://es.javascript.info/debugging-chrome
 		
 			
 		<br><br><br>
-		<div style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
+		<div id="idDivExtra"  style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 		
@@ -108,7 +108,7 @@ https://es.javascript.info/debugging-chrome
 			<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
 			<button class="btn" onclick = "decir ('')"> Parar Voz </button>
 			<br>
-			<button class="btn" onclick = "test ()"> Test </button>
+			<button id="idTestButton" class="btn" onclick = "test();"> Test </button>
 		</div>
 					
 <script>
@@ -129,6 +129,25 @@ https://es.javascript.info/debugging-chrome
 				alert("ERROR: " + err);
 			});	 
 	}
+	
+	var start;
+	function longClickAction(accion){
+		if (accion=="ratonAbajo")
+			start = Date.now();
+		else {
+			if (((Date.now() - start) + 1) > 500) {		// Long Click
+				console.log ("Long.");
+				document.getElementById('idCbVoz').checked=true;
+				cambioNumParrafoEvent();
+			} else {									// Click
+				console.log ("Short.");
+				document.querySelector('#idParrafo').value++;
+				cambioNumParrafoEvent();
+			}		
+		}
+	}
+	
+	
 	/*
 	var vozOn = false;
 	function botonVoz(){
@@ -163,7 +182,7 @@ https://es.javascript.info/debugging-chrome
 		var arrayDePalabras = textoEntrada.split(' ');
 		var numPalabras = arrayDePalabras.length;
 		var numMaxPalabras = 10;
-		var respuesta ="Recortado: ";
+		var respuesta ="Recorta: ";	//Antes: "Recortado: "
 		if (numPalabras > numMaxPalabras){
 			for (indicePalabras = (numPalabras-numMaxPalabras); indicePalabras<numPalabras; indicePalabras++){
 			respuesta = respuesta + " " + arrayDePalabras[indicePalabras];
