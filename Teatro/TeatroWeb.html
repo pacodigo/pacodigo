@@ -36,14 +36,15 @@ https://es.javascript.info/debugging-chrome
  
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
-		
-		<div id ="idDivOpciones" style = "display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 15pt" ">
-			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-			<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input></div>
-			<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input></div>
-			<button class="button"  style=" width: 10%; height: 30px;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
+		<div id ="idDivOpciones" style = "border: 2px solid black;">
+			<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 15pt" ">
+				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input></div>
+				<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input></div>
+				<button class="button"  style=" width: 10%; height: 30px;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
+			</div>
+			<hr>
 		</div>
-		<hr>		
 		<!--		
 		<div id="idDivPaginas">
 			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
@@ -75,14 +76,14 @@ https://es.javascript.info/debugging-chrome
 		-->
 	
 		
-		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
+		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>	
 			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
 			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');">X</button>
 			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCa</button>
 		</div>	
 		
-		<hr>
+		<br><hr>
 		
 		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
