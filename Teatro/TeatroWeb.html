@@ -188,7 +188,7 @@ https://es.javascript.info/debugging-chrome
 		var arrayDePalabras = textoEntrada.split(' ');
 		var numPalabras = arrayDePalabras.length;
 		var numMaxPalabras = document.querySelector('#idMaxPalabras').value;	; 	//Antes 10
-		var respuesta ="Recorta: ";	//Antes: "Recortado: "
+		var respuesta ="Corto: ";	//Antes: "Recortado: " > Recorta
 		if (numPalabras > numMaxPalabras){
 			for (indicePalabras = (numPalabras-numMaxPalabras); indicePalabras<numPalabras; indicePalabras++){
 			respuesta = respuesta + " " + arrayDePalabras[indicePalabras];
