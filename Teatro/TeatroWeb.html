@@ -37,16 +37,13 @@ https://es.javascript.info/debugging-chrome
     <body style="background: black; ">
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 		
-
-		<div id ="idDivOpciones" style="font-size: 15pt" >
-			<div style = "display:flex; justify-content: center;align-items: center; color:blue;">
-				<input  style="background-color: #d1d1d1;;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
-		        <input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input>
-				<input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input>
-				<button class="button"  style=" width: 10%; height: 30px;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
-			</div>
+		<div id ="idDivOpciones" style = "display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 15pt" ">
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input></div>
+			<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silenc</input></div>
+			<button class="button"  style=" width: 10%; height: 30px;" type="button" onclick="conmutaVisualizacionDiv('idDivOpciones');">X</button>
 		</div>
-		
+		<hr>		
 		<!--		
 		<div id="idDivPaginas">
 			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
@@ -85,7 +82,7 @@ https://es.javascript.info/debugging-chrome
 			<button class="button"  style="width: 20%; background-color: blue;" type="button" onclick="macroConcatena();">ConCa</button>
 		</div>	
 		
-		<br><hr>
+		<hr>
 		
 		
 		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
@@ -96,21 +93,21 @@ https://es.javascript.info/debugging-chrome
 			
 		<br><br><br>
 		<div style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
-		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
-		<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
-	
-		<p> <input type="file" id="file-input" /> </p>
-		<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
-		<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
-		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
-		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
-		<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
-		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
+			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
+		
+			<p> <input type="file" id="file-input" /> </p>
+			<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
+			<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
+			<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+			<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
+			<button class="btn" onclick = bodyFullScreen();>Body FULL SCREEN</button>
+			<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
 
-		<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
-		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
-		<br>
-		<button class="btn" onclick = "test ()"> Test </button>
+			<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
+			<button class="btn" onclick = "decir ('')"> Parar Voz </button>
+			<br>
+			<button class="btn" onclick = "test ()"> Test </button>
 		</div>
 					
 <script>
@@ -176,7 +173,6 @@ https://es.javascript.info/debugging-chrome
 		return (respuesta);	
 	}
 	
-	/*
 	function conmutaVisualizacionDiv(divID){
 	    var x = document.getElementById(divID);
 		if (x.style.display === "none") {
@@ -185,7 +181,7 @@ https://es.javascript.info/debugging-chrome
 			x.style.display = "none";
 		}
 	}
-	*/
+	
 	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
 		if (!document.fullscreenElement) {
 			document.documentElement.requestFullscreen();
