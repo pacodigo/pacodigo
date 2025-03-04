@@ -38,7 +38,7 @@ https://es.javascript.info/debugging-chrome
 		<!--h2> Ver.: 28-2-25. 1</h1-->
 		<div id ="idDivOpciones" style = "border: 2px solid black;">
 			<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 13pt">
-				<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=50 />
+				<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=5 />
 				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input></div>
 				<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silen.</input></div>
 				<button class="button"  style=" width: 20%; height: 30px; background-color: blue" type="button" onclick="toggleBodyFullScreen();">|_|</button>
@@ -93,7 +93,7 @@ https://es.javascript.info/debugging-chrome
 		
 			
 		<br><br><br>
-		<div id="idDivExtra"  style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
+		<div id="idDivExtra" onmousedown="longClickAction('ratonAbajo');" onmouseup="longClickAction('ratonArriba');" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 		
