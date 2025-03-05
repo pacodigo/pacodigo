@@ -95,7 +95,7 @@ https://es.javascript.info/debugging-chrome
 		
 			
 		<br><br><br>
-		<div id="idDivExtra" onmousedown="longClickAction('ratonAbajo');" onmouseup="longClickAction('ratonArriba');" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
+		<div id="idDivExtra" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
 			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
 		
@@ -451,8 +451,9 @@ function infoDeLinea (lineaTexto){
 		speechSynth.cancel();
 		const newUtter = new SpeechSynthesisUtterance(enteredText);
 		speechSynth.speak(newUtter);
+		newUtter.onend = () => console.log("Fin");
 	}
-
+	/*
 	function macroConcatena(){
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
 		for (i=0; i<5; i++){
@@ -484,9 +485,66 @@ function infoDeLinea (lineaTexto){
 		newUtter.volume = volumen;
 		speechSynth.speak(newUtter);
 	}
+*/
+
+	function macroConcatena(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
+		if (document.getElementById("idCbAcortaTexto").checked)
+			textoParrafoAnterior= acortarTexto(textoParrafoAnterior);
+		var textoMiParrafo = arrayParrafos[indiceMiParrafo].texto;
+		decirConcatenadoPromise ("U:" + textoParrafoAnterior, 1);
+		decirConcatenadoPromise ("Silencio.",0);			// Añado un silencio en plan cutre.
+		var volumen = !(document.getElementById("idSilenciarme").checked);
+		/*
+		if (document.getElementById("idSilenciarme").checked)
+			decirConcatenado (textoMiParrafo, 0);		//decirConcatenado (textoMiParrafo, 0.5);
+		else
+			decirConcatenado ("O:" + textoMiParrafo, 1);
+		parrafoSolicitado++;
+		decirConcatenado ("Sile.",0);			// Añado un silencio en plan cutre.
+		*/
+		decirConcatenadoPromise("O:" + textoMiParrafo, volumen)
+			.then (function(){
+				console.log ("Adios.");
+				document.querySelector('#idParrafo').value++; 
+				var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+				var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+				document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
+				document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+				macroConcatena();
+			});
+			
+			
+		/*		
+		decirConcatenado ("Fin.", 1);
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+		//cambioNumParrafoEvent();
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		document.getElementById('idCajaParrafoMio').value = getTodaInfoDeParrafo(indiceMiParrafo);
+		document.getElementById('idCajaParrafoAnterior').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+	*/
+	}
+
+	function decirConcatenadoPromise (enteredText, volumen){
+		const speechSynth = window.speechSynthesis;   
+		const newUtter = new SpeechSynthesisUtterance(enteredText);
+		newUtter.volume = volumen;
+		speechSynth.speak(newUtter);
+		
+		return new Promise (function(resolve){				// Constructor del Objeto Promise. Se le pasa como argumento una 'function'. Esta function tiene 2 argumentos, que son dos funciones?
+			newUtter.onend = (function(){
+				console.log("Fin.");
+				resolve("Promise is resolved!");
+			});
+		});
+	}
+		
+		
 
 
-
+			
 			
 		</script>
     </body>
