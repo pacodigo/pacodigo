@@ -1,6 +1,6 @@
 
 CURA DEL PUEBLO
-Versión: 4/3
+Versión: 6/3
 Hasta página 185 Incluida
 ¿Quieres que demos una vuelta?
 
@@ -252,9 +252,9 @@ NAGORE
 ¿En qué pensaría cuando conducía por las carreteras de Tejas?
 
 JORGE
-Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. Pensaba en que todo era muy grande. Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cár­ cel del alma y que yo quería ser libre. Pensaba en conver­ tirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado, en romper las fotos en las que apareciese vestido de cura. Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, que quería formar una familia y leer rodeado del ruido de los niños. Pensaba en la nieve cayendo suavemente, en la luz del sol intentando atrave­ sar el cielo gris, en el silencio que provoca la nieve que
+Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. Pensaba en que todo era muy grande. Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cár­ cel del alma y que yo quería ser libre. Pensaba en conver­ tirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado, en romper las fotos en las que apareciese vestido de cura. Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, que quería formar una familia y leer rodeado del ruido de los niños. 
 28
-todo lo calma. Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. La tierra de mi pueblo en mis manos. Los terrones de tierra de las viñas de mi pueblo en mis manos. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. Y también pensaba que quizás 1 vida te pe m!­ te ser varias personas durante una sola v1 a. Que qu1 s la vida puede ser varias vidas. Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
+Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. Y también pensaba que quizás 1 vida te pe m!­ te ser varias personas durante una sola v1 a. Que qu1 s la vida puede ser varias vidas. Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
 
 Música.
 
@@ -393,13 +393,7 @@ RANCHERO	?
 ¿Quiere quedarse con nosotros a cenar.
 
 JORGE
-Hoy no puedo, pero manana s1.
-
-RANCHERO
-Venga mañana.
-
-JORGE
-De acuerdo. Muchas gracias.
+Vale.
 
 RANCHERO	d	con
 Deje la aspiradora, nos ha gustado. ¿Le pue o pagar
@@ -422,44 +416,9 @@ Sí es el precio, lo que sobra quédeselo corno propina.
 JORGE
 Muchas gracias.
 
-RANCHERO
-Hasta mañana.
-
-
 V
 
-   JORGE vuelve al bar. Allí están NAGORE y EVARISTO. JORGE
-Me he acordado de mis padres. Somos seis hermanos y, gracias a Dios, estarnos todos vivos. Ellos tenían unoy fo han perdido.
-
-Pausa.
-
-EVARISTO
-¿Has vendido la aspiradora?
-
-JORGE
-Sí.
-
 34
-
-EVARISTO
-Enhorabuena.
-
-JORGE
-La han comprado porque me parezco a su hijo.
-
-EVARISTO
-Una cosa siempre se vende por algo y muy pocas veces porque el que la compra la necesite.
-
-JORGE
-No creo que pueda parecerme a los hijos de todos los rancheros de este pueblo.
-
-EVARISTO sonríe y se va a limpiar una mesa. JORGE bebe algo con hielo.
-
-NAGORE
-¿Irás a la cena?
-
-JORGE
-Les he dicho que iba a ir.
 
 NAGORE
 ¿A ti te apetece?
@@ -467,81 +426,7 @@ NAGORE
 JORGE
 ¿Apetecer? No sé. He sentido compasión.
 
-NAGORE
-¿Quieres que te haga unos huevos con bacon?
-
-JORGE
-¿Tienes algo de verdura?
-
 35
-
-
-
-
-
-ALFREDO 5ANZOL
-
-
-NAGORE
-Guisantes.
-
-
-
-
-
-1·	JORGE
-1	La verdad es que sí.
-
-EL BAR QUESETRAGO A TODOS LOS ESPAÑOLES
-
-
-
-JORGE
-¿Otra cosa?
-
-NAGORE
-Maíz.
-
-JORGE
-Porune los huevos con bacon.
-
-Músicn.
-
-RANCHERO
-Estupendo, así te sabrá todo mejor. A nuestro hijo le gus·
-taba la música country, pero a lo mejor a ti no te gusta.
-
-JORGE
-Bueno, antes no sabía ni que existía, pero aquí me gusta.
-En el coche la escucho todo el tiempo.
-
-RANCHERO
-¿En la radio no ponen otra cosa, verdad?
-
-
-
-
-
-
-
-Lo.s
-
-
-VI
-
-RANCHEROS ponen una sencilla mesa para tres
-
-JORGE
-(Sonríe.) Sí, no ponen otra cosa.
-
-RANCHERO
-¿Ya conoces Houston?
-
-nczenden un_a vela que colocan en medio. Está lloviendo. ruenos y relampagos. Llega JORGE.	·
-
-RANCHERA
-está lloviendo! ¡Pasa, pasa, no te quedes en la
-
 
 RANCHERO
 ¿Te gusta la carne?
@@ -552,41 +437,32 @@ Mucho.
 RANCHERA
 ¿Tienes hambre?
 
+36
+
 JORGE
-No.
+La verdad es que si.
 
 RANCHERO
-Tienes que ira Houston, está a un par de horas. Te gustará.
-Siéntate.
+Estupendoo, así te sabrá todo mejor. Anuestro hijo le gustaba
+la música country, pero a lo mejor a ti no te gusta.
+
+JORGE
+Bueno, antes no sabía ni que existía, pero aquí me gusta.
+En el coche la escuho todo el tiempo.
+
+RANCHERO
+¿En la radio no ponen otra cosa, verdad?
+
+JORGE
+(Sonrie). Si, no ponen otra cosa.
 
 RANCHERA
 ¿Quieres patatas?
 
 JORGE
 Sí, gracias.
-
-RANCHERA
-He hecho mi salsa secreta.
 37
-
-36
-
-
-
-
-
-ALFREDO5ANZOL
-
-
-
-RANCHERO
-Está riquísima.
-
-RANCHERA
-   realidad no es secreta, es la que hace todo el mundo, o quel pasa es que yo le hago una cosita diferente y a la gente e parece especial.
-
-JORGE
-Está muy rica.
+Está muy rico.
 
 RANCHERA
 Gracias.
@@ -600,10 +476,21 @@ RANCHERO
 ¿Qué planes tienes para el futuro?
 
 JORGE
+¿Para el futuro?. Me gustaría dedicarme al marketing.
+Estudiar. Me gusta hablar con la gente... se me da bien
+hablar con la gente... me gusta, y... creo que soy un buen
+vendedor...
 
-El BAR QUE SETRAGÓ A TODOS LOSESPAÑOLES
+RANCHERA
+¿Quieres volver a España o a lo mejor has pensado en quedarte
+aquí?
 
+JORGE
+Todavía no lo sé. Echo de menos mi pueblo. Sobre todo 
+mi pueblo. Me gustaría casarme y tener una familia, pero
+a lo mejor me enamoro aquí.
 
+38
 
 RANCHERO
 Cuidado con las tejanas, son muy seductoras. Yo te lo
@@ -649,8 +536,6 @@ tengo otra vez conmigo. Creo que lo que ha pasado ha sido una pesadilla de la qu
 
 ¿Quieres volver a Espaiia o a lo mejor has pensad quedarte aquí?	o en
 
-JORGE
-T davía no lo sé. Echo de menos mi pueblo. Sobre todo m1 pue?lo. Me gustaría casarme y tener una famili
 a lo meJor me enamoro aquí.	a, pero
 
 vivay	contigo vuelve a estarlo. Nos gustaría decirte que si te quedas a vivir con nosotros, cuando muramos, este
@@ -661,14 +546,6 @@ Por supuesto, entendemos que necesites pensarlo, no es
 una decisión fácil...
 
 39
-38
-
-
-
-
-ALFREDO SANZOL
-
-
 JORGE
 Vaya, no me esperaba esto... No me lo esperaba... Uff...
 
@@ -681,9 +558,25 @@ No, no, no. Claro que no. Es... me he quedado impresio­ nado. Muchas gracias.
 RANCHERO
 Somos nosotros los que te daremos siempre las gracias por haber llamado a nuestra puerta. Somos nosotros.
 
-EL 81\R QUESETRAGÓ A TODOS LOS ESPAl\!OLES
+RANCHERA
+Solo esperamos que te guste la idea. Seríamos tan felices teniéndote aquí. Y, por supuesto, podrías seguir con tu carrera de marketing y ya irías conociendo el rancho...
 
+FALTATEXTO
 
+RANCHERO
+De hecho, hay mucho de marketing también en este nego­ cio. Somos ganaderos, pero tenemos que saber colocar nu_estra nercancía. No somos unos paletos. Aquí hay vemte mil cabezas y tenemos a cincuenta hombres traba­ jando. Es... es la obra de nuestra vida...
+
+JORGE
+¿Puedo volver a ver la foto de su hijo?
+
+RANCHERA
+Claro.
+
+AUTOR
+El_RANCHERO sale a buscarla y vuelve enseguida. JORGE la
+mira.
+
+40
 
 JORGE
 ¿Cómo podemos ser tan parecidos?
@@ -699,34 +592,11 @@ Parecéis algo más que mellizos.
 
 Música.
 
-
-
-RANCHERA
-Solo esperamos que te guste la idea. Seríamos tan felices teniéndote aquí. Y, por supuesto, podrías seguir con tu carrera de marketing y ya irías conociendo el rancho...
-
-
-
-
-
-
-
-NAGORE
-
 VII
 
-RANCHERO
-De hecho, hay mucho de marketing también en este nego­ cio. Somos ganaderos, pero tenemos que saber colocar nu_estra nercancía. No somos unos paletos. Aquí hay vemte mil cabezas y tenemos a cincuenta hombres traba­ jando. Es... es la obra de nuestra vida...
-
-JORGE
-¿Puedo volver a ver la foto de su hijo?
-
-RANCHERA
-Claro.
-
-El_RANCHERO sale a buscarla y vuelve enseguida. JORGE /a
-1nzra.
-
+NAGORE
 ¿Te vasa quedar? ¿Qué vas a hacer? ¿Te vas a quedar con ellos?
+
 JORGE
 ¡No! No lo sé. No lo he pensado. Es muy raro lo que me
 ha pasado.
@@ -735,36 +605,17 @@ EVARISTO
 Podrías ser millonario. Ese rancho vale millones.
 
 JORGE
-¿  Cómo voy a quedarme aquí para siempre?
+¿Cómo voy a quedarme aquí para siempre?
 
 NAGORE
 Puedes probar. Quédate un año, y mira a ver cómo te va.
 Nopierdes nada. ¿Para qué quieres volver a España?
 
 41
-40
-
-
-
-
-ALFREDO SANZOL
-
-
 JORGE
 Para casarme y tener una familia.
 
-
-
-
-
-JORGE
-No. Eso nunca se sabe.
-
-EL BAR QUESE TRAGÓ A TODOS LOS1:SPAÑOLES
-
-
-
-
+EVARISTO
 ¿Y la dispensa qué tal? ¿Cómo va eso?
 
 JORGE
@@ -781,17 +632,21 @@ NAGORE
 ¿Siempre serás cura? ¿No te puedes salir?
 
 Siempre será cura Con l  d•	.
-las obli aciones de.los sac:r; re: ;:!iep ::: g er c osy pre sera un cura. De hecho ha	.	.	es1a s1em­ pierde: dar confesión en peÍigrrduna obligación que nunca
-e muerte. ¿Verdad?
-JORGE mira para otro Indo.
+las obli aciones de.los sac:r; re: ;:!iep ::: g er c osy pre sera un cura. 
 
+EVARISTO
+...Dar confesión en peligro de muerte. ¿Verdad? (JORGE mira para otro lado)
 ¿Qué quiere decir que lo de la dispensa va lento?
 
 JORGE
 Estoy esperando.
 
+EVARISTO
 ¿No calculas cuánto puede tardar?
 42
+
+JORGE
+No. Eso nunca se sabe.
 
 NAGORE
 ¿Si conoces a una chica le vas a decir que eres cura?
@@ -799,17 +654,18 @@ NAGORE
 JORGE
 ¿Para qué? ¿Para que salga corriendo?
 
-
+EVARISTO
 En Estados Unidos están acostumbradas. Aquí hay mucho cura protestante que está casado.
 
 JORGE
 A vosotros os he dicho que era cura y no os lo tenía que
-haber dicho. Eso forma parte de mi pasado. Forma parte de una vida que no es mi vida. Mi vida no la conozco porque la estoy haciendo ahora. Ahora. Ahora mismo estoy haciendo mi vida. La vida en la que yo era cura no es mi vida, es una vida que me dieron, que no recuerdo como mía. Esto que está pasando ahora sí es mi vida. Lo que vaa	pasar luego sí es mi vida. Lo que ha pasado antes no es mío. Es un dolor que se ha quedado en mi sangre nada más. Un dolor que se cura amando la viday amando la libertad. Cuando pasen los años podré hablar
+haber dicho. Eso forma parte de mi pasado. Forma parte de una vida que no es mi vida. Mi vida no la conozco porque la estoy haciendo ahora. Ahora. Ahora mismo estoy haciendo mi vida. La vida en la que yo era cura no es mi vida, es una vida que me dieron, que no recuerdo como mía. Esto que está pasando ahora sí es mi vida. Lo que vaa	pasar luego sí es mi vida. Lo que ha pasado antes no es mío. Es un dolor que se ha quedado en mi sangre nada más. Un dolor que se cura amando la vida y amando la libertad. Cuando pasen los años podré hablar
 del pasado.
 Ahora no puedo. Ahora solo quiero tener recuerdos
 nuevos.Y para eso tengo que vivir. Y tengo que vivir mucho y rápido.
 
-¿ Conoces a un hombre que se llama Claus Sluter?
+EVARISTO
+¿Conoces a un hombre que se llama Claus Sluter?
 
 JORGE
 No. ¿Quién es?
