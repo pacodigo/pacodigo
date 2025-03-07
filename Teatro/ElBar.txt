@@ -1,7 +1,7 @@
 
 PACO
-Versión: 7/3 
-Hasta página 56 Incluida. Línea 1069
+Versión: 7/3 B
+Hasta página 66 Incluida. Línea 1428. Cap X
 
 JORGE
 El bar que se tragó a todos los españoles
@@ -1064,23 +1064,15 @@ JORGE
 No noto nada.
 
 TIPO DE LA BARRA
-Espere un segundo.
+Espere un segundo. (fuman)
 
 56
 
-
-
-
-
-
-
-
-
-
-
-
-
-los del TIPO DE LA BARRA-) ¡Tu también.
+JORGE
+(Muerto de la risa) Llevo los calcetines de diferente color.
+No me había dado cuenta. (Se rién mucho)
+Es la primera vez que me pasa. (Se mira los calcetines, mira
+los del tipo de la barra). ¡Tú también!
 
 TIPO DE LA BARRA
 ¿Qué?
@@ -1089,13 +1081,12 @@ JORGE
 Los tienes de colores diferentes.
 
 TlPO DE LA BARRA	·	· N
-(Levantándose los pantalones para verse los calcetmes.)i o
-jodas!
+(Levantándose los pantalones para verse los calcetmes.). 
+No jodas!
 Se mean de la risa.
 
 JORGE
-·Conoces a Walt Whitman? ¿Lo conoces?
-l
+¿Conoces a Walt Whitman? ¿Lo conoces?
 
 TIPO DE LA BARRA
 ¿Al poeta?
@@ -1107,35 +1098,44 @@ TIPO DE LA BARRA
 Claro.
 57
 
-56
-
-
-
-ALFREDO SANZOL
-
 
 JORGE
-¿Te s bes estos versos?: «Juro que ba·o tech		, menc10nar el amoro la muerte .		J	o	no volverea sino con la mujero  el homb ,	Juro que no me confesaré
-aire libre».	re que compartan conmigo el
+¿Te sabes estos versos?: «Juro que bajo techo no volveré a mencionar el amor o la muerte, 
+juro que no me confesaré sino con la mujer o el hombre que compartan conmigo el aire libre.
 
 TIPO DE LA BARRA
 Precioso.
 
 JORGE
 Estamos compartiendo el aire líbre.
+
 TIPO DE LA BARRA
 Amén.
 
 JORGE
-En mi pueblo había un	erro	-	.
-siempre mordermec	pd	pequeno que mtentaba
+En mi pueblo había un perro pequeño que intentaba
+siempre morderme cuando pasaba por delante de su puerta.
+Y tenía que pasar muchas veces porque mi madre
+me mandaba a por pan. Yo tenía diez años y un día el
+perro me mordió. Me tuvieron que poner la antitetánica.
+Aquel perro era el demonio. En la misma calle en la que estaba el perro
+tenía su casa una tía mía. Así que subí con
+una piedra más grande que yo y esperé a que pasara el perro.
+La tiré, le di, y allí se quedó. Seco.
 
-El BAR QUE SE TRA.Gó A TODOS LOS FSPAÑOLES
+TIPO DE LA BARRA
+Joder.
 
+JORGE
+Nunca le dije nada a nadie. Nunca se supo que yo maté a aquel perro.
+Y nunca le había dicho nada a nadie. Nunca
+quise darle importancia a matar a un perro, pero sí la tiene.
+Me siento culpable y necesito que me perdones.
+
+58
 
 TIPO DE LA BARRA
 ¿Yo? Oye. Me estás cayendo muy bien. ¿Quieres llevarte esta bolsita para el viaje? Te la dejo por diez dólares.
-
 Saca una bolsa de marihuana.
 
 JORGE
@@ -1146,7 +1146,10 @@ TIPO DE LA BARRA
 
 JORGE
 No, gracias.
-JORGEcoge la bolsa de marihuana y se la guarda en un bolsillo.
+(JORGE coge la bolsa de marihuana y se la guarda en un bolsillo.)
+
+
+
 
 puerta. Y tenía que
 
@@ -1165,16 +1168,11 @@ una piedra más grande	·	·	que su 1con
 perro. La tú:é le diy	ali'que yody esperéa  que pasara el
 '	,	1 se que 6. Seco.
 
-TIPO DE LA BARRA
-Joder.
 
-JORGE
-Nunca le dije nada a nadie N
 aquel perro. y nunca le había	se sudpo que yo maté a
   . d	l		ic 10 na	a a nadie N quise ar e importancia a matar un			, .	ca Me siento culpabley	necesit		perro, pero s1la tiene.
 0 que me perdones.
 
-58
 
 hecho lo mismo. Y toda la humanidad. Te mordió. Nadie hizo nada para defenderte. ¿A qué estaban esperando?
 ¿A que mordiese a cada niño del pueblo? Cuando
@@ -1222,7 +1220,19 @@ No estábamos fumando...
 PoLICfA MArr LAGUARDA
 Cállese, por favor.
 
-EL BAR QUESE TRAGÓ A TODOS LOS ESPA!'10LES
+
+
+
+60
+
+BARRA
+¿Le vale con el carnet de conducir?. Claro
+
+JORGE
+Yo soy turista. Este es mi pasaporte. Tengo una visa
+para seis meses. Renovable
+
+
 
 
 
@@ -1245,10 +1255,26 @@ Dense la vuelta y apoyen las manos contra el cristal.
 TIPO DE LA BARRA
 Oiga, le aseguro...
 
+
+
+
+
 POLICIA MATI LAGUARDA
-Cállese, señor Rodrigues. (El POLICÍA MATT LAGUARDA
- cacltea al TIPO DE LA BARRA y luego cacheaa JORGE. Le encuentra la bolsa de la marihuana.) ¿Puede abrir estabolsa,
+Cállese, señor Rodrigues. (El policia
+cacltea al tipo de la barra y luego cacheaa JORGE. Le encuentra la bolsa de la marihuana.) ¿Puede abrir estabolsa,
 por favor?
+
+JORGE
+Esa bolsa no es mía.
+
+POLICIA
+La he sacado de su bolsillo
+
+61
+
+JORGE
+Pero no es mía.
+
 
 
 PoucfA L!ON KNIFE
@@ -1259,10 +1285,6 @@ El TIPO DE LA BARRA y JORGEles dan los papeles.
 TIPO DE LA BARRA
 ¿Le vale con el carnet de conducir?
 
-JORGEy el TIPO DE LA BARRA se dan pocao
-
-JORGE
-Esa bolsa no es mía.
 
 POLldA MATT LAGUARDA
 La he sacado de su bolsillo.
@@ -1270,23 +1292,6 @@ La he sacado de su bolsillo.
 poco la vuelta.
 
 
-
-
-
-
-61
-
-60
-
-
-
-
-
-ALFREDO 5ANZOL
-
-
-JORGE
-Pero no es 1rua.
 
 PouclA MATI LAGUARDA
 Ábrala.
@@ -1331,25 +1336,17 @@ PouctA L10N KNrFE	uelva a repetir.
 
 Los policías se van. Silencio.
 
-TIPO DE LA BARRA	t	'do ·eh? Se estaba poniendo la Qué suerte hemos em ,	l	·
-cosa muy fea.
 
-JORGE	,
-Les has dado todo lo que tema.
+TIPO DE LA BARRA
+Que suerte hemos tenido, ¿eh?. Se estaba poniendo la cosa muy fea.
+
+JORGE
+Les has dado todo lo que tenía
 
 TLPO DE LA BARRA
-l. Preferías la cárcel?
+¿Preferías la cárcel?
 
 63
-62
-
-
-
-
-
-ALFREDOSANZOL
-
-
 
 JORGE
 ¿Qué hago yo ahora?
@@ -1384,14 +1381,11 @@ TIPO DE LA BARRA
 Por esta zona nos conocemos todos.
 64
 
-ELBAR QUESE TRAGó A TODOS LOSESP/\j;:QLES
-
-
 JORGE
 ¿Tú los conocías?
 
 TIPO DE LA BARRA	.
-No los había visto en mi vida, pero él a lo me1or me cono- cía a mí. Yo qué sé.
+No los había visto en mi vida, pero él a lo mejor me conocía a mí. Yo qué sé.
 
 JORGE
 Me habéis robado entre los tres.
@@ -1416,30 +1410,11 @@ Sí.
 
 JORGE se va. TIPO DE LA BARRA cae de rodillas.
 
-TIPO DE LA BARRA	d	d	1	del
-Perdóname ahora a mí, como yo te he per ona o o
-perro.
-
-JORGE lo mira. Pausa.
-65
-
-
-
-
-ALFREDO5ANZOL
-
-
 TIPO DE LA BARRA
-Perdóname ahora tú a mí.
-
-
-
-MARGARET MILLER
-¿Le han quitado mucho?
-
-EL BAR QUE SE TRACó A TODOS LOS ESPAÑOLES
-
-
+Perdóname ahora a mí, como yo te he perdonado lo del
+perro. (JORGE lo mira. Pausa.)
+65
+Perdóname ahora tú a mi.
 
 JORGE
 (JORGE se acerca a él, le pone la mano en la cabeza.) Te perdono.
@@ -1448,6 +1423,16 @@ Two DE LA BARRA
 Si un día nos volvemos a ver te devolveré lo que te he quitado multiplicado por diez.
 
 El TIPO DE LA BARRA se levanta y se va. JORGE coge su car­ tera, saca el billete, lo mira, lo guarda y entra en el Blue Moon.
+
+
+
+PACO
+Corregido hasta aquí EL 7/3
+
+JORGE
+Corregido hasta aquí
+
+
 
 
 XI
