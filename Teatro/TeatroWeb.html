@@ -124,7 +124,8 @@ https://es.javascript.info/debugging-chrome
 	}	
 			
 	function cargaDesdeInternet(){
-		fetch('https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt', { signal: AbortSignal.timeout(2500) })
+		//fetch('https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt', { signal: AbortSignal.timeout(2500) })
+		fetch('https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt')
 			.then(response => response.text())
 			.then((data) => {
 				textoObraEnBruto = data;
