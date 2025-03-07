@@ -1,7 +1,7 @@
 
 PACO
-Versión: 6/3 b
-Hasta página 50 Incluida. Línea 839
+Versión: 7/3 
+Hasta página 56 Incluida. Línea 1069
 
 JORGE
 El bar que se tragó a todos los españoles
@@ -846,21 +846,6 @@ JORGE
 
 50
 
-
-
-
-
-
-
-
-
-
-
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPA<'IOLES
-
-
-
 TIPO DE LA BARRA
 Es un gran tipo. Este sombrero es suyo. Me lo regaló hace
 dos inviernos. ¿Usted no es de por aquí, verdad?
@@ -868,84 +853,46 @@ dos inviernos. ¿Usted no es de por aquí, verdad?
 JORGE
 Soy español.
 
+CAMARERO
 Mi padre es español. Vasco. De un pueblo que se llama Lekumberri.
 
 JORGE
 ¡Ahí va lío! Yo también soy navarro.
 
-
-
-
-
-
-
-JORGE
-
+CAMARERO
 Mipadre es vasco.
 
 JORGE
 Sí, si, pero es navarro. Lekumberri es	pueblo navarro.
 Su padre es vasco-navarro.
 
+CAMARERO
 Oiga, amigo, ¿me está contando lo que es mi padre?
 
 JORGE
 No, faltaba más. Solo le estoy diciendo que Lekumberri
 es un pueblo de Navarra.
 
-Claro que la Littlewood.
-
-Tiro DE LA BARRA
-
-conozco. He trabajado para el señor
-
-
+CAMARERO
 Mi padre siempre se presentaba diciendo soy pastor vasco-americano.
-
-No me diga. Yo soy su sobrino.
-
-JORGE
-¿De verdad? ¡Qué coincidencia!
-50
-
-
 
 JORGE
 Claro, porque lo era.
 51
 
-
-
-
-
-ALFREDO 5ANZOL
-
-
-
+CAMARERO
 Con dieciocho años vino a América a trabajar de pastor. Les dejaban en las montañas con el ganado, solos. Hasta un mes se pasaba sin ver a una persona. Muchos vinieron a trabajar de pastor.
-
-
-
-T1ro DE LA BARRA
-Sí.
-
-JORGE
-Es una droga.
-
-EL BARQUE SE TRAGÓ ATODOS LOS ESPAÑOLES
-
-
 
 JORGE
 Muchos han venido, sí.
 
-
-Yo nunca he estado en Espai"la. Un día de estos, voy. Quiero conocer el pueblo de mi padre. Él quería haber muerto allí, pero no pudo volver. Así es la vida. También se puede decir «la puta vida». Mi madre era francesa, de Biarritz.
+CAMARERO
+Yo nunca he estado en España ni en Francia. Mi madre era francesa, de Biarritz.
 
 JORGE
 También era vasca.
 
-
+CAMARERO
 Era francesa. Oiga, sin faltar al respeto, ¿qué coño le pasa con el origen de mis padres?
 
 JORGE
@@ -960,11 +907,16 @@ TIPO DE LA BARRA
 
 JORGE
 ¿La droga?
-
 52
 
-Tiro DE LA BARRA	.	b d	?
-(Se ríe.) Muy buena.Lo que quiero decir es:¿la ha proa	o.
+BARRA
+Si.
+
+JORGE
+Es una droga
+
+BARRA
+Muy buena. Lo que quiero decir es: ¿la ha probado?
 
 JORGE
 No.
@@ -978,21 +930,19 @@ No.
 TIPO DE LA BARRA	.
 Debería hacerlo. Es lo mejor del mundo. La vida se ve
  diferente. Todo se hace más fácil. Te co ecta. Conecta con l	ealidad. Conecta con lo invisible. Oiga, yo no soy muy
-rªreligioso, pero creo en0.ios. yla mar.ihuana conecta con
+rªreligioso, pero creo en0.ios. y la marihuana conecta con
 Dios.
 
-.	HPara conectar con Dios no hace falta		acen falta ganas.
-Tiro DE LA BARRA
+JORGE
+Para conectar con Dios no hace falta marihuana. Hacen falta ganas.
+
+BARRA
 Claro que sí.
 
 JORGE
-Diosestá. Con la fe basta. Con creer basta.
+Dios está. Con la fe basta. Con creer basta.
 
 53
-
-
-
-41.FREDO 5ANZOL
 
 TIPO DE LA BARRA
 y claro que creo en Dios. No Jo podría haber dicho mejor. Parece usted predicador. ¿Quién no cree en Dios? Yo creo en el Dios del amor y de la vida. Creo en la palabra de Dios. Y en que somos hermanos.
@@ -1008,16 +958,16 @@ Primero me quiero acabar las patatas.
 
 TIPO DE LA BARRA
 Acábese sus patatas. Voy al lavabo y salimos.
-
-JORGE asiente y el TIPO DE LA BARRA se va al lavabo.
+(Jorge asiente)
 
 JORGE
 (¿Aquién habla? ¿A sí mismo? ¿Al camarero? ¿Al tipo que se ha ido al lavabo?) Creo en un hombre llamado Jesús. No me importa si era el hijo de Dios o no. Me importa que fue un hombre que habló de amor y de libertad. De lucha contra la hipocresía, de poner la otra mejHla. De acogera
 los pecadores, de defender a los pobres y de ponera los ricos en su sitio.
 
-EL BAR QUESETRACÓ A TODOS LOS ESPA5:0LES
+MUJER
+No se fíe de ese desgraciado.
 
-
+54
 
 JORGE
 ¿Cómo?
@@ -1025,7 +975,7 @@ JORGE
 MUJER DE LA REVISTA
 No se fíe de ese desgraciado.
 
-fur·
+CAMARERO
 Callada estás más guapa, Margaret. (A JORGE.) Es una	c1a.
 
 MUJER DE LA REVISTA
@@ -1052,18 +1002,11 @@ El TIPO DE LA BARRA sale del baño.
 
 MUJER DE LA REVISTA
 No se fíe de ese desgraciado.
-54
+
 
 TIPO DE LA BARRA
-·l Cómo van esas patatas?
+¿Cómo van esas patatas?
 55
-
-
-
-
-
-ALFREDO5ANZOL
-
 
 JORGE
 He acabado.
@@ -1101,14 +1044,6 @@ TIPO DE LA BARRA
 Vamos un poco más allá. No está bien hacer esto en la
 
 JORGE
-Es 1a P
-
-rimera vez que me pasa. (Se mira l.os calce·tines, m·ira
-,	.	1
-
-puerta.
-
-JORGE
 ¿Quién es esa mujer?
 
 TIPO DE LA BARRA
@@ -1130,6 +1065,20 @@ No noto nada.
 
 TIPO DE LA BARRA
 Espere un segundo.
+
+56
+
+
+
+
+
+
+
+
+
+
+
+
 
 los del TIPO DE LA BARRA-) ¡Tu también.
 
