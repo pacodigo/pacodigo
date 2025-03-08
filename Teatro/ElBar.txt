@@ -1041,7 +1041,7 @@ Se ríen los dos. Se ríen mucho.
 
 
 TIPO DE LA BARRA
-Vamos un poco más allá. No está bien hacer esto en la
+Vamos un poco más allá. No está bien hacer esto en la puerta.
 
 JORGE
 ¿Quién es esa mujer?
@@ -1092,7 +1092,7 @@ TIPO DE LA BARRA
 ¿Al poeta?
 
 JORGE
-Sí.
+Si.
 
 TIPO DE LA BARRA
 Claro.
@@ -1142,7 +1142,7 @@ JORGE
 ¿Eso no es mucho?
 
 TIPO DE LA BARRA
-¡No!Te la dejo muy barata. Cógela.
+¡No!. Te la dejo muy barata. Cógela.
 
 JORGE
 No, gracias.
@@ -1400,13 +1400,13 @@ TIPO DE LA BARRA
 No.
 
 JORGE
-Sí.
+Si.
 
 TIPO DE LA BARRA
 No.
 
 JORGE
-Sí.
+Si.
 
 JORGE se va. TIPO DE LA BARRA cae de rodillas.
 
