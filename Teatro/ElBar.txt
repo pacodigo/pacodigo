@@ -1,10 +1,16 @@
 
 PACO
-Versión: 7/3 B
-Hasta página 66 Incluida. Línea 1428. Cap X
+4-6*:  36
+7:     68
+10*:   86
+11:    140
+15*:   199
+
 
 JORGE
-El bar que se tragó a todos los españoles
+Versión: 8/3 
+Hasta página 66 Incluida. Línea 1428. Cap X
+y Cap XV
 
 CURA DEL PUEBLO
 ¿Quieres que demos una vuelta?
