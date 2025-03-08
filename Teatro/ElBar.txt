@@ -265,8 +265,10 @@ Música.
 
 
 IV
+PACO
+Capítulo 04
 
-AUTOR
+JORGE
 Jorge saca una aspiradora de algún lado y la mueve de un lado a otro con velocidad y maña. 
 Una pareja de Rancheros de unos sesenta años observa estupefacta a Jorge.
 
@@ -601,6 +603,11 @@ Parecéis algo más que mellizos.
 Música.
 
 VII
+PACO
+Capítulo: 07
+
+JORGE
+Nulo
 
 NAGORE
 ¿Te vasa quedar? ¿Qué vas a hacer? ¿Te vas a quedar con ellos?
@@ -797,6 +804,12 @@ las luces fundidas, por eso no ha visto el nombre.
 E	1	t	. do suerte Esel primer sitio en el que Ah.Sí que 1e ent	·
 paro.
 
+PACO
+Capítulo: 10
+
+JORGE
+Jorge está en el Blue Moon. En el bar hay un tipo sobre un taburete en la barra, 
+un camarero y una mujer leyendo una revista en una mesa.
 
 CAMARERO DEL BLUE MOON
 Buenas noches amigo.
@@ -1423,8 +1436,10 @@ Si un día nos volvemos a ver te devolveré lo que te he quitado multiplicado po
 El TIPO DE LA BARRA se levanta y se va. JORGE coge su car­ tera, saca el billete, lo mira, lo guarda y entra en el Blue Moon.
 
 
+XI
 
 PACO
+Capítulo: 11. 
 Corregido hasta aquí EL 7/3
 
 JORGE
@@ -2161,36 +2176,35 @@ Como te puedes imaginar el pobre entendió: «Disfrázate de lo que quieras, per
 
 
 Estás en un momento de tu vida en el que no hace falta
-88	89
 
 
-
-
-
-ALFREDOSANZOL
-
+89
 
 XV
 
+PACO
+Capítulo: 15. 
 
+JORGE
+Música. Jorge comienza a vestirse de Rey Baltasar
 
-
-
-
-RACHEL
-
-
-EL DAR QUE SETRAGÓ A TODOS LOS ESPAis:OLFS
-
-
-
-Música.JORGE comienza a vestirse de Rey Baltasar.
+AUTOR
+Nulo
 
 JORGE
 No entendí por qué me dijo que debía disfrazarme de negro. Cuando llegué a Tejas aún quedaban baños para blancos y para negros. Un día entré en uno de negros sin darme cuenta, y un señor mayor con el pelo blanco me dijo: «Caballero, usted no puede estar aquí, lo siento. Los aseos de los blancos son los de la puerta de al lado». y ento ces pensé: cuando tenga hijos y estemos cenando y me pidan que les cuente historias de mi vida, les contaré esto; les contaré que cuando viajé a los Estados Unidos en 1963 había baños para negros y para blancos y no se lo podrán creer.
 
+AUTOR
 Estamos en la fiesta de cumpleaifos de RACHEL SLUTER. Alguien abre una botella de champán y deja que el corcho salga volando hasta los pies de JoRGE. JoRGE coge el corcho, lo quema con un mechero y se pinta la cara de negro.
 
+RACHEL
+(A JORGE.) Hola.
+
+JORGE
+Hola. Siento llegar tarde. Soy un amigo del señor Claus Sluter.
+90
+
+RACHEL
 Hola, Jorge. Mi padre ya nos ha dicho que venías. Yo soy su hija, me llamo Rache!, encantada de conocerte. (Le da la mano.) Y ella es mi amiga Carmen.
 
 CARMEN
@@ -2209,56 +2223,21 @@ CARMEN
 No pasa nada.
 
 RACHEL
-Me parece tan fuerte que os deis dos besos sin conoceros
-
-Música. En la cocina
-
-charla con MARTIN
-
-de nada.
-
-LUTHER KING. En el centro bailan un hombre y dos muje­ res. En el otro extremo está la puerta dela casa.JORGE acaba de llegar y le Ita abierto RACHEL junto a CARMEN Robles, la española de Madrid que está haciendo un intercambio con RAcHEL. Las dos van disfrazadas dehadas.
-
-RACHEL
-(A JORGE.) Hola.
-
-JORGE
-Hola. Siento llegar tarde. Soy un amigo del señor Claus Sluter.
-90
-
+Me parece tan fuerte que os deis dos besos sin conoceros de nada.
 
 CARMEN
 En España es así.
 
 JORGE
-Tu padre medijo que hoy era tu cumpleaños. Felicidades.
-
-Le da una cnjn de bombones que trae en la mmw.
+Tu padre me dijo que hoy era tu cumpleaños. Felicidades.
+(Le da una caja de bombones que trae en la mano).
 
 RACHEL
 ¡Muchas gracias! ¡Eres muy amable! ¿Te puedo dar dos
-besos? Como ya nos conocemos...
+besos? Como ya nos conocemos... (le da dos besos)
 91
 
-
-
-
-ALFREDO SANZOL
-
-EL BAR QUE SE TRAGó A TODOS LOS ESt>Ai-:OLES
-
-
-
-
-
 JORGE
-
-Le da dos besos.
-
-
-RACHEL
-No sé quién es.
-
 Te he manchado un poco la cara.
 
 RACHEL
@@ -2271,13 +2250,13 @@ JORGE
 EStoy estudiando marketing.
 
 RACHEL
-Ndo te hdagas la to ta, Carmen. Mi padre ya nos lo ha conM t a o to o sobre tt.
+Ndo te hdagas la tonta, Carmen. Mi padre ya nos lo ha contado todo sobre ti.
 
 JORGE
 ¿Os ha contado todo?
 
 RACHEL
-Sí. <:2ue quieres aprender marketing y que eres un f	d  su hbro, ¿no?	an e
+Sí. <:2ue quieres aprender marketing y que eres un fan de su libro, ¿no?
 
 JORGE
 Así es. ¿Y tú qué haces aquí?
@@ -2326,12 +2305,6 @@ con alguien disfrazado de negro.
 JORGE
 Tu padre me dijo que me disfrazara de negro.
 93
-
-
-
-ALFREDO 5ANZOL
-
-
 
 RACHEL
 ¿Mi padre te dijo eso? No lo creo, la verdad.
@@ -2411,12 +2384,6 @@ Hola, me llamo Jorge Arizmendi. Encantado de conocerle.
 
 95
 
-
-
-ALFREDO 5ANZOL
-
-
-
 MARTlN LUTHER KING
 Igualmente. ¿De dónde eres, Jorge?
 
@@ -2430,10 +2397,7 @@ JORGE
 No exactamente. Los sueltan por un recorrido que tiene vallas a los lados para que los toros corran por la calle.
 
 MARTJN LUTHER KJNG
-Creo que es lo que he dicho, que los sueltan por la calle
-¿no?	'
-
-Se ríe.
+Creo que es lo que he dicho, que los sueltan por la calle ¿no? (se rie)
 
 JORGE
 Yo diría que los sueltan en la calle no por la calle. Si no parece algo descontrolado. y salvaje.
@@ -2452,16 +2416,11 @@ De Rey Baltasar.
 
 96
 
-
-EL BAR QUE SE TRAGÓ A TO!X)S LOS ESPAÑOLES
-
-
-
 MARTIN LUTHER KING
 ¿Sabes que en Estados Unidos los negros estamos libran­ do una batalla por nuestros derechos? ¿Conoces nuestra lucha?
 
 JORGE
-Sí.
+Si.
 
 MARTIN LUTHER KING
 No quiero ser un aguafiestas. Solo quería decirte algo que pudiera ayudar a entender la realidad en la que vivimos. Claro que es divertido disfrazarse de negro y también es divertido disfrazarse de mujer. Si no fuese quien soy a mí me gustaría disfrazarme de mujer blanca. (Se ríe.) Y a voso­ tras, quizás, os gustaría disfrazaros de hombres negros. (Sonríe.) Disfrazarse es precisamente transformarse en quien no se es. Y eso es divertido. Y es bueno. Y me gusta. Me gusta que vayas disfrazado de un rey negro que visitó a nuestro señor Jesucristo en la cuna; pero cuando lo hagas, no te olvides de nosotros. (Serio.) No te olvides de los negros que nunca se han disfrazado de los Reyes blan­ cos Melchor y Gaspar. Ni te olvides de todos los blancos que en este país se han disfrazado de negro porque no dejaban a los negros trabajar en los teatros. O que se han disfrazado de negro, simplemente, para ridiculizar a una raza a la que consideran inferior. Sé que no es tu caso. Sé que no querías ofender a nadie. Y lo sé porque lo veo. Disfrazarse de algo, de alguna manera, también puede ser una forma de amarlo. Solo te quería decir esto: cuando te disfraces de negro no te olvides de nosotros. No te olvides de las mujeres y de los hombres que en este país están luchando por su libertad, como seguro que tú estás luchando por tu libertad. Cuando un hombre no está en su país junto a sus seres queridos, es porque necesita abrir las puertas de su libertad. ¿Me equivoco?
@@ -2500,58 +2459,26 @@ RMEN. RACHEL y ]ORGE los miran. RACHELy	]ORCE
 
 EL BAR QUESETRAGÓ A TODOS LOS ESPAL'\;OLES
 
-
+98
+CARMEN
 me miraba y parecía estar descubriendo algo dentro de mí que no sabía que existía. Era una mirada inteligente, algo triste, pero llena de fuego. Y sabía hablar. Sabía hablar muy bien, y sobre todo sabía discutir muy bien. (Se ríe.) Yo siempre he sido muy discutidora y los chicos se asus­ taban, pero este no. Al revés. No sé por qué se enamoran dos personas. No sé qué pensarnos encontrar en el otro. Algo de paz, de tranquilidad, algo de guerra, de excita­ ción, algo de locura y algo de cordura, descansos y fati­ gas, algo de luz, algo de misterio, un amigo y un enemigo, una pared contra la que rebotar y un colchón en el que descansar, la fuerza y el sentido del humor de un compa­ ñero, alguien con quien reírnos para encender el motor de la vida, alguien con quien perderse en los bosques de la duda, en el fango de la culpa, en la miseria de los díasy en la gloria de los días, en el frío de la noche alguien con quien juntar los pies, y alguien con quien hablar sin pala­ bras, alguien con quien asomarse al precipicio para com­ partir el miedo, y también la alegría de dar el salto. Alguien con quien llegar de noche a casa. Alguien con quien apagar, al final de los días, antes de dormir, la luz.
 
 JORGE
 ¿De dónde eres?
 
-bazlan. Todos bailan durante un ratito
-1 o os siguen bailando.
-
-Ba,ia la ,	.
-1	·
-
 CARMEN
 De Madrid. ¿Tú eres del mismo Pamplona o de un pueblo?
-
-
-
-CARMEN
-No sé por qué me enamoré de él. No lo sé. Era un hombre gu po. Interesante. Nunca me habían mirado ,	Al
 
 JORGE
 De un pueblecito.
 
-me1or ·	,·
-
-as1.	o
-
 CARMEN
-
-,	me muo c mo necesitaba que alguien me mirase.
-Parec1a que su nurada unía los pedazos sueltos No	.
-
 ¿Cómo se llama?
 
-d  ·	·	quie-
-r	ecrr que yo estuviese rota por dentro, pero sí es cierto
-
-q e  nunca pensé que yo podía atraer tanta atención. Él
-98
-
 JORGE
-Qué más te da, no lo conoces.
+Qué mas te da, no lo conoces.
 
 99
-
-
-
-
-
-Al.fREDO SANZOL
-
-
 CARMEN
 ¿Y tú qué sabes los pueblos que yo conozco o no conozco?
 
@@ -2567,7 +2494,8 @@ Se llama San Martín de Unx.
 CARMEN
 No me suena.
 
-JORGE se ríe.
+JORGE
+Jorge se ríe.
 
 CARMEN
 ¿Hasta cuándo te quedas aquí?
@@ -2587,26 +2515,22 @@ Yo vuelvo en un par de semanas. Llevo aquí casi un año. Pedí una excedencia e
 JORGE
 ¿Trabajas en Telefónica?
 
+100
 
-EL Bt\R QUE SETRACÓ A 10005 LOS ESI'A1'l0LES
-
-
-
-™	.
 Sí, en Internacional. ¿Conoces el edificio de la Telefómca
 en la Gran Vía?
 
 JORGE
-Sí.
+Si.
 
 CARMEN
 Pues ahí.
 
 JORGE
-¿ Y te vas en quince días?
+¿Y te vas en quince días?
 
 CARMEN
-Sí.
+Si.
 
 JORGE
 Qué pena.
@@ -2626,18 +2550,10 @@ JORGE
 CARMEN
 No sé. Puede. (Sonríe.) ¿Eres muy lanzado, no?
 
-JORGE	.
+JORGE
 La vida está para vivirla y para disfrutarla.
 
-
 101
-
-
-
-
-ALFREDO 5ANZOL
-
-
 
 CARMEN
 Para disfrutarla, pero sin prisa, ¿no? (Ríe.)
@@ -2655,38 +2571,13 @@ CARMEN
 ¿El qué?
 
 JORGE
-Lo que sea. Me gusta estar con la gente, ofrecerles cosas, charlar, hacer negocios. Lo importante no es Jo que se
-
-
-EL BAR QUESETRAGÓ A TODOS LOS ESPAl'IOLES
-
+Lo que sea. Me gusta estar con la gente, ofrecerles cosas, charlar, hacer negocios. 
+Lo importante no es lo que se vende. Lo importante es hacer buenos negocios.
 
 CARMEN
-¿y lo que menos?
-
-JoR do es demasiado grande. Hasta los conejos son dema­ siado grandes. ¿Y a ti?
-
-CARMEN	de
-Lo  ue más me gusta es que hay poca gente con car
-pen , y lo que menos que hay demasiada gente con pmta de estar muy sola.
-
-JORGE	?
-¿Te gustaría que se muriera Franco.
-
-CARMEN	.
-Que se muera cuando se tenga que monr.
-
-vende. Lo importante es hacer buenos negocios.
-
-CARMEN
-A mí también me gusta hablar con la gente. Me gusta
-
-JORSGíE, pero qué te gustaría, que fuese cuant gase a viejo.
-
-o antes O que	lle-
-
-ayudarles. Hay compañeras que se cansan cuando los abonados les dan mucho la murga, pero yo no me canso
-nunca. La gente pide ayuda porque la necesita,y	me gusta dársela.
+A mí también me gusta hablar con la gente. Me gusta ayudarles. Hay compañeras que
+se cansan cuando los abonados les dan mucho la murga, pero yo no me canso nunca.
+La gente pide ayuda porque la necesita, y me gusta dársela.
 
 JORGE
 Totalmente de acuerdo.
@@ -2698,26 +2589,41 @@ JORGE
 La libertad.
 102
 
-CARMEN	?
-l·Y cuando se muera Franco qué va a pasar.
+CARMEN
+¿y lo que menos?
+
+JORGE
+Todo es demasiado grande. Hasta los conejos son dema­ siado grandes. ¿Y a ti?
+
+CARMEN
+Lo  que más me gusta es que hay poca gente con cara de pena, y lo que
+menos que hay demasiada gente con pinta de estar muy sola.
+
+JORGE
+¿Te gustaría que se muriera Franco?
+
+CARMEN
+Que se muera cuando se tenga que morir.
+
+JORGE
+Si, pero qué te gustaría, que fuese cuanto antes o que llegase a viejo.
+
+CARMEN
+¿Y cuando se muera Franco qué va a pasar?
+
 JORGE
 La democracia.
 
 CARMEN
-la guerra otra vez.
+O la guerra otra vez.
 
 JORGE
 ¿Por qué?
 
-CARMEl"J	·	1	ha
-Porque los que perdieron la guerra quieren a revanc	.
+CARMEN
+Porque los que perdieron la guerra quieren la revancha.
+
 103
-
-
-
-ALFREDO 5ANZOL
-
-
 
 JORGE
 Eso no es verdad.
@@ -2757,17 +2663,12 @@ CARMEN
 
 104
 
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-
 JORGE
 Albañiles.
 
 CARMEN
 Ah, claro. Es lo que faltaba. Entonces sí que eres español.
-
-Se ríen los dos. Se miran.
+(Se ríen los dos. Se miran.)
 
 CARMEN
 ¿Estás casado?
@@ -2793,35 +2694,24 @@ CARMEN
 (Se ríe.) Lo siento. Ha sido culpa mía. Con mi edad yo también debería estar casada y tener cuatro hijos. A lo mejor es que somos más modernos que el resto de la gente.
 105
 
-
-ALFREDO 5ANZOL
-
-
-
 JORGE
 Yo no soy muy moderno...
 
-
-
-CARMEN
-
-El. BAR QUESE TRAGó A TODOS LOS ESPAl\'OLES
-
-
 CARMEN
 ¿No? Estamos los dos en San Francisco, en una fiesta con Martin Luther King. Tú vas en tu coche de un ladoa  otro
-de los Estados Unidos... ¿Sabes qué somos nosotros? Somos bent.
+de los Estados Unidos... ¿Sabes qué somos nosotros? Somos beat.
 
 JORGE
 ¿Qué es eso?
 
 CARMEN
 Es vivir la vida con un ritmo diferente a como la viven otros. ¿Qué crees que están haciendo ahora tus amigos?
+
 JORGE
 ¿Ahora? Si aquí son las diez, en España son las cuatro. Estarán durmiendo.
 
 CARMEN
-¿ Y  qué harán mañana domingo?
+¿Y qué harán mañana domingo?
 
 JORGE
 Despertarse tarde. Vestirse de domingo. Ira misa. Ir de bares. Comer. Echar la partida en el bar. Ir al frontón. Tomarse un patxarán en el bar del frontón. Ir de baresy cenar. Me parece un plan bastante bueno.
@@ -2834,6 +2724,7 @@ JORGE
 
 106
 
+CARMEN
 (Riéndose.) Madre mía. (Pausa.) Qué música tan bonita.
 
 JORGE
@@ -2851,9 +2742,7 @@ JORGE
 Tú también. (Bailan.) ¿Qué vais a hacer mañana?
 
 CARMEN
-Queríamos ir a la playa.
-
-Bailan.
+Queríamos ir a la playa. (Bailan.)
 
 JORGE
 ¿Puedo ir con vosotras?
@@ -2869,12 +2758,6 @@ Me parece que tú no molestas.
 
 107
 
-
-
-ALFREDO5ANZOL
-
-
-
 JORGE
 Gracias.
 
@@ -2886,7 +2769,15 @@ El olor de ella me resultaba familiar, como si ya lo hubie­ se olido antes. Me 
 
 Música. Guantanamera. Ahora se va formando una coreo­ grafía en la que participarán los nueve actores. Y será una coreografía que cuente que los personajes están viviendo un momento de plenitud y de armonía. Será una coreografía preciosa. Libre. Aire. La coreografía acabará con CARMEN y JORGE. Luego CARMEN saldrá y JORGE se quedará solo.
 
-EL BAR QUE SE TR,\GÓ A TODOS LOS ESPAÑOLES
+
+PACO
+Capítulo 16
+
+JORGE
+Al final, sonará un teléfono que vendrá de lejos, cruzando el océano Atlántico, y se fundirá con la música hasta que tome el primer plano y se quede solo. Entonces JORGE lo escucha­ rá. Caminará hacia él y lo descolgará.
+
+XVI
+108
 
 
 JORGE
@@ -2923,12 +2814,8 @@ Sí, dígame.
 
 
 
-108
 
 
-XVI
-
-Al final, sonará un teléfono que vendrá de lejos, cruzando el océano Atlántico, y se fundirá con la música hasta que tome el primer plano y se quede solo. Entonces JORGE lo escucha­ rá. Caminará hacia él y lo descolgará.
 
 JORGE
 ¿Sabe qué pasa?
