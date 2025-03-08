@@ -831,8 +831,7 @@ JORGE
 Sí, muy bien.
 
 TIPO DE LA BARRA
-¿Conoce en Orange una tienda de aspiradoras que se
-llama Littlewood?	
+¿Conoce en Orange una tienda de aspiradoras que se llama Littlewood?	
 
 JORGE
 Claro que la conozco. He trabajado para el señor
@@ -847,8 +846,8 @@ JORGE
 50
 
 TIPO DE LA BARRA
-Es un gran tipo. Este sombrero es suyo. Me lo regaló hace
-dos inviernos. ¿Usted no es de por aquí, verdad?
+Es un gran tipo. Este sombrero es suyo. Me lo regaló hace dos inviernos. 
+¿Usted no es de por aquí, verdad?
 
 JORGE
 Soy español.
@@ -928,10 +927,10 @@ JORGE
 No.
 
 TIPO DE LA BARRA	.
-Debería hacerlo. Es lo mejor del mundo. La vida se ve
- diferente. Todo se hace más fácil. Te co ecta. Conecta con l	ealidad. Conecta con lo invisible. Oiga, yo no soy muy
-rªreligioso, pero creo en0.ios. y la marihuana conecta con
-Dios.
+Debería hacerlo. Es lo mejor del mundo. La vida se ve  diferente. 
+Todo se hace más fácil. Te conecta. Conecta con la realidad. 
+Conecta con lo invisible. Oiga, yo no soy muy rereligioso, 
+pero creo en Dios, y la marihuana conecta con Dios.
 
 JORGE
 Para conectar con Dios no hace falta marihuana. Hacen falta ganas.
@@ -1260,9 +1259,8 @@ Oiga, le aseguro...
 
 
 POLICIA MATI LAGUARDA
-Cállese, señor Rodrigues. (El policia
-cacltea al tipo de la barra y luego cacheaa JORGE. Le encuentra la bolsa de la marihuana.) ¿Puede abrir estabolsa,
-por favor?
+Cállese, señor Rodrigues. (El policia cachea al tipo de la barra y luego cachea JORGE. 
+Le encuentra la bolsa de la marihuana.) ¿Puede abrir esta bolsa, por favor?
 
 JORGE
 Esa bolsa no es mía.
@@ -1367,12 +1365,12 @@ TIPO DE LA BARRA
 Con cinco dólares puedes pagar la cena y echarle unos litros al coche.
 
 JORGE
-Mi padre me decía:Jorge, no te fíes ni de tu padre.
+Mi padre me decía: Jorge, no te fíes ni de tu padre.
 
 TIPO DE LA BARRA
 Es un buen consejo. Oye. Ha sido unplacer conocerte. Es
-verdad que la noche no se nos ha dado bien, pero segui­
-mos siendo dos personas libres y con salud. Eso es lo importante.
+verdad que la noche no se nos ha dado bien, pero segui­mos 
+siendo dos personas libres y con salud. Eso es lo importante.
 
 JORGE
 Uno de los policías te ha llamado por tu apellido sin ver tu documentación.
