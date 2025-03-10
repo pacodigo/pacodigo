@@ -272,7 +272,7 @@ Música.
 
 IV
 PACO
-Capítulo 04
+Capítulo: 04
 
 JORGE
 Jorge saca una aspiradora de algún lado y la mueve de un lado a otro con velocidad y maña. 
@@ -611,6 +611,7 @@ Música.
 VII
 PACO
 Capítulo: 07
+Cap VII
 
 JORGE
 Nulo
@@ -2204,7 +2205,7 @@ AUTOR
 Estamos en la fiesta de cumpleaifos de RACHEL SLUTER. Alguien abre una botella de champán y deja que el corcho salga volando hasta los pies de JoRGE. JoRGE coge el corcho, lo quema con un mechero y se pinta la cara de negro.
 
 RACHEL
-(A JORGE.) Hola.
+(A Jorge) Hola.
 
 JORGE
 Hola. Siento llegar tarde. Soy un amigo del señor Claus Sluter.
@@ -2213,7 +2214,7 @@ Hola. Siento llegar tarde. Soy un amigo del señor Claus Sluter.
 RACHEL
 Hola, Jorge. Mi padre ya nos ha dicho que venías. Yo soy su hija, me llamo Rache!, encantada de conocerte. (Le da la mano.) Y ella es mi amiga Carmen.
 
-CARMEN
+-Carmen-
 Hola. Nos podemos dar dos besos, yo soy española.
 
 JORGE
@@ -2231,7 +2232,7 @@ No pasa nada.
 RACHEL
 Me parece tan fuerte que os deis dos besos sin conoceros de nada.
 
-CARMEN
+-Carmen-
 En España es así.
 
 JORGE
@@ -2256,13 +2257,13 @@ JORGE
 EStoy estudiando marketing.
 
 RACHEL
-Ndo te hdagas la tonta, Carmen. Mi padre ya nos lo ha contado todo sobre ti.
+No te hdagas la tonta, Carmen. Mi padre ya nos lo ha contado todo sobre ti.
 
 JORGE
 ¿Os ha contado todo?
 
 RACHEL
-Sí. <:2ue quieres aprender marketing y que eres un fan de su libro, ¿no?
+Sí. Que quieres aprender marketing y que eres un fan de su libro, ¿no?
 
 JORGE
 Así es. ¿Y tú qué haces aquí?
@@ -2270,11 +2271,14 @@ Así es. ¿Y tú qué haces aquí?
 CARMEN
 He venido a aprender inglés.
 
-RACHEL
+-Rachel-
 ¿De qué vas disfrazado?
 
 CARMEN
 De Rey Baltasar.
+
+RACHEL
+No sé quien es.
 
 92
 
@@ -2498,12 +2502,7 @@ JORGE
 Se llama San Martín de Unx.
 
 CARMEN
-No me suena.
-
-JORGE
-Jorge se ríe.
-
-CARMEN
+No me suena. (Jorge se ríe.).
 ¿Hasta cuándo te quedas aquí?
 
 JORGE
@@ -2523,7 +2522,8 @@ JORGE
 
 100
 
-Sí, en Internacional. ¿Conoces el edificio de la Telefómca
+CARMEN
+SI, en Internacional. ¿Conoces el edificio de la Telefómca
 en la Gran Vía?
 
 JORGE
