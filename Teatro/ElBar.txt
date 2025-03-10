@@ -8,7 +8,7 @@ PACO
 
 
 JORGE
-Versión: 10/3 
+Versión: 10/3 b
 Hasta página 66 Incluida. Línea 1428. Cap X
 y Cap XV
 
@@ -2214,7 +2214,7 @@ Hola. Siento llegar tarde. Soy un amigo del señor Claus Sluter.
 RACHEL
 Hola, Jorge. Mi padre ya nos ha dicho que venías. Yo soy su hija, me llamo Rache!, encantada de conocerte. (Le da la mano.) Y ella es mi amiga Carmen.
 
--Carmen-
+Carmen:
 Hola. Nos podemos dar dos besos, yo soy española.
 
 JORGE
@@ -2232,7 +2232,7 @@ No pasa nada.
 RACHEL
 Me parece tan fuerte que os deis dos besos sin conoceros de nada.
 
--Carmen-
+Carmen:
 En España es así.
 
 JORGE
@@ -2271,18 +2271,18 @@ Así es. ¿Y tú qué haces aquí?
 CARMEN
 He venido a aprender inglés.
 
--Rachel-
+Rachel:
 ¿De qué vas disfrazado?
 
-CARMEN
+Carmen:
 De Rey Baltasar.
 
-RACHEL
+Rachel:
 No sé quien es.
 
 92
 
-CARMEN
+Carmen:
 ¿No sabes quiénes son los tres Reyes Magos? Salen en el
 Evangelio.
 
