@@ -280,7 +280,7 @@ Una pareja de Rancheros de unos sesenta años observa estupefacta a Jorge.
 
 JORGE
 Como ven, es muy rápida y muy fácil, muy factl de
-mover, es una herramienta básica para tener en casa que garantizará una limpieza como la que ustedes desean Y que lo hace cuatro veces más rápido q e una escoba, un ahorro de tiempo esencial que nos servirá para el descan­ so O para hacer otro tipo de actividad. Una aspiradora no es un capricho, es una necesidad.
+mover, es una herramienta básica para tener en casa que garantizará una limpieza como la que ustedes desean Y que lo hace cuatro veces más rápido q e una escoba, un ahorro de tiempo esencial que nos servirá para el descan­so o para hacer otro tipo de actividad. Una aspiradora no es un capricho, es una necesidad.
 
 AUTOR
 Los Rancheros le miran como si fuese un aparecido.
@@ -303,43 +303,33 @@ JORGE
 España, Europa.
 
 RANCHERA
- ¿1'!o es u a	casualidad que le miremos así, sabe? Nuestro hi JO munó...	·
-
-RANCHERO
+ No es una casualidad que le miremos así, ¿sabe?. Nuestro hijo murió...
 Patsy...
-
-RANCHERA
- éjame q e se o cuente, estoy bien. Nuestro hijo murió 1ace un ano y s1ete meses.
+Déjame que se lo cuente, estoy bien. Nuestro hijo murió hace un ano y siete meses.
 
 JORGE
 Lo siento.
 
 RANCHERA
-Gra ias. Tenía la misma edad que usted m,
-¿Cuantos años tiene usted?	aso menos.
+Gracias. Tenía la misma edad que usted más o menos.
+¿Cuantos años tiene usted?
 
 JORGE
 Treinta y tres.
 
 RANCHERA
-Él ahora tendría treinta y tres -anos. (Se emo. ciona un poco,
+Él ahora tendría treinta y tres años.
 30
 
-pero consigue seguir hablando.) Y se puede imaginar cómo nos hemos sentido cuando usted ha llamado a la puertay hemos visto que usted y él eran totalmente parecidos.
+Y se puede imaginar cómo nos hemos sentido cuando usted ha llamado a la puerta y hemos visto que usted y él eran totalmente parecidos.
 Papá, trae la foto.
-
-RANCHERO
-Mamáa,	lo mejor estamos molestando a este señor.
+Mamá, a lo mejor estamos molestando a este señor.
 
 JORGE
 No, no me molestan en absoluto.
 
 RANCHERO
 De acuerdo. Voy a traerla.
-
-El RANCHERO sale a por la foto.
-
-RANCHERA
 ¿Le puedo tutear?
 
 JORGE
@@ -355,18 +345,13 @@ RANCHERA
 ¿No estabas contento con tu vida?
 
 JORGE
-No la había elegido yo. Ahora quiero construir yo mi
-vida.
+No la había elegido yo. Ahora quiero construir yo mi vida.
 
 31
 
 RANCHERA
 Eso está bien. Eso está muy bien. Dios nos da solo una vez la libertad y nos tenemos que hacer cargo de esa libertad.
-     Entra el RANCHERO con la foto. Se la va adar a la RANCHERA. RANCHERA
-Dásela tú.
-
-El RANCHERO se acerca muy suavemente a Jorge. Jorge
-coge el marcoen el que está ln foto.
+Dásela tú. (Jorge coge el marco en el que está la foto.)
 
 JORGE
 Es asombroso. Somos iguales.
@@ -376,8 +361,6 @@ Sois iguales.
 
 RANCHERA
 Habláis igual.
-
-RANCHERO
 Tenéis el mismo tono de voz.
 
 JORGE
@@ -393,27 +376,24 @@ RANCHERA
 No sabes lo que es tenerte aquí. Es como si hubiera vuelto.
 32
 
-RANCHERO
 Mamá...
 
-RANCHERA
-Es un regalo de Dios tenerte aquí porque yo u a odría haber imaginado que iba a volver a ver a u hiJO, lo estoy viendo. No es un sueño. Muchas gracias por haber venido a vernos.
+Es un regalo de Dios tenerte aquí porque yo nuca podría haber imaginado que iba a volver a ver a mi hijo y lo estoy viendo. 
+No es un sueño. Muchas gracias por haber venido a vernos.
 
-RANCHERO	.	.é	ne esto Perdónenos, pero no se puede imaginar qu  supo
-para nosotros.
+Perdónenos, pero no se puede imaginar que supone esto para nosotros.
 
 JORGE
 No hay nada que perdonar, lo entiendo perfectamente.
 
-RANCHERO	?
+RANCHERO
 ¿Quiere quedarse con nosotros a cenar.
 
 JORGE
 Vale.
 
-RANCHERO	d	con
-Deje la aspiradora, nos ha gustado. ¿Le pue o pagar
-un cheque?
+RANCHERO
+Deje la aspiradora, nos ha gustado. ¿Le puedo pagar con un cheque?
 
 JORGE
 Sí, por supuesto.
@@ -421,7 +401,7 @@ Sí, por supuesto.
 33
 
 AUTOR
-El RANCHERO saca su chequera. Firma el cheque. Lo arran­ ca del taco y se lo da a JORGe. JORGE lo mira.
+El RANCHERO saca su chequera. Firma el cheque. Lo arran ca del taco y se lo da a Jorge. Jorge lo mira.
 
 JORGE
 Este no es el precio.
@@ -437,7 +417,7 @@ V
 34
 
 NAGORE
-¿A ti te apetece?
+¿A ti te apetece quedarte a cenar?
 
 JORGE
 ¿Apetecer? No sé. He sentido compasión.
@@ -459,7 +439,7 @@ JORGE
 La verdad es que si.
 
 RANCHERO
-Estupendoo, así te sabrá todo mejor. Anuestro hijo le gustaba
+Estupendoo, así te sabrá todo mejor. Anuestro hijo le gustaba 
 la música country, pero a lo mejor a ti no te gusta.
 
 JORGE
@@ -483,12 +463,10 @@ Está muy rico.
 RANCHERA
 Gracias.
 
-RANCHERO
 Pues come, come todo lo que quieras.
 
 Silencio. Los RANCHEROS le miran comer.
 
-RANCHERO
 ¿Qué planes tienes para el futuro?
 
 JORGE
@@ -498,8 +476,7 @@ hablar con la gente... me gusta, y... creo que soy un buen
 vendedor...
 
 RANCHERA
-¿Quieres volver a España o a lo mejor has pensado en quedarte
-aquí?
+¿Quieres volver a España o a lo mejor has pensado en quedarte aquí?
 
 JORGE
 Todavía no lo sé. Echo de menos mi pueblo. Sobre todo 
@@ -558,6 +535,7 @@ vivay	contigo vuelve a estarlo. Nos gustaría decirte que si te quedas a vivir c
 rancho será para ti.
 
 RANCHERO
+Nos gustaría decirte que si te quedas a vivir con nosotros, cuando muramos, este rancho será para ti.
 Por supuesto, entendemos que necesites pensarlo, no es
 una decisión fácil...
 
@@ -589,8 +567,7 @@ RANCHERA
 Claro.
 
 AUTOR
-El_RANCHERO sale a buscarla y vuelve enseguida. JORGE la
-mira.
+El Ranchero sale a buscarla y vuelve enseguida. Jorge la mira.
 
 40
 
@@ -2283,24 +2260,20 @@ No sé quien es.
 92
 
 Carmen:
-¿No sabes quiénes son los tres Reyes Magos? Salen en el
-Evangelio.
+¿No sabes quiénes son los tres Reyes Magos? Salen en el Evangelio.
 
 JORGE
-En realidad, no salen en los Evangelios canónicos, salen
-en un Evangelio apócrifo.
+En realidad, no salen en los Evangelios canónicos, salen en un Evangelio apócrifo.
 
 CARMEN
-A  mí me suena muchísimo que salen en uno de los
-Evangelios.
+A  mí me suena muchísimo que salen en uno de los Evangelios.
 
 JORGE
 En San Mateo 2, versículos del 1 al 12, pero no se dicen
 sus nombres... De todas maneras, yo no tengo ni ideaa, lo mejor tienes razón tú.
 
 RACHEL
-¿Mi padre no te dijo que iba a estar en mi fiesta el doctor
-Martin Luther King?
+¿Mi padre no te dijo que iba a estar en mi fiesta el doctor Martin Luther King?
 
 JORGE
 ¿Martin Luther King está aquí?
@@ -2309,8 +2282,7 @@ CARMEN
 Está allí.
 
 RACHEL
-No creo que le haga mucha gracia compartir una fiesta
-con alguien disfrazado de negro.
+No creo que le haga mucha gracia compartir una fiesta con alguien disfrazado de negro.
 
 JORGE
 Tu padre me dijo que me disfrazara de negro.
