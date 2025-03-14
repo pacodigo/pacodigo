@@ -8,7 +8,7 @@ PACO
 
 
 JORGE
-Versión: 12/3
+Versión: 14/3
 Hasta página 83. Línea 1898. Cap 13 incluido.
 y Cap XV
 Falta: Cap 14 y 16...38
@@ -189,17 +189,14 @@ Soy un caballo. Cuando lo he hecho bien me han premia­ do, cuando lo he hecho m
 
 NAGORE
 No lo sabes.
-
-EVARISTO
-Sí lo sabe
+- Sí lo sabe.
 
 JORGE
 No existe la eternidad. La eternidad son los hijos.
 
 Entra en el bar el PADRE ROBERT. 
 PADRE ROBERT
-De la misma manera que Dios quiso que fueras sacerdo­ te, ahora quiere que no loseas. No hay nada contra lo que luchar. Me parece bien que sigas tu camino. Y los padres
-escolapios de Orange te vamos a ayudar en todo lo que podamos.
+De la misma manera que Dios quiso que fueras sacerdo­ te, ahora quiere que no loseas. No hay nada contra lo que luchar. Me parece bien que sigas tu camino. Y los padres escolapios de Orange te vamos a ayudar en todo lo que podamos.
 
 JORGE
 Gracias.
@@ -219,18 +216,18 @@ JORGE
 Me encantaría
 
 PADRE ROBERT
-Cómprate un coche. ,•T1'enes dinero para comprar e un coche?
+Cómprate un coche. ¿Tienes dinero para comprarte un coche?
 
 JORGE
 No.
 
 PADRE ROBERT
-Yo te prestaré  l dinero (Se saca del bolsillo diez billetes de
+Yo te prestaré  el dinero (Se saca del bolsillo diez billetes de
 y O te prestar e	·	c	é t l
 .	d,	. ) Ahí	van	quinientos dólares.	u n a os.
 cincuenta omes.	cho melosdevuel- d	1	s que vas a ganar mu	,
 cua; e°:1 :nda deaspiradoras del señor Li tlewood.
-a	uatro manzanas de aquí. Di que vasde mi  parte.
+a	uatro manzanas de aquí. Di que vas de mi parte.
 
 JORGE
 Muchas gracias.
@@ -266,9 +263,9 @@ NAGORE
 ¿En qué pensaría cuando conducía por las carreteras de Tejas?
 
 JORGE
-Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. Pensaba en que todo era muy grande. Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cár­ cel del alma y que yo quería ser libre. Pensaba en conver­ tirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado, en romper las fotos en las que apareciese vestido de cura. Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, que quería formar una familia y leer rodeado del ruido de los niños. 
+Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. Pensaba en que todo era muy grande. Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cár cel del alma y que yo quería ser libre. Pensaba en conver­ tirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado, en romper las fotos en las que apareciese vestido de cura. Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, que quería formar una familia y leer rodeado del ruido de los niños. 
 28
-Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. Y también pensaba que quizás 1 vida te pe m!­ te ser varias personas durante una sola v1 a. Que qu1 s la vida puede ser varias vidas. Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
+Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. Y también pensaba que quizás 1a vida te permite ser varias personas durante una sola vida. Que qu1 s la vida puede ser varias vidas. Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
 
 Música.
 
@@ -306,7 +303,7 @@ JORGE
 España, Europa.
 
 RANCHERA
- No es una casualidad que le miremos así, ¿sabe?. Nuestro hijo murió...
+No es una casualidad que le miremos así, ¿sabe?. Nuestro hijo murió...
 Patsy...
 Déjame que se lo cuente, estoy bien. Nuestro hijo murió hace un ano y siete meses.
 
@@ -465,11 +462,8 @@ Está muy rico.
 
 RANCHERA
 Gracias.
-
 Pues come, come todo lo que quieras.
-
-Silencio. Los RANCHEROS le miran comer.
-
+(Silencio)
 ¿Qué planes tienes para el futuro?
 
 JORGE
@@ -568,9 +562,7 @@ JORGE
 
 RANCHERA
 Claro.
-
-AUTOR
-El Ranchero sale a buscarla y vuelve enseguida. Jorge la mira.
+(El Ranchero sale a buscarla. Jorge la mira).
 
 40
 
