@@ -118,7 +118,7 @@ https://es.javascript.info/debugging-chrome
 			<button class="btn" onclick = toggleBodyFullScreen();>Body FULL SCREEN</button>
 			<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
 
-			<button class="btn" onclick = "decir ('Hola Paco')"> Test Voz </button>
+			<button class="btn" onclick = "decir ('Hola Paco.')"> Test Voz </button>
 			<button class="btn" onclick = "decir ('')"> Parar Voz </button>
 			<br>
 			<button id="idTestButton" class="btn" onclick = "test();"> Test </button>
@@ -291,7 +291,7 @@ https://es.javascript.info/debugging-chrome
 			setCookie("numParrafoCookie", parrafoSolicitado);
 		}
 		if ((0<parrafoSolicitado) && (parrafoSolicitado<1)){		// Num párrafo decimales 0.03>> Ha metido un título
-			var capituloSolicitado = parrafoSolicitado*100;
+			var capituloSolicitado = Math.trunc(parrafoSolicitado*100);		// Devuelve la parte entera, removiendo los decimales. A veces me sale 7,000000001
 			console.log ("Solicitando capítulo " + capituloSolicitado);
 			parrafoSolicitado = devuelveRegistroDeTitulo(capituloSolicitado);
 			document.querySelector('#idParrafo').value = parrafoSolicitado;
