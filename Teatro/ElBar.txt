@@ -1,18 +1,18 @@
 
 PACO
-4-6*:  36
-7:     68
-10*:   86
-11:    140
-15*:   199
+2:     Un bar de Orange
+4-6*:  Rancheros. 36
+7:     Nogore pregunta sobre rancho. 68
+10*:   Blue Moon. Camarero de Lkumberri. Robo. 86
+11:    Margaret Biller. 140
+12:    Pájaro
+15*:   Fiesta. 199. Pág. 90
 
 
 JORGE
-Versión: 14/3
-Hasta página 83. Línea 1898. Cap 13 incluido.
-y Cap XV
-Falta: Cap 14 y 16...38
-
+Versión: 14/3 b
+Faltan capítulos: 16...38
+Capítulo 15 pendiente de quitar algo.
 
 
 CURA DEL PUEBLO
@@ -1890,32 +1890,25 @@ XIV
 Capítulo: 14
 
 JORGE
-Corregido hasta aquí.
-
-
-
-
-del Lazarilloy de La Celestina. Por estas venas corren esas palabras. Yo soy la España de las tres culturas y lascu ­ trolenguas. Yo soy la España que ilumina y causa adrru­ ración por su osadía y su libertad. A mí no me hables de
-
 Fin de la carta. JORGE llega a San Francisco. A un bar de
 españoles llamado «La bellota».
 
 ANGELINES
 Bienvenido a San Francisco. ¿Eres español?
 
-JORGE
+NO
 ¿Cómo lo has sabido?
 
 ANGELINES
 Mi padre es español. Catalán.
 
-JORGE
+NO
 Desde que he llegado a Estados Unidos no paro de entrar en bares de españoles. Es muy raro.
 
 ANGELINES
 Será que los buscas. A lo mejor necesitas buscar algo familiar.
 
-JORGE
+NO
 No los busco. Me los encuentro.
 
 ANGELINES
@@ -1923,159 +1916,72 @@ Si crees en el azar, te los encuentras. Si no crees, los bus­ cas. ¿Ves a ese 
 
 otra España porque me aburro.
 
-JORGE
+NO
 Ahora no parece muy osado.
 
 ANGELINES
 Ahora ya no. Este bar se lo tragó.
 
-     Entra por la puerta CLAUS SLUTER. CLAUSSLUTER
+
+
+CLAUSSLUTER
+Entra por la puerta CLAUS SLUTER. ¿Eres Jorge Arizmendi?
 
 JORGE
 ¿Señor Sluter?
 
 CLAUSSLUTER
-
-
+Encantado de conocerte, hijo.
 
 JORGE
-Igualmente. Muchas gracias por venir. No sabe lo agra-
-decido que estoy.
+Igualmente. Muchas gracias por venir. No sabe lo agradecido que estoy.
 
 CLAUSSLUTER
-
+Gracias a ti por escribirme.
 
 JORGE
 ¿Quiere tomar algo?
 
 CLAUSSLUTER
+Si, gracias. Café, por favor.
 
 85
-
-84
-
-
-
-
-ALFREDO SANZOL
-
 
 JORGE
 Yo también.
 
-
-Jorge, es la primera vez que un sacerdote me escribe abriendo así su corazón. Tengo que decirte que tu histo­ ria me impresionó. Me conmovió.
-
-JORGE
-Gracias. Lo mismo me ha pasado a mí con su libro. Ha sido una fuente de inspiración y de fuerza. Me ha ayuda­ do a entender mejor mi carácter. Su libro anima a la acción, y yo sé que soy una persona de acción.
-
-
-Claro que sí. Y yo lo he sabido nada más verte. Dime,
+CLAUS
+Tengo que decirte que tu historia me impresionó. Me conmovió.
 ¿cuáles son tus planes? ¿En qué puedo ayudarte?
 
 JORGE
 Quiero conocer California. Quiero estudiar mnrketing. Quiero trabajar. Quieroenamorarme y quiero formar una familia. Quiero tener hijos y quiero luchar para que el mundo en el que vivan sea mejor que el mundo en el que he vivido yo. Esos son mis planes.
 
-
-Dame un abrazo.
-
-JORGE ARIZMENDI y CLAUS SUJTER se abrazan.
-
-
+CLAUS
+Dame un abrazo. (se abrazan)
 Me gustaría que conocieras a mi hija. Este viernes es su cumpleafios. Haremos una fiesta de disfraces en mi casa. Estás invitado.
 
 86
-
-EL DAR QUESETRAGÓ A TODOS LOS ESPA.'IOLES
-
-
-
 JORGE
 Muchas gracias, no sé qué decir, me parece demasiado.
 Yo solo quería darle la mano.
 
+CLAUS
 Dime que vas a venir, me encantará seguir charlando contigo.
-
-JORGE
-De acuerdo. Iré. Gracias.
-
-Gracias a ti por escribirme. Me hiciste sentir importante. Importante en su sentido más humano. Puede que mis libros me hayan hecho famoso, y puede que sea impor­ tante, oficialmente hablando quiero decir, pero tu carta me hizo recordar que no soy más que alguien que puede ayudar a otro. Tu carta me iluminó de una manera tan claray sencilla que tocó una parte esencial de mi perso­ na. Me dije: ser alguien que puede ayudar a otro quizás sea todo lo que necesito ser. Y me dije: sí. No hay más. Solo soy aquel que puede ayudar, y eso me hizo sentir de nuevo importante. Así que, gracias.
 
 JORGE
 No sé qué decir.
 
+CLAUS
 No tienes que decirme nada. Nos vemos el viernes.
 (Saliendo del bar.) Recuerda que la fiesta es de disfraces.
-
-JORGE
-Sí, veré lo que puedo hacer, en la maleta no suelo llevar
-disfraces.
-
-87
-
-
-
-ALFREDO 5ANZOL
-
-
-Con tal de que no te disfraces de cura.
-
-JORGE se ríe como puede.
-
-
-Es ui:a broma, mbre. Reírse de uno mismo es la mejor gasolma para vivir. Ah, por cierto, a mi hija no hace falta que le digas que has sido sacerdote.
-
-JORGE
-Bueno, en realidad, lo sigo siendo. Aún no tengo la dis­ pensa.
-
-EL BAR QUE SE TRACÓ ,\ TODOS LOS ESPAÑOLES
-
-
-dar demasiadas explicaciones. Mira, te diré algo más. No te hace falta decir quién eres, simplemente, porque ni tú mismo lo sabes. Yo te agradezco que hayas abierto tu corazón contándome tu historia, pero tú, ahora, tienes derecho al secreto. ¿Entiendes? Estás en un momento tan delicado que tienes derecho a guardar en secreto quién fuiste, y tienes derecho a guardar en secreto que no sabes quién eres. Tienes derecho, incluso, fíjate lo que te voy a decir, a mentir. A la mentira. Tienes derecho a usar la mentira para proteger la delicadeza del momento vital en
-el que estás.
-
-JORGE lo mira pensativo, intentando encajar lo que escucha.
-
-
-
-
-Bueno, pues con más razón. Cuando os conozcáis un poco más, si quieres, se lo dices.
-
-JORGE
-Claro que sí.
-
-¿Entiendes lo que te quiero decir?
-
-JORGE
-Creo que sí.
-
-
-
-
-
-Ya sabes, las chicas cuando oyen de eso de cura...
-
-JORGE
-Sí.
-
-
-Ya tendrás tiempo de decírselo.
-
-JORGE
-Ya tendré tiempo.
-
 Eres un amigo. Gracias por darme la bienvenida a tu vida. Yo te la doy a la mía. Y ahora hasta el viernes. Disfrázate de lo que quieras, perosobre todo no de negro. A la fiesta vendrá un amigo al que te quiero presentar. Adiós.
 
-}ORGE
+JORGE
 Adiós.
 
 EVARISTO
 Como te puedes imaginar el pobre entendió: «Disfrázate de lo que quieras, pero sobre todo de negro».
-
-
-
-Estás en un momento de tu vida en el que no hace falta
-
 
 89
 
