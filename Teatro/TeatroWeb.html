@@ -81,7 +81,7 @@ https://es.javascript.info/debugging-chrome
 		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
 			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
-			<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
+			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();">P+</button>
 			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
 		</div>	
 		
@@ -94,6 +94,15 @@ https://es.javascript.info/debugging-chrome
 		<br><hr>
 		
 		
+		<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
+			document.querySelector('#idBtnSaved').innerHTML = document.querySelector('#idParrafo').value;">Store</button>		
+			<button id="idBtnSaved" class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value=Number(document.querySelector('#idBtnSaved').innerHTML);
+			cambioNumParrafoEvent();">1</button>				
+			<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayParrafos[1].texto);">Info</button>
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo();">< Cap</button>
+		</div>	
+		<br><hr>
 		<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
 			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
@@ -101,6 +110,16 @@ https://es.javascript.info/debugging-chrome
 			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();">P+</button>
 		</div>	
 		<br><hr>
+		<div id ="idDivControlParrafoRepetido" style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
+			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+			<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
+			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
+		</div>	
+		
+		<br><hr>
+		
+		
 			
 		<br><br><br>
 		<div id="idDivExtra" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
@@ -149,6 +168,15 @@ https://es.javascript.info/debugging-chrome
 			});	 
 	}
 
+	
+	function irInicioCapitulo(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;	
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];	
+		var capituloActual = arrayParrafos[indiceMiParrafo].capitulo;
+		parrafoSolicitado = devuelveRegistroDeCapitulo(capituloActual);
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+	}
+	
 	/*
 	var start;
 	function longClickAction(accion){
@@ -267,7 +295,7 @@ https://es.javascript.info/debugging-chrome
 		}
 		return(1);
 	}
-	function devuelveRegistroDeTitulo (numCapitulo){
+	function devuelveRegistroDeCapitulo (numCapitulo){
 		var encontrado = false;
 		var i=0;
 		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
@@ -293,7 +321,7 @@ https://es.javascript.info/debugging-chrome
 		if ((0<parrafoSolicitado) && (parrafoSolicitado<1)){		// Num párrafo decimales 0.03>> Ha metido un título
 			var capituloSolicitado = Math.trunc(parrafoSolicitado*100);		// Devuelve la parte entera, removiendo los decimales. A veces me sale 7,000000001
 			console.log ("Solicitando capítulo " + capituloSolicitado);
-			parrafoSolicitado = devuelveRegistroDeTitulo(capituloSolicitado);
+			parrafoSolicitado = devuelveRegistroDeCapitulo(capituloSolicitado);
 			document.querySelector('#idParrafo').value = parrafoSolicitado;
 			setCookie("numParrafoCookie", parrafoSolicitado);
 		}
