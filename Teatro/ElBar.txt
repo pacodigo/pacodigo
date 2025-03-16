@@ -1,12 +1,13 @@
 
 PACO
 2:     Un bar de Orange
-4-6*:  Rancheros. 36
-7:     Nogore pregunta sobre rancho. 68
-10*:   Blue Moon. Camarero de Lkumberri. Robo. 86
-11:    Margaret Biller. 140
+4-6*:  Rancheros.
+7:     Nogore pregunta sobre rancho.
+10*:   Blue Moon. Camarero de Lkumberri. Robo.
+11:    Margaret Biller.
 12:    Pájaro
-15*:   Fiesta. 199. Pág. 90
+15*:   Fiesta. p90
+50:    Parrafadas
 
 
 JORGE
