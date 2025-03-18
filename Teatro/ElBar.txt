@@ -11,7 +11,7 @@ PACO
 
 
 JORGE
-Versión: 18/3 
+Versión: 18/3 b
 Faltan capítulos: 16...38
 Capítulo 15 pendiente de quitar algo.
 
@@ -62,7 +62,8 @@ JORGE
 Yo tampoco, madre.
 
 EVARISTO
-Esa noche de 1942 decidieron que Jorge iría al seminario. Jorge tuvo miedo y lloró en su cama. A la mañana siguien­ te, el cura se alegró de la decisión que habían tornadoy comenzóa arreglarlo todo para llevar a Jorge al seminario. A los pocos días vino un cura de Pamplona acompañado de un diácono. Jorge cogió su pequeña maleta. Besóa su madrey a su padre.Sus hermanos ya estaban trabajando.
+Esa noche de 1942 decidieron que Jorge iría al seminario. Jorge tuvo miedo y lloró en su cama. A la mañana siguien­ te, el cura se alegró de la decisión que habían tornadoy comenzóa arreglarlo todo para llevar a Jorge al seminario. A los pocos días vino un cura de Pamplona acompañado de un diácono. Jorge cogió su pequeña maleta. Besó a su madrey a su padre. 
+Sus hermanos ya estaban trabajando.
 Jorge se acercó a su madre y le susurró al oído:
 
 JORGE
@@ -711,18 +712,15 @@ En coche.
 45
 
 RA:NCHERO
-La mejor manera que tiene un hombre de viajar. ¿Qué
-día es hoy? ¿Lunes?
+La mejor manera que tiene un hombre de viajar. 
+¿Qué día es hoy?, ¿Lunes?
 
 JORGE
 Lunes
 
 RANCHERO
-Si conduces ocho horas al día el  .
-viernes puedes estar alií.
-
-RANCHERA
-Te haré un bocadillo. (se va hacer bocata). 
+Si conduces ocho horas al día el viernes puedes estar allí.
+- Te haré un bocadillo. (se va hacer bocata). 
 
 JORGE
 Cuando tenga hijos les contaré que el agua en Tejas era
@@ -1071,7 +1069,7 @@ JORGE
 Los tienes de colores diferentes.
 
 TlPO DE LA BARRA	·	· N
-(Levantándose los pantalones para verse los calcetmes.). 
+(Levantándose los pantalones para verse los calcetines). 
 No jodas!
 Se mean de la risa.
 
@@ -1359,9 +1357,10 @@ JORGE
 Mi padre me decía: Jorge, no te fíes ni de tu padre.
 
 TIPO DE LA BARRA
-Es un buen consejo. Oye. Ha sido unplacer conocerte. Es
-verdad que la noche no se nos ha dado bien, pero segui­mos 
-siendo dos personas libres y con salud. Eso es lo importante.
+Es un buen consejo. Oye. Ha sido un placer conocerte. 
+Es verdad que la noche no se nos ha dado bien, 
+pero segui­mos siendo dos personas libres y con salud. 
+Eso es lo importante.
 
 JORGE
 Uno de los policías te ha llamado por tu apellido sin ver tu documentación.
@@ -1424,9 +1423,8 @@ Dentro sigue sentada en In misma mesa MARGARET MILLER. El CAMARERO DEL BUJE MooN
 
 
 MARGARET MlLLER
-
 Lo siento.
-(Jorge levanta ln cabeza y mira a Margaret.)
+(Jorge levanta la cabeza y mira a Margaret.)
 Lo siento de verdad.
 
 JORGE
@@ -1521,9 +1519,10 @@ JORGE
 La edad de Cristo.
 
 MARGARET MILLER
-Ya no eres un crío y, sin embargo, tienes la mirada de un
-niño. Yo en cambio nací vieja. De joven parecía mayor de
-lo que era, y ahora me pasa al revés. Ya no puedo envejecer mas.
+Ya no eres un crío y, sin embargo, tienes la mirada de un niño. 
+Yo en cambio nací vieja. 
+De joven parecía mayor de lo que era, y ahora me pasa al revés. 
+Ya no puedo envejecer mas.
 
 69
 
@@ -1531,7 +1530,8 @@ JORGE
 ¿Cuántos años tienes?
 
 MARGARET MJLLER
-Más de los que parece, pero no te los pienso decir. (Sonríe y	bebe.) Cuando un hombre y una mujer están solos hablan de la edad, todo se pone muy sexual, ¿verdad?
+Más de los que parece, pero no te los pienso decir. (Sonríe y bebe). 
+Cuando un hombre y una mujer están solos y hablan de la edad, todo se pone muy sexual, ¿verdad?
 
 JORGE
 (Se avergüenza.) No lo sé. No lo había pensado.
@@ -1590,22 +1590,22 @@ JORGE
 ¿Qué?
 
 MARGARET MILLER
-Eres muy misterioso, me volverías loca. Solo te estoy
+Eres muy misterioso, me volverías loca. 
 71
-diciendo que en mi casa tienes una cama en la que estirar las piernas y	una ducha en la que quitarte el polvo de la
-carretera. ¿Qué más quieres?
+Solo te estoy diciendo que en mi casa tienes una cama en la que estirar las piernas y una ducha en la que quitarte el polvo de la carretera. 
+¿Qué más quieres?
 
 JORGE
 Soy virgen.
 
 MARGARET MILLER
-(se queda seria. Sonríe. No se lo puede creer. Se sienta.) Vale. Muy bien. ¿Y?
+(se queda seria. Sonríe. No se lo puede creer. Se sienta.) Vale. Muy bien, ¿y?
 
 JORGE
 Nada. Quería que lo supieras.
 
 MARGARET MILLER
-Vale. Quiero decir... Gracias por compartir este momen to íntimo conmigo, pero no hacía falta.
+Vale. Quiero decir, gracias por compartir este momento íntimo conmigo, pero no hacía falta.
 
 JORGE
 Si que hacía falta. Bueno, yo al menos necesitaba decirlo. Decírtelo a ti. Lo siento.
@@ -1864,6 +1864,8 @@ Soy yo el que tiene que darte las gracias, hijo adoptivo de los rancheros de Ora
 Mi deuda está saldada.
 
 PACO
+Soy yo el que tiene que darte las gracias, hijo adoptivo de los rancheros de Orange, Tejas. 
+Mi deuda está saldada.
 Capítulo: 13
 
 JORGE
@@ -2037,8 +2039,9 @@ Tu padre me dijo que hoy era tu cumpleaños. Felicidades.
 (Le da una caja de bombones que trae en la mano).
 
 RACHEL
-¡Muchas gracias! ¡Eres muy amable! ¿Te puedo dar dos
-besos? Como ya nos conocemos... (le da dos besos)
+¡Muchas gracias! ¡Eres muy amable! 
+¿Te puedo dar dos besos?, Como ya nos conocemos... 
+(le da dos besos)
 91
 
 JORGE
@@ -2315,8 +2318,8 @@ JORGE
 100
 
 CARMEN
-SI, en Internacional. ¿Conoces el edificio de la Telefómca
-en la Gran Vía?
+Si, en Internacional. 
+¿Conoces el edificio de la Telefónica en la Gran Vía?
 
 JORGE
 Si.
@@ -2394,8 +2397,8 @@ JORGE
 Todo es demasiado grande. Hasta los conejos son dema­ siado grandes. ¿Y a ti?
 
 CARMEN
-Lo  que más me gusta es que hay poca gente con cara de pena, y lo que
-menos que hay demasiada gente con pinta de estar muy sola.
+Lo que más me gusta es que hay poca gente con cara de pena, 
+y lo que menos que hay demasiada gente con pinta de estar muy sola.
 
 JORGE
 ¿Te gustaría que se muriera Franco?
