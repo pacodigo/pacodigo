@@ -11,7 +11,7 @@ PACO
 
 
 JORGE
-Versión: 16/3 
+Versión: 18/3 
 Faltan capítulos: 16...38
 Capítulo 15 pendiente de quitar algo.
 
@@ -114,8 +114,8 @@ JORGE
 Claro que te lo digo.
 
 NAGORE
-Qué coincidencia más grande. Pero yo llevo quí
-muchos años ya, es normal que no me conozcas.
+Qué coincidencia más grande. 
+Pero yo llevo aquí muchos años ya, es normal que no me conozcas.
 
 JORGE	
 ¿Cuántos años llevas aqui?
@@ -304,9 +304,9 @@ JORGE
 España, Europa.
 
 RANCHERA
-No es una casualidad que le miremos así, ¿sabe?. Nuestro hijo murió...
-Patsy...
-Déjame que se lo cuente, estoy bien. Nuestro hijo murió hace un ano y siete meses.
+No es una casualidad que le miremos así, ¿sabe?. 
+Nuestro hijo murió...
+Déjame que se lo cuente, estoy bien. Nuestro hijo murió hace un año y siete meses.
 
 JORGE
 Lo siento.
@@ -440,8 +440,8 @@ JORGE
 La verdad es que si.
 
 RANCHERO
-Estupendoo, así te sabrá todo mejor. Anuestro hijo le gustaba 
-la música country, pero a lo mejor a ti no te gusta.
+Estupendoo, así te sabrá todo mejor. 
+A nuestro hijo le gustaba la música country, pero a lo mejor a ti no te gusta.
 
 JORGE
 Bueno, antes no sabía ni que existía, pero aquí me gusta.
@@ -534,8 +534,7 @@ rancho será para ti.
 
 RANCHERO
 Nos gustaría decirte que si te quedas a vivir con nosotros, cuando muramos, este rancho será para ti.
-Por supuesto, entendemos que necesites pensarlo, no es
-una decisión fácil...
+Por supuesto, entendemos que necesites pensarlo, no es una decisión fácil...
 
 39
 JORGE
@@ -556,7 +555,7 @@ Solo esperamos que te guste la idea. Seríamos tan felices teniéndote aquí. Y,
 FALTATEXTO
 
 RANCHERO
-De hecho, hay mucho de marketing también en este nego­ cio. Somos ganaderos, pero tenemos que saber colocar nu_estra nercancía. No somos unos paletos. Aquí hay vemte mil cabezas y tenemos a cincuenta hombres traba­ jando. Es... es la obra de nuestra vida...
+De hecho, hay mucho de marketing también en este nego­cio. Somos ganaderos, pero tenemos que saber colocar nuestra nercancía. No somos unos paletos. Aquí hay vemte mil cabezas y tenemos a cincuenta hombres traba­jando. Es la obra de nuestra vida...
 
 JORGE
 ¿Puedo volver a ver la foto de su hijo?
@@ -674,9 +673,8 @@ Claus Sluter?
 No losé.
 
 EVARISTO
-Ha escrito un libro que se llama el mejor vendedor de todos
-los tiempos. Aquí lo está leyendo todo el mundo. Toma,
-échale un vistazo
+Ha escrito un libro que se llama el mejor vendedor de todos los tiempos. 
+Aquí lo está leyendo todo el mundo. Toma, échale un vistazo.
 
 JORGE
 (Ojea y lee.) ¿Dónde vive?
@@ -6006,14 +6004,20 @@ Fin.
 
 
 
-500
+PARRAFADAS
 Capítulo: 50
 
 NAGORE
 Es que aquí los pueblos son muy grandes. El centro de la ciudad está a un kilómetro. ¿A quién buscas?
 
 JORGE
-Soy cura. Y vengo a la casa que tienen los padres escola­ pios aquí. Nunca llegaré a entender que alguien me quie­ ra. El mundo me parece un lugar frío, aunque yo intento vivir la vida con todas mis fuerzas. Me separaron de mi madre cuando tenia doce años y la realidad se llenó de frío, de soledad y de hambre. En el seminario contaba los garbanzos. No entiendo qué es el amor porque no he podido aprenderlo de mis padres, porque no he vivido con mis hermanos, porque solo he escuchado sermones toda mi vida. Sermones que repetiré a mis hijos. ¿Me querrán mis hijos?
+Soy cura. Y vengo a la casa que tienen las madres escolapias aquí. 
+Nunca llegaré a entender que alguien me quiera. 
+El mundo me parece un lugar frío, aunque yo intento vivir la vida con todas mis fuerzas. 
+Me separaron de mi madre cuando tenia doce años y la realidad se llenó de frío, de soledad y de hambre. 
+En el seminario contaba los garbanzos. 
+No entiendo qué es el amor porque no he podido aprenderlo de mis padres, porque no he vivido con mis hermanos, porque solo he escuchado sermones toda mi vida. Sermones que repetiré a mis hijos. 
+¿Me querrán mis hijos?
 (página 24)
 
 
@@ -6021,9 +6025,25 @@ NAGORE
 ¿En qué pensaría cuando conducía por las carreteras de Tejas?
 
 JORGE
-Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. Pensaba en que todo era muy grande. Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cárcel del alma y que yo quería ser libre. Pensaba en convertirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado, en romper las fotos en las que apareciese vestido de cura. Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, que quería formar una familia y leer rodeado del ruido de los niños. 
-Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. Y también pensaba que quizás 1a vida te permite ser varias personas durante una sola vida. Que qu1 s la vida puede ser varias vidas. Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
-(Página 28)
+Pensaba en no dormirme en estas rectas que no conocía. Rectas de cinco kilómetros. 
+Pensaba en que todo era muy grande. 
+Pensaba en que se me abría el espíritu, en que de mi pecho salía el dolor, pensaba que España era una cárcel del alma y que yo quería ser libre. 
+
+(Pensaba en convertirme en un gran vendedor. Pensaba en comenzar de cero, en nacer de nuevo, en olvidar el pasado,) 
+
+en romper las fotos en las que apareciese vestido de cura. 
+Pensé: recuerda que tienes que escribir a Pamplona para decir que rompan las fotos en las que aparezco vestido de cura. 
+
+Pensaba que la vida da segundas oportunidades, que me quedaba todo por hacer, 
+(que quería formar una familia y leer rodeado del ruido de los niños.)
+
+Eché de menos mi pueblo. Eché de menos la tierra de mi pueblo. Eso es lo que eché de menos, y el olor del aire de la mañana mezclado con la tierra. En esas cosas pensaba. 
+Y también pensaba que quizás la vida te permite ser varias personas durante una sola vida. 
+Que quizás la vida puede ser varias vidas. 
+Y que morirse y resucitar era algo posible sin dejar que el corazón se parara.
+
+(Pág. 28. Resumen Pensaba: Carretera, Abrir espíritu, Romper fotos, Echar de menos el pueblo, Vida, Morirse)
+
 
 PACO
 Jorge saca una aspiradora de algún lado y la mueve de un lado a otro con velocidad y maña. 
@@ -6033,23 +6053,32 @@ JORGE
 Como ven, es muy rápida y muy fácil, muy factl de
 mover, es una herramienta básica para tener en casa que garantizará una limpieza como la que ustedes desean Y que lo hace cuatro veces más rápido q e una escoba, un ahorro de tiempo esencial que nos servirá para el descan­so o para hacer otro tipo de actividad. Una aspiradora no es un capricho, es una necesidad.
 
+
 EVARISTO
 En Estados Unidos están acostumbradas. Aquí hay mucho cura protestante que está casado.
 
 JORGE
-A vosotros os he dicho que era cura y no os lo tenía que
-haber dicho. Eso forma parte de mi pasado. Forma parte de una vida que no es mi vida. Mi vida no la conozco porque la estoy haciendo ahora. Ahora. Ahora mismo estoy haciendo mi vida. La vida en la que yo era cura no es mi vida, es una vida que me dieron, que no recuerdo como mía. Esto que está pasando ahora sí es mi vida. Lo que vaa	pasar luego sí es mi vida. Lo que ha pasado antes no es mío. Es un dolor que se ha quedado en mi sangre nada más. Un dolor que se cura amando la vida y amando la libertad. Cuando pasen los años podré hablar
-del pasado.
-Ahora no puedo. Ahora solo quiero tener recuerdos
-nuevos.Y para eso tengo que vivir. Y tengo que vivir mucho y rápido.
+A vosotros os he dicho que era cura y no os lo tenía que haber dicho. 
+Eso forma parte de mi pasado. Forma parte de una vida que no es mi vida. 
+Mi vida no la conozco porque la estoy haciendo ahora. Ahora. Ahora mismo estoy haciendo mi vida. 
+
+(La vida en la que yo era cura no es mi vida, es una vida que me dieron, que no recuerdo como mía. 
+Esto que está pasando ahora sí es mi vida. Lo que va a pasar luego sí es mi vida. Lo que ha pasado antes no es mío. Es un dolor que se ha quedado en mi sangre nada más. Un dolor que se cura amando la vida y amando la libertad.)
+
+Cuando pasen los años podré hablar del pasado. Ahora no puedo. 
+Ahora solo quiero tener recuerdos nuevos. Y para eso tengo que vivir. Y tengo que vivir mucho y rápido.
 (Página 43)
 
-RANCHEROS y J(?RGE. RANCHERA
-Tienes razón. Tienes que seguir tu vida. Lo entendemos. Tienes que seguir tu camino y aprender marketing y cono­ cer a ese señor que vive en San Francisco, pero siempre te esperaremos. No somos tan viejos. Si nos escribes sere­mos felices. Una postal de vez en cuando para saber que estás bien. Puedes visitarnos en Navidad si quieres. No tenemos ninguna prisa porque sabemos que un día vendrás para quedarte.
+
+RANCHEROS y RANCHERA
+Tienes razón. Tienes que seguir tu vida. Lo entendemos. Tienes que seguir tu camino y aprender marketing y conocer a ese señor que vive en San Francisco, pero siempre te esperaremos. No somos tan viejos. Si nos escribes sere­mos felices. Una postal de vez en cuando para saber que estás bien. Puedes visitarnos en Navidad si quieres. No tenemos ninguna prisa porque sabemos que un día vendrás para quedarte.
 
 JORGE
-No... no creo que venga. Lo siento mucho, pero no quiero crearles falsas esperanzas. No quiero que me esperen porque es muy probable que no vuelva. No sé a dónde me va a llevar la vida, pero sé que no quiero quedarme en este rancho.
+No... no creo que venga. Lo siento mucho, pero no quiero crearles falsas esperanzas. 
+(No quiero que me esperen porque es muy probable que no vuelva.)
+No sé a dónde me va a llevar la vida, pero sé que no quiero quedarme en este rancho.
 (P. 45)
+
 
 MARGARET MILLER
 (Se ríe.) Eres raro. Eso es lo que me gusta de ti, que eres raro.
@@ -6061,16 +6090,22 @@ MARGARET MILLER
 ¿Y tú? ¿Qué esperas de mí? ¿Qué esperas de venir a mi casa?
 
 JORGE
-¿De ir a tu casa? Pues mira. Espero salir de mi cuerpo y
-transformarme en aire para ver la realidad desde las alturas. 
-Espero abrazar todo lo invisible que siento a mi alre­ dedor y que no puedo tocar. 
+¿De ir a tu casa? Pues mira. 
+Espero salir de mi cuerpo y transformarme en aire para ver la realidad desde las alturas. 
+Espero abrazar todo lo invisible que siento a mi alrededor y que no puedo tocar. 
 Espero volver a nacer un día. Despertarme de este sueño. Hacer de la vida mi vida. 
-Espero mancharme los zapatos con el barro e los perdedores, de los que han decidido hacer de su vida una obra de arte y saben que cada día la tienen que iniciar de cero. 
+
+(Espero mancharme los zapatos con el barro e los perdedores, de los que han decidido hacer de su vida una obra de arte y saben que cada día la tienen que iniciar de cero. )
+
 Espero dejar de oír a un niño llorando que vive aquí, en este pecho que nunca ha acariciado una mujer, que ni mi madre ha acariciado. 
 Espero rodar con las piedras del camino. Rodar llevado por la corriente del agua y del viento. 
-Espero unirme a los insectos en su esperanza de un segundo más de vida antes de ser devorados. 
-Espero que una luz se encienda en mi garganta, que la luz salga por mi pene y por mi boca. Eso espero.
-(P. 72)
+
+(Espero unirme a los insectos en su esperanza de un segundo más de vida antes de ser devorados.)
+
+Espero que una luz se encienda en mi garganta, que la luz salga por mi pene y por mi boca. 
+Eso espero.
+(P. 72. Resumen Espero: Salir + Abrazar + Volver a nacer + Niño + Rodar + Luz)
+
 
 PÁJARO
 Soy yo el que tiene que darte las gracias, hijo adoptivo de los rancheros de Orange, Tejas. 
@@ -6082,4 +6117,3 @@ Es por la mañana, deben ser las nueve y estoy gozando. Sigo  mi viaje.
 No puedo explicar el placer de conducir a primera hora de la mañana con la ventanilla abierta.
 ¿Se puede explicar? ¿Puedo llorar? ¿Puedo gritar?
 (p. 82)
-
