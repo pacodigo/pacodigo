@@ -11,9 +11,11 @@ PACO
 
 
 JORGE
-Versión: 18/3 b
-Faltan capítulos: 16...38
+Versión: 21/3 
+Faltan capítulos: 19...38
 Capítulo 15 pendiente de quitar algo.
+Hasta capítulo 18. Pág: 118
+
 
 
 CURA DEL PUEBLO
@@ -2579,67 +2581,7 @@ PACO
 Capítulo: 16
 Al final, sonará un teléfono que vendrá de lejos, cruzando el océano Atlántico, y se fundirá con la música hasta que tome el primer plano y se quede solo. Entonces JORGE lo escucha­rá. Caminará hacia él y lo descolgará.
 
-108
-
-JORGE
-¿Sí?
-
-TELEFONISTA 1
-¿Es usted Jorge Arizmendi?
-
-JORGE
-Si, soy yo.
-
-TELEFONISTA 1
-Le comunico que tiene usted un preaviso y que dentro de quince minutos va a tener una llamada de Evaristo Arizmendi. 
-¿Va a poder atenderla?
-
-JORGE
-Si, si, voy a estar aquí.
-
-TELEFONJSTA 1
-De acuerdo. Muchas gracias.
-
-JORGE
-Oiga, oiga.
-
-TELEFONISTA 1
-Sí, dígame.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-JORGE
-¿Sabe qué pasa?
-
-TELEFONISTA 1
-No, señor. Dentro de quince minutos recibirá la llamada.
-
-JORGE
-Gracias.
-
 109
-
-
-
-
-ALFREDOSANZOL
-
-
-TELEFONISTA 1
-A usted.
-
-Se oye el tono del teléfono en espera, y JORGE cuelga muy despacio. Aprovecha los quince minutos para limpiarse la cara, quitarse parte del disfraz, ir al baíio y comer algo. Todo lo hace sin dejar de mirar el teléfono. Suena el teléfono.
 
 JORGE
 ¿Evaristo?
@@ -2650,50 +2592,45 @@ Jorge.
 JORGE
 ¿Pasa algo? ¿Estáis bien?
 
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-JORGE
-Por favor, abre la carta. (Pausa.) ¿Qué haces?
-
-
-Coño, estoy abriendo el sobre. A ver.
-
-JORGE
-Lee en voz alta.
-
-
-Excelentísimo y reverendísimo señor don Martín de Zalba Obispo de Pamplona y en su nombre don Juan Bautista Senar secretario...
-
-JORGE
-Vete a la carta, a ver qué dice la carta.
-
-
-
-
+EVARISTO
 Sí, estamos todos bien, tranquilo. Que te llamo a estas horas porque ha llegado una carta certificada del obispado.
 
 JORGE
 ¿Qué dice?
 
-
+EVARISTO
 No la he abierto. ¿La abro?
 
 JORGE
 Hombre, claro, ábrela. Qué pregunta es esa. Abre la carta, por el amor de Dios.
 
-
+EVARISTO
 Yo qué sé. A lo mejor no querías que la abriera, por eso te llamo.
 
 110
 
-Por la presente se comunica al reverendo señor don Jorge Arizmendi la necesidad de que se presente a la mayor brevedad en el obispado de Pamplona con el objeto de mantener una entrevista cort el excelentísimo y reveren­ dísimo señor don Martín de Zalba, obispo de Pamplona. Atentamente, don Juan Bautista Senar secretario del e.xcelentísimo y...
+JORGE
+Por favor, abre la carta. (Pausa.) ¿Qué haces?
+
+EVARISTO
+Coño, estoy abriendo el sobre. A ver.
+
+JORGE
+Lee en voz alta.
+
+EVARISTO
+Excelentísimo y reverendísimo señor don Martín de Zalba Obispo de Pamplona y en su nombre don Juan Bautista Senar secretario...
+
+JORGE
+Vete a la carta, a ver qué dice la carta.
+
+EVARISTO
+Por la presente se comunica al reverendo señor don Jorge Arizmendi la necesidad de que se presente a la mayor brevedad en el obispado de Pamplona con el objeto de mantener una entrevista coN el excelentísimo y reverendísimo señor don Martín de Zalba, obispo de Pamplona. Atentamente, don Juan Bautista Senar secretario del excelentísimo y...
 
 JORGE
 ¿No dice nada más?
 
-
+EVARISTO
 No. Dice que te presentes en el obispado y nada más.
 
 JORGE
@@ -2701,68 +2638,68 @@ JORGE
 
 111
 
-
-
-ALFREDO 5ANZOL
-
-
+EVARISTO
 No.
 
 JORGE
 ¿Cuándo ha llegado?
 
-
+EVARISTO
 Ahora mismo. Esto, Jorge, tiene toda la pinta de ser algo que tiene que ver con la dispensa, ¿no?
 
 JORGE
 Sí, eso seguro.
 
-
+EVARISTO
 ¿Qué vas a hacer?
 
 JORGE
 Voy a coger el primer avión que vaya a Nueva York.
 
+EVARISTO
 ¿No vuelves en barco?
 
 JORGE
 Voy a coger un avión.
 
+EVARISTO
 ¿Necesitas dinero?
 
 JORGE
 No. Tengo dinero.
 
-
+EVARISTO
 Vale. Pues entonces ya me dices cuando estés en Nueva York cuándo llegas a Madrid.
 
 112
 
 
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPA1'JOLES
-
-
 JORGE
 Sí, yo te llamo desde Nueva York.
 
+EVARISTO
 Llámame cuando sea, da igual la hora.
 
 JORGE
-Sí. No te preocupes. Te llamo en un par de días. Un abrazo.
+Si. No te preocupes. Te llamo en un par de días. Un abrazo.
 
+EVARISTO
 Un abrazo muy grande.
 
 JORGE
 Adiós.
 
+EVARISTO
 Adiós, Jorge.
-JORGE piensa. Se queda quieto. De una maleta saca un traje negro y se viste de cura.
+Jorge piensa. Se queda quieto. De una maleta saca un traje negro y se viste de cura.
 
+JORGE
+Nulo
 
 XVII
+Capítulo: 17
 
-CARMEN y RACHEL, vestidas para ir a la playa, esperan a
-JORGE.
+CARMEN y RACHEL, vestidas para ir a la playa, esperan a Jorge.
 
 RACHEL
 ¿Vamos?
@@ -2790,56 +2727,38 @@ CARMEN y RACHEL salen.
 
 
 XVIII
+Capíutlo: 18
 
 Pamplona, Navarra, España. Despacho del obispo. JORGE y el ÜBISPO MARTÍN DE ZALBA.
 
 OBISPO
-Ha llegado la respuesta del Vaticano a tu solicitud de dis­ pensa. (Pausa.) A mí me parece que no son malas noticias, porque nos dan más tiempo para reflexionar, pero tal y como te veo, quizás para ti son malas noticias.
-
-Pausa. JORGE cierra los ojos y agacha la cabeza.
-
-OBISPO
+Ha llegado la respuesta del Vaticano a tu solicitud de dis­pensa. 
+A mí me parece que no son malas noticias, porque nos dan más tiempo para reflexionar, pero tal y como te veo, quizás para ti son malas noticias.
+(JORGE cierra los ojos y agacha la cabeza.)
 La Congregación para la Doctrina de la Fe ha rechazado tu solicitud.
 
 JORGE
 (Levanta la cabeza y abre los ojos.) ¿Dicen por qué?
 
 OBISPO
-Es algo de lo que ya hablamos cuando redactaste tu carta. No hay espíritu de humildad de ánimo. No haces una narración clara de por qué quieres abandonar el ministe­ rio. No hablas de tu crisis. Eso es lo que dicen, y estoy de
+Es algo de lo que ya hablamos cuando redactaste tu carta. No hay espíritu de humildad de ánimo. No haces una narración clara de por qué quieres abandonar el ministe­ rio. No hablas de tu crisis. Eso es lo que dicen, y estoy de acuerdo con ellos.
 114
-
-ELBAR QUE SE TRAGÓ A TODOS LOSESPAl'1OLES
-
-
-acuerdo con ellos. Yo también la hubiese rechazado. Pero si vemos las cosas desde otro punto de vista, podernos considerar este rechazo como una segunda oportunidad que te están dando para que te replantees tu decisión. Esto puede ser algo muy bueno para ti.
+Yo también la hubiese rechazado. Pero si vemos las cosas desde otro punto de vista, podernos considerar este rechazo como una segunda oportunidad que te están dando para que te replantees tu decisión. Esto puede ser algo muy bueno para ti.
 
 JORGE
-Lo que ellos quieren que diga es que yo carecía de las cuali- dadesque me hacían idóneo para asumir el orden sa rdo­ tal. Que carecía de libertad. Que carecía de responsabilidad. Que carecía de capacidad para ser sacerdote. Pero yo deci­ dí ser sacerdote siendo libre. Responsable. Y capaz. Si ahora quierodejar de serlo es porque tengo derecho a dejar de serlo, y no tengo por qué dar explicaciones a nadie.
-·Qué es espíritu de humildad? ¿Qué diferencia hay con humillarse o con padecer humillación? ¿Son cosas diferen­ tes? ¿Son la misma? ¿Tiene que ser humilde un hombre al que llevaron al seminario con doce años? ¿No tiene ese hombre derecho de restitución? La libertad que me robaron cuando era niño es un asunto mío de conciencia. Cuando acepté el sacramento sí era libre. Y si hablamos de iber d,
-¿tengo ahora más libertad que antes? ¿Y usted, enun nc1a?
-¿Tiene usted libertad? ¿Hasta dónde se puede decir que somos libres y hasta dónde no? ¿No es ese un gran proble­ ma filosófico que quizás es erróneo querer simplificar o querer resolver de manera tajante? ¿No se puede,decir ue todos somos libres o que nadie lo es? ¿No es mas sencillo reconocer el derecho de un sacerdote a renunciar al com­ promiso? ¿Qué quiere decir obligarse de por vida? ¿No tiene derecho una persona a cambiar de vida? ¿A transfor­ marse? ¿No debería apoyar esa decisión la Iglesia y consi­ derar al presbítero que quiere renunciar al sacerdocio como parte del grupo de fieles? ¿No debe a acogerlo y p oteger­ lo en ese cambio y ayudarle a exphcar a la comurudad su decisión para eliminar la alarma, los rumores y los comen­ tarios? Porque un día, eminencia, mi mujer irá por la calle,
+Lo que ellos quieren que diga es que yo carecía de las cualidadesque me hacían idóneo para asumir el orden sacerdo­ tal. 
+Que carecía de libertad. Que carecía de responsabilidad. Que carecía de capacidad para ser sacerdote. 
+Pero yo decidí ser sacerdote siendo libre. Responsable. Y capaz. Si ahora quierodejar de serlo es porque tengo derecho a dejar de serlo, y no tengo por qué dar explicaciones a nadie.
+¿Qué es espíritu de humildad? ¿Qué diferencia hay con humillarse o con padecer humillación? ¿Son cosas diferen tes? ¿Son la misma? 
+¿Tiene que ser humilde un hombre al que llevaron al seminario con doce años? ¿No tiene ese hombre derecho de restitución?. 
+La libertad que me robaron cuando era niño es un asunto mío de conciencia. Cuando acepté el sacramento sí era libre. 
 115
-
-
-
-ALFREDO SANZOL
-
-
-una pareja se le acercará y le dirá: «Tu marido nos casó». y
-un día un hombre le dirá a mi hijo desde una huerta:
-«¡Buenas misas cantó tu padre en este pueblo!». ¿No tene­ mos todos los miembros de la Iglesia el derecho a vivir de manera transparente? Porque si yo redacto una carta en la que me considero un irresponsable, un incapaz, alguien que no era apto para recibir el sacerdocio, ¿no estoy reba­ jándome? ¿No estoy atacando mi propia dignidad? ¿No estoy diciendo de alguna manera que soy responsable de haber hecho algo mal? Y yo, su eminencia, no hice, ni he hecho nada mal. ¿Es eso humildad? ¿Reconocer algo que no se ha hecho? ¿No tiene un sacerdote derecho a vivir de otra manera dentro del seno de la Iglesia?
-
-Pausa.
+Porque si yo redacto una carta en la que me considero un irresponsable, un incapaz, alguien que no era apto para recibir el sacerdocio, 
+¿no estoy reba­ jándome? ¿No estoy atacando mi propia dignidad? ¿No estoy diciendo de alguna manera que soy responsable de haber hecho algo mal? 
+Y yo, su eminencia, no hice, ni he hecho nada mal. ¿Es eso humildad? ¿Reconocer algo que no se ha hecho? ¿No tiene un sacerdote derecho a vivir de otra manera dentro del seno de la Iglesia?
 
 OBISPO
-Me estás hablando como hablaría un comerciante. Me hablas de derechos y de obligaciones como me hablaría un abogado. Aceptar la recepción del sacramento del sacerdocio es un acto de libertad máximo que compro­ mete para el resto de la vida. ¿Qué le dirías a un hombre que ha tenido un hijo? ¿Que tiene derecho a renunciar a su hijo porque ha tenido una transformación vital? Tener un hijo es una decisión libre y afecta para toda la vida.
-¿Qué le dirías a alguien que dona un riñón? ¿Que puede cambiar de opinión? Cuando recibes el orden del sacra­ mento estás donando tu vida a un fin superior. ¿Cómo me estás hablando, Jorge? ¿Como un hombre que tiene un trabajo y reclama su derecho a dejarlo? ¿De verdad crees eso? ¿Crees que el sacerdocio es un trabajo más? y si lo crees, ¿crees que alguien que considera el sacerdocio un trabajo más es apto y responsable para ser sacerdote? Ponlo por escrito y estarás facilitando el trabajo a la Congregación para la Doctrina de la Fe. (Pausa.) Y si no, Jorge, date tiempo. Yo estoy aquí para ayudarte, para que
-116
-
-El BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-puedas volver a la paz interior, la confianza, y a la peni­ tencia, y para que puedas recuperar la alegría que siem­ pre has tenido en el ministerio sacerdotal. (Pausa.) ¿Todo esto es porque estás conviviendo con una mujer?
+¿Todo esto es porque estás conviviendo con una mujer?
 
 JORGE
 No.
@@ -2848,7 +2767,7 @@ OBISPO
 Sí. O no.
 
 JORGE
-No estoy conviviendo con una mujer, pero me he enamo- rado de una mujer.
+No estoy conviviendo con una mujer, pero me he enamorado de una mujer.
 
 OBJSP0
 ¿Has tenido relaciones con ella?
@@ -2863,14 +2782,10 @@ JORGE
 ¡Eso forma parte de mi vida privada!
 
 OBISPO
-¡¡Todo de lo que estamos hablando forma parte de tu vida privada!! ¡¡El sacerdocio es una disposición íntima y privada que se tiene o no!! ¡¡No es un derecho de nadie ser sacerdote, ni es un derecho dejar de serlo!! ¡¡La Iglesia quiere concederte la gracia de que dejes de serlo, pero tendrás que hacer algo de tu parte!! (Silencio.) ¿Esa mujer de la que te has enamorado sabe que eres sacerdote?
+¡¡Todo de lo que estamos hablando forma parte de tu vida privada!! ¡¡El sacerdocio es una disposición íntima y privada que se tiene o no!! ¡¡No es un derecho de nadie ser sacerdote, ni es un derecho dejar de serlo!! ¡¡La Iglesia quiere concederte la gracia de que dejes de serlo, pero tendrás que hacer algo de tu parte!! (Silencio.) 
+¿Esa mujer de la que te has enamorado sabe que eres sacerdote?
 
 117
-
-
-
-ALFREDO 5ANZOL
-
 
 JORGE
 No.
@@ -2891,30 +2806,24 @@ OBISPO
 No tengas prisa. Tómate tu tiempo para reflexionar.
 
 JORGE
- uando tenga hijos no tendré fuerzas para decirles que he sido cura. (Pausa.) No sé si me faltará la fuerza o si creeré que guardando el secreto les protegeré mejor de que se rían de ellos en el colegio por ser los hijos de uno que fue c ra. Ya he reflexionado tanto que un día pensé, condu­ ciendo en Tejas, que mis pensamientos eran más largos que sus carreteras.
-
-Pausa.
+Cuando tenga hijos no tendré fuerzas para decirles que he sido cura. (Pausa.) No sé si me faltará la fuerza o si creeré que guardando el secreto les protegeré mejor de que se rían de ellos en el colegio por ser los hijos de uno que fue cura. Ya he reflexionado tanto que un día pensé, condu­ciendo en Tejas, que mis pensamientos eran más largos que sus carreteras.
 
 ÜBISPO
 Entonces toma este papel y escribe.
 
 118
 
-EL BAR QUESE TRA<;ó A TODOS LOS ESPAl\:0LES
-
-
-JORGE coge un papel y una pluma.
+JORGE
+Fin capítulo.
 
 ÜBJSPO
 Su excelencia reverendísima, yo, Jorge Arizmendi, presbí­ tero de Pamplona... (Música. La voz del OBISPO grabada.) que fui llevado con doce años de edad al seminario de Pamplona contra mi voluntad, que durante mi adolescen­ cia se despertó en mí el deseo de recibir el sacramento del sacerdocio, pero ahora veo que este deseo no tenía raíces verdaderas, que siempre carecí de la idoneidad y de la responsabilidad para ser sacerdote, que la crisis en la que ahora con treinta y tres años me encuentro sumido...
 
 
 XIX
-
-JORGE quitándose el traje de cura, mientras sujeta el teléfono con una oreja.
-
-TELEFONISTA 2
-Internacional.
+Capítulo: 19
+Jorge quitándose el traje de cura, mientras sujeta el teléfono con una oreja.
+Telefonista 2: Internacional.
 
 JORGE
 Hola, buenas noches, mire, a ver si me puede ayudar. Yo
