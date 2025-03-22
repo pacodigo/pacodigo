@@ -1,8 +1,8 @@
 
 CONTROL ESCENAS
-1*:     Pueblo
-2-3:   Tejas: Un bar de Orange + Madre Robert
-4-6*:  Rancheros I. 
+1*:    Pueblo
+2*-3:  Tejas: Un bar de Orange + Madre Robert
+4*-6*: Rancheros I. 
 7:     Nogore pregunta sobre rancho.
 8:     Rancheros II. Despedida
 10*:   Las Cruces: Blue Moon. Camarero de Lekumberri. Robo.
@@ -10,13 +10,18 @@ CONTROL ESCENAS
 12:    Pájaro
 13:    Continua viaje con dinero y gozando. 
 14:    San Fco.: Encuentro con Claus
-15*:   Fiesta. p90
-19-38: Pendiente revisión texto.
+15:    Fiesta: Conozco a Carmen. p90
+16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
+18:    Pamplona: Dispensa rechazada
+
+15, 19-38: Pendiente revisión texto.
 
 50:    Parrafadas
 
 * Impro de aproximación hecha.
 No entran: 9
+No tengo texto: 17
+
 
 JORGE
 Versión: 21/3 
