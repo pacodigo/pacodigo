@@ -1,8 +1,8 @@
 
 CONTROL ESCENAS
-1*:    Pueblo
-2*-3:  Tejas: Un bar de Orange + Madre Robert
-4*-6*: Rancheros I. 
+1:    Pueblo
+2-3:  Tejas: Un bar de Orange + Madre Robert
+4-6: Rancheros I. 
 7:     Nogore pregunta sobre rancho.
 8:     Rancheros II. Despedida
 10*:   Las Cruces: Blue Moon. Camarero de Lekumberri. Robo.
@@ -10,11 +10,12 @@ CONTROL ESCENAS
 12:    Pájaro
 13:    Continua viaje con dinero y gozando. 
 14:    San Fco.: Encuentro con Claus
-15:    Fiesta: Conozco a Carmen. p90
+15*:    Fiesta: Conozco a Carmen. p90
 16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
 18:    Pamplona: Dispensa rechazada
+19:    Telefonista  
 
-15, 19-38: Pendiente revisión texto.
+20-38: Pendiente revisión texto.
 
 50:    Parrafadas
 
@@ -24,10 +25,14 @@ No tengo texto: 17
 
 
 JORGE
-Versión: 21/3 
-Faltan capítulos: 19...38
-Capítulo 15 pendiente de quitar algo.
-Hasta capítulo 18. Pág: 118
+Versión: 28/3 
+- La venta de aspiradoras es algo novedoso. Me encanta.
+- Me sorprendo mucho al ver la foto del hijo de los granjeros (parecido)
+- Cuando bailo con Carme me paro para mi speech mirando al públido. Hablar despacio.
+- En despedida de granjeros no reirme
+- En fiesta cuando hablo de los evangelios, que se note que no quiero que se note que sé.
+
+
 
 
 
@@ -2833,36 +2838,34 @@ Fin capítulo.
 Su excelencia reverendísima, yo, Jorge Arizmendi, presbí­ tero de Pamplona... (Música. La voz del OBISPO grabada.) que fui llevado con doce años de edad al seminario de Pamplona contra mi voluntad, que durante mi adolescen­ cia se despertó en mí el deseo de recibir el sacramento del sacerdocio, pero ahora veo que este deseo no tenía raíces verdaderas, que siempre carecí de la idoneidad y de la responsabilidad para ser sacerdote, que la crisis en la que ahora con treinta y tres años me encuentro sumido...
 
 
+PACO
 XIX
 Capítulo: 19
 Jorge quitándose el traje de cura, mientras sujeta el teléfono con una oreja.
 Telefonista 2: Internacional.
 
 JORGE
-Hola, buenas noches, mire, a ver si me puede ayudar. Yo
-quería hablar con una compañera de ustedes que trabaja en internacional que se llama Carmen.
+Hola, buenas noches, mire, a ver si me puede ayudar. 
+Yo quería hablar con una compañera de ustedes que trabaja en internacional que se llama Carmen.
 
 TELEFONISTA 2
 ¿Qué Carmen?
 
 JORGE
-No sé cómo se apellida. Ha estado en Estados Unidos estu­ diando inglés y la he conocido allí. Yo me llamo Jorge Arizmendi y necesito localizarla por un asunto urgente. Solo sé que se llama Carmen y que trabaja en Internacional.
+No sé cómo se apellida. Ha estado en Estados Unidos estu­ diando inglés y la he conocido allí. 
+Yo me llamo Jorge Arizmendi y necesito localizarla por un asunto urgente. Solo sé que se llama Carmen y que trabaja en Internacional.
 
 119
 
-
-
-ALFREDO SANZOL
-
-
 TELEFONISTA 2
-Si no me dice el apellido no puedo ayudarle porque en estos momentos debe haber trabajando, solo en mi tumo, unas veinte María del Carmen. Sin ir más lejos, yo me llamo Carmen.
+Si no me dice el apellido no puedo ayudarle porque en estos momentos debe haber trabajando, solo en mi tumo, unas veinte María del Carmen. 
+Sin ir más lejos, yo me llamo Carmen.
 
 JORGE
 ¿Usted se llama Carmen?
 
 TELEFONISTA 2
-Sí.
+Si.
 
 JORGE
 La Carmen que yo busco ha estado en Estados Unidos estudiando inglés y ha vuelto hace poco.
@@ -2871,155 +2874,30 @@ TELEFONISTA 2
 Sí, señor, pero yo no conozco los destinos vacacionales de todas mis compañeras. Por favor, intente hablar con el turno de la mañana.
 
 JORGE
-¿A qué hora comienza el turno de la mañana?
-
-TELEFONISTA 2
-A las siete.
-
-JORGE
-Gracias.
-
-TELEFONISTA 2
-Gracias a usted. ¿Desea algo más?
-
-JORGE
-No, nada más.
-
-120
-
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-Cuelga. Ya está en calzoncillos. Se tumba. Pone el desperta­ dor. No duerme. Suena el despertador. Lo apaga. Marca.
-
-TELEFONISTA 3
-Internacional.
-
-JORGE
-Hola, buenos días, mire, a ver si me puede ayudar. Yo quería hablar con una compañera de ustedes que trabaja en Internacional que se llama Carmen.
-
-TELEFONISTA 3
-¿Qué Carmen?
-
-JORGE
-No sé cómo se apellida. Ha estado en Estados Unidos estu­ diando inglés y la he conocido allí. Yo me llamo Jorge Arizmendi y necesito localizarla para un asunto urgente. Solo sé que se llama Carmen y que trabaja en Internacional.
-
-TELEFONISTA 3
-Si no me dice el apellido no puedo ayudarle porque en estos momentos debe haber trabajando, solo en mi tumo, unas veinte María del Carmen. Sin ir más lejos yo me llamo Carmen.
-
-JORGE
-¿Usted se llama Carmen?
-
-TELEFONISTA 3
-Sí.
-
-JORGE
-Pero la Carmen que yo busco ha estado estudiando inglés en Estados Unidos y ha vuelto hace poco.
-121
-
-
-
-ALFREDO 5ANZOL
-
-
-
-TELEFONISTA 3
-Sí,señor, pero yo no conozco los destinos vacacionales de todas mis compañeras. Por favor intente hablar con el turno de la tarde.
-
-JORGE
-¿A qué hora comienza el turno de la tarde?
-
-TELEFONISTA 3
-A las tres.
-
-JORGE
-Gracias.
-
-TELEFONISTA 3
-Gracias a usted. ¿Desea algo más?
-
-JORGE
-No, nada más.
-
-JORGE se hace un bocadillo, se lo come con una cerveza. Mira el reloj todo el rato. Llegan las tres.
-
-TELEFONISTA 4
-Internacional.
-
-JORGE
-Hola, buenas tardes, mire, a ver si me puede ayudar. Yo quería hablar con una compañera de ustedes que trabaja en Interacional que se Ilama Carmen.
-
-TELEFONISTA 4
-¿Qué Carmen?
-
-JORGE
-No sé cómo se apellida. Ha estado en Estados Unidos estu-
-122
-
-
-El BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-<liando inglés y ia he conocido allí. Yo me llamo Jorge Arizmendi y necesito localizarla por un asunto urgente. Solo sé que se llama Carmen y que trabaja en Internacional.
-
-TELEFONISTA 4
-Si no me dice el apellido no puedo ayudarle porque en estos momentos debe haber trabajando, solo en mi turno, unas veinte María del Carmen.
-
-JORGE
-Supongo que usted también se llama Carmen.
-
-TELEFONISTA 4
-No. Me llamo Marisa.
-
-JORGE
-Ah. La Carmen que yo busco ha estado en Estados Unidos estudiando inglés y ha vuelto hace poco.
-
-TELEFONISTA 4
-Sí, señor, pero yo no conozco los destinos vacacionales de todas mis compañeras. Por favor, intente hablar con el turno de la noche.
-
-JORGE
-Ya he hablado con el turno de la noche y con el de la tarde. Por favor, señorita, ¿no podría usted dejar un reca­ do o una nota en algún sitio en el que ponga que Jorge Arizmendi quiere hablar con Carmen de San Francisco, California, Estados Unidos? ¿Podría hacer eso por mí?
+Por favor, señorita, ¿no podría usted dejar un reca­ do o una nota en algún sitio en el que ponga que Jorge Arizmendi quiere hablar con Carmen de San Francisco, California, Estados Unidos? ¿Podría hacer eso por mí?
 
 TELEFONISTA 4
 ¿A qué número puede llamarle?
 
 JORGE
-Gracias, gracias, sí, le digo este número de Madrid es el...
+Gracias, gracias, sí, le digo este número de Madrid es el 521...
 
 123
 
-
-
-ALFREDO SANZOL
-
-
-CAMARERA FILÓSOFA
-521.
-
-JORGE
-521.
-
 TELEFONISTA 4
 521.
-
-CAMARERA FILÓSOFA
-88.
 
 JORGE
 88.
 
 TELEFONISTA 4
 88.
-
-CAMARERA FILÓSOFA
-76.
 
 JORGE
 76.
 
 TELEFONISfA 4
-76. Le repito. 52188 76.
+76. Le repito. 521 88 76.
 
 JORGE
 Eso es. Muchas gracias.
@@ -3029,45 +2907,12 @@ Lo que voy a hacer es dejar el mensaje a la vista, pero le adelanto que es muy c
 
 124
 
-EL BARQUlo SETRAGÓ A TODOS LOS ESPAi:OLES
-
-
-
-JORGE
-Sí, muchas gracias.
-
-TELEFONISTA 4
-Gracias a usted. ¿Desea algo más?
-
-JORGE
-No, nada, más. Sí. Oiga, una cosa. Si no se acuerda de mi
-nombre, digale que me conoció disfrazado de Rey Baltasar.
-
-TELEFONISTA 4
-He entendido que le conoció disfrazado de Rey Baltasar,
-¿es correcto?
-
-JORGE
-Sí, es correcto.
-
-TELEFONISTA 4
-¿Puedo ayudarle en algo más?
-
-JORGE
-No. Muchas gracias.
-La TELEFONISTA 4 se queda sonriendo mirando el papel que tiene en las manos. Entra CARMEN con unos papeles. Se ponae hacer cosas. La TELEFONISTA 4 la mira. No dice nada. Y cuando CARMEN está a punto de salir...
-
 NAGORE
 ¿Y la encontró?
 
 Claro. Por pura casualidad. Carmen no solía pasar nunca por delante del puesto de Marisa, pero ese día lo hizo.
 
 125
-
-
-
-ALFREDO 5ANZOL
-
 
 TELEFONISTA 4
 ¿Carmen?
@@ -3139,14 +2984,13 @@ Bueno, ya veré qué hago.
 
 127
 
-
-
-ALFREDO 5ANZOL
-
-
+PACO
 XX
-
+Capítulo: 20
 Se funde con JORGE en un bar. La CAMARERA FILÓSOFA le pone un café solo.
+
+JORGE
+Nulo.
 
 CARMEN
 ¿Ya veré qué hago? ¿Qué voy a hacer? Llamarle. Llamarle ya y desear que coja el teléfono a la primera.
