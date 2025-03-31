@@ -1,19 +1,19 @@
 
 CONTROL ESCENAS
-1:    Pueblo
-2-3:  Tejas: Un bar de Orange + Madre Robert
-4-6: Rancheros I. 
+1:     PUEBLO
+2-3:   TEJAS: Un bar de Orange + Madre Robert
+4-6:   Rancheros I. 
 7:     Nogore pregunta sobre rancho.
 8:     Rancheros II. Despedida
-10*:   Las Cruces: Blue Moon. Camarero de Lekumberri. Robo.
+10*:   LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
 11:    Margaret Biller.
 12:    Pájaro
 13:    Continua viaje con dinero y gozando. 
-14:    San Fco.: Encuentro con Claus
-15*:    Fiesta: Conozco a Carmen. p90
+14:    SAN FCO.: Encuentro con Claus
+15*:   Fiesta: Conozco a Carmen. p90
 16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
-18:    Pamplona: Dispensa rechazada
-19:    Telefonista  
+18:    PAMPLONA: Dispensa rechazada
+19:    MADRID: Llamada telefóno a Telefónica en busca de Carmen  
 
 20-38: Pendiente revisión texto.
 
@@ -23,14 +23,20 @@ CONTROL ESCENAS
 No entran: 9
 No tengo texto: 17
 
+Otra info a 31/3/25
+22:  No es significativa
+23:  La va a quitar
+24:  Va entera
+
 
 JORGE
-Versión: 28/3 
+Versión: 31/3 
 - La venta de aspiradoras es algo novedoso. Me encanta.
 - Me sorprendo mucho al ver la foto del hijo de los granjeros (parecido)
-- Cuando bailo con Carme me paro para mi speech mirando al públido. Hablar despacio.
+- Cuando bailo con Carmen me paro para mi speech mirando al públido. Hablar despacio.
 - En despedida de granjeros no reirme
 - En fiesta cuando hablo de los evangelios, que se note que no quiero que se note que sé.
+- Cuando digo lo de los baños, recalcar el año 1963
 
 
 
