@@ -30,7 +30,7 @@ Otra info a 31/3/25
 
 
 JORGE
-Versión: 31/3 
+Versión: 4/4 
 - La venta de aspiradoras es algo novedoso. Me encanta.
 - Me sorprendo mucho al ver la foto del hijo de los granjeros (parecido)
 - Cuando bailo con Carmen me paro para mi speech mirando al públido. Hablar despacio.
@@ -3085,73 +3085,56 @@ Hola, buenos días, quería hablar con Jorge Arizmendi.
 CAMARERA FILÓSOFA
 Un momento. (A JORGE.) Es para ti.
 
+
+
+PACO
+Capítulo: 20
+
 JORGE
-(JORGE coge el teléfono.) ¿Sí?
+(JORGE coge el teléfono.) ¿Si?
 
 CARMEN
 Hola, ¿eres Jorge?
 
 JORGE
-Sí, soy yo.
+Si, soy yo.
 
 CARMEN
 Soy Carmen.
 
 JORGE
-¡Hola, Carmen! ¡Gracias por llamar! He estado llamando
-a la Telefónica unos cuantos días, pero, claro, me decían que había muchas chicas que se llaman Carmen y como no sé cómo te apellidas no había manera. ¡Qué bien! Gracias por llamar. ¿Sabes quién soy, verdad? ¿Te acuer-
-das de mí, no?
+¡Hola, Carmen! ¡Gracias por llamar! He estado llamando a la Telefónica unos cuantos días, pero, claro, 
+me decían que había muchas chicas que se llaman Carmen y como no sé cómo te apellidas no había manera. 
+¡Qué bien! Gracias por llamar. ¿Sabes quién soy, verdad? ¿Te acuerdas de mí, no?
 
 CARMEN
-Sí, sí. Me ha sorprendido mucho cuando me han pasado
-tu recado. Nunca pensé que pudieras llamarme.
+Sí, sí. Me ha sorprendido mucho cuando me han pasado tu recado. 
+Nunca pensé que pudieras llamarme.
 
 JORGE
 ¿Por qué?
 131
 
-
-
-ALFREDO 5ANZOL
-
-
 CARMEN
-Porque no he sabido nada de ti después del día que nos conocimos. Cuando quedamos para ir a la playa parecías muy contento, pero luego no apareciste. Pensé que te había pasado algo. No sé, fue raro.
+Porque no he sabido nada de ti después del día que nos conocimos. 
+Cuando quedamos para ir a la playa parecías muy contento, pero luego no apareciste. 
+Pensé que te había pasado algo. No sé, fue raro.
 
 JORGE
-Sí, es verdad. Es verdad que no pude decirte nada, pero
-
-
-
-
-
-JORGE
-Hasta luego.
-
-
-EL BAR QUE SE TRAGó A TODOS LOS ESPAÑOLES
-
-
-
-
-
-
-
-
-
-
-XXI
-
-ya te contaré un día lo que me pasó. Oye, ¿te apetece que nos veamos? O a lo mejor no te apetece. Si no te apetece lo entiendo. Muchas gracias por haberme devuelto la lla­ mada y ya está. ¿Qué tal estás? ¿Cómo va todo?
+Sí, es verdad. Es verdad que no pude decirte nada, pero ya te contaré un día lo que me pasó.
+Oye, ¿te apetece que nos veamos? O a lo mejor no te apetece. Si no te apetece lo entiendo.
+Muchas gracias por haberme devuelto la llamada y ya está.
+¿Qué tal estás?, ¿Cómo va todo?
 
 CARMEN
-Sí me apetece.
+Si me apetece.
 
 JORGE
 ¿De verdad?
 
 CARMEN
-Sí, de verdad. Mira, ahora estoy trabajando. Salgo a las ocho. ¿Quieres venir a buscarme y nos tomamos algo en la Gran Vía?
+Sí, de verdad. Mira, ahora estoy trabajando. Salgo a las ocho. 
+¿Quieres venir a buscarme y nos tomamos algo en la Gran Vía?
 
 JORGE
 Muy bien.
@@ -3160,18 +3143,30 @@ CARMEN
 Salgo por la puerta de la calle Desengaño, ¿sabes cuál es, verdad?
 
 JORGE
-Sí. Allí te espero.
+Si. Allí te espero.
 
+CARMEN
+De acuerdo. Hasta luego.
+
+132
+
+JORGE
+Hasta luego.
+
+PACO
+XXI
+Capítulo: 21
 JORGE está esperando en la calle Desengaño con una rosa en la mano. Salen tres chicas del edificio de la Telefónica vesti­ das igual. Las tres con gafas de sol. Una de las tres se quita las gafas.
 
 CARMEN
 ¿Y esa flor?
 
 JORGE
-Para ti, para pedirte disculpas por haberte dejado planta- da en San Francisco.
+Para ti, para pedirte disculpas por haberte dejado plantada en San Francisco.
 
 CARMEN
-Gracias, pero tú a mí no me dejaste plantada. Lo que pasó en San Francisco fue que quedamos y tú no viniste, pero ese día yo me lo pasé muy bien en la playa.
+Gracias, pero tú a mí no me dejaste plantada. 
+Lo que pasó en San Francisco fue que quedamos y tú no viniste, pero ese día yo me lo pasé muy bien en la playa.
 
 JORGE
 Bueno, pero un poco plantada sí te dejé porque al acabar la fiesta los dos teníamos ganas de vernos al día siguiente.
@@ -3179,27 +3174,10 @@ Bueno, pero un poco plantada sí te dejé porque al acabar la fiesta los dos ten
 CARMEN
 Sí, pero no me dejaste plantada porque yo, sola, me muevo muy bien.
 
-
-
-CARMEN
-De acuerdo. Hasta luego.
-
-132
-
-
 JORGE
 Un poco plantada sí te dejé.
 
-
-
-
 133
-
-
-
-ALFREDO 5ANZOL
-
-
 
 CARMEN
 No.
@@ -3222,12 +3200,17 @@ JORGE
 CARMEN
 (CARMEN coge la flor.) La cojo porque es bonita, no porque me dejaras plantada.
 
-Bajando por la Gran Vía hacia el Nebraska.
+JORGE
+¿Siempre haces el mismo turno?
 
+CARMEN
+No. Vamos rotando, pero este turno es el que más me gusta. Entrar a las tres y salir a las diez. 
+O entrar a las siete de la mañana y salir a las dos. ¿Tú qué horario tienes?
 
-EL BAR QUESE TRAGó A TODOS LOS ESPAÑOLES
+JORGE
+No tengo horario. Al final estoy trabajando todo el día.
 
-
+134
 
 CARMEN
 ¿Dónde trabajas?
@@ -3243,94 +3226,9 @@ Hacia El Pardo. Bastante lejos. Si quieres, un día te llevo a verlas.
 
 CARMEN
 Vale.
+¿Por qué te fuiste de San Francisco?
 
-JORGE
-y estamos construyendo una muy grande que va a llevar un sistema de calefacción central que hace una empresa de Dinamarca.
-
-CARMEN
-Tendrás que ir a Dinamarca.
-
-
-
-JORGE
-¿Siempre haces el mismo turno?
-
-CARMEN
-No. Vamos rotando, pero este turno es el que más me gusta. Entrar a las tres y salir a las diez. O entrar a las siete de la mañana y salir a las dos. ¿Tú qué horario tienes?
-
-JORGE
-No tengo horario. Al final estoy trabajando todo el día.
-134
-
-JORGE
-¿Yo? ¿Para qué?
-
-CARMEN
-Para aprender cómo funciona.
-
-JORGE
-Para eso tendrá que ir el que la instala.
-
-CARMEN
-Y tú que eres el que vende los pisos.
-
-
-
-
-
-
-
-
-
-
-
-135
-
-
-
-ALFREDO SANZOL
-
-
-
-JORGE
-No hace falta que vaya.
-
-CARMEN
-Ya verás como te dicen que vayas.
-
-JORGE
-Que no hace falta que vaya.
-
-CARMEN
-Sí hará falta.
-
-JORGE
-No hace falta.
-
-CARMEN
-Sí hace falta.
-
-JORGE
-¿Y tú qué sabes?
-
-CARMEN
-No sé, pero me lo supongo. Tendrás que ir.
-
-JORGE
-No.
-
-CARMEN
-Sí.
-
-JORGE
-No.
-
-CARMEN
-Ya verás. ¿Por qué te fuiste de San Francisco?
 136
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
 
 JORGE
 Tuve un problema familiar.
@@ -3338,7 +3236,7 @@ Tuve un problema familiar.
 CARMEN
 ¿Cuál?
 
-JORGE	.
+JORGE
 A mi hermano Evaristo le dio un infarto, pero está bien.
 
 CARMEN
@@ -3356,7 +3254,7 @@ Sí, pero fue un infarto leve.
 CARMEN
 ¿Leve?
 
-JORGE	,
+JORGE
 Un amago de infarto. El ni se enteró.
 
 CARMEN
@@ -3369,12 +3267,6 @@ CARMEN
 Claro. Normal. ¿Tienes más hermanos?
 
 137
-
-
-
-ALFREDO 51\NZOL
-
-
 
 JORGE
 Cuatro. Y una hermana, que es monja.
@@ -3395,7 +3287,7 @@ CARMEN
 No.
 
 JORGE
-Sí. Lo sabré yoque es mi familia.
+Sí. Lo sabré yo que es mi familia.
 
 CARMEN
 ¿Y es de clausura?
@@ -3407,12 +3299,12 @@ CARMEN
 La cuota religiosa de cada familia.
 
 JORGE
-Sí.
+Si.
 
+CARMEN
+Yo tenía unos tíos abuelos curas, pero no los conocí casi.
 
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLF.5
-
-
+138
 
 y una tía es medio monja, pero sin ser monja. No sé lo que es exactamente.
 
@@ -3446,35 +3338,20 @@ JORGE
 CARMEN
 Sí.
 
-
-
-CARMEN
-Yo tenía unos tíos abuelos curas, pero no los conocí casi.
-
-138
-
-
 JORGE
 ¿Quieres que vayamos a comer al Pardo?
 
-
-
-
 139
-
-
-
-ALFREDO 5ANZOL
-
 
 CARMEN
 Vale. ¿Tienes coche?
 
 JORGE
-Bueno, lo tiene el banco y yo lo conduzco. Lo estoy com­ prando a plazos.
+Bueno, lo tiene el banco y yo lo conduzco. Lo estoy com­prando a plazos.
 
 CARMEN
-Yo también conduzco, pero no tengo coche. Uso el de mi padre. Si mañana te cansas puedo conducir yo.
+Yo también conduzco, pero no tengo coche. Uso el de mi padre. 
+Si mañana te cansas puedo conducir yo.
 
 JORGE
 No, yo no me canso. Me gusta conducir.
@@ -3489,7 +3366,7 @@ CARMEN
 Vale, pero de todos modos me gustaría conducir un rati­ to, por practicar.
 
 JORGE
-A los coches les sienta mal que los conduzca gente dife­ rente.
+A los coches les sienta mal que los conduzca gente dife rente.
 
 CARMEN
 ¿Quién ha dicho eso?
@@ -3501,10 +3378,6 @@ CARMEN
 Eso no es verdad.
 
 140
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAl'IOLES
-
-
 
 JORGE
 Se estropean más.
@@ -3519,7 +3392,7 @@ CARMEN
 No se estropean.
 
 JORGE
-Sí.
+Si.
 
 CARMEN
 ¿No me lo vas a dejar?
@@ -3532,377 +3405,37 @@ No es verdad.
 
 JORGE
 Se estropean.
-
-CARMEN niega con la cabeza. JORGE asiente con la cabeza.
-
-
-
-
-
-
-
-141
-
-
-
-ALFREDO 5ANZOL
-
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPA1':0LES
-
-
-
-
-
-
-
-
-CARMEN
-
-XXII
-
-De donde crece la palma Y antes de morir yo quiero Decir mis versos del alma Guantanamera
-
-Me gustaba estar sentada a su lado mientras conducía. Se ponía atractivo.
-
-JORGE
-¿Te importa que fume?
-
-CARMEN
-No. Fumaba y conducía, y miraba al horizonte con una mirada intensa y triste de la que surgía una sonrisa por sorpresa.
-
-JORGE
-Me gustaba cómo miraba el paisaje, como si nunca hubie­ se visto una encina, como si nunca hubiese visto el cielo.
-
-CARMEN
-Junto a él tenía la sensación de ser nueva en esta vida. Ahora, todo parecía nuevo.
-
-JORGE
-Me puse a cantar Guantanmnera, no sé por qué. Y ella se la sabía casi entera.
-
-CARMEN
-Me gustaba mucho esa canción, y él se la sabía casi entera.
-
-CARMEN y JORGE
-(Cantan.) «Yo soy un hombre sincero De donde crece la palma
-Yo soy un hombre sincero
-
-142
-
-Guajira guantanamera Guantanamera
-Guajira guantanamera».
-
-CARMEN
-Mi verso es de un verde claro...
-
-JORGE
-Cultivo la rosa blanca...
-
-CARMEN
-(Sin cantar.) No es así.
-
-JORGE
-Sí, es: (Canta.)
-«Cultivo la rosa blanca en junio como en enero».
-
-CARMEN
-(Sin cantar.) No. Es así: (Canta.)
-«Mi verso es de un verde claro y de un carmín encendido».
-
-JORGE
-«Cultivo la rosa blanca en junio como en enero».
-
-CARMEN
-«Miverso es de un verde claro y de un carmín encendido».
-
-JORGE
-«Para el amigo sincero que me da su mano franca».
-
-143
-
-
-
-ALFREDO 5ANZOL
-
-
-EL BAR QUESE TRACÓ1\ TODOS LOSESPAÑOLES
-
-
-
-CARMEN
-«Mi verso es un ciervo herido que busca en el monte amparo».
-
-JORGE
-No es así.
-
-
-
-
-
-
-
-
-
-JORGE
-
-XXIII
-
-Un restaurante en El Pardo.
-
-CARMEN
-Sí lo es.
-
-}ORCE
-Yo no me las sé así.
-
-CARMEN
-Pues yo la sé porque me la cantó un cubano.
-
-}ORGE
-¿Ah sí? ¿Qué suerte, no?
-
-CARMEN
-Sí, qué pasa, eres muy bobo, ¿no?
-
-JORGE
-«Guantanamera ... ».
-
-CARMEN
-«Guajira guantanamera ... ».
-
-CARMEN y JORGE
-«Guantanamera guajira guantanamera».
-
-Y llegan. al restaurante.
+(CARMEN niega con la cabeza. JORGE asiente con la cabeza.)
 
 144
 
-AUTOR
-Un restaurante en El Pardo
-
+PACO
+Capítulo: 23
+XXIII
+Un restaurante en El Pardo.
 
 JORGE
-Cuando llegamos al restaurante estaba feliz. En el pecho sentía pena, una presión aquí, por no haber vivido hasta ahora algo parecido. Tengo treinta y tres años y he perdido la vida, pensé.
+Cuando llegamos al restaurante estaba feliz. 
+En el pecho sentía pena, una presión aquí, por no haber vivido hasta ahora algo parecido. 
+Tengo treinta y tres años y he perdido la vida, pensé.
 
 CARMEN
 Estaba un poco asustada porque me sentía demasiado contenta, y cuando estábamos entrando al restaurante... me suelta...
 
 JORGE
-La vida es tan corta que me resisto a aceptarlo, por eso me gusta soñar con la eternidad, aunque no exista. Nos tenemos que morir para dejar sitio a los que vienen detrás de nosotros, pero por qué, por qué no podemos vivir estos momentos eternamente. Tengo treinta y tres años, pero me hubiese gustado conocerte con veinte.
+La vida es tan corta que me resisto a aceptarlo, por eso me gusta soñar con la eternidad, aunque no exista. 
+Nos tenemos que morir para dejar sitio a los que vienen detrás de nosotros, pero por qué, por qué no podemos vivir estos momentos eternamente. 
+Tengo treinta y tres años, pero me hubiese gustado conocerte con veinte.
 
 CARMEN
-Me quedé muerta. O mejor que muerta, me quedé patidi­ fusa. Yo tengo veintiocho, le dije, y también dije, es muy agradable este sitio. Y pensé, soy boba.
+Me quedé muerta. O mejor que muerta, me quedé patidi­ fusa. 
+Yo tengo veintiocho, le dije, y también dije, es muy agradable este sitio. Y pensé, soy boba.
 
-CAMARERO
-Hola, buenas tardes.
-
-JORGE
-Buenas tardes. ¿Aún se puede comer?
-
-145
-
-CAMARERO
-Sí. Claro. Por supuesto. ¿Para dos?
+PACO
+Nota: Speach de los Bares pendiente.
 
 JORGE
-Si.
-
-CAMARERO
-Aquella mesita, por favor. (Se sientan a la mesa.) ¿De beber qué desean?
-
-JORGE
-(A Carmen.) ¿Te apetece tomar una copita de vino?
-
-CARMEN
-Sí, una copa de vino y agua.
-
-CAMARERO
-Dos copas de vino y una jarra de agua.
-
-CARMEN
-Muy bien.
-
-CAMARERO
-Les dejo las cartas para que echen un vistazo, y ahora les cuento lo que tenemos fuera de carta. O si les parece se lo cuento ya.
-
-CARMEN y JORGE asienten.
-
-CAMARERO
-Tenemos un estofado de gamo inocente y aspecto inge­ nuo con setas variadas en salsa de nata de la casa, que es una maravilla. También tenemos pastel de jabalí peludito y aspecto de intrépido con sus simpáticos colmillos que servimos después de darle un golpecito al horno y cubrir
-146
-con frutas del bosque. Riquísimo. Mientras se lo van pen­ sando voy a por la bebida. Con permiso.
-
-Se va el CAMARERO.
-
-CARMEN	?
-¿Tú has escuchado que ha dicho gamo inocente.
-
-JORGE
-Y jabalí peludito.
-
-Se parten de la risa.
-
-CARMEN
-Que  tío más surrealista, ¿no?
-
-Desde hace un rato, un señor mira a CARMEN y a JORGE Y ahora que los ve relajados aprovecha para acercarse.
-
-FRANCISCO ELIZONDO
-Jorge.
-
-JORGE
-(Al principio, JORGE no lo conoce, pero luego cae.) ¡Hombre,
-Patxi! ¡Aspaldiko! (¡Cuánto tiempo!).
-
-FRANCISCO ELIZONDO
-¿Zer moduz? (¿Qué tal estás?).
-
-JORGE
-Jorge se levanta. ¡Oso ondo! Eta zu? (¡Muy bien! ¿y  tu?
-
-FRANCISCO ELIZONDO
-Qué alegría verte. Un abrazo, hombre.
-
-147
-
-
-
-ALFREDO SANZOL
-
-JORGE y FRANCISCO ELIZONDO se dan un abrazo.
-
-FRANCISCO ELIZONDO
-Perdona que os moleste ¿eh?
-
-JORGE
-No nos molestas. Mira, te presento. Ella es Carmen.
-
-CARMEN
-Encantada.
-
-FRANCISCO ELIZONDO
-Igualmente. Francisco Elizondo.
-
-JORGE
-Patxi es un artista maravilloso.
-
-FRANCISCO ELIZONDO
-No tanto, no tanto. Pero sentaos, sentaos.
-
-JORGE
-Carmen trabaja en Internacional, en la Telefónica.
-
-FRANCISCO ELIZONDO
-Que interesante. Entonces hablas perfectamente inglés.
-
-JORGE
-Inglés y francés.
-
-FRANCISCO ELIZONDO
-Saber idiomas es nuestra única salvación. Pero sentaos, sentaos.
-
-148
-
-JORGE
-¿Qué vida llevas? ¿Qué haces por aquí?
-
-FRANCISCO ELIZONDO
-Pues mira, ando con un poco de disgusto, (Comienza a hablar confidencialmente.) porque me llamaron de aquí, del Pardo, ya sabes, para hacer un planisferio celeste, porque el jefe quería en una de las habitaciones un planisferio celeste de los que yo hago. (A CARMEN.) Yo pinto en los techos de los salones planisferios celestes que, como ya sabrás, son mapas de la disposición de las estrellas y de los planetas en el firmamento.
-
-CARMEN
-Qué  bonito, qué interesante.
-
-FRANCISCO ELIZONDO
-Sí, gracias. Pues eso, que le he pintado aquí uno al jefe, y han pasado ya noventa días desde que acabé, y oye, no me pagan.
-
-JORGE
-No me digas.
-
-FRANCISCO ELIZONDO
-Lo que oyes.
-
-JORGE
-Madre mía.
-
-FRANCISCO ELIZONDO
-Y está siendo muy muy muy desagradable. Porque vengo aquí, y se hacen los sorprendidos. Me dicen que los plazos son los plazos, y que me espere porque el dine­ ro me llegará en el plazo acordado. A mí me dijeron que
-149
-me iban a pagar en dos mitades. Una mientras estuviese aquí pintando y la otra al acabar.
-
-JORGE
-¿No te lo pusieron en el contrato?
-
-FRANCISCO ELIZONDO
-No.
-
-JORGE
-Estos son unos ladrones.
-
-FRANCISCO ELIZONDO
-Calla.
-
-JORGE
-Unos ladrones. Una amiga de Barcelona que tiene una tienda de antigüedades en el Pueblo Español me contó que estuvieron estos dos de visita por allí, y La Collares se llevó una silla del siglo 18. Bueno, pues aún están esperando a que paguen.
-
-FRANCISCO ELIZONDO
-No me digas eso que me pongo malo.
-
-JORGE
-Es una vergüenza.
-
-FRANCISCO ELIZONDO
-Hombre, yo creo que pagar, acabarán pagando, pero el mal trago no me lo quita nadie.
-
-JORGE
-Y al jefe, ¿lo conociste?
-
-150
-
-FRANCISCO ELIZONDO
-Un día se asomó a preguntar qué tal iba. Me dijo que le gustaba mucho lo que estaba haciendo y ya está.
-
-JORGE
-¿Y la otra?
-
-FRANCISCO ELIZONDO
-No, a esa no la vi. Cuatro meses he estado ahí metido col­ gado de un andamio, y ahora tengo que andar pidiendo que me paguen como si me estuviesen haciendo un favor.
-
-JORGE
-Madre mía.
-
-FRANCISCO ELIZONDO
-Me alegro mucho de verte, Jorge. Y sobre todo me alegro de verte tan bien, ¿eh? Y viviendo la vida. Que es nues­ tra, ¿verdad? Y qué más te puedo decir, pues nada, que no pasen otros cinco años sin vernos. (A CARMEN.) Y encantado de conocerte.
-
-CARMEN
-Igualmente.
-
-FRANCISCO ELIZONDO
-Voy a picar algo en la barra, y a ver si hoy tengo suerte.
-
-JORGE
-Estoy viviendo en Madrid, ¿sabes?
-
-FRANCISCO ELIZONDO
-Pues sí lo sabía, Jorge. No te voy a engañar. Y también me sé todo. Todo de todo. Porque ya sabes que vayas
-151
- un navarro que le contará a otro navarro la vida y milagros de otro navarro. En fin, dame otro abrazo, que me voy.
-
-Se abrazan.
-
-JORGE
-Mucha suerte.
-
-FRANCISCO ELIZONDO
-Igualmente. Mucha suerte para todo. Agur.
-
-FRANCISCO ELIZONDO se va.
-
-CARMEN
-Qué simpático tu amigo.
-
-JORGE
-Sí, es una maravilla de hombre. Más bueno que el pan.
-¿Sabes lo que pasa? Que este, de chaval, con dieciocho años, estuvo en la cárcel por líos con el Partido Comunista, y cuando salió no se quiso exiliar, y ahora lo van a volver loco.
+pendiente
 
 CAMARERO
 ¿Han elegido ya?
@@ -3915,7 +3448,8 @@ Muy bien.
 
 152
 JORGE
-¿Tú te crees que es normal que Franco le pida un planis­ferio celeste a un tío que ha estado en la cárcel por comu­nista? Pues no. Se lo ha pedido para no pagarle, para torturarlo sicológicamente.
+¿Tú te crees que es normal que Franco le pida un planis­ferio celeste a un tío que ha estado en la cárcel por comu­nista? Pues no. 
+Se lo ha pedido para no pagarle, para torturarlo sicológicamente.
 
 CARMEN
 Sería un poco retorcido, ¿no?
@@ -3924,7 +3458,8 @@ JORGE
 ¿Retorcido? Carmen, son torturadores, vivimos en un país secuestrado por torturadores.
 
 CARMEN
-Ya, bueno, a ver, tampoco exageres. Vivimos en una dic­ tadura, pero vivimos con más tranquilidad que mucha gente que vive en democracias.
+Ya, bueno, a ver, tampoco exageres. 
+Vivimos en una dic tadura, pero vivimos con más tranquilidad que mucha gente que vive en democracias.
 
 JORGE
 ¿Quién vive con tranquilidad?
@@ -3936,12 +3471,29 @@ JORGE
 ¿Tú? ¿Tú puedes vivir tranquila sin vivir en libertad?
 
 CARMEN
-Yo tengo toda la libertad del mundo para hacer todo lo quequiero. Nunca he sentido que me haya faltado la liber­ tad. Nunca. De hecho, tengo mucha más libertad que mucha gente que vive supuestamente en una democracia.
+Yo tengo toda la libertad del mundo para hacer todo lo quequiero. Nunca he sentido que me haya faltado la libertad. 
+Nunca. De hecho, tengo mucha más libertad que mucha gente que vive supuestamente en una democracia.
 
 JORGE
 ¿Estás hablando en serio?
 
 153
+
+NOTA
+A partir de aquí interrogante. Pasar a siguiente capítulo 27?
+
+JORGE
+Pendiente de confirmar. Pasar a siguiente capítulo 27?
+
+
+
+
+
+
+
+
+
+
 
 CARMEN
 Totalmente. Llevamos casi treinta años de paz. A ver cuándo has visto tú eso en España antes.
@@ -4409,19 +3961,25 @@ Te llamaré para casarnos.
 CARMEN
 Adiós, Jorge.
 
+
+NOTA
+Capítulo: 27
 XXVII
 Música. JORGE se viste con traje de cura. Llama a su hennano.
 
 JORGE
-Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. En cuanto te cuelgue voy a llamar a Martínez de Iriarte para que me diga con quién tengo que hablar en el Vaticano. Evaristo,
+Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. 
+En cuanto te cuelgue voy a llamar a Martínez de Iriarte para que me diga con quién tengo que hablar en el Vaticano. Evaristo,
 170
 ¿tú podrías mandarme algo de dinero? Todo lo que pue­ das. Gracias. Te lo devolveré. Gracias. Un abrazo. Te llamo desde Roma.
-JORGE cuelga.
+Jorge cuelga.
 
-XXVIII
 
 AUTOR
-Música. Aeropuerto de Fiumicino, Roma, Italia. La gente está consternada. Una MONJA de rodillas reza. Una chica llora desconsolada. Corros de gente hablando. JORGE sale del avióny se encuentra con el cuadro. No entiende qué pasa. Se acerca a la MONJA que reza de rodillas.
+XXVIII
+Música. Aeropuerto de Fiumicino, Roma, Italia. La gente está consternada. Una MONJA de rodillas reza. 
+Una chica llora desconsolada. Corros de gente hablando. Jorge sale del avióny se encuentra con el cuadro. 
+No entiende qué pasa. Se acerca a la Monja que reza de rodillas.
 
 JORGE
 Disculpe, ¿sabe usted qué pasa?
@@ -4433,23 +3991,24 @@ JORGE
 ¿Cuándo?
 
 MONJA
-Ahora. Pobre Juan XXIII. Pobre Giovannino.
+Ahora. Pobre Juan 23. Pobre Giovannino.
 
 JORGE
-Sí. Pobre. Pobre Juan XXIII.
+Si. Pobre. Pobre Juan XXIII.
 
 171
 
-XXIV
-
 CRISÓSTOMO CARLUCCI
+Capítulo: 24
+XXIV
 Lo siento mucho. Como puede comprender, hasta que no haya nuevo papa hay una serie de procedimientos que quedan paralizados.
 
 JORGE
 Padre Carlucci, ¿usted no podría decirme en qué fase del procedimiento está la dispensa? Con eso me bastaría.
 
 CRISÓSTOMO CARLUCC!
-Pero eso yo no puedo decírselo. Las dispensas firmadas por el santo padre se envían inmediatamente al obispado que inició el proceso. Es su obispo el que se pondrá en comunicación con usted. Aquí usted no puede hacer nada.
+Pero eso yo no puedo decírselo. Las dispensas firmadas por el santo padre se envían inmediatamente al obispado que inició el proceso. 
+Es su obispo el que se pondrá en comunicación con usted. Aquí usted no puede hacer nada.
 
 JORGE
 Yo pensé que a lo mejor me podrían decir un tiempo estimado...
@@ -4458,7 +4017,7 @@ CRISÓSTOMO CARLUCC!
 No ... Lo siento mucho.
 
 JORGE
-¿ Y usted no podría decirme si hay alguien que pudiera ayudarme?
+¿Y usted no podría decirme si hay alguien que pudiera ayudarme?
 
 CR!SÓSTOMO CARLUCCI
 La paciencia es la mejor ayuda. Ahora, si me permite, tengo que irme.
@@ -4480,10 +4039,8 @@ Adiós.
 JORGE
 Adiós.
 
-
-
+Capítulo: 30
 XXX
-
 Bar de tapas Malandro. JORGE en una mesita tomándose un vino. Entra por la puerta un cura con sotana y txapela al que llaman TXISTORRO.
 
 TXISTORRO
@@ -4496,21 +4053,15 @@ TXISTORRO
 No,  córtame unas rodajicas en un plato con un trozo de pan y ya me vale. Y un porrón de clarete. (IXISTORRO pasa al lado de la mesa en la que está JORGE y le echa un vistazo.
 173
 
-
-
-ALFREDO 5ANZOL
-
-
-
 Cuando está a un par de metros se para, y vuelve a mirar.)
 ¿Jorge?
 
-JORGE no reacciona.
+Jorge no reacciona.
 
 TX1STORRO
 Oye, perdona, ¿tú eres Jorge Arizmendi, no?
 
-JORGE levanta la vista.
+Jorge levanta la vista.
 
 TX!STORRO
 Perdona, ¿tú eres Jorge Arizmendi?
@@ -4560,7 +4111,7 @@ JORGE
 Exactamente.
 
 TXISTORRO
-Qué pena, ¿verdad? Juan XXIII se hacía de querer. Yo he sido feliz con él. Ha hecho mucho este papa, pero... asíes
+Qué pena, ¿verdad? Juan XXIII se hacía de querer. Yo he sido feliz con él. Ha hecho mucho este papa, pero... así es
 175
 la vida. Dios se lo ha querido llevar, y cuando nos quiera llevar a nosotros igual será. Cuentico cuentao por la chi­ menea se ha escapau. ¿Cómo estás, Jorge? Cuéntame qué vida llevas. ¿Qué haces en Roma? ¿Qué te estás toman­ do? ¿Quieres un vino? ¿Quieres algo de comer? ¿Que has venido de turismo o tienes papeleo que hacer o qué?
 
@@ -4582,7 +4133,8 @@ JORGE
 176
 
 TXISTORRO
-Con más que muchos que andan por ahí echando sermo­ nes a los que tienen dudas. Joder, Jorge. ¿Y esa tristeza tan grande que tienes en el pecho? ¿Eh? Esa tristeza no es por dejar de ser cura.
+Con más que muchos que andan por ahí echando sermo­ nes a los que tienen dudas. Joder, Jorge. ¿Y esa tristeza tan grande que tienes en el pecho? ¿Eh?. 
+Esa tristeza no es por dejar de ser cura.
 
 JORGE
 No. La tristeza es porque en Estados Unidos conocí a una chica, una madrileña, y cuando volví a España la llamé. No le dije que era cura. Nosenamoramos y la he dejado embarazada.
@@ -4632,6 +4184,7 @@ Sí, porque a la primera me los devolvieron «por falta de humildad».
 
 TXISTORRO
 ¿Por falta de humildad? (Se ríe.) ¡Qué cabrón! Qué orgullo­ sico has sido toda tu puta vida. En el Vaticano hay que ir
+
 178
 
 con la cabeza gacha, amigo. Aquí se dan unas collejas muy grandes a los gallicos. Así que, lo primero, la cresta te la peinas para atrás. Aquí por lo bajo, y con mucha suerte, algo se puede conseguir, pero levantando la cabecica no sacas ni esto. A ver,Jorge. Tú de dinero, ¿cómo andas?
@@ -4688,7 +4241,7 @@ Hasta mañana.
 JORGE
 Adios.
 
-
+Capítulo: 31
 XXXI
 
 TXISTORRO y JORGE al día siguiente en el Palacio del Santo Oficio sentados frente a la mesa del padre CRISÓSTOMO CARLUCCI.
