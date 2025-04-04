@@ -1,5 +1,5 @@
 
-CONTROL ESCENAS
+__CONTROL ESCENAS__  Vers: 4/4
 1:     PUEBLO
 2-3:   TEJAS: Un bar de Orange + Madre Robert
 4-6:   Rancheros I. 
@@ -2995,101 +2995,7 @@ PACO
 XX
 Capítulo: 20
 Se funde con JORGE en un bar. La CAMARERA FILÓSOFA le pone un café solo.
-
-JORGE
-Nulo.
-
-CARMEN
 ¿Ya veré qué hago? ¿Qué voy a hacer? Llamarle. Llamarle ya y desear que coja el teléfono a la primera.
-
-CAMARERA FILÓSOFA
- (A JORGE.) Es necesario tener cuidado con la vida para hacer que lo cotidiano tenga poesía. La brutalidad es entregarse a la falta de esperanza, a la inercia, es entre­ gar e a una mirada sobre sí mismo llena de tristeza. Es abr_ir la pu rta de la suciedad. Para crear poesía es nece­ sario cambiar de hábitos. Dejar de hacer lo que duele lo que ultraja, y tener fe en que la belleza puede for ar parte de nuestra vida. La disposición de ánimo necesaria para producir belleza no surge de la nada. Necesita fuer­ za	d t rminación. Vivir de una manera poética quiere decir_ v1 1 de una manera creativa con el objetivo de bus­ car s1gmf1cad . Es necesaria una disposición física por­ que la memoria que el cuerpo ha ido acumulando a lo lar o de_ lo	a o_s nos arrastra a repetir actos indignos, vac10s, s	s1gnif1cad?. Contra esa inercia hay que luchar. No cambia so a. s importante que dediques tiempo a ocup te deld1bu10 que vas creando en el tiempo y en el espacio con el solo hecho de vivir. Quiero decir que tú al moverte, solo con moverte, ya puedes hacer algo bello0 no. Conduci ndo pasa igual. La fealdad se apodera del que conduce impulsado por instintos horribles. Conduce con elegancia, crea un entorno bello al conducir nota la diferencia y continúa ese movimiento cuando te bajes del coche, cuando hables con una persona, cuando recibas
-128
-
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-una llamada de teléfono contesta siendo consciente de que existe la posibilidad de crear poesía. ¿Qué te parece lo que te cuento?
-
-JORGE
-Me parece muy interesante.
-
-CAMARERA FILÓSOFA
-Vivir es un acto creativo.
-
-JORGE
-Ya.
-
-CAMARERA FILÓSOFA
-O vives siendo un creador de tu vida o vives siendo un destructor de tu vida. No hay término medio. Hay gente que hace de su vida una obra de arte por intuición, pero son los menos.
-
-JORGE
-Ya.
-
-CAMARERA FILÓSOFA
-Y obra de arte no es algo rimbombante. Obra de arte es lo que se hace con técnica y creatividad, sin que se vea la técnica ni se note la creatividad. Obra de arte es lo que parece que no podría ser de otra manera. Ese es el miste­ rio. ¿Qué te parece?
-
-JORGE
-Muy interesante.
-
-CAMARERA FILÓSOFA
-Por ejemplo, tú ahora estás esperando a que te llame una chica, ¿no?
-
-129
-
-
-
-
-ALFREDO 5,\NZOL
-
-
-JORGE
-Sí.
-
-CA.1\JIARERA FILÓSOFA
-Y eso crea una impaciencia, una ansiedad, ¿no?
-
-JORGE
-Bastante.
-
-CAMARERA FILÓSOFA
-¿Tú has pensado que esa ansiedad, ese sentimiento se puede vivir de maneras diferentes?
-
-JORGE
-No.
-
-CAMARERA FILÓSOFA
-Pues piénsalo.
-
-JORGE
-(JORGE piensa.) Si pudiese cambiar cada segundo de mi vida que he pasado enfadado y triste por segundos de alegría y buen humor...
-
-CAMARERA FILÓSOFA
-Por ahí se empieza, por ahí se empieza.
-
-JORGE
-Eres una camarera filósofa.
-
-CAMARERA FILÓSOFA
-No. (Se ríe.) Ya me gustaría a mí. Yo dejaba la hostelería ahora mismo, pero la he mamado desde que nací y me gusta. He intentado hacer otras cosas, pero siempre vuel­ vo a la barra. Desde aquí, hago yo mi belleza. (Suena el
-
-130
-
-EL BAR QUESE TRAGó A TODOS LOS ESPAJ\:OLES
-
-
-teléfono. La CAMARERA FILÓSOFA contesta.) Pub El frontón, dígame.
-CARMEN
-Hola, buenos días, quería hablar con Jorge Arizmendi.
-
-CAMARERA FILÓSOFA
-Un momento. (A JORGE.) Es para ti.
-
-
-
-PACO
-Capítulo: 20
 
 JORGE
 (JORGE coge el teléfono.) ¿Si?
