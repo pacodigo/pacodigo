@@ -1,5 +1,5 @@
 
-__CONTROL ESCENAS__  Vers: 4/4
+__CONTROL ESCENAS__  
 1:     PUEBLO
 2-3:   TEJAS: Un bar de Orange + Madre Robert
 4-6:   Rancheros I. 
@@ -7,27 +7,27 @@ __CONTROL ESCENAS__  Vers: 4/4
 8:     Rancheros II. Despedida
 10*:   LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
 11:    Margaret Biller.
-12:    Pájaro
+12:    Luciérnaga (Pájaro)
 13:    Continua viaje con dinero y gozando. 
 14:    SAN FCO.: Encuentro con Claus
 15*:   Fiesta: Conozco a Carmen. p90
 16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
 18:    PAMPLONA: Dispensa rechazada
 19:    MADRID: Llamada telefóno a Telefónica en busca de Carmen  
-20#-21:   Carmen llama a Jorge. Quedan
-
-20-38: Pendiente revisión texto.
+----------
+20-21:  Carmen llama a Jorge. Quedan. p131
+23#:    Un restaurante en el Pardo. Estaba feliz. Bares con solera.
+24:     Médico. Embarazada. No tengo texto.
+25-26#: -La va a comprimir- Me dice que está embarazada. 
+27-37:  ROMA: Txistorro. p170-p205
+38:     MADRID: Reencuentro Carmen. Fin
 
 50:    Parrafadas
 
 * Impro de aproximación hecha.
-No entran: 9
-No tengo texto: 17
-
-Otra info a 31/3/25
-22:  No es significativa
-23:  La va a quitar
-24:  Va entera
+#  Pendiente de definir texto / comprimir.
+No entran:       9, 22
+No tengo texto:  17, 24
 
 
 JORGE
@@ -2995,7 +2995,8 @@ PACO
 XX
 Capítulo: 20
 Se funde con JORGE en un bar. La CAMARERA FILÓSOFA le pone un café solo.
-¿Ya veré qué hago? ¿Qué voy a hacer? Llamarle. Llamarle ya y desear que coja el teléfono a la primera.
+¿Qué hago? ¿Qué voy a hacer? Llamarle. 
+Llamarle ya y desear que coja el teléfono a la primera.
 
 JORGE
 (JORGE coge el teléfono.) ¿Si?
