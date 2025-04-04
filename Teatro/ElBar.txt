@@ -14,6 +14,7 @@ CONTROL ESCENAS
 16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
 18:    PAMPLONA: Dispensa rechazada
 19:    MADRID: Llamada telefóno a Telefónica en busca de Carmen  
+20#-21:   Carmen llama a Jorge. Quedan
 
 20-38: Pendiente revisión texto.
 
