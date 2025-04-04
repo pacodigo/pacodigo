@@ -29,6 +29,7 @@ __CONTROL ESCENAS__
 No entran:       9, 22
 No tengo texto:  17, 24
 
+4/4/25: Hecho hasta: 34, p191, 4444
 
 JORGE
 Versión: 4/4 
