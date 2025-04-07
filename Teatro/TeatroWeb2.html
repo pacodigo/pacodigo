@@ -140,6 +140,7 @@ https://es.javascript.info/debugging-chrome
 			<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
 			<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
 			<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
+			<button class="btn" onclick = activarEventosMouse();>Eventos mouse</button>
 			<button class="btn" onclick = toggleBodyFullScreen();>Body FULL SCREEN</button>
 			<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
 
@@ -175,29 +176,29 @@ https://es.javascript.info/debugging-chrome
 	}
 
 	
-	
-	// Right-Click Mouse detection:
-	document.getElementById('idCajaParrafoAnterior').onmousedown = function(event) {
-		if (event.which == 3) 		// Right-Click Mouse 
-			clickEnCajaParrafoMio();
-		if (event.which == 2) 		// Click en Rueda
-			decir('');
-	}
-	// On Wheel Mouse event:
-	document.getElementById("idCajaParrafoAnterior").onwheel = function(event) {
-		if (event.deltaY > 0) {		// down
-			//alert ("Down");
-			document.getElementById('idCbVoz').checked=true;	// Repite el actual
-			cambioNumParrafoEvent();
-			}
-		else {					// up
-			//alert ("Up");
-			//document.getElementById('idCbVoz').checked=false;
-			document.querySelector('#idParrafo').value--;
-			cambioNumParrafoEvent();
-			}
+	function activarEventosMouse(){
+		// Right-Click Mouse detection:
+		document.getElementById('idCajaParrafoAnterior').onmousedown = function(event) {
+			if (event.which == 3) 		// Right-Click Mouse 
+				clickEnCajaParrafoMio();
+			if (event.which == 2) 		// Click en Rueda
+				decir('');
 		}
-		
+		// On Wheel Mouse event:
+		document.getElementById("idCajaParrafoAnterior").onwheel = function(event) {
+			if (event.deltaY > 0) {		// down
+				//alert ("Down");
+				document.getElementById('idCbVoz').checked=true;	// Repite el actual
+				cambioNumParrafoEvent();
+				}
+			else {					// up
+				//alert ("Up");
+				//document.getElementById('idCbVoz').checked=false;
+				document.querySelector('#idParrafo').value--;
+				cambioNumParrafoEvent();
+				}
+			}
+	}	
 	
 	function irInicioCapitulo(){
 		var parrafoSolicitado = document.querySelector('#idParrafo').value;	
