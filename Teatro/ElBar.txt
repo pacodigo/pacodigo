@@ -4466,8 +4466,8 @@ JORGE
 Hola. Sí yo soy Jorge.
 
 GINA
-Encantada. Soy Gina. Qué ganas de conocerte. No te pue-
-des imaginar la alegría que le dio a Julián encontrarse contigo ayer.
+Encantada. Soy Gina. Qué ganas de conocerte. 
+No te puedes imaginar la alegría que le dio a Julián encontrarse contigo ayer.
 
 JORGE
 Sí, a mí también me dio mucha alegría.
@@ -4477,11 +4477,6 @@ GINA
 
 191
 
-
-
-ALFREDOSANZOL
-
-
 TXISTORRO
 Bien. Ha ido bien. Tenemos la dispensa con todas las fir­ mas. Nos falta la del papa. Y para eso tienes que hablar con tu hermano.
 
@@ -4490,23 +4485,17 @@ GJNA
 
 TXJSTORRO
 Conmigo no va a querer hablar.
-
-GJNA
-Y conmigo menos. ¿Tenéis hambre?
+- Y conmigo menos. 
+¿Tenéis hambre?
 
 JORGE
 Yo estoy desfallecido.
 
 GINA
 Pues a cenar. Julián, pon la mesa.
-
-TXISTORRO
-Primero llama a Bruno.
-
-GJNA
-Que no pienso llamar a mi hermano.
-
-GINA sale.
+- Primero llama a Bruno.
+- Que no pienso llamar a mi hermano.
+(Gina sale.)
 
 JORGE
 ¿Qué tiene que ver su hermano con la firma del papa?
@@ -4515,9 +4504,6 @@ TXISTORRO
 Su hermano está metido en las altas esferas. Conoce a gente que nos puede ayudar.
 
 192
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLES
-
 
 GtNA aparece con una fuente llena de pasta.
 
@@ -4528,7 +4514,7 @@ TXISTORRO
 Si le llamo yo es peor. Gina, por favor te lo pido, que nos estamos jugando mucho.
 
 GINA
-(GINA para. A JORGE.) ¿Cómo se llama tu novia?
+(Gina para. A Jorge.) ¿Cómo se llama tu novia?
 
 JORGE
 Carmen.
@@ -4536,8 +4522,8 @@ Carmen.
 GINA
 Qué nombre tan español.
 
-JORGE asiente y dice «sí» entre dientes pensando en
-CARMEN.
+JORGE 
+Jorge asiente y dice «sí» entre dientes pensando en Carmen.
 
 TXISTORRO
 Gina, tenemos que sacar esto para adelante como sea.
@@ -4551,15 +4537,6 @@ Gina.
 TX!STORRO y GINA se miran.
 
 193
-
-
-
-
-
-
-
-ALFREDO SANZOL
-
 
 GJNA
 Voy a llamar a mi hermano.
