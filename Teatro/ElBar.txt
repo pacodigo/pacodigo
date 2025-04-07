@@ -3245,7 +3245,7 @@ JORGE
 ¿Dos de la tarde?
 
 CARMEN
-Sí.
+Si.
 
 JORGE
 ¿Quieres que vayamos a comer al Pardo?
@@ -3266,7 +3266,7 @@ JORGE
 No, yo no me canso. Me gusta conducir.
 
 CARMEN
-Pero a lo mejor en 1a comida bebes vino.
+Pero a lo mejor en la comida bebes vino.
 
 JORGE
 Bebo muy poco.
@@ -3874,7 +3874,7 @@ Adiós, Jorge.
 NOTA
 Capítulo: 27
 XXVII
-Música. JORGE se viste con traje de cura. Llama a su hennano.
+Música. JORGE se viste con traje de cura. Llama a su hermano.
 
 JORGE
 Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. 
@@ -4028,7 +4028,8 @@ JORGE
 Pues te vas a llevar una sorpresa, Txistorro. Hace ya un año que he pedido la dispensa.
 
 TX!STORRO
-Ahí va lío. No me digas. ¿Qué te ha pasado, pues? ¿Te has enamorado?
+Ahí va lío. No me digas. 
+¿Qué te ha pasado, pues?, ¿Te has enamorado?
 
 JORGE
 Ahora sí estoy enamorado, pero la dispensa la pedí por­ que llevaba un par de años sufriendo mucho, con muchas dudas, muy enfadado con los superiores, triste, muy angustiado, muy cabreado todo el rato, y sobre todo con una crisis de fe y de sentido de la vida muy grande. y lo más importante: me apareció1a necesidad de tener fami­ lia de una manera muy fuerte. Al principio intenté qui­ tarme esos pensamientos, pero cada vez se hicieron más intensos. Al final tuve que hablar con el obispo. Ya llevo casi un año apartado. He estado viviendo en Estados Unidos, en Madrid, y ahora lo último, en Dinamarca.
@@ -4188,14 +4189,14 @@ Ahora mismo.
 
 181
 
-TXISTORRO coge el sobre con mucho cuidado. Se lo da a JORGE y este loguarda en un bolsillo interior de la chaqueta. CRISÓSTOMO CARLUCCI les mira.
+TXISTORRO coge el sobre con mucho cuidado. Se lo da a JORGE y este lo guarda en un bolsillo interior de la chaqueta. CRISÓSTOMO CARLUCCI les mira.
 
 TXJSTORRO
 Pues yo creo que no teníamos ningún otro asunto,
 ¿verdad? (Jorge) niega con la cabeza.
 Pues entonces con su permiso nos vamos a ir.
 (Carlucci no dice nada, y no deja de mirarlos.)
-(Jorge y Tx1sroRRO se levantan muy lentamente.)
+(Jorge y Chistorro se levantan muy lentamente.)
 Muchas gracias y buenos días.
 
 JORGE
@@ -4456,14 +4457,12 @@ JORGE
 
 TXISTORRO
 ¡Hola! Ya estamos en casa.
-
 Aparece GINA ZANELLA.
-
-GINA
+Gina: 
 Hola. ¿Tú eres Jorge?
 
 JORGE
-Hola. Sí yo soy Jorge.
+Hola. Si yo soy Jorge.
 
 GINA
 Encantada. Soy Gina. Qué ganas de conocerte. 
@@ -4481,11 +4480,11 @@ TXISTORRO
 Bien. Ha ido bien. Tenemos la dispensa con todas las fir­ mas. Nos falta la del papa. Y para eso tienes que hablar con tu hermano.
 
 GJNA
-¿ Con mi hermano? Llama tú a mi hermano si quieres hablar con él.
+¿Con mi hermano? Llama tú a mi hermano si quieres hablar con él.
 
 TXJSTORRO
 Conmigo no va a querer hablar.
-- Y conmigo menos. 
+Gina: Y conmigo menos. 
 ¿Tenéis hambre?
 
 JORGE
@@ -4493,8 +4492,8 @@ Yo estoy desfallecido.
 
 GINA
 Pues a cenar. Julián, pon la mesa.
-- Primero llama a Bruno.
-- Que no pienso llamar a mi hermano.
+Chisto: Primero llama a Bruno.
+Gina: Que no pienso llamar a mi hermano.
 (Gina sale.)
 
 JORGE
@@ -4512,9 +4511,7 @@ No quiero llamar a mi hermano para oír lo de siempre.
 
 TXISTORRO
 Si le llamo yo es peor. Gina, por favor te lo pido, que nos estamos jugando mucho.
-
-GINA
-(Gina para. A Jorge.) ¿Cómo se llama tu novia?
+Gina: ¿Cómo se llama tu novia?
 
 JORGE
 Carmen.
@@ -4539,21 +4536,20 @@ TX!STORRO y GINA se miran.
 193
 
 GJNA
-Voy a llamar a mi hermano.
+Voy a llamar a mi hermano. (sale)
+Jorge mira a Chistorro sin atreverse a hablar. Al final lo consigue.
 
-GJNA sale.
+JORGE
+¿Vivís juntos? ¿Es tu pareja?
 
-TXISTORRO entrecruza los dedos de las manos y mira al suelo. JORGE mira a TXISTORRO sin atreverse a hablar. Al final lo con.sigue.
 
-Et BAR QUESE TRAGó A TODOS LOS ESPAÑOLES
 
 
 muertos de frío escuchar a los críos llorando llamar a sus madres? Yo he creído toda mi vida que no tenía derecho a ser querido. Que el único amor al que tenía derecho era al amor de Dios. Y esta mujer me ha devuelto a la vida. Me ha cogido así, como si tirase de una cuerda y me ha pues­ to los pies en la tierra. ¿Me entiendes o no me entiendes? Tú claro que me entiendes, qué te voy a contar a ti.
 
 Tx1sTORRO le guiña un ojo y le sonríe. Entra GINA.
 
-JORGE
-¿Vivís juntos? ¿Es tu pareja?
+
 
 TXISTORRO
  (TXISTORRO levanta la vista. Mira un rato a JORGE.) Yo a ti te siento como a mi propio hermano, Jorge, y no te voy a mentir. A otros sí que les he mentido con toda mi cara dura porque no reconocería la verdad aunque me tortura­ ran. Esa es la mujer más buena que hay sobre la faz de la tierra. Y nos hemos enamorado compartiendo el mismo techo. Ni más ni menos. Con la verdad de dos seres humanos que se necesitan. Que necesitan compañía. Yo soy cura. Y lo seré hasta que me muera porque no sé hacer otra cosa, ni tengo tiempo, ni ganas. La vida me ha traído hasta aquí, y yo con esta mujer he conocido el amor, el cariño. Esta mujer me ha enseñado a quererme. Y me ha enseñado a quererla. Cuanto más la cuido mejor cuido a los que me rodean. Yo no puedo más que estar agradecido a Dios porque hizo que nos encontráramos sin buscarlo. Y cada día le doy gracias. Y no me digas por qué, pero nunca he sentido culpa. Siempre he sabido que estábamos haciendo lo que teníamos que hacer. No pretendo enten­ der los misterios. El misterio nos pone ante la vida y nos hace humildes con su sola existencia. ¿Cómo lo hemos pasado tú y yo en el seminario? ¿Qué soledades hemos pasado? ¿Qué era acostarse con el estómago vacío y
@@ -4583,53 +4579,35 @@ Espera, Gina, espera. No pasa nada.
 
 ¿Qué tal la castidad, padre?
 
+
 195
-
-
-
-ALFREDO 5ANZOL
-
 
 TXISTORRO
 (Risa forzada.) Bruno, Bruno, compórtate. Tenemos visita.
-
-
-
-JORGE
-De nada.
-
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPAÑOLES
-
-
-
-
-(A JORGE.) Buenas tardes.
+Bruno: (A Jorge) Buenas tardes.
 
 JORGE
 Buenas tardes.
 
-TXISTORRO
-Siéntate. ¿Quieres un vinito? (TXISTORRO Le sirva un vini­ to.) Este es mi amigo Jorge Arizmendi. Y necesita tu ayuda, Bruno. Mira. (TXISTORRO Abre el portafolio donde está la dispensa.) Solo falta la firma del papa.
-
-¿Se puede preguntar por qué la necesita con tanta prisa?
+---
 
 GINA
 ¿A ti que te importa?
-
-Me voy.
-
-
-TX!STORRO
-(Se va a por él.) ¡No! Bruno. Espera. Siéntate.
+Bruno: Me voy. 
+Chistorro: ¡No! Bruno. Espera. Siéntate.
 
 JORGE
 He dejado embarazada a la mujer con la que me quiero casar.
 
+BRUNO
 Entiendo. Gracias.
 
 196
 
+JORGE
+De nada.
+
+BRUNO
 No me hace falta saber más. (A GINA.) ¿Ves como no soy
 un monstruo? (Coge el portafolio de la dispensa. Lo abre. A
 TXISTORRO.) Hay que  hablar con Andreas Locher.
@@ -4642,32 +4620,33 @@ TXISTORRO
 TXISTORRO
 Lamentablemente, sí.
 
-Él tiene el sello de Juan XXIIl y puede falsificar su firma. Va a hacer falta dinero.
+BRUNO
+Él tiene el sello de Juan 23 y puede falsificar su firma. Va a hacer falta dinero.
 
 JORGE
-Llamé a los rancheros de Tejas. ¡Cómo se alegraron de escuchar mi voz! Les pedí mucho dinero y me lo enviaron. Solo querían que les prometiese que iba a volver.Se lo pro­ metí y supe que cumpliría la promesa. Que pasase lo que pasase tenía que cumplir lo que les había prometido. Me acordé del cielo de Tejas, de la luz de la tarde, de la inmensidad del paisaje y parecía que estaba viendo mi propia alma. No me sentí ni bien ni mal. Solo me sentí parte de la Tierra.
-
-
-
-
+Llamé a los rancheros de Tejas. ¡Cómo se alegraron de escuchar mi voz! Les pedí mucho dinero y me lo enviaron. 
+Solo querían que les prometiese que iba a volver. Se lo pro­ metí y supe que cumpliría la promesa. 
+Que pasase lo que pasase tenía que cumplir lo que les había prometido. 
+Me acordé del cielo de Tejas, de la luz de la tarde, de la inmensidad del paisaje y parecía que estaba viendo mi propia alma. 
+No me sentí ni bien ni mal. Solo me sentí parte de la Tierra.
 
 197
 
-
-
-ALFREDO 5ANZOL
-
-
+NOTA
 XXXV
+Capítulo: 35
+TxrSTORRO y JORGE con el padre ANDREAS LOCHER. ANDREAS LOCHER mira dentro deun maletín.
 
-El BAR QUE SE TRAGó A TOIXJS LOS ESPAÑOLES
+JORGE
+Nulo
+
 
 
 mujer esperándole. Una mujer que está embarazada. Usted es nuestra última esperanza.
 
 
 
-TxrSTORRO y JORGE con el padre ANDREAS LOCHER. ANDREAS LOCHER mira dentro deun maletín.
+
 
 ANDREAS LOCHER
 Esta no es la cantidad en la que habíamos quedado.
@@ -4704,7 +4683,7 @@ ANDREAS LOCHER
 Tengan paciencia. Las cosas, una vez que ha pasado el tiempo, se ven de otro color. Buenos días.
 
 JORGE
-(JORGE tira del brazo de TXlSTORRO.) Vámonos.
+(Jorge tira del brazo de TXlSTORRO.) Vámonos.
 
 TXISTORRO
 Espera. Yo... Usted tiene corazón. Mire dentro de su corazón.
@@ -4716,8 +4695,9 @@ TXISTORRO
 Usted... Mire los ojos de este hombre.
 
 JORGE
-Déjalo.
-JORGE arrastra a TXISTORRO. TXISTORRO
+Déjalo. (Jorge arrastra a TXISTORRO). 
+
+TXISTORRO
 No  puede hacer lo que está haciendo. ¡No puede hacerlo!
 ¡No tiene ningún derecho! ¡No tiene derecho! ¡No puede
 
@@ -4737,8 +4717,9 @@ ANDREAS LOCHER
 ]ORCE agarran TXISTORRO y se lo lleva.
 
 
+NOTA
+Capítulo: 36
 XXXVI
-
 JORGE y TXISTORRO en la calle.
 
 JORGE
@@ -4747,18 +4728,14 @@ Mañana me vuelvo a Madrid.
 TX!STORRO
 Cállate. No digas eso ni en broma. (Pausa.) Mira, Jorge, por las buenas lo hemos intentado todo, así que ahora no nos queda más remedio que hacer las cosas por las malas.
 
-]ORGE
-¿Por las malas? ¿Te parece poco poner una pistola enci­ ma de una mesa?
+JORGE
+¿Por las malas? ¿Te parece poco poner una pistola enci­ma de una mesa?
 
 TXISTORRO
 Poner una pistola encima de una mesa es hacer las cosas
 200
-
-
-EL DAR QUESE TRAGÓ A TODOS LOSESPA OLES
-
-
-por las buenas, Jorge, no me seas inocente. Te estoy hablando... de coger a Locher, meterlo en una habitación y darle de hostias hasta que firme.
+por las buenas, Jorge, no me seas inocente. 
+Te estoy hablando... de coger a Locher, meterlo en una habitación y darle de hostias hasta que firme.
 
 JORGE
 No.
@@ -4770,50 +4747,47 @@ JORGE
 No. Esto se ha acabado.
 
 TXISTORRO
-¿Seguro? (Pausa.) Yo... si fuese otro, igual me lo pensaba, pero a Locher a mí no me importa darle. Por lo cabrón que es supongo que aguantará más de la cuenta y habrá que hacerle daño; pero, oye, igual nos sorprende y se aco­ jona rápido.
+¿Seguro? (Pausa.) Yo... si fuese otro, igual me lo pensaba, pero a Locher a mí no me importa darle. 
+Por lo cabrón que es supongo que aguantará más de la cuenta y habrá que hacerle daño; pero, oye, igual nos sorprende y se aco jona rápido.
 
 JORGE
-No. Es imposible. Yo no ... yo no puedo hacer eso...
+No. Es imposible. Yo no... yo no puedo hacer eso...
 
 TXIST0RRO
-En la vida siempre llega el momento de las excepciones, Jorge. La moral es para los buenos tiempos, pero cuando te tienen agarrado del cuello..., eso se llama legítima defensa.
+En la vida siempre llega el momento de las excepciones, Jorge. 
+La moral es para los buenos tiempos, pero cuando te tienen agarrado del cuello..., eso se llama legítima defensa.
 
 JORGE
 No, ni hablar. Yo no voy a hacer eso, me vuelvo a Madrid ahora mismo.
 
-
-
 201
 
-
-
-ALFREDO 5ANZOL
-
-
+NOTA
+Capítulo: 37
 XXXVII
+Entra en una habitación	Bruno con ANDREASANDREAS LOCHER lleva una capucha negra que le tapa la cabeza entera, y las manos atadas atrás. 
+ANDREAS LocHER intenta gritar, pero no puede; está amordazado. 
+Entran TXISTORRO y JORGE. 
+TXISTORRO deja una bolsa grande de cuero en el suelo en la que lleva «herramientas».
 
-EL BAR QUE SE TRACÓ A TODOS LOSESPAÑOLES
+JORGE
+Nota: Aquí irá un audio. 
 
 
-JORGE se quita las manos y volvemos a oír los gritos. Se vuelven tnpar los oídos, y escuchamos Guantanamera can­ tada por CARMEN y JORGE. TXISTORRO asoma medio cuerpo.
 
-Entra en una habitación	con ANDREAS
+Jorge se quita las manos y volvemos a oír los gritos. Se vuelven tnpar los oídos, y escuchamos Guantanamera can­ tada por CARMEN y JORGE. TXISTORRO asoma medio cuerpo.
 
-LOCHER. ANDREAS LOCHER lleva una capucha negra que le tapa la cabeza entera, y las manos atadas atrás. ANDREAS LocHER intenta gritar, pero no puede; está amordazado. Entran TXISTORRO y JORGE. TXISTORRO deja una bolsa grande de cuero en el suelo en la que lleva «herramientas».
-
+LOCHER. 
 TXISTORRO
 Mételo allí. Dame la dispensa. Pon la radio alta que no se oiga todo esto.
 
 TXISTORRO
 Abre esa bolsa y pásamelas cadenas que hay dentro.
 
-JORGE saca unas cadenas gigantes de la bolsa. En lugar de dárselas a TXISTORRO se queda paralizado mirándolas.
+Jorge saca unas cadenas gigantes de la bolsa. En lugar de dárselas a TXISTORRO se queda paralizado mirándolas.
 
 TXISTORRO
 ¡Que es para hoy!
-
-
-
 
 ción. TXISTORRO
 
@@ -4826,13 +4800,13 @@ comienzan a oír los ruidos de la paliza. JORGE se tapa los oídos. Dejamos de o
 CARMEN
 Yo también conduzco, pero no tengo coche. Uso el de mi padre. Si mañana te cansas puedo conducir yo.
 
-JORGE
+JORGENULONULO
 No, yo no me canso. Me gusta conducir.
 
 CARMEN
 Pero a lo mejor en la comida bebes vino.
 
-JORGE
+JORGENULONULO
 Bebo muy poco.
 
 CARMEN
@@ -4857,26 +4831,7 @@ Aparece TXISTORRO con el portafolios de la dispensa.
 TXISTORRO
 Bueno. Pues esto ya está.
 203
-
-
-
-
-
-ALFREDO SANZOL
-
-
-TXJSTORRO le da el portafolios a JORGE.
-
-
-
-
-
-TXISTORRO
-Madre mía.
-
-EL BAR QUESETRAGO A TODOS LOSESPA1'0LES
-
-
+le da el portafolios a Jorge.
 
 JORGE
 ¿Y Locher?
@@ -4888,7 +4843,8 @@ JORGE
 Muchas gracias por todo.
 
 TXISTORRO
-De nada. Cuando éramos críos yo lo pasaba muy mal, muchas veces, y nunca nunca nunca me dejaste solo. Tú no sabes las ganas que he tenido yo toda mi vida de devolverte ese favor. ¿Bautizarás a tus hijos?
+De nada. Cuando éramos críos yo lo pasaba muy mal, muchas veces, y nunca nunca nunca me dejaste solo. 
+Tú no sabes las ganas que he tenido yo toda mi vida de devolverte ese favor. ¿Bautizarás a tus hijos?
 
 JORGE
 Claro, si a Carmen le parece bien. Claro que los bautizaré.
@@ -4899,18 +4855,29 @@ Pues si no se te ocurre a nadie de padrino, aquí estoy yo.
 JORGE
 ¿Vendrás a la boda?
 
+TXlSTORRO
+Ojalá llegue a la boda, pero a ver si soluciono antes todo esto. Que me parece que se me ha quedado aquí un buen fregao. Hala, rancn de aquí. ¡Corre!
 
+JORGE
+Jorge y Chisto se abrazan. Jorge se va. 
+
+204
+
+CHISTORRO
+Madre mía.
+
+NOTA
+Capítulo: 38
 XXXVIII
-
-CARMEN en un bar de Madrid. Se está tomando un café con lec/1e. Entra JORGE. Se ven. JORGE se acerca a su mesa.
+CARMEN en un bar de Madrid. Se está tomando un café con lechee. 
+Entra JORGE. Se ven. JORGE se acerca a su mesa.
 
 JORGE
 Hola.
 
 CARMEN
-Hola.
-
-JORGE se sienta.
+Hola. 
+(Jorge se sienta).
 
 JORGE
 ¿Qué tal estás?
@@ -4921,51 +4888,15 @@ Bien.
 JORGE
 (Señalando hacia la tripa.) ¿Qué tal...?
 
-
-
-TXlSTORRO
-Ojalá llegue a la boda, pero a ver si soluciono antes todo esto. Que me parece que se me ha quedado aquí un buen fregao. Hala, rancn de aquí. ¡Corre!
-
-JORGE y TX!STORRO se abrazan. JORGE se vn. TX!STORRO
-mira hacia la habitación en la que está ANDREAS LOCHER y
-se echa las manos a la cabeza.
-
-
 CARMEN
-(Se toca la tripa.) Bien.
-
-Pausa.
+(Se toca la tripa.) Bien. Pausa
 
 JORGE
 ¿Te lo has pensado?
 
-
-
-
-
-
-
-
 205
 
-204
-
-
-
-
-
-AI..FREOO 5A.'1ZOL
-
-
 CARMEN
-
-
-
-
-CARMEN
-
-EL BAR QUESETRAGÓ A TODOS LOS ESPAÑOLES
-
 Me lo estoy pensando.
 
 JORGE
@@ -4975,8 +4906,9 @@ CARMEN
 Ya lo sé, ya me lo has dicho.
 
 JORGE
-Si necesitas pensarlo puedo esperar todo el tiempo que necesites. (Pausa.) Yo solo quería decirte que te quiero. Que soy feliz. Y que no espero de esta vida másque hacer
-una familia contigo.
+Si necesitas pensarlo puedo esperar todo el tiempo que necesites. (Pausa.) 
+Yo solo quería decirte que te quiero. Que soy feliz. 
+Y que no espero de esta vida másque hacer una familia contigo.
 
 CARMEN
 (CARMEN asiente. Mira su café con leche.) Les he dicho a mis
@@ -4997,6 +4929,7 @@ No sabes la rabia que me da cuando te pones tan seguro de ti mismo.
 JORGE
 Lo siento.
 
+CARMEN
 No me pongas cara de perrito apaleado.
 
 JORGE
@@ -5009,36 +4942,27 @@ JORGE
 Un día te lo cuento. Ha sido intenso.
 
 CARNlEN
-¿  Cómo has conseguido la dispensa si estaba el papa
-muerto? ¿Estaba fumada antes de que muriera?
+¿Cómo has conseguido la dispensa si estaba el papa muerto? 
+¿Estaba firmada antes de que muriera?
 
 JORGE
-Sí. Eso parece. Hemos tenido mucha suerte. Se han dado
-una serie de casualidades, y mira... ¿Quieres que vaya- mos a comer al Pardo?
+Sí. Eso parece. Hemos tenido mucha suerte. 
+Se han dado una serie de casualidades, y mira... 
+¿Quieres que vayamos a comer al Pardo?
 
 CARMEN
 Jorge, sigo muy enfadada.
 
-}ORGE
-Ya. Es solo una invitación a comer. Si quieres puedes
-conducir.
+JORGE
+Ya. Es solo una invitación a comer. Si quieres puedes conducir.
 
 CARMEN
-Ahora puedo conducir, ¿no? Qué pasa, que ya no rompo
-coches.
+Ahora puedo conducir, ¿no? Qué pasa, que ya no rompo coches.
 
 JORGE
 Creo que no. Déjame que te invite a comer, anda.
 
 207
-206
-
-
-
-
-ALFREDO SANZOL
-
-
 
 CARMEN
 Voy al baño y me lo pienso.
@@ -5046,46 +4970,28 @@ Voy al baño y me lo pienso.
 JORGE
 Vale.
 
-
-
-
-
-CARMEN
-¿Vamos?
-
-JORGE
-Vamos.
-
-
-EL BAR QUESE TRAGÓ A TODOS LOS ESPAÑOLFS
-
-
-
 NAGORE
 Cuando Carmen se fue al baño, a Jorge no le cabía el corazón en el pecho de alegría. El optimismo podía con él. No se daba cuenta de que Carmen se lo estaba pensan­ do realmente. No se daba cuenta de que Carmen, a lo mejor, a pesar de todo, a pesar de los problemas, a pesar de la presión de su familia, a pesar de que su vida cam­ biaría para siempre, a pesar de todo, a lo mejor, prefería tener a esa niña sola. Carmen, cuando salió del baño no sabía qué hacer.
 
 CARMEN sale del baño. Se acerca a JORGE. Silencio.
 
 CARMEN
-Necesito una razón para subirme contigo a ese coche.
-
-Silencio.
+Necesito una razón para subirme contigo a ese coche. (Silencio.)
 
 JORGE
 No he podido ser el dueño de mi pasado. Quiero crear contigo mi futuro.
 
-Pausa.
-
 CARMEN
 Dame las llaves.
-
-JORGE le da las llaves del coche.
+(le da las llaves del coche.)
 
 208
 
-Van saliendo.
+CARMEN
+¿Vamos?
 
 JORGE
+Vamos. (van saliendo)
 Ten cuidado al cambiar de marcha porque el coche está acostumbrado a mi mano y a lo mejor te rasca.
 
 CARMEN
@@ -5111,14 +5017,9 @@ Pues no hace falta que lo digas, porque los coches no se acostumbran.
 
 209
 
-
-
-A U:lUDO SA.'12:01.
-
-
-
-}ORCE
+JORCE
 Que sí se acostumbran...
+
 
 Se quedn11 solos NACOREY Ev1\RISfO.
 
