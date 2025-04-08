@@ -19,7 +19,10 @@ __CONTROL ESCENAS__
 23#:    Un restaurante en el Pardo. Estaba feliz. Bares con solera.
 24:     Médico. Embarazada. No tengo texto.
 25-26#: -La va a comprimir- Me dice que está embarazada. 
-27-37:  ROMA: Txistorro. p170-p205
+27-32:  ROMA: Llm.Eva, Llegada, Carlucci, Txistorro, Carlucci. p170
+33:	Marcell, pistola.
+34:     Casa Txistorro. Gina y Bruno. Pide mucho dinero a rancheros
+35-37:  Andreas. Maletín con dinero. Me quiero ir. Paliza
 38:     MADRID: Reencuentro Carmen. Fin
 
 50:    Parrafadas
