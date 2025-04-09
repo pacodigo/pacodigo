@@ -779,7 +779,8 @@ JORGE
 Por El Paso.
 
 RANCHERO
-Si vas por El Paso y paras en un bar de carretera cerca de un pueblo que se llama Las Cruces, puede que te encuen­ tres a un negro ciego al que le dicen Pájaro. Escúchalo y dale recuerdos de mi parte. Y si por lo que sea necesitas ayuda, pídesela. Él te la dará.
+Si vas por El Paso y paras en un bar de carretera cerca de un pueblo que se llama Las Cruces, puede que te encuen­ tres a una negra ciega al que le dicen Luciérnaga.
+Escúchala y dale recuerdos de mi parte. Y si por lo que sea necesitas ayuda, pídesela. Ella te la dará.
 
 Música.}ORCE se despide de los RANCHEROS.
 
@@ -1781,10 +1782,10 @@ Gracias amigo.
 
 JORGE
 Vengo de Orange, Tejas. Allí tengo unos amigos. 
-Me dije­ron que si necesitaba ayuda y me encontraba con un negro ciego al que llaman Pájaro, le saludara de su parte.
+Me dije­ron que si necesitaba ayuda y me encontraba con una negra ciega a la que llaman Luciérnaga, la saludara de su parte.
 
 PÁJARO
-Me has encontrado. Yo soy Pájaro. ¿Tú?
+Me has encontrado. Yo soy Luciérnaga. ¿Tú?
 
 JORGE
 Me llamo Jorge Arizmendi.
