@@ -31,7 +31,7 @@ __CONTROL ESCENAS__
 #  Pendiente de definir texto / comprimir.
 No entran:       9, 22
 No tengo texto:  17, 24
-
+Sin aprender:    23, 25, 26. 35, 36, 37 y 38.
 
 
 JORGE
