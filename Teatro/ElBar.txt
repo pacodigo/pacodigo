@@ -5,7 +5,7 @@ __CONTROL ESCENAS__
 4-6:   Rancheros I. 
 7:     Nogore pregunta sobre rancho.
 8:     Rancheros II. Despedida
-10*:   LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
+10:   LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
 11:    Margaret Biller.
 12:    Luciérnaga (Pájaro)
 13:    Continua viaje con dinero y gozando. 
@@ -3350,187 +3350,14 @@ Nota: Speach de los Bares pendiente.
 JORGE
 pendiente
 
-CAMARERO
-¿Han elegido ya?
-
-CARMEN
-Un momentito.
-
-CAMARERO
-Muy bien.
-
-152
-JORGE
-¿Tú te crees que es normal que Franco le pida un planis­ferio celeste a un tío que ha estado en la cárcel por comu­nista? Pues no. 
-Se lo ha pedido para no pagarle, para torturarlo sicológicamente.
-
-CARMEN
-Sería un poco retorcido, ¿no?
-
-JORGE
-¿Retorcido? Carmen, son torturadores, vivimos en un país secuestrado por torturadores.
-
-CARMEN
-Ya, bueno, a ver, tampoco exageres. 
-Vivimos en una dic tadura, pero vivimos con más tranquilidad que mucha gente que vive en democracias.
-
-JORGE
-¿Quién vive con tranquilidad?
-
-CARMEN
-Yo.
-
-JORGE
-¿Tú? ¿Tú puedes vivir tranquila sin vivir en libertad?
-
-CARMEN
-Yo tengo toda la libertad del mundo para hacer todo lo quequiero. Nunca he sentido que me haya faltado la libertad. 
-Nunca. De hecho, tengo mucha más libertad que mucha gente que vive supuestamente en una democracia.
-
-JORGE
-¿Estás hablando en serio?
-
-153
-
-NOTA
-A partir de aquí interrogante. Pasar a siguiente capítulo 27?
-
-JORGE
-Pendiente de confirmar. Pasar a siguiente capítulo 27?
-
-
-
-
-
-
-
-
-
-
-
-CARMEN
-Totalmente. Llevamos casi treinta años de paz. A ver cuándo has visto tú eso en España antes.
-
-JORGE
-No, Carmen, esto es no es paz, esto es una guerra conti­ nua no se ha acabado, una guerra que la policía y el ejérci­ to hacen todos los días y que nos tiene atemorizados. Y aquí el que dice lo que piensa o hace lo que quiere se lo ventilan. Este es un país con una pistola en la nuca, Carmen. Claro si haces lo que te dice el que tiene la pistola en la mano pues eres libre, ya ves tú qué libertad es esa.
-
-CARMEN
-¿Entonces qué prefieres tú, vivir con la gente matándose unos a otros como se vivía en la República? ¿Tú te crees que los españoles pueden vivir en una democracia si a la mínima que uno no piensa como el otro sacan las pistolas para matarse entre ellos?
-
-JORGE
-Eso que dices es propaganda franquista. La libertad se aprende. Por la libertad se lucha. Y un paísque no apren­ de a vivir en libertad nunca puede ser libre.
-
-CARMEN
-¿En Estados Unidos te sentías libre?
-
-JORGE
-Pues mira, ahora que lo preguntas yo creo que nosotros nunca sabremos qué es la libertad. Porque, me parece, y no estoy seguro, ¿eh?, pero me parece que la libertad se aprende de niño. Si desde niño no te permiten hacerte responsable de tu libertad, si te hacen creer que la liber­ tad es obedecer órdenes, no hay manera de aprender a gestionar la responsabilidad que exige el ejercicio de la libertad.
-
-154
-
-CARMEN
-En eso estoy totalmente de acuerdo. Yo creo que lo mas
-importante de la libertad es la capacidad de ponerse límites a uno mismo para que los demás sean libres. ¿Me
-entiendes?
-
-JORGE
-Sí, sí, sí.
-
-CARMEN
-La libertad nace de la capacidad de autolimitación y de la capacidad de exigir límites a los de ás. Casi se puede
-decir que la libertad es un acuerdo soCial.
-
-JORGE
-Claro. Y eso tú y yo no lo vamos a saber hacer nunca. A
-nosotros nos han metido en el cuerpo un miedo total a ser libres. De hecho, tú piensas que la libertad es igual a que la gente se mate, ¿no?
-
-CARMEN
-Sí, porque la gente no sabe ser libre.
-
-JORGE
-Ya, pero eso hasta que no vivamos en una democracia no lo sabremos.
-
-CARMEN
-Cuando llegue la democracia vendrá la revancha de los
-vencidos en la guerra.
-
-JORGE
-Eso también es propaganda franquista. ¿Si nosotros no
-155
-hemos conocido la libertad, cómo se la vamos a enseñar a nuestros hijos?
-
-CARMEN
-¿Qué hijos?
-
-JORGE
-Digo en general, los hijos.
-
-CARMEN
-Ah, yo qué sé. Digo, este se está volviendo loco.
-
-
-CAMARERO
-Perdonen que me meta donde no me llaman, ¿pero no les
-parece que no hace falta venirse al Pardo a hablar mal de Franco?
-
-
-
-JORGE se ríe. Vuelve a entrar taurante y se dirige a la mesa de ellos.
-
-al res­
-
-CARMEN
-Es verdad, perdone.
-
-
-
-
-
-Oye, perdonad, solo una cosica, antes de irme. No me gustaría que mi historia del planisferio sirviera para frivo­ lizar sobre esta dictadura y hacer chistes sobre Franco y su señora. Esto en lo que vivimos es una dictadura fascis­ ta de clase a través de la cual se ha exteqninado a un tanto
-
-
-por ciento muy elevado de la población española. Vosotros dos sois hijos de vencedores, no sois culpables de nada, eso es verdad, pero en el futuro sí que seréis cul­ pables si no os preocupáis por conocer la historia real. La clase social fascista que tiene los medios de producción en este país no los va a soltar porque llegue la democracia. Llegará la democracia a cambio de no recordar a nadie que la riqueza está en sus manos gracias a la guerra y a su colaboración con el nazismo. Aquí no estamos hablando más que de una cosa. En manos de quién está la propie­ dad. Lo que me deben por haber hecho mí trabajo es la metáfora de una deuda. Lo que debe la clase social fascis­ ta a toda la población española esquilmada. No nos vamos a conformar con las migajas y nuestra lucha dura-
-
-156
-
-CAMARERO
-Que cada uno puede pensar como quiera, pero luego ya
-saben que los rumores crecen solos y empiezan a decir que a este restaurante viene cierta gente o viene de la otra clase, ya saben, y al final el pato lo pago yo.
-
-JORGE
-Perdone, sí, tiene toda la razón.
-
-CAMARERO
-Si llegan a entrar aquí los rusos durante la guerra, ¿qué
-pasa? ¿Que no habrían matado gente? ¿Qué tenemos que hacer, poner las fotos de los muertos en dos montones y ver cual es el montón más grande?
-Se quedan en silencio.
-
-JORGE
-No hace falta hacer montones. Lo que hace falta es hacer juicios.
-157
-
-CAMARERO
-Usted es el cliente. Usted tiene la razón.
-
-El CAMARERO se va.
-
-CARMEN
-A ver si ahora vamos a acabar los dos en la cárcel.
-
-JORGE
-Si nos ponen en la misma celda a mí no me importa.
-
-CARMEN
-Anda, mira qué fresco nos salido el intelectual.
 
 Se ríen los dos. JORGE le coge la mano y se la besa.
-
 Música. Percusión de jazz. Transición de tiempo. En algún lugar se tiene que leer: TRES MESES DESPUÉS.
-
 La miísica continúa durante la siguiente escena.
 
 
 XXIV
+Capítulo: 24
 
 CARMEN en la consulta de un médico. Un MÉDICO y una
 ENFERMERA.
@@ -3637,40 +3464,16 @@ MÉDICO
 161
 
 
-
-ALFREDO 5ANZOL
-
-
-
-XXV
-
-EL BAR QUE SE TRAGÓ A TODOS LOS ESPA1'10LES
-
-
-
-
 AUTOR
-Dinamarca. Un bar de españoles con bandera republicana. Jorge llama por teléfono.
+XXV
+Capítulo: 25
+Jorge coge el teléfono.
+
 
 JORGE
- Evaristo, ¿qué tal estáis? Yo muy bien. ¿Tú qué tal estás? Me alegro. Oye, escúchame. Mira, estoy en Dinamarca. Sí. En una ciudad que se llama Aahrus. Desde hace una semana. He venido a aprender cómofuncionan las calefac­ ciones que vamos a poner en Madrid. En casa de una fami­ lia que me alquila una habitación. Debajo de la casa hay un bar de españoles y no corno mal. He tenido suerte. Verdura muy poca. Judías y coles, pero pequeñas. Oye, es úcharne. A ver cómo hacemos esto. Tienes que ir al obispado para enterarte de cómo va lo mío. ¿Tú te acuer­ das de un cura de Olite que era muy amigo de la madre? Eso es, el que me llevó al seminario. Pues te vas al obispa­ do y preguntas por él. Jesúsmari Martínez de Iriarte. No le digas a nadie que eres mi hermano. Di que vas para infor­ marte sobre un terna de nulidad de matrimonio. Porque él lleva esos temas. Y cuando estés con él le dices que eres mi hermano y que vas de mi parte. ¿Me entiendes? Y oye. A ver. Te cuento una cosa. Me han entrado las prisas porque he conocido a una chica. Sí. Ya lo sé. Ya lo sé, pero no, no es eso. Me quiero casar. Que me quiero casar con ella. ¡No! Ell nosabe nada. ¡Cómo se lo voy a decir! ¡No puedo decirle! Porque saldría corriendo. Cuando tenga la dispen­ sa en la mano ledigo que me quiero casar con ella y le digo también lo otro. ¡Antes no se lo voy a decir, Evaristo!
-¡Parece mentira que no sepas el mundo en el que vivimos!
-Claro. Claro, ni más ni menos. Haz lo que te he dicho, por favor, ¿de acuerdo? Tengo que colgar que he quedado con
-ella para que me llame ahora. Porque trabaja en Telefónica. Que no le llamo porque ella trabaja en Telefónica. Venga, adiós, que cuelgo. Adiós. Oye... ¿Oye?
-162
-
-Cuelga. Mira el teléfono. Mira el reloj. Suena el teléfono.
-JORGE mira al camarero. El camarero se acerca y descuelga.
-
-
-CAMARERO
-¿Sí? (Pasa el teléfono a JORGE.) Su conferencia.
-
-JORGE
-Gracias. (Coge el teléfono.) ¿Carmen? ¡Hola! ¿Cómo estás?
+¿Carmen? ¡Hola! ¿Cómo estás?
 Yo muy bien. ¿Tú? Me acuerdo mucho de ti. Aburrido. Sí. No hay policía. Llevo aquí un mes y todavía no he visto un policía, ni un militar, es una maravilla. Otro mes. Claro. No. Es un mes solo. No, no puedo. Pero esto ya lo hemos hablado, cariño. Te echo mucho de menos. Sí. Yo también. Trabajo cada día, mi amor, no puedo. ¿Estás bien? Qué te pasa. Si no me lo quieres decir por teléfono cómo me lo vas a decir. (Se ríe un poco.) No me estoy rien­ do. Cariño... No te enfades, qué te pasa.
-
-JORGE escucha.
+(Jorge escucha.)
 
 CARMEN
 Carmen le está diciendo que está embarazada. Que ha ido al médico. Que le han hecho análisis.
@@ -3705,13 +3508,13 @@ No te preocupes. Ahora mismo me pongo a arreglar las cosas. No te preocupes. En 
 164
 Carmen. Escucha. Que estés embarazada me hace feliz.
 ¿Me oyes? Yo también te quiero. Mucho.
-JORGE cuelga el teléfono.
+Jorge cuelga el teléfono.
 
-
-XXVI
 
 AUTOR
-CARMEN y JORGE se encuentran en Madrid.
+XXVI
+Capítulo: 26
+Carmen y Jorge se encuentran en Madrid.
 
 JORGE
 Hola.
@@ -3732,8 +3535,8 @@ CARMEN
 ¿No me vas a dar un beso?
 
 JORGE
-Claro. Te estaba mirando. (JORGE se aceren a CARMEN). ¿Te
-puedo tocar la tripa?
+Claro. Te estaba mirando. (JORGE se aceren a CARMEN). 
+¿Te puedo tocar la tripa?
 
 CARMEN
 Si.
@@ -3757,7 +3560,7 @@ JORGE
 Claro. Tendré que ir a buscarla a Pamplona.
 
 CARMEN
-¿No  te la pueden mandar por correo certificado?
+¿No te la pueden mandar por correo certificado?
 
 JORGE
 Sí, es verdad. Lo que pasa es que no sé muy bien dónde la tengo. Carmen, yo me quiero casar contigo, eso no lo podemos poner en duda. Nos vamos a casar.
@@ -3813,7 +3616,7 @@ JORGE
 No podía.
 
 CARMEN
-Sí podías.
+Si podías.
 
 JORGE
 No, no podía porque no habrías querido conocerme. Y yo... yo te amo, Carmen, y tú no, no habrías querido...
@@ -3833,7 +3636,7 @@ La dispensa va a llegar ya. La voy a conseguir ya.
 CARMEN
 Inténtalo. Consigue la dispensa, pero, no sé qué decirte ahora, conmigo no cuentes. En este momento prefiero tenerlo sola. No sé si quiero tenerlo contigo. No lo sé. Creo que es mejor que yo haga mi vida y tú la tuya y,
 168
-luego ya veremos. Ahora no puedo decirte que quiero esperarte porque no es verdad. Ahora no puedo decirte nada. Me siento muy sola. Tengo la sensación de estar saliendo de un sueño y me duele. No te conozco. No sé quién eres. Hace un segundo lo sabía y ahora no. No tie­ nes ningún derecho a ocultarme la verda co o lo_ has hecho. Has sido un egoísta. Un egoísta. S1 temas miedo de que yo no quisiese tener una relación con un cura, déjame esa decisión a mí. Podría ha er  i  o quesí,º podría haber dicho que no, pero era rm dec1s1on. Te hab1a idealizado y ahora me pareces un cobarde. Tú tienes derecho a decir la verdad y a vivir con las personas que asumen tu verdad. Las personas que te aman no se vana asustar de tu verdad. Los pacatos y los hipócritas no que­ rrán escuchar que eres un cura y que quieres dejar de serlo, pero esa gente no es la gente con la que tú quieres vivir. Yo no soy una pacata, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
+luego ya veremos. Ahora no puedo decirte que quiero esperarte porque no es verdad. Ahora no puedo decirte nada. Me siento muy sola. Tengo la sensación de estar saliendo de un sueño y me duele. No te conozco. No sé quién eres. Hace un segundo lo sabía y ahora no. No tie­ nes ningún derecho a ocultarme la verda co o lo_ has hecho. Has sido un egoísta. Un egoísta. S1 temas miedo de que yo no quisiese tener una relación con un cura, déjame esa decisión a mí. Podría ha er  i  o quesí,º podría haber dicho que no, pero era rm dec1s1on. Te hab1a idealizado y ahora me pareces un cobarde. Tú tienes derecho a decir la verdad y a vivir con las personas que asumen tu verdad. Las personas que te aman no se vana asustar de tu verdad. Los perjuiciosos y los hipócritas no que­ rrán escuchar que eres un cura y que quieres dejar de serlo, pero esa gente no es la gente con la que tú quieres vivir. Yo no soy una perjuiciosa, ni una hipócrita, y no tenías ningún derecho a mentirme. Ninguno.
 
 JORGE
 No.
@@ -3881,7 +3684,9 @@ XXVII
 Música. JORGE se viste con traje de cura. Llama a su hermano.
 
 JORGE
-Evaristo, escúchame. Carmen está embarazada. Sí, sí, sí. Ya losé. Me voy a Roma. A buscar la dispensa. 
+Evaristo, escúchame.  Me voy a Roma. A buscar la dispensa. 
+Me han entrado las prisas porque he conocido a una chica, Sí. Ya losé, pero no, no es eso. 
+Me quiero casar. Me quiero casar con ella.
 En cuanto te cuelgue voy a llamar a Martínez de Iriarte para que me diga con quién tengo que hablar en el Vaticano. Evaristo,
 170
 ¿tú podrías mandarme algo de dinero? Todo lo que pue­ das. Gracias. Te lo devolveré. Gracias. Un abrazo. Te llamo desde Roma.
