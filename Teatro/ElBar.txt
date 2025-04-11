@@ -18,7 +18,7 @@ __CONTROL ESCENAS__
 20-21:  Carmen llama a Jorge. Quedan. p131
 23#:    Un restaurante en el Pardo. Estaba feliz. Bares con solera.
 24:     Médico. Embarazada. No tengo texto.
-25-26#: -La va a comprimir- Me dice que está embarazada. 
+25-26#: Me dice que está embarazada. 
 27-32:  ROMA: Llm.Eva, Llegada, Carlucci, Txistorro, Carlucci. p170
 33:	Marcell, pistola.
 34:     Casa Txistorro. Gina y Bruno. Pide mucho dinero a rancheros
@@ -32,17 +32,20 @@ __CONTROL ESCENAS__
 No entran:       9, 22
 No tengo texto:  17, 24
 
-4/4/25: Hecho hasta: 34, p191, 4444
+
 
 JORGE
-Versión: 4/4 
+Versión: 11/4 
 - La venta de aspiradoras es algo novedoso. Me encanta.
 - Me sorprendo mucho al ver la foto del hijo de los granjeros (parecido)
 - Cuando bailo con Carmen me paro para mi speech mirando al públido. Hablar despacio.
 - En despedida de granjeros no reirme
 - En fiesta cuando hablo de los evangelios, que se note que no quiero que se note que sé.
 - Cuando digo lo de los baños, recalcar el año 1963
-
+- MARGARET: 
+No moverme. Contención. Pequeño. Mirar al vacío (picaporte)
+- LUCIÉRNAGA: 
+Excéptico. Me cuesta darle la mano. No he visto nunca a una negra. Mas tiempo.
 
 
 
