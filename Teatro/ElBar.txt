@@ -1,11 +1,11 @@
 
 __CONTROL ESCENAS__  
-1:     PUEBLO
+1:     PUEBLO: No me quiero ir
 2-3:   TEJAS: Un bar de Orange + Madre Robert
 4-6:   Rancheros I. 
 7:     Nogore pregunta sobre rancho.
 8:     Rancheros II. Despedida
-10:   LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
+10:    LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
 11:    Margaret Biller.
 12:    Luciérnaga (Pájaro)
 13:    Continua viaje con dinero y gozando. 
