@@ -1,5 +1,4 @@
 __CONTROL ESCENAS__  
-
 1:       PUEBLO
 2-3:     TEJAS: Un bar de Orange + Madre Robert
 4-6:     Rancheros I. 
