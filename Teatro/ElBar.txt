@@ -21,7 +21,7 @@ __CONTROL ESCENAS__
 25:      DINAMARCA: Me dice que está embarazada.
 26#:     MADRID: Me pide partida nacimiento. Le digo que soy cura. 
 27-30:   ROMA: Llm.Eva, Llegada, Carlucci I, Txistorro.
-31-33:	 Carlucci II (sobre), Marcell (pistola).
+31-33:   Carlucci II (sobre), Marcell (pistola).
 34:      Casa Txistorro. Gina y Bruno. Pide mucho dinero a rancheros
 35-37:   Andreas. Maletín con dinero. Me quiero ir. Paliza
 38:      MADRID: Reencuentro Carmen. Fin
