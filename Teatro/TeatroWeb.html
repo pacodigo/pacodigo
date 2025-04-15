@@ -95,10 +95,13 @@ https://es.javascript.info/debugging-chrome
 		
 		
 		<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">				
+			<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
+			document.querySelector('#idBtnSaved').innerHTML = document.querySelector('#idParrafo').value;">Store</button>		
+			<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="document.querySelector('#idParrafo').value=Number(document.querySelector('#idBtnSaved').innerHTML);
+			cambioNumParrafoEvent();">1</button>	
 			<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayParrafos[1].texto);">Info</button>
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(-1);"><< Cap</button>
 			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(0);">< Cap</button>
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(1);">>> Cap</button>
+			
 		</div>	
 		<br><hr>
 		<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
@@ -117,11 +120,8 @@ https://es.javascript.info/debugging-chrome
 		
 		<br><hr>
 		<div style = "display:flex;    justify-content: space-between;     align-items: center;">
-			<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
-			document.querySelector('#idBtnSaved').innerHTML = document.querySelector('#idParrafo').value;">Store</button>		
-			<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="document.querySelector('#idParrafo').value=Number(document.querySelector('#idBtnSaved').innerHTML);
-			cambioNumParrafoEvent();">1</button>
-		
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(-1);"><< Cap</button>
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(1);">>> Cap</button>
 		</div>
 		<br><hr>
 			
