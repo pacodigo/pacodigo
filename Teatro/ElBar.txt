@@ -1,37 +1,42 @@
-
 __CONTROL ESCENAS__  
-1:     PUEBLO: No me quiero ir
-2-3:   TEJAS: Un bar de Orange + Madre Robert
-4-6:   Rancheros I. 
-7:     Nogore pregunta sobre rancho.
-8:     Rancheros II. Despedida
-10:    LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
-11:    Margaret Biller.
-12:    Luciérnaga (Pájaro)
-13:    Continua viaje con dinero y gozando. 
-14:    SAN FCO.: Encuentro con Claus
-15*:   Fiesta: Conozco a Carmen. p90
-16-17: Llamada Evaristo. Carta dice ir al obispado de Pamplona.
-18:    PAMPLONA: Dispensa rechazada
-19:    MADRID: Llamada telefóno a Telefónica en busca de Carmen  
-----------
-20-21:  Carmen llama a Jorge. Quedan. p131
-23#:    Un restaurante en el Pardo. Estaba feliz. Bares con solera.
-24:     Médico. Embarazada. No tengo texto.
-25-26#: Me dice que está embarazada. 
-27-32:  ROMA: Llm.Eva, Llegada, Carlucci, Txistorro, Carlucci. p170
-33:	Marcell, pistola.
-34:     Casa Txistorro. Gina y Bruno. Pide mucho dinero a rancheros
-35-37:  Andreas. Maletín con dinero. Me quiero ir. Paliza
-38:     MADRID: Reencuentro Carmen. Fin
 
-50:    Parrafadas
+1:       PUEBLO
+2-3:     TEJAS: Un bar de Orange + Madre Robert
+4-6:     Rancheros I. 
+7:       Nogore pregunta sobre rancho.
+8:       Rancheros II. Despedida
+10*:     LAS CRUCES: Blue Moon. Camarero de Lekumberri. Robo.
+11:      Margaret Biller.
+12:      Luciérnaga (Pájaro)
+13:      Continua viaje con dinero y gozando. 
+14:      SAN FCO.: Encuentro con Claus
+15*:     Fiesta: Conozco a Carmen. p90
+
+16-17:   Llamada Evaristo. Carta dice ir al obispado de Pamplona.
+18:      PAMPLONA: Dispensa rechazada
+19:      MADRID: Llamada teléfono a Telefónica en busca de Carmen  
+20-21:   Carmen llama a Jorge. Quedan. p131
+23#:     Un restaurante en el Pardo. Estaba feliz. Bares con solera.
+24:      Médico. Embarazada. No tengo texto.
+
+25:      DINAMARCA: Me dice que está embarazada.
+26#:     MADRID: Me pide partida nacimiento. Le digo que soy cura. 
+27-30:   ROMA: Llm.Eva, Llegada, Carlucci I, Txistorro.
+31-33:	 Carlucci II (sobre), Marcell (pistola).
+34:      Casa Txistorro. Gina y Bruno. Pide mucho dinero a rancheros
+35-37:   Andreas. Maletín con dinero. Me quiero ir. Paliza
+38:      MADRID: Reencuentro Carmen. Fin
+
+
+
+
 
 * Impro de aproximación hecha.
 #  Pendiente de definir texto / comprimir.
 No entran:       9, 22
 No tengo texto:  17, 24
-Sin aprender:    23, 25, 26. 35, 36, 37 y 38.
+
+Sin aprender:    23, 26. 35, 36, 37 y 38.
 
 
 JORGE
