@@ -776,7 +776,7 @@ JORGE
 Se lo contaré.
 
 RANCHERO
-¿Por dónde	vas a ir, por El Paso o por Albuquerque?
+¿Por dónde vas a ir, por El Paso o por Albuquerque?
 46
 
 JORGE
@@ -1535,8 +1535,6 @@ MARGARET MtLLER
 
 JORGE
 Otras cosas. (ella sonríe).
-
-JORGE
 Otras cosas que no puedo contar, lo siento.
 
 MARGARET MILLER
