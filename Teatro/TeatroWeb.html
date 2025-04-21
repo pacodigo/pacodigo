@@ -40,7 +40,7 @@ https://es.javascript.info/debugging-chrome
 		<div id ="idDivOpciones" style = "border: 2px solid black;">
 			<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 13pt">
 				<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;" type="text" inputmode="numeric" id="idParrafo" onchange="cambioNumParrafoEvent()"  value=2 />
-				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz">Voz</input></div>
+				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz" onclick="decir('')">Voz</input></div>
 				<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silen.</input></div>
 				<button class="button"  style=" width: 20%; height: 30px; background-color: blue" type="button" onclick="toggleBodyFullScreen();">|_|</button>
 			</div>
@@ -80,7 +80,7 @@ https://es.javascript.info/debugging-chrome
 		
 		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
 			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
-			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(0);">< Cap</button>
 			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();">P+</button>
 			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
 		</div>	
@@ -99,8 +99,8 @@ https://es.javascript.info/debugging-chrome
 			document.querySelector('#idBtnSaved').innerHTML = document.querySelector('#idParrafo').value;">Store</button>		
 			<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="document.querySelector('#idParrafo').value=Number(document.querySelector('#idBtnSaved').innerHTML);
 			cambioNumParrafoEvent();">1</button>	
+			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
 			<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayParrafos[1].texto);">Info</button>
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(0);">< Cap</button>
 			
 		</div>	
 		<br><hr>
