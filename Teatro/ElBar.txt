@@ -1845,8 +1845,6 @@ Hola.
 PÁJARO
 Abre los ojos.
 (Jorge abre los ojos.)
-
-PÁJARO
 ¿Necesitas ayuda, Águila?
 
 JORGE
