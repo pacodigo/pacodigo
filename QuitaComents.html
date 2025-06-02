@@ -1,0 +1,68 @@
+<!-- 
+C:\Users\fpespanol\OneDrive - ENAIRE\Otros\Perso\Mis curros\JavaScript\Mios\JS_1.html  
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Quita Coments</title>
+    </head>
+    
+    <body>
+		<h1> 2U</h1>
+			
+	<textarea 
+			id="textarea_Entrada"
+			rows="20" 
+			cols="80"
+			ondblclick=value="">Datos entrada</textarea>
+		
+		<textarea 
+			id="textarea_Salida"
+			rows="20" 
+			cols="80">Resultado
+		</textarea>
+	           	
+		<p> 
+			<button type="button" onclick = run()> Run </button>
+		</p>
+		
+		<p>Enlace: 
+			<a href="https://www.google.es" id ="enlace">bookmarklet</a>
+		</p>
+		
+				
+		<script>
+
+			function run() {
+				valor = document.getElementById('textarea_Entrada').value;
+				var valorProcesado = quitaComentarios (valor);
+				valorProcesado = quitaTabuladores(valorProcesado);
+				document.getElementById('textarea_Salida').value = "javascript: " + valorProcesado;
+				document.getElementById('enlace').href= "javascript: " + valorProcesado;
+				}
+
+			function quitaComentarios (textoEntrada){
+				var textoSalida = "";
+				var arrayDeLineas = textoEntrada.split('\n');
+				for (i=0; i<arrayDeLineas.length ; i++){
+					var arrayDeSeparadores = arrayDeLineas[i].split ('//');
+					textoSalida = textoSalida + arrayDeSeparadores[0];
+					}
+				return textoSalida;
+			}
+			
+			function quitaTabuladores (textoEntrada){
+				var textoProcesado = textoEntrada.replace(/(\r\n|\n|\r|\t)/gm, "");	// Quitamos retorno de carro
+				//var textoProcesado = textoProcesado.replace( '/[\n\r\t]+/', "");
+				//var textoProcesado = textoProcesado.replace(/ /g, ""); 
+				return textoProcesado;
+			
+			}
+			
+			
+			
+         </script>
+        
+    </body>
+</html>
