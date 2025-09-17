@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detección de Habla</title>
+</head>
+<body>
 
+<button id="startStopBtn">Iniciar</button>
+<p>Dí algo...</p>
+
+<script>
+  const startStopBtn = document.getElementById('startStopBtn');
+  const outputParagraph = document.querySelector('p');
+  let isListening = false;
+
+  // Asegurarse de que el navegador soporta la API
+  if ('webkitSpeechRecognition' in window) {
+    const recognition = new webkitSpeechRecognition(); // Para Chrome y navegadores basados en Chromium
+    // Para Firefox, puede ser 'SpeechRecognition'
+    // const recognition = new SpeechRecognition();
+
+    recognition.continuous = true; // Para escuchar de forma continua
+    recognition.lang = 'es-ES'; // Idioma de reconocimiento
+
+    recognition.onstart = () => {
+      isListening = true;
+      outputParagraph.textContent = "Escuchando...";
+      startStopBtn.textContent = "Detener";
+    };
+
+    recognition.onresult = (event) => {
+      const spokenText = event.results[event.results.length - 1][0].transcript;
+      outputParagraph.textContent = `Has dicho: ${spokenText}`;
+    };
+
+    recognition.onend = () => {
+      isListening = false;
+      outputParagraph.textContent = "Haz clic para empezar a escuchar.";
+      startStopBtn.textContent = "Iniciar";
+    };
+
+    startStopBtn.addEventListener('click', () => {
+      if (!isListening) {
+        recognition.start();
+      } else {
+        recognition.stop();
+      }
+    });
+
+  } else {
+    outputParagraph.textContent = "La API de Reconocimiento de Voz no es compatible con tu navegador.";
+  }
+</script>
+
+</body>
+</html>
