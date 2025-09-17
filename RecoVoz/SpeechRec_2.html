@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reconocimiento de voz</title>
+</head>
+<body>
+  <h1>Prueba de reconocimiento de voz</h1>
+  <p id="texto">Diga algo...</p>
+
+  <script>
+    // Comprobar compatibilidad
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("Tu navegador no soporta la API de reconocimiento de voz.");
+    } else {
+      const recognition = new SpeechRecognition();
+      recognition.lang = "es-ES"; // idioma español
+      recognition.continuous = true; // sigue escuchando
+      recognition.interimResults = false;
+
+      recognition.onresult = (event) => {
+        const results = event.results;
+        const frase = results[results.length - 1][0].transcript.trim().toLowerCase();
+        document.getElementById("texto").innerText = "Has dicho: " + frase;
+
+        // Palabras clave y acciones
+        if (frase.includes("hola")) {
+          alert("¡Hola Paco!");
+        }
+
+        if (frase.includes("rojo")) {
+          document.body.style.background = "red";
+        }
+
+        if (frase.includes("azul")) {
+          document.body.style.background = "blue";
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Error de reconocimiento: ", event.error);
+      };
+
+      recognition.onend = () => {
+        // Reiniciar automáticamente si se detiene
+        recognition.start();
+      };
+
+      // Iniciar reconocimiento
+      recognition.start();
+    }
+  </script>
+</body>
+</html>
