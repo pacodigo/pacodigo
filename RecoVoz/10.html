@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Detector de Silbidos</title>
+<style>
+  body { font-family: sans-serif; padding: 2rem; }
+  #log { margin-top: 1rem; white-space: pre-wrap; border: 1px solid #ccc; padding: 1rem; height: 200px; overflow-y: auto; }
+</style>
+</head>
+<body>
+
+<h1>Detector de Silbidos</h1>
+<button id="startBtn">Iniciar detección</button>
+<button id="stopBtn">Parar detección</button>
+<button id="clear">clear</button>
+<div id="log"></div>
+
+<script>
+// --- SMQT ---
+var SMQT = {
+    timeArr: [],
+    smqtArr: [],
+    maxLevel: 0,
+    init: function(timeArr, maxLevel){
+        this.timeArr = timeArr;
+        this.maxLevel = maxLevel;
+        return this;
+    },
+    calculate: function(){
+        this.smqtArr = this.SMQT(this.timeArr, 1);
+        return this;
+    },
+    addUp: function(a, b, c) {
+        var catArr = b.concat(c);
+        for(var i=0; i<catArr.length; i++) a[i] += catArr[i];
+        return a;
+    },
+    SMQT: function(time_arr, currLevel) {
+        if(currLevel === this.maxLevel + 1) return [];
+        var U = [], one_set = [], zero_set = [], sum_samples = 0, avg_samples;
+        for(var i=0;i<time_arr.length;i++) sum_samples += time_arr[i];
+        avg_samples = sum_samples / time_arr.length;
+        for(i=0;i<time_arr.length;i++){
+            if(time_arr[i]>=avg_samples){
+                U.push(1*Math.pow(2,this.maxLevel-currLevel));
+                one_set.push(time_arr[i]);
+            } else {
+                U.push(0);
+                zero_set.push(time_arr[i]);
+            }
+        }
+        return this.addUp(U, this.SMQT(one_set,currLevel+1), this.SMQT(zero_set,currLevel+1));
+    },
+    normalize: function(){
+        for(var i=0;i<this.smqtArr.length;i++)
+            this.smqtArr[i]=(this.smqtArr[i]-Math.pow(2,this.maxLevel-1))/Math.pow(2,this.maxLevel-1);
+        return this.smqtArr;
+    }
+};
+
+// --- DSP Filters ---
+function bandPassFilter(spectrum, config){
+    var clone = spectrum.slice();
+    var freqPer = config.sampleRate / (clone.length*2);
+    for(var i=0;clone[i]!==undefined;i++){
+        if(i*freqPer<config.fLower||i*freqPer>config.fUpper) clone[i]=0.15;
+    }
+    return clone;
+}
+
+function bandStopFilter(spectrum, config){
+    var clone = spectrum.slice();
+    var freqPer = config.sampleRate / (clone.length*2);
+    for(var i=0;clone[i]!==undefined;i++){
+        if(i*freqPer>config.fLower && i*freqPer<config.fUpper) clone[i]=0.15;
+    }
+    return clone;
+}
+
+// --- Jensen Difference ---
+var Hv_ = 5.545177444479573;
+function Hv(arr){ var sum=0; for(var i=0;arr[i]!==undefined;i++) sum-=arr[i]*Math.log(arr[i]); return sum; }
+function HvHv_(arr,freqBinCount){ var sum=0; for(var i=0;arr[i]!==undefined;i++){ var X=(arr[i]+2/freqBinCount)/2; sum-=X*Math.log(X); } return sum; }
+function jensenDiff(spectrum,freqBinCount){ return HvHv_(spectrum,freqBinCount)-(Hv(spectrum)+Hv_)/2; }
+
+// --- Simple FFT (adaptada, mínima) ---
+function FFT(bufferSize,sampleRate){
+    this.bufferSize = bufferSize;
+    this.sampleRate = sampleRate;
+    this.spectrum = new Float32Array(bufferSize/2);
+    this.real = new Float32Array(bufferSize);
+    this.imag = new Float32Array(bufferSize);
+    this.forward = function(buffer){
+        var N = buffer.length;
+        for(var i=0;i<N;i++){ this.real[i]=buffer[i]; this.imag[i]=0; }
+        // FFT simplificado: solo magnitud aproximada
+        for(var k=0;k<N/2;k++){
+            var re=0,im=0;
+            for(var n=0;n<N;n++){
+                var phi=2*Math.PI*k*n/N;
+                re+=buffer[n]*Math.cos(phi);
+                im-=buffer[n]*Math.sin(phi);
+            }
+            this.spectrum[k]=Math.sqrt(re*re+im*im);
+        }
+        return this.spectrum;
+    }
+}
+
+// --- Raf Polyfill simple ---
+function raf(cb){ return requestAnimationFrame(cb); }
+
+// --- Detector ---
+var config = { 
+		sampleRate:44100, 				// Audio Input sample rate
+		maxLevel:8, 					// Maximum level of SMQT
+		freqBinCount:512, 				// Size of FFT
+		jDiffThreshold:0.45, 			// Jensen Difference Threshold
+		whistleBlockThreshold:25, 		// Ratio of bandpass and bandstop blocks for 500-5000Hz
+		sampleThreshold:10 				// 10 // Threshold for postive samples / 50 samples
+		};  
+
+var totalSamples=0, positiveSamples=0;					
+var timeBuf=new Uint8Array(config.freqBinCount);		//time domain data
+
+function whistleFinder(analyser, whistleCallback){
+    analyser.getByteTimeDomainData(timeBuf);
+    SMQT.init(timeBuf,config.maxLevel).calculate();
+    var fft = new FFT(config.freqBinCount, config.sampleRate);		// FFT calculation of nomralized data
+    fft.forward(SMQT.normalize());
+
+    var pbp = bandPassFilter(fft.spectrum, { sampleRate:config.sampleRate,fLower:500,fUpper:5000 });
+    var pbs = bandStopFilter(fft.spectrum, { sampleRate:config.sampleRate,fLower:500,fUpper:5000 });
+
+    var maxpbp=0,minpbp=100,sumAmplitudes=0;				// Calculating mean(pbs) max(pbp)
+    for(var i=0;i<config.freqBinCount/2;i++){
+        if(pbp[i]>maxpbp) maxpbp=pbp[i];
+        if(pbp[i]<minpbp) minpbp=pbp[i];
+        sumAmplitudes+=Math.abs(pbs[i]);
+    }
+    var meanpbs=sumAmplitudes/(i-1);
+
+    sumAmplitudes=0;
+    for(i=0;i<config.freqBinCount/2;i++){ pbp[i]=(pbp[i]-minpbp)+2/config.freqBinCount; sumAmplitudes+=pbp[i]; }
+    for(i=0;i<config.freqBinCount/2;i++) pbp[i]/=sumAmplitudes;
+
+    var ratio=maxpbp/(meanpbs+1);
+    var jDiffVal=jensenDiff(pbp,config.freqBinCount);
+
+    if(ratio>config.whistleBlockThreshold && jDiffVal>config.jDiffThreshold){
+        positiveSamples++;
+        if (positiveSamples>config.sampleThreshold) 
+			whistleCallback({ratio:ratio,jDiff:jDiffVal});
+    }
+
+    if(totalSamples===50){ 
+		totalSamples=0; 
+		positiveSamples=0; 
+		} else { 
+			totalSamples++; 
+		}
+    raf(whistleFinder.bind(this,analyser,whistleCallback));			// https://github.com/shubhamjain/whistlerr/blob/master/index.js
+	//raf(whistleFinder); // cross platform requestAnimationFrame    	// https://github.com/Knogobert/whistleroll/blob/master/index.js
+}
+
+let running=false;      // para saber si está activo
+let audioContext=null;  // referencia al contexto de audio
+let micStream=null;     // referencia al stream del micrófono
+
+
+function whistlerr(whistleCallback){
+	running=true;
+    audioContext = new AudioContext();
+    navigator.mediaDevices.getUserMedia({audio:true})
+		.then(stream=>{
+			micStream=stream;
+			var source=audioContext.createMediaStreamSource(stream);	// Create an AudioNode from the stream.
+			var analyser=audioContext.createAnalyser();					// Connect it to the destination
+			analyser.fftSize=config.freqBinCount;
+			source.connect(analyser);
+			whistleFinder(analyser,whistleCallback);
+		})
+		.catch(()=>{ 
+			log("Error al acceder al micrófono"); 
+		});
+}
+
+function log(msg){ 
+	document.getElementById("log").textContent += msg+"\n"; 
+}
+
+document.getElementById("startBtn").addEventListener("click",()=>{
+    log("Iniciando detección...");
+    whistlerr((data)=>{ 
+		log("¡Silbido detectado! Ratio: "+data.ratio.toFixed(2)+" JensenDiff: "+data.jDiff.toFixed(2)); 
+		});
+});
+
+
+document.getElementById('clear').onclick=clear;
+document.getElementById('stopBtn').onclick=stop;
+
+function clear(){
+	document.getElementById("log").textContent ="";
+}
+
+function stop(){
+	running=false;
+    if(micStream){ 
+		micStream.getTracks().forEach(t=>t.stop()); 
+		micStream=null; 
+		}
+    if(audioContext){ 
+		audioContext.close(); 
+		audioContext=null; 
+		}
+    log("Detección detenida.");
+}
+
+
+</script>
+
+</body>
+</html>
