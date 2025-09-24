@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Whistle Detector</title>
+</head>
+<body>
+<h1>Detector de Silbidos</h1>
+<button id="start">Empezar</button>
+<script>
+// --------------------- librerías internas ---------------------
+
+// smqt.js
+var SMQT = {
+    timeArr: [],
+    smqtArr: [],
+    maxLevel: 0,
+    init: function(timeArr, maxLevel) {
+        this.timeArr = timeArr;
+        this.maxLevel = maxLevel;
+        return this;
+    },
+    calculate: function() {
+        this.smqtArr = this.SMQT(this.timeArr, 1);
+        return this;
+    },
+    addUp: function(a,b,c) {
+        var catArr = b.concat(c);
+        for(var i=0;i<catArr.length;i++) a[i]+=catArr[i];
+        return a;
+    },
+    SMQT: function(time_arr, currLevel) {
+        if(currLevel===this.maxLevel+1) return [];
+        var U=[],one_set=[],zero_set=[],sum_samples=0,avg_samples;
+        for(var i=0;i<time_arr.length;i++) sum_samples+=time_arr[i];
+        avg_samples = sum_samples / time_arr.length;
+        for(var i=0;i<time_arr.length;i++){
+            if(time_arr[i]>=avg_samples){U.push(Math.pow(2,this.maxLevel-currLevel)); one_set.push(time_arr[i]);}
+            else{U.push(0); zero_set.push(time_arr[i]);}
+        }
+        return this.addUp(U,this.SMQT(one_set,currLevel+1),this.SMQT(zero_set,currLevel+1));
+    },
+    normalize: function() {
+        for(var i=0;i<this.smqtArr.length;i++)
+            this.smqtArr[i]=(this.smqtArr[i]-Math.pow(2,this.maxLevel-1))/Math.pow(2,this.maxLevel-1);
+        return this.smqtArr;
+    }
+};
+
+// dspFilter.js
+var dspFilter = {
+    bandpass: function(spectrum, config) {
+        var spectrumClone = spectrum.slice();
+        var freqPerSpectrumElement = config.sampleRate / (spectrumClone.length * 2);
+        for(var i=0;spectrumClone[i]!==undefined;i++){
+            if(i*freqPerSpectrumElement<config.fLower || i*freqPerSpectrumElement>config.fUpper)
+                spectrumClone[i]=0.15;
+        }
+        return spectrumClone;
+    },
+    bandstop: function(spectrum, config) {
+        var spectrumClone = spectrum.slice();
+        var freqPerSpectrumElement = config.sampleRate / (spectrumClone.length * 2);
+        for(var i=0;spectrumClone[i]!==undefined;i++){
+            if(i*freqPerSpectrumElement>config.fLower && i*freqPerSpectrumElement<config.fUpper)
+                spectrumClone[i]=0.15;
+        }
+        return spectrumClone;
+    }
+};
+
+// fft.js (simplificado)
+function FFT(bufferSize,sampleRate){
+    this.bufferSize=bufferSize;
+    this.sampleRate=sampleRate;
+    this.spectrum=new Float32Array(bufferSize/2);
+    this.real=new Float32Array(bufferSize);
+    this.imag=new Float32Array(bufferSize);
+}
+FFT.prototype.forward=function(buffer){
+    for(var i=0;i<buffer.length;i++){this.real[i]=buffer[i]; this.imag[i]=0;}
+    for(var i=0;i<this.spectrum.length;i++) this.spectrum[i]=Math.abs(this.real[i]);
+    return this.calculateSpectrum();
+};
+FFT.prototype.calculateSpectrum=function(){return this.spectrum;};
+
+// jensenDiff.js
+function jensenDiff(spectrum,freqBinCount){
+    var Hv_=5.545177444479573;
+    function Hv(arr){var sum=0;for(var i=0;arr[i]!==undefined;i++)sum-=arr[i]*Math.log(arr[i]);return sum;}
+    function HvHv_(arr,freqBinCount){var sum=0;for(var i=0;arr[i]!==undefined;i++){var X=(arr[i]+2/freqBinCount)/2;sum-=X*Math.log(X);}return sum;}
+    return HvHv_(spectrum,freqBinCount)-(Hv(spectrum)+Hv_)/2;
+}
+
+// raf.js (requestAnimationFrame)
+var raf = window.requestAnimationFrame.bind(window);
+
+// --------------------- Whistlerr ---------------------
+var config = {
+    sampleRate: 44100,
+    maxLevel: 8,
+    freqBinCount: 512,
+    jDiffThreshold: 0.45,
+    whistleBlockThreshold: 25,
+    sampleThreshold: 10
+};
+var setConfig=function(initConfig={}){config={...config,...initConfig};};
+var totalSamples=0, positiveSamples=0, timeBuf=new Uint8Array(config.freqBinCount);
+function whistleFinder(analyser,whistleCallback){
+    analyser.getByteTimeDomainData(timeBuf);
+    SMQT.init(timeBuf,config.maxLevel).calculate();
+    var fft = new FFT(config.freqBinCount,config.sampleRate);
+    fft.forward(SMQT.normalize());
+    var pbp = dspFilter.bandpass(fft.spectrum,{sampleRate:config.sampleRate,fLower:500,fUpper:5000});
+    var pbs = dspFilter.bandstop(fft.spectrum,{sampleRate:config.sampleRate,fLower:500,fUpper:5000});
+    var maxpbp=0,minpbp=100,sumAmplitudes=0,i;
+    for(i=0;i<config.freqBinCount/2;i++){if(pbp[i]>maxpbp)maxpbp=pbp[i]; if(pbp[i]<minpbp)minpbp=pbp[i]; sumAmplitudes+=Math.abs(pbs[i]);}
+    var meanpbs=sumAmplitudes/(i-1);
+    sumAmplitudes=0; for(i=0;i<config.freqBinCount/2;i++){pbp[i]=(pbp[i]-minpbp)+2/config.freqBinCount; sumAmplitudes+=pbp[i];}
+    for(i=0;i<config.freqBinCount/2;i++) pbp[i]/=sumAmplitudes;
+    var ratio=maxpbp/(meanpbs+1);
+    var jDiff=jensenDiff(pbp,config.freqBinCount);
+    if(ratio>config.whistleBlockThreshold && jDiff>config.jDiffThreshold){
+        positiveSamples++;
+        if(positiveSamples>config.sampleThreshold) whistleCallback({ratio:ratio,jDiff:jDiff});
+    }
+    if(totalSamples===50){totalSamples=0; positiveSamples=0;} else totalSamples++;
+    raf(whistleFinder.bind(this,analyser,whistleCallback));
+}
+function whistlerr(whistleCallback){
+    var audioContext=new (window.AudioContext||window.webkitAudioContext)();
+    navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){
+        var mediaStreamSource=audioContext.createMediaStreamSource(stream);
+        var analyser=audioContext.createAnalyser();
+        analyser.fftSize=config.freqBinCount;
+        mediaStreamSource.connect(analyser);
+        whistleFinder(analyser,whistleCallback);
+    }).catch(function(){alert("Error accediendo al micrófono");});
+}
+
+// --------------------- Uso ---------------------
+document.getElementById('start').addEventListener('click', function(){
+    whistlerr(function(data){
+        console.log("¡Silbido detectado!", data);
+        alert("¡Silbido detectado!");
+    });
+});
+</script>
+</body>
+</html>
