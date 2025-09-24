@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Whistle detector</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <style type="text/css">
+    body
+    {
+        background: #000;
+        color: #FFF;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+
+    }
+    </style>
+    <!--script type="text/javascript" src="./build/whistle.build.js"></script-->
+
+	<script type="text/javascript" src="demo.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	
+		 <!--script type="text/javascript" src="./lib/dspFilter.js"></script>
+	  <script type="text/javascript" src="./lib/fft.js"></script>
+	  <script type="text/javascript" src="./lib/jensenDiff.js"></script>
+	  <script type="text/javascript" src="./lib/smqt.js"></script-->
+	
+
+</head>
+<body>
+		<!--div class="container">
+        <div class="row">
+                <h1 class="heading"> Whistlerr</h1>
+                <strong><a id="clickhere" href="#">Click Here</a></strong> to start detecting. You'll need to give permission to access the microphone.
+              </p>
+        </div>
+
+        <div>
+            <div id="container" style="height: 50vh;"></div>
+        </div-->
+		
+		<a id="clickhere" href="#">Click Here</a>
+		<a onclick="fullScreen()" href="#">Full Screen</a>
+        <script>
+
+			
+			
+			
+	
+	
+	
+	
+	
+	
+			
+			
+			whistlerr.setConfig({
+                sampleThreshold : 18			// 8
+            });
+
+            document.getElementById('clickhere').addEventListener('click', function(){
+                whistlerr.detect(function(){
+                    //alert ("Silbido.");
+					disparo();
+			
+                });
+            });
+			
+		var hagoCasoASilbido = true;	
+		var estadoCanal = false;
+		
+		function disparo(){
+			console.log ("Disparo.");
+			if (hagoCasoASilbido){
+				hagoCasoASilbido = false;
+				document.body.style.background = "#ff0000";   //CCCC66  #9c9c9c
+				setTimeout(() => {
+					document.body.style.background = "#000000";
+					hagoCasoASilbido = true;
+				}, "1000");
+				console.log (hagoCasoASilbido);
+				//fetch("https://api.telegram.org/bot5989965123:AAEhjYy-FSGRo-eX8AQM_zJJWbO9uwqlAkM/sendMessage?chat_id=%40PacoChanel&text=Detection");
+				//envioDatos ("https://api.telegram.org/bot5989965123:AAEhjYy-FSGRo-eX8AQM_zJJWbO9uwqlAkM/sendMessage?chat_id=%40PacoChanel&text=Detection"); 
+				if (estadoCanal){
+					estadoCanal = false;
+					envioDatos ("http://192.168.1.100/rf2off");
+					//envioDatos ("https://api.telegram.org/bot5989965123:AAEhjYy-FSGRo-eX8AQM_zJJWbO9uwqlAkM/sendMessage?chat_id=%40PacoChanel&text=2-On"); 
+				}
+				else {
+					estadoCanal = true;
+					envioDatos ("http://192.168.1.100/rf2on");
+					//envioDatos ("https://api.telegram.org/bot5989965123:AAEhjYy-FSGRo-eX8AQM_zJJWbO9uwqlAkM/sendMessage?chat_id=%40PacoChanel&text=2-Off"); 
+					
+					setTimeout(() => {
+						estadoCanal = false;
+						envioDatos ("http://192.168.1.100/rf2off");
+					}, "20000");
+				}
+			}
+		}		
+			
+
+		
+function fullScreen(){
+	document.querySelector("body").requestFullscreen();
+}
+		
+		
+		// Constantes:
+const IP_Server = "192.168.1.100";
+//const IP_Server = "192.168.5.1";
+const FETCH_Timeout = 2500;
+		
+	
+	function envioDatos (ruta){
+	//const raiz = "http://" + IP_Server + "/";
+	//let ruta = raiz + datos;
+	
+	//document.querySelector('#respuestaLabel').innerText=".";
+	/*
+	document.body.style.background = "#5a5a5a";   //CCCC66  #9c9c9c
+	setTimeout(() => {
+		document.body.style.background = "#000000";
+	}, "150");
+	*/
+
+	fetch(ruta, {
+	    signal: AbortSignal.timeout(FETCH_Timeout),
+	    method: "GET",
+		headers: {"Content-type": "text/html"}
+	})
+
+	/*
+	fetch(ruta, {		//<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	    method: "GET",
+		headers: {
+			"Content-type": "text/html",
+			"http-equiv": "Content-Security-Policy",
+			"content":"upgrade-insecure-requests"
+			}
+		
+	})
+	*/
+	.then(response => response.text()) 	//.then(response => response.text()) 
+	.then(respuesta => {				// Respuesta exitosa.
+		console.log("Datos: " + respuesta);
+		//document.querySelector('#respuestaLabel').innerText = respuesta.substring(0, 3);;
+		//document.body.style.background = "#000000";
+		})
+	.catch(err => {
+		console.log("ERROR: " + err);
+		//alert ("ERROR: " + err);
+		//document.querySelector('#respuestaLabel').innerText=("ERROR: " + err);
+		});
+}
+		
+		
+		
+		
+		
+			
+        </script>
+    </div>
+</body>
+</html>
+
