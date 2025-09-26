@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detector de silbidos (WebAudio)</title>
+  <style>
+    :root{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111}
+    body{max-width:900px;margin:28px auto;padding:18px}
+    h1{font-size:1.6rem;margin-bottom:6px}
+    p{margin-top:6px;color:#444}
+    .controls{margin:12px 0}
+    button{padding:8px 12px;margin-right:8px;border-radius:8px;border:1px solid #ccc;background:#f6f6f6;cursor:pointer}
+    button.primary{background:#1f7aec;color:#fff;border:none}
+    #status{display:inline-block;margin-left:8px;font-weight:600}
+    .panel{margin-top:12px;padding:12px;border-radius:10px;background:#fafafa;border:1px solid #eee}
+    canvas{width:100%;height:120px;display:block}
+    .big{font-size:1.2rem;margin-top:8px}
+    .detected{color:green;font-weight:700}
+    .nope{color:#b33;font-weight:700}
+    footer{margin-top:18px;color:#666;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <h1>Detector de silbidos</h1>
+  <p>Una página simple que usa la WebAudio API para escuchar el micrófono y detectar un silbido.
+  Incluye visualización del espectro y botones para iniciar/parar.</p>
+
+  <div class="controls">
+    <button id="startBtn" class="primary">Iniciar escucha</button>
+    <button id="stopBtn">Parar escucha</button>
+    <span id="status">Inactivo</span>
+  </div>
+
+  <div class="panel">
+    <div>Frecuencia detectada: <span id="freq">—</span> Hz</div>
+    <div class="big">¿Silbido?: <span id="whistleState" class="nope">NO</span></div>
+    <canvas id="spectrum" width="1024" height="128" aria-label="Espectro de audio"></canvas>
+    <p style="margin-top:8px;font-size:0.9rem;color:#444">Rango objetivo de silbido: <strong>1 000 — 4 000 Hz</strong>. El detector busca un pico fuerte y sostenido en ese rango.</p>
+  </div>
+
+  <footer>Funciona mejor en navegadores modernos (Chrome, Edge, Firefox). Dale permiso al micrófono cuando el navegador lo pida.</footer>
+
+  <script>
+  // Variables globales
+  let audioCtx = null;
+  let analyser = null;
+  let source = null;
+  let microphoneStream = null;
+  let rafId = null;
+
+  const startBtn = document.getElementById('startBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const statusSpan = document.getElementById('status');
+  const freqSpan = document.getElementById('freq');
+  const whistleState = document.getElementById('whistleState');
+  const canvas = document.getElementById('spectrum');
+  const ctx = canvas.getContext('2d');
+
+  // Parámetros del detector
+  const MIN_WHISTLE_FREQ = 1000;   // Hz
+  const MAX_WHISTLE_FREQ = 4000;   // Hz
+  const PEAK_THRESHOLD_DB = -50;   // dB (umbral para considerar un pico "fuerte")
+  const SUSTAIN_FRAMES = 14;        // (4) cuántos frames consecutivos deben cumplir para declarar silbido
+
+  let sustainCount = 0;
+
+  // Inicia la captura de micrófono y el bucle de análisis
+  async function startListening() {
+    if (audioCtx) return; // ya iniciado
+    try {
+      microphoneStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+    } catch (err) {
+      alert('No se pudo acceder al micrófono: ' + err.message);
+      return;
+    }
+
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 2048; // resolución de frecuencia
+    analyser.smoothingTimeConstant = 0.6; // suavizado para estabilidad
+
+    source = audioCtx.createMediaStreamSource(microphoneStream);
+    source.connect(analyser);
+
+    statusSpan.textContent = 'Escuchando';
+
+    // Arrays para datos
+    const bufferLength = analyser.frequencyBinCount; // fftSize/2
+    const dataArray = new Float32Array(bufferLength);
+
+    // Bucle de animación / análisis
+    function update() {
+      analyser.getFloatFrequencyData(dataArray); // decibelios
+
+      // Dibuja espectro
+      drawSpectrum(dataArray, audioCtx.sampleRate);
+
+      // Busca el pico máximo
+      let maxVal = -Infinity;
+      let maxIndex = -1;
+      for (let i = 0; i < bufferLength; i++) {
+        if (dataArray[i] > maxVal) { maxVal = dataArray[i]; maxIndex = i; }
+      }
+
+      // Convierte índice a frecuencia
+      const nyquist = audioCtx.sampleRate / 2;
+      const freq = maxIndex * nyquist / bufferLength;
+
+      if (isFinite(freq) && freq > 0) {
+        freqSpan.textContent = freq.toFixed(1);
+      } else {
+        freqSpan.textContent = '—';
+      }
+
+      // Condición de silbido: pico en rango objetivo y suficientemente alto (db) y sostenido
+      if (freq >= MIN_WHISTLE_FREQ && freq <= MAX_WHISTLE_FREQ && maxVal > PEAK_THRESHOLD_DB) {
+        sustainCount++;
+      } else {
+        sustainCount = 0;
+      }
+
+      if (sustainCount >= SUSTAIN_FRAMES) {
+        whistleState.textContent = 'SÍ';
+        whistleState.className = 'detected';
+		
+		
+		if (freq<1500)
+			document.body.style.background = "#00ff00";
+		else
+			document.body.style.background = "#ff0000";   //CCCC66  #9c9c9c
+		setTimeout(() => {
+			document.body.style.background = "#000000";		
+		}, "3000");
+		
+		
+		
+      } else {
+        whistleState.textContent = 'NO';
+        whistleState.className = 'nope';
+      }
+
+      rafId = requestAnimationFrame(update);
+    }
+
+    update();
+  }
+
+  // Para la escucha y libera recursos
+  function stopListening() {
+    if (!audioCtx) return;
+    statusSpan.textContent = 'Inactivo';
+    freqSpan.textContent = '—';
+    whistleState.textContent = 'NO';
+    whistleState.className = 'nope';
+
+    if (rafId) cancelAnimationFrame(rafId);
+    if (source) source.disconnect();
+    if (analyser) analyser.disconnect();
+    
+	if (microphoneStream) {
+      const tracks = microphoneStream.getTracks();
+      tracks.forEach(t => t.stop());
+      microphoneStream = null;
+    }
+	
+    audioCtx.close();
+    audioCtx = null;
+    analyser = null;
+    source = null;
+  }
+
+  // Dibujo simple del espectro en canvas (usa datos en dB)
+  function drawSpectrum(dataArray, sampleRate) {
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+
+    // Fondo
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.beginPath();
+    const len = dataArray.length;
+    for (let i = 0; i < len; i++) {
+      // convertimos dB (-100 .. 0) a valor vertical
+      const db = dataArray[i];
+      const v = (db + 140) / 140; // normaliza aproximadamente entre 0..1
+      const x = Math.round(i / len * w);
+      const y = Math.round(h - v * h);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = '#1f7aec';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Dibuja rango objetivo (1k-4k Hz)
+    const nyquist = sampleRate / 2;
+    const startX = Math.round((MIN_WHISTLE_FREQ / nyquist) * w);
+    const endX = Math.round((MAX_WHISTLE_FREQ / nyquist) * w);
+    ctx.fillStyle = 'rgba(31,122,236,0.08)';
+    ctx.fillRect(startX, 0, Math.max(2, endX - startX), h);
+  }
+
+  // Botones
+  startBtn.addEventListener('click', () => startListening());
+  stopBtn.addEventListener('click', () => stopListening());
+
+  // Si el usuario cierra la pestaña, asegura liberar micrófono
+  window.addEventListener('beforeunload', () => stopListening());
+  </script>
+</body>
+</html>
