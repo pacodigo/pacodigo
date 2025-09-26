@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Detector de Silbidos</title>
+  <title>SilVoz v2</title>
   <style>
     body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
     canvas { border: 1px solid black; margin-top: 10px; }
@@ -42,7 +42,7 @@
     let audioCtx, analyser, dataArray, source, rafId;
 	let microphoneStream = null;
     let running = false;
-    let baseThreshold = 120;
+    let baseThreshold = 200;     // Antes 120
     let dynamicThreshold = baseThreshold;
     let noiseAverage = 0;
 
@@ -119,7 +119,7 @@
       }
 
       // ajustar umbral dinámico según ruido
-      dynamicThreshold = baseThreshold + noiseAverage * 0.8;
+      dynamicThreshold = baseThreshold + noiseAverage * 2.8;     // Antes 0.8
 
       const nyquist = audioCtx.sampleRate / 2;
       const freq = maxIndex * nyquist / dataArray.length;
