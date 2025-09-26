@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detector de Silbidos</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+    canvas { border: 1px solid black; margin-top: 10px; }
+    #status { font-size: 1.5em; margin-top: 10px; }
+    #noiseLevel { margin-top: 10px; font-weight: bold; }
+    #noiseBarContainer {
+      width: 80%;
+      height: 20px;
+      background: #ddd;
+      margin: 10px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    #noiseBar {
+      height: 100%;
+      width: 0%;
+      background: green;
+      transition: width 0.1s linear, background 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Detector de Silbidos</h1>
+  <button id="startBtn">Iniciar escucha</button>
+  <input type="button" value="pararDetectSilbido" onclick="pararDetectSilbido()">
+ 
+ <div id="status">Esperando...</div>
+  <div id="noiseLevel">Nivel de ruido: 0%</div>
+  <div id="noiseBarContainer"><div id="noiseBar"></div></div>
+  <canvas id="visualizer" width="600" height="200"></canvas>
+  
+   <input type="button" value="startBtnRecoVoz" onclick="startBtnRecoVoz()">
+   <p id="texto">Diga algo...</p>
+  
+
+  <script>
+    let audioCtx, analyser, dataArray, source, rafId;
+	let microphoneStream = null;
+    let running = false;
+    let baseThreshold = 120;
+    let dynamicThreshold = baseThreshold;
+    let noiseAverage = 0;
+
+    const canvas = document.getElementById("visualizer");
+    const canvasCtx = canvas.getContext("2d");
+    const status = document.getElementById("status");
+    const noiseLevel = document.getElementById("noiseLevel");
+    const noiseBar = document.getElementById("noiseBar");
+
+    document.getElementById("startBtn").onclick = async () => {
+      iniciarEscucharSilbido();
+	  /*
+	  if (running) return;
+      running = true;
+
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      microphoneStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      source = audioCtx.createMediaStreamSource(microphoneStream);
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 2048;
+      dataArray = new Uint8Array(analyser.frequencyBinCount);
+      source.connect(analyser);
+
+      detect();
+	  */
+    };
+
+
+	async function iniciarEscucharSilbido(){
+	      if (running) return;
+      running = true;
+
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      microphoneStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      source = audioCtx.createMediaStreamSource(microphoneStream);
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 2048;
+      dataArray = new Uint8Array(analyser.frequencyBinCount);
+      source.connect(analyser);
+
+      detect();
+	}
+
+
+
+    function detect() {
+      analyser.getByteFrequencyData(dataArray);
+
+      let maxVal = -Infinity;
+      let maxIndex = -1;
+      let sum = 0;
+
+      for (let i = 0; i < dataArray.length; i++) {
+        sum += dataArray[i];
+        if (dataArray[i] > maxVal) {
+          maxVal = dataArray[i];
+          maxIndex = i;
+        }
+      }
+
+      let avg = sum / dataArray.length;
+      noiseAverage = 0.9 * noiseAverage + 0.1 * avg;
+
+      // actualizar nivel ruido en %
+      let noisePercent = Math.min(100, (noiseAverage / 255) * 100).toFixed(1);
+      noiseLevel.textContent = `Nivel de ruido: ${noisePercent}%`;
+      noiseBar.style.width = `${noisePercent}%`;
+      if (noisePercent > 60) {
+        noiseBar.style.background = "red";
+      } else if (noisePercent > 30) {
+        noiseBar.style.background = "orange";
+      } else {
+        noiseBar.style.background = "green";
+      }
+
+      // ajustar umbral dinámico según ruido
+      dynamicThreshold = baseThreshold + noiseAverage * 0.8;
+
+      const nyquist = audioCtx.sampleRate / 2;
+      const freq = maxIndex * nyquist / dataArray.length;
+
+      if (freq > 1000 && freq < 4000 && maxVal > dynamicThreshold) {
+			silbidoDetectado();
+			status.textContent = `¡Silbido detectado! (${freq.toFixed(0)} Hz)`;
+			status.style.color = "blue"
+			
+      } else {
+        status.textContent = "Escuchando...";
+        status.style.color = "black";
+      }
+
+      draw();
+      if (running) rafId = requestAnimationFrame(detect);
+    }
+
+    function draw() {
+      canvasCtx.fillStyle = "white";
+      canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = "black";
+
+      canvasCtx.beginPath();
+
+      const sliceWidth = canvas.width / dataArray.length;
+      let x = 0;
+
+      for (let i = 0; i < dataArray.length; i++) {
+        let v = dataArray[i] / 255;
+        let y = canvas.height - v * canvas.height;
+
+        if (i === 0) canvasCtx.moveTo(x, y);
+        else canvasCtx.lineTo(x, y);
+
+        x += sliceWidth;
+      }
+
+      canvasCtx.lineTo(canvas.width, canvas.height);
+      canvasCtx.stroke();
+    }
+	
+	
+	
+	function silbidoDetectado(){
+		pararDetectSilbido();
+		startBtnRecoVoz();
+	}
+	
+	function pararDetectSilbido(){
+		running = false;
+		cancelAnimationFrame(rafId);
+		if (audioCtx) audioCtx.close();
+		status.textContent = "Detenido";
+	
+	
+	
+		    //if (rafId) cancelAnimationFrame(rafId);
+    if (source) source.disconnect();
+    if (analyser) analyser.disconnect();
+    
+	if (microphoneStream) {
+      const tracks = microphoneStream.getTracks();
+      tracks.forEach(t => t.stop());
+      microphoneStream = null;
+    }
+	analyser = null;
+    source = null;
+    audioCtx = null;
+	
+	
+	}
+	
+	
+	
+	//_____ PARTE RECOVOZ ____
+	
+	
+
+	 // Comprobar compatibilidad
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("Tu navegador no soporta la API de reconocimiento de voz.");
+    } else {
+		console.log ("Iniciando SpeechRecognition...");
+      const recognition = new SpeechRecognition();
+      recognition.lang = "es-ES"; // idioma español
+      recognition.continuous = false; // sigue escuchando
+      recognition.interimResults = false;
+
+      recognition.onresult = (event) => {
+        console.log ("onresult");
+		const results = event.results;
+        const frase = results[results.length - 1][0].transcript.trim().toLowerCase();
+        document.getElementById("texto").innerText = "Has dicho: " + frase;
+
+        // Palabras clave y acciones
+        if (frase.includes("hola")) {
+          alert("¡Hola Paco!");
+        }
+
+        if (frase.includes("rojo")) {
+          document.body.style.background = "red";
+        }
+
+        if (frase.includes("azul")) {
+          document.body.style.background = "blue";
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Error de reconocimiento: ", event.error);
+      };
+
+      recognition.onend = () => {
+		console.log ("onend");
+        // Reiniciar automáticamente si se detiene
+        //recognition.start();
+		iniciarEscucharSilbido();
+      };
+
+      
+	  
+	  function startBtnRecoVoz(){
+			// Iniciar reconocimiento
+			recognition.start();
+		}
+		
+		
+		
+		
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </script>
+</body>
+</html>
