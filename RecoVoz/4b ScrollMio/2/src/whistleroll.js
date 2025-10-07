@@ -1,3 +1,5 @@
+let escuchandoSilbido = true;
+
 document.addEventListener("DOMContentLoaded", function () {
 
     /*
@@ -135,12 +137,51 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     *   Main
     */
+	
+
+
+	
+	function startRecoSilvido(){
+		if (!escuchandoSilbido){
+			document.querySelector("#activateAudioContext").click();
+			escuchandoSilbido = true;
+		}
+	}
+	
+	function stopRecoSilvido(){
+		console.log ("stopRecosilvido");
+		if (escuchandoSilbido){
+			console.log ("aqui");
+			escuchandoSilbido = false;
+			document.querySelector("#disableAudioContext").click();
+			
+		/*	
+			setTimeout(function(){
+				startRecoSilvido();
+				console.log ("despues...");
+				
+				},5*1000);
+				
+				*/
+		}
+	}
+	
+	
+	
     whistlerr( (result) => {
-        //alert("Hola");
+		if (escuchandoSilbido){
+			console.log ("silbido detectado");
+			//escuchandoSilbido= false;
+			stopRecoSilvido();
+			startRecoVoz();
+			
+		}
+	   //alert("Hola");
 		
-		document.querySelector("#disableAudioContext").click();
-		startRecoVoz();
+		//document.querySelector("#disableAudioContext").click();
+		//startRecoVoz();
 		
+		//setTimeout (function(){document.querySelector("#activateAudioContext").click();}, 5*1000);
 		
     }, config);
 	
@@ -181,8 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		console.log ("onend");
 		document.body.style.background = "#000000";
 		//iniciarEscucharSilbido();
-		document.querySelector("#activateAudioContext").click();
+		//document.querySelector("#activateAudioContext").click();
 		escuchandoVoz = false;
+		startRecoSilvido();
       };	
     }
 	
@@ -270,4 +312,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	
 	
+	
+		
 });
