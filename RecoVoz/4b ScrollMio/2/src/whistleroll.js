@@ -3,6 +3,7 @@ let escuchandoVoz = false;
 
 document.addEventListener("DOMContentLoaded", function () {
 
+	alert ("hola Paco");
     /*
     *   Initializations
     */
