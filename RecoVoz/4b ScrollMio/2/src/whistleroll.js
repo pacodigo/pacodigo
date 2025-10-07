@@ -1,4 +1,5 @@
 let escuchandoSilbido = true;
+let escuchandoVoz = false;
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	//_____ PARTE RECOVOZ ____
 	
 	
-	let escuchandoVoz = false;
+	
 	let recognition;
 	// Comprobar compatibilidad
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
