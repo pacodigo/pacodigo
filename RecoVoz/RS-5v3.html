@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>RS_5v2</title>
+    <title>RS_5v3</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
 <body>
     <div class="container">
         <div class="row">
-                <h1 class="heading"> Whistlerr - RS_5v2</h1>
+                <h1 class="heading"> Whistlerr - RS_5v3</h1>
         </div>
 
         <div class="controls">
@@ -710,11 +710,10 @@ function startDetection() {					// Start/Stop helpers
     whistlerr.detect(function(info){		// whistlerr.detect establecerá window._whistlerr_stream y window._whistlerr_audioContext        
         if (!window.stopWhistle) {			// Evitamos mostrar alert si hemos pedido detener
             console.log("Silbido.");
-			//stopDetection();
-			//startRecoVoz();
-			
-			document.body.style.background = "#00FF00";
-			setTimeout (function(){document.body.style.background = "#000000";}, 2*1000);			
+			stopDetection();
+			startRecoVoz();
+			//document.body.style.background = "#00FF00";
+			//setTimeout (function(){document.body.style.background = "#000000";}, 2*1000);			
         }
     });
 }
@@ -960,3 +959,4 @@ button.addEventListener("click", () => {
     </div>
 </body>
 </html>
+
