@@ -1,0 +1,509 @@
+<!-- 
+https://es.javascript.info/debugging-chrome 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>DocuWeb</title>
+		<meta name="viewport" content="width=device-width">
+    </head>
+	
+	
+	<style>
+		.button {
+			background-color: grey;
+			border: none;
+			color: white;
+			border-radius: 10px;
+			font-size: 20px;
+			height: 50px;						
+			margin: 5px;
+
+		}
+		.btn {
+			font-size: 20px;
+			height: 40px;	
+		}
+		hr {
+			height: 10px;
+			border: 0;
+			box-shadow: 0 10px 10px -10px #8c8b8b inset;
+		}
+
+</style>
+
+
+ 
+    <body style="background: black; ">
+		<!--h2> Ver.: 28-2-25. 1</h1-->
+		<div id ="idDivOpciones" style = "border: 2px solid black;">
+			<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 13pt">
+				<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;" type="text" inputmode="numeric" id="idParrafo" onchange="cambioNumParrafoEvent()"  value=2 />
+				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz" onclick="decir('')">Voz</input></div>
+				<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silen.</input></div>
+				<button class="button"  style=" width: 20%; height: 30px; background-color: blue" type="button" onclick="toggleBodyFullScreen();">|_|</button>
+			</div>
+			<hr>
+		</div>
+		<!--		
+		<div id="idDivPaginas">
+			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
+				<button class="button"  style="width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivPaginas');">X</button>
+				<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
+				<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
+				<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
+			</div>
+			<hr>
+		</div>
+		-->
+		<div style = "display:flex;    justify-content: center;     align-items: center;">
+			<!--textarea id="idCajaPregunta" rows="10" style="user-select: none; width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onmousedown="longClickAction('ratonAbajo');" onmouseup="longClickAction('ratonArriba');">idCajaPregunta </textarea-->
+			<textarea class="prevent-select" id="idCajaPregunta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick = "document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();" ondblclick = "document.querySelector('#idParrafo').value--;document.querySelector('#idParrafo').value--; document.getElementById('idCbVoz').checked=true; cambioNumParrafoEvent();">idCajaPregunta </textarea>
+		</div>
+		<br><hr>
+		<!--
+		<div id ="idDivControlSpeaking">
+			<div style = "display:flex;    justify-content: center;     align-items: center;">
+				<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
+				<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
+			</div>
+		</div>
+		
+		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">Parr -</button>
+			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambioNumParrafoEvent()" value=2 />
+			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambioNumParrafoEvent();">Parr +</button>
+		</div>	
+		-->
+	
+		
+		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(0);">< Cap</button>
+			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();">P+</button>
+			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
+		</div>	
+		
+		<br><hr>
+		
+				
+		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
+			<textarea id="idCajaRespuesta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="clickEnCajaRespuesta();">idCajaRespuesta </textarea>
+		</div>
+		<br><hr>
+		
+		
+		<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">				
+			<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
+			document.querySelector('#idBtnSaved').innerHTML = document.querySelector('#idParrafo').value;">Store</button>		
+			<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="document.querySelector('#idParrafo').value=Number(document.querySelector('#idBtnSaved').innerHTML);
+			cambioNumParrafoEvent();">1</button>	
+			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+			<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayParrafos[1].texto);">Info</button>
+			
+		</div>	
+		<br><hr>
+		<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
+			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
+			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="clickEnCajaRespuesta();">Resp</button>
+			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.querySelector('#idParrafo').value++; cambioNumParrafoEvent();">P+</button>
+		</div>	
+		<br><hr>
+		<div id ="idDivControlParrafoRepetido" style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambioNumParrafoEvent();">P-</button>				
+			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+			<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
+			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambioNumParrafoEvent();">Act</button>
+		</div>	
+		
+		<br><hr>
+		<div style = "display:flex;    justify-content: space-between;     align-items: center;">
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(-1);"><< Cap</button>
+			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irInicioCapitulo(1);">>> Cap</button>
+		</div>
+		<br><hr>
+			
+		<br><br><br>
+		<div id="idDivExtra" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
+			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
+			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
+		
+			<p> <input type="file" id="file-input" /> </p>
+			<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
+			<label>Max palabras:</label>
+			<input id="idMaxPalabras" tabindex="-1" type="number" value="15" style="width: 20%; zoom: 1.5; text-align: center; margin: 5px;">
+			<p></p>
+			
+			<div id="rate-control">
+				<label for="rate">Voice Rate:</label>
+				<input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+			</div> <p></p>
+			
+			<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
+			<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+			<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
+			<button class="btn" onclick = activarEventosMouse();>Eventos mouse</button>
+			<button class="btn" onclick = toggleBodyFullScreen();>Body FULL SCREEN</button>
+			<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+
+			<button class="btn" onclick = "decir ('Hola Paco.')"> Test Voz </button>
+			<button class="btn" onclick = "decir ('')"> Parar Voz </button>
+			<br>
+			<button id="idTestButton" class="btn" onclick = "test();"> Test </button>
+		</div>
+					
+<script>
+	
+	
+	window.onload = function() {
+		console.log("Página cargada...");
+		cargaDesdeInternet();
+	}	
+			
+	function cargaDesdeInternet(){
+		//fetch('https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt', { signal: AbortSignal.timeout(2500) })		// Con esto no funciona en el movil del curro.
+		fetch('https://pacodigo.github.io/pacodigo/DocuWeb/Docu.txt')
+			.then(response => response.text())
+			.then((data) => {
+				console.log ("Datos recibidos de Internet: " + data);
+				procesadoParrafos(data);
+				/*
+				let parrafoSolicitado = getCookie("numParrafoCookie"); 
+				if (parrafoSolicitado != "" && parrafoSolicitado != null) {
+					document.querySelector('#idParrafo').value = parrafoSolicitado;	
+					cambioNumParrafoEvent();
+				}
+*/				
+			})
+			.catch(err => {
+				alert("ERROR: " + err);
+			});	 
+	}
+
+	
+	var arrayBloquesPregResp = [];
+	
+	function procesadoParrafos(textoEnBruto){
+		console.log ("procesadoParrafos.");
+		let arrayDeParrafos = textoEnBruto.split(/\n\n+/);		// Expresión regular que divide en párrafos
+		procesadoPreguntaRespuesta (arrayDeParrafos);		
+	}
+	
+	function procesadoPreguntaRespuesta(arrayDeParrafos){
+		console.log ("procesadoPreguntaRespuesta");
+		let bloquePregResp = {					// Objeto "bloquePregResp"
+			pregunta: 			"Pregunta",		// Clave / Valor. En la Clave personaje se almacena el Valor NULO
+			respuesta: 			"Respuesta",
+			tema:				"Tema",
+			numTema:			0,
+			controlUsada: 		false
+			};
+		
+		var indiceArrayBloquesPregResp=0;
+		var nuevoTema ="NULO";
+		var numTema = 0;
+		
+		for (let indiceBloques=0; indiceBloques<arrayDeParrafos.length; indiceBloques++){
+			var arrayDeLineas = arrayDeParrafos[indiceBloques].split('\n');
+			if (arrayDeLineas.length>1){		// Si hay más de una línea en el párrafo
+				arrayBloquesPregResp[indiceArrayBloquesPregResp] = { ...bloquePregResp};	// Creamos un nuevo objeto en el array en pos [0] y clonamos el objeto usando el operador de propagación. Copiamos su contenid
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].pregunta = arrayDeLineas[0];
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].respuesta = arrayDeLineas[1];
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].tema = nuevoTema;
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].numTema = numTema;					
+				indiceArrayBloquesPregResp++;
+			}
+			else if (arrayDeLineas[0].length >2) {		// Única línea. Texto de control o Tema
+				nuevoTema = arrayDeLineas[0];
+				numTema++;
+			}
+		}
+		console.log (arrayBloquesPregResp);
+		var infoProcesada = ("Temas: " + numTema + "\nBloques Preg+Resp: " + arrayBloquesPregResp.length);
+		console.log (infoProcesada);
+		document.getElementById('idCajaPregunta').value = infoProcesada;
+	}
+	
+	
+	
+	
+	
+	function activarEventosMouse(){
+		// Right-Click Mouse detection:
+		document.getElementById('idCajaPregunta').onmousedown = function(event) {
+			if (event.which == 3){ 		// Right-Click Mouse 
+				//document.getElementById('idCbVoz').checked=false;
+				document.querySelector('#idParrafo').value--; cambioNumParrafoEvent();  // Parrafo Anterior
+				}
+			if (event.which == 2) 		// Click en Rueda
+				decir('');
+		}
+		// On Wheel Mouse event:
+		document.getElementById("idCajaPregunta").onwheel = function(event) {
+			if (event.deltaY > 0) {		// down
+				//alert ("Down");
+				clickEnCajaRespuesta();	// Decir mi párrafo
+				}
+			else {						// up
+				//alert ("Up");
+				document.getElementById('idCbVoz').checked=true; cambioNumParrafoEvent();	// Repite el actual
+				}
+			}
+	}	
+	
+	function irInicioCapitulo(offset){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;	
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];	
+		var capituloActual = arrayParrafos[indiceMiParrafo].capitulo;
+		parrafoSolicitado = devuelveRegistroDeCapitulo(capituloActual+offset);
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+		cambioNumParrafoEvent();
+	}
+	
+	
+	function clickEnCajaRespuesta(){
+		console.log ("clickEnCajaRespuesta");
+		if (document.getElementById("idCbVoz").checked){
+			var parrafoSolicitado = document.querySelector('#idParrafo').value;	
+			decir (arrayBloquesPregResp[parrafoSolicitado].respuesta);
+		}
+		else {
+			if (document.getElementById('idCajaRespuesta').style.color!="white")		
+				document.getElementById('idCajaRespuesta').style.color="white";
+			else
+				document.getElementById('idCajaRespuesta').style.color="black";
+		}
+	}
+	
+	function acortarTexto (textoEntrada){
+		var arrayDePalabras = textoEntrada.split(' ');
+		var numPalabras = arrayDePalabras.length;
+		var numMaxPalabras = document.querySelector('#idMaxPalabras').value;	; 	//Antes 10
+		var respuesta ="Corto: ";	//Antes: "Recortado: " > Recorta
+		if (numPalabras > numMaxPalabras){
+			for (indicePalabras = (numPalabras-numMaxPalabras); indicePalabras<numPalabras; indicePalabras++){
+			respuesta = respuesta + " " + arrayDePalabras[indicePalabras];
+			}
+		}
+		else 
+			respuesta = textoEntrada;
+		return (respuesta);	
+	}
+	
+	function conmutaVisualizacionDiv(divID){
+	    var x = document.getElementById(divID);
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+	
+	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
+		if (!document.fullscreenElement) 
+			document.documentElement.requestFullscreen();
+		else 
+			document.exitFullscreen();
+	}
+	
+	function toggleBodyFullScreen(){		//document.querySelector('body').requestFullscreen();
+		if (!document.fullscreenElement) 
+			document.querySelector('body').requestFullscreen();
+		else 
+			document.exitFullscreen();
+	}
+	
+
+
+/*
+	function devuelveRegistroDePagina (numPagina){
+		var encontrado = false;
+		var i=0;
+		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
+			var indiceParrafos = indicesParrafosDePaco[i];
+			if (arrayParrafos[indiceParrafos].pagina >= numPagina){			// Encontrado
+				encontrado = true; 
+				return (i+1);
+				}
+			i++;
+		}
+		return(1);
+	}
+	function devuelveRegistroDeCapitulo (numCapitulo){
+		var encontrado = false;
+		var i=0;
+		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
+			var indiceParrafos = indicesParrafosDePaco[i];
+			if (arrayParrafos[indiceParrafos].capitulo >= numCapitulo){			// Encontrado
+				encontrado = true; 
+				return (i+1);
+				}
+			i++;
+		}
+		return(1);
+	}
+*/
+
+	function cambioNumParrafoEvent(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		/*
+		if (parrafoSolicitado<0){		// Num párrafo negativo >> Ha metido una pagina
+			var paginaSolicitada = -parrafoSolicitado;
+			parrafoSolicitado = devuelveRegistroDePagina(paginaSolicitada);
+			document.querySelector('#idParrafo').value = parrafoSolicitado;
+			setCookie("numParrafoCookie", parrafoSolicitado);
+		}
+		if ((0<parrafoSolicitado) && (parrafoSolicitado<1)){		// Num párrafo decimales 0.03>> Ha metido un título
+			var capituloSolicitado = Math.trunc(parrafoSolicitado*100);		// Devuelve la parte entera, removiendo los decimales. A veces me sale 7,000000001
+			console.log ("Solicitando capítulo " + capituloSolicitado);
+			parrafoSolicitado = devuelveRegistroDeCapitulo(capituloSolicitado);
+			document.querySelector('#idParrafo').value = parrafoSolicitado;
+			setCookie("numParrafoCookie", parrafoSolicitado);
+		}
+		*/
+		if (parrafoSolicitado > arrayBloquesPregResp.length-1){
+			document.getElementById('idCajaPregunta').value = "NO HAY MÁS PREGUNTAS";
+			return;
+		}
+		let textoPregunta = arrayBloquesPregResp[parrafoSolicitado].tema + "\n" + arrayBloquesPregResp[parrafoSolicitado].pregunta;
+		document.getElementById('idCajaPregunta').value = textoPregunta;
+		document.getElementById('idCajaRespuesta').value = arrayBloquesPregResp[parrafoSolicitado].respuesta;
+		
+		if (document.getElementById("idCbVoz").checked){					// Si Voz=On		
+			if (document.getElementById("idCbAcortaTexto").checked)
+				decir (acortarTexto(arrayBloquesPregResp[parrafoSolicitado].pregunta));
+				//decirConcatenado (acortarTexto(textoParrafoAnterior),1);
+			else
+				decir (arrayBloquesPregResp[parrafoSolicitado].pregunta);		
+			// Parte respuesta:
+			if (!document.getElementById("idSilenciarme").checked){
+				var textoResp = arrayBloquesPregResp[parrafoSolicitado].respuesta;
+				decirConcatenadoPromise ("O:" + textoResp, 1);
+			}
+		}	
+	}
+
+
+
+
+	function getTodaInfoDeParrafo(indiceParrafos){
+		var infoProcesada = (arrayParrafos[indiceParrafos].personaje + "\n" + arrayParrafos[indiceParrafos].texto);
+		infoProcesada = infoProcesada + ("\nCap.: " + arrayParrafos[indiceParrafos].capitulo + ".  Pág.: " + arrayParrafos[indiceParrafos].pagina);
+		infoProcesada = infoProcesada + ("\nNúm.Línea: " + arrayParrafos[indiceParrafos].numLineaParrafo);
+		return (infoProcesada);
+	}
+
+
+
+	// Fichero de entrada:
+	document.getElementById('file-input').addEventListener('change', leerArchivo, false);
+	function leerArchivo(e) {
+		var archivo = e.target.files[0];
+		if (!archivo) {
+			return;
+		}
+		var lector = new FileReader();
+		lector.onload = function(e) {
+			var contenido = e.target.result;
+			textoObraEnBruto = contenido;
+			procesadoParrafos();
+		}
+		lector.readAsText(archivo);
+	}
+
+	const rate = document.querySelector("#rate");
+	
+	function decir (enteredText){
+		const speechSynth = window.speechSynthesis;   
+		speechSynth.cancel();
+		const newUtter = new SpeechSynthesisUtterance(enteredText);
+		newUtter.rate = rate.value;			// Opcional
+		speechSynth.speak(newUtter);
+		newUtter.onend = () => console.log("Fin");
+	}
+
+
+	function macroConcatena(){
+		var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		var textoParrafoAnterior = arrayParrafos[indiceMiParrafo-1].texto;
+		if (document.getElementById("idCbAcortaTexto").checked)
+			textoParrafoAnterior= acortarTexto(textoParrafoAnterior);
+		var textoMiParrafo = arrayParrafos[indiceMiParrafo].texto;
+		decirConcatenadoPromise ("U:" + textoParrafoAnterior, 1);
+		decirConcatenadoPromise ("Silencio.",0);			// Añado un silencio en plan cutre.
+		var volumen = !(document.getElementById("idSilenciarme").checked);
+		/*
+		if (document.getElementById("idSilenciarme").checked)
+			decirConcatenado (textoMiParrafo, 0);		//decirConcatenado (textoMiParrafo, 0.5);
+		else
+			decirConcatenado ("O:" + textoMiParrafo, 1);
+		parrafoSolicitado++;
+		decirConcatenado ("Sile.",0);			// Añado un silencio en plan cutre.
+		*/
+		decirConcatenadoPromise("O:" + textoMiParrafo, volumen)
+			.then (function(){
+				document.querySelector('#idParrafo').value++; 
+				var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+				var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+				document.getElementById('idCajaRespuesta').value = getTodaInfoDeParrafo(indiceMiParrafo);
+				document.getElementById('idCajaPregunta').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+				macroConcatena();
+			});
+			
+			
+		/*		
+		decirConcatenado ("Fin.", 1);
+		document.querySelector('#idParrafo').value = parrafoSolicitado;
+		//cambioNumParrafoEvent();
+		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];
+		document.getElementById('idCajaRespuesta').value = getTodaInfoDeParrafo(indiceMiParrafo);
+		document.getElementById('idCajaPregunta').value = getTodaInfoDeParrafo(indiceMiParrafo-1);
+	*/
+	}
+
+	function decirConcatenadoPromise (enteredText, volumen){
+		const speechSynth = window.speechSynthesis;   
+		const newUtter = new SpeechSynthesisUtterance(enteredText);
+		newUtter.volume = volumen;
+		speechSynth.speak(newUtter);
+		
+		return new Promise (function(resolve){				// Constructor del Objeto Promise. Se le pasa como argumento una 'function'. Esta function tiene 2 argumentos, que son dos funciones?
+			newUtter.onend = (function(){
+				//console.log("Fin.");
+				resolve("Promise is resolved!");
+			});
+		});
+	}
+		
+		
+	// Cookies   https://www.w3schools.com/js/js_cookies.asp	
+	function setCookie(cname, cvalue) {
+	  const d = new Date();
+	  d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+	  let expires = "expires="+d.toUTCString();
+	  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+	  let name = cname + "=";
+	  let ca = document.cookie.split(';');
+	  for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+		  c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		  return c.substring(name.length, c.length);
+		}
+	  }
+	  return "";
+	}
+
+			
+			
+		</script>
+    </body>
+</html>
