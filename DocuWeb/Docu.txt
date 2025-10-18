@@ -1,8 +1,10 @@
-OTROS
+MENÚ GENERAL:
+
+Versión 2
 Esto es una prueba
 
-JORGE
-Respuesta 1
+Pregunta 2
+Respuesta 2
 
 OTROS
 Esto es una prueba 2
@@ -17,7 +19,7 @@ JORGE
 Respuesta 3
 
 
-TÍTULO: 
+TÍTULO: Es es otro título.
 
 Pregunta 1
 Respuesta 1
