@@ -1,6 +1,4 @@
-<!-- 
-https://es.javascript.info/debugging-chrome 
--->
+<!-- https://es.javascript.info/debugging-chrome -->
 
 <!DOCTYPE html>
 <html>
@@ -8,7 +6,6 @@ https://es.javascript.info/debugging-chrome
         <title>DocuWeb</title>
 		<meta name="viewport" content="width=device-width">
     </head>
-	
 	
 	<style>
 		.button {
@@ -19,161 +16,131 @@ https://es.javascript.info/debugging-chrome
 			font-size: 20px;
 			height: 50px;						
 			margin: 5px;
-
 		}
-		.btn {
-			font-size: 20px;
-			height: 40px;	
-		}
-		hr {
-			height: 10px;
-			border: 0;
-			box-shadow: 0 10px 10px -10px #8c8b8b inset;
-		}
-
+		.btn {font-size: 20px; height: 40px; }
+		hr { height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset; }
 </style>
 
 
- 
-    <body style="background: black; ">
-		<!--h2> Ver.: 28-2-25. 1</h1-->
-		<div id ="idDivOpciones" style = "border: 2px solid black;">
-			<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 13pt">
-				<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;" type="text" inputmode="numeric" id="idParrafo" onchange="cambiaBloque(0)"  value=2 />
-				<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz" onclick="decir('')">Voz</input></div>
-				<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silen.</input></div>
-				<button class="button"  style=" width: 20%; height: 30px; background-color: blue" type="button" onclick="toggleBodyFullScreen();">|_|</button>
-			</div>
-			<hr>
-		</div>
-		<!--		
-		<div id="idDivPaginas">
-			<div style = "border: 1px solid black; display:flex; justify-content: center; align-items: center;">
-				<button class="button"  style="width: 10%;" type="button" onclick="conmutaVisualizacionDiv('idDivPaginas');">X</button>
-				<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value--; cambioNumPaginaEvent();">Pag -</button>
-				<button class="button"  style="width: 30%;" type="button" onclick="document.querySelector('#idPagina').value++; cambioNumPaginaEvent();">Pag +</button>
-				<input  style="width: 20%; zoom: 2; text-align: center;" id="idPagina" onchange="cambioNumPaginaEvent();" value=100 />
-			</div>
-			<hr>
-		</div>
-		-->
-		<div style = "display:flex;    justify-content: center;     align-items: center;">			
-			<!--textarea class="prevent-select" id="idCajaPregunta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick = "cambiaBloque(indiceBloqueActual+1);" ondblclick = "cambiaBloque(indiceBloqueActual-1);document.getElementById('idCbVoz').checked=true;">idCajaPregunta </textarea-->
-			<textarea class="prevent-select" id="idCajaPregunta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick = "cambiaBloque(indiceBloqueActual+1);">idCajaPregunta </textarea>
-		</div>
-		<br><hr>
-		<!--
-		<div id ="idDivControlSpeaking">
-			<div style = "display:flex;    justify-content: center;     align-items: center;">
-				<button class="button"  style="height: 100px; background-color: orange; width: 30%;" type="button" onclick="actual();">Actual</button>
-				<button class="button"  style="height: 100px; background-color: orange; width: 80%;" type="button" onclick="next();">Next</button>
-			</div>
-		</div>
-		
-		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: center;     align-items: center;">
-			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value--;cambiaBloque();">Parr -</button>
-			<input  style="background-color: #d1d1d1;;width: 20%; zoom: 2; text-align: center;";name="number" id="idParrafo" onchange="cambiaBloque()" value=2 />
-			<button class="button"  style="width: 40%;" type="button" onclick="document.querySelector('#idParrafo').value++;cambiaBloque();">Parr +</button>
-		</div>	
-		-->
-	
-		
-		<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>			
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema(arrayBloquesPregResp[indiceBloqueActual].numTema)">< Cap</button>
-			<button class="button"  style="width: 20%;" type="button" onclick="cambiaBloque(indiceBloqueActual-1);">P-</button>				
-		</div>	
-		
-		<br><hr>
-		
-				
-		<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
-			<textarea id="idCajaRespuesta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="clickEnCajaRespuesta();">idCajaRespuesta </textarea>
-		</div>
-		<br><hr>
-		
-		
-		<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">				
-			<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
-			document.querySelector('#idBtnSaved').innerHTML = indiceBloqueActual;">Store</button>		
-			<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="cambiaBloque(Number(document.querySelector('#idBtnSaved').innerHTML));">0</button>	
-			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
-			<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayBloquesPregResp[0].pregunta);">Info</button>
-			
-		</div>	
-		<br><hr>
-		<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
-			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambiaBloque();">P-</button>				
-			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque();">Act</button>
-			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="clickEnCajaRespuesta();">Resp</button>
-			<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="cambiaBloque(indiceBloqueActual+1);">P+</button>
-		</div>	
-		<br><hr>
-		<div id ="idDivControlParrafoRepetido" style = "display:flex;    justify-content: space-between;     align-items: center;">
-			<button class="button"  style="width: 20%;" type="button" onclick="document.getElementById('idCbVoz').checked=false;document.querySelector('#idParrafo').value--;cambiaBloque();">P-</button>				
-			<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
-			<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
-			<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>
-		</div>	
-		
-		<br><hr>
-		<div style = "display:flex;    justify-content: space-between;     align-items: center;">
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
-			<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>
-		</div>
-		<br><hr>
-			
-		<br><br><br>
-		<div id="idDivExtra" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
-			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt">Texto</a>
-			<a href="https://pacodigo.github.io/pacodigo/Teatro/ElBar.txt" target="_blank">PN Texto</a>
-		
-			<p> <input type="file" id="file-input" /> </p>
-			<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
-			<label>Max palabras:</label>
-			<input id="idMaxPalabras" tabindex="-1" type="number" value="15" style="width: 20%; zoom: 1.5; text-align: center; margin: 5px;">
-			<p></p>
-			
-			<div id="rate-control">
-				<label for="rate">Voice Rate:</label>
-				<input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
-			</div> <p></p>
-			
-			<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
-			<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
-			<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
-			<button class="btn" onclick = activarEventosMouse();>Eventos mouse</button>
-			<button class="btn" onclick = toggleBodyFullScreen();>Body FULL SCREEN</button>
-			<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+<body style="background: black; ">
 
-			<button class="btn" onclick = "decir ('Hola Paco.')"> Test Voz </button>
-			<button class="btn" onclick = "decir ('')"> Parar Voz </button>
-			<br>
-			<button id="idTestButton" class="btn" onclick = "irATema(1);"> Test </button>
+<!-- CINTA SUPERIOR -->
+	<div id ="idDivOpciones" style = "border: 2px solid black;">
+		<div style = "height: 30px; display:flex; justify-content: space-between;align-items: center; color:orange; border: 2px solid black; font-size: 13pt">
+			<input  style="background-color: #d1d1d1;width: 20%; zoom: 1.5; text-align: center; margin: 5px;" type="text" inputmode="numeric" id="idParrafo" onchange="cambiaBloque(0)"  value=2 />
+			<div><input style = "zoom:1.5;" type="checkbox" id="idCbVoz" onclick="decir('')">Voz</input></div>
+			<div><input style = "zoom:1.5;" type="checkbox" id="idSilenciarme" checked >Silen.</input></div>
+			<button class="button"  style=" width: 20%; height: 30px; background-color: blue" type="button" onclick="toggleBodyFullScreen();">|_|</button>
 		</div>
+		<hr>
+	</div>
+	
+	
+<!-- CAJA PREGUNTA -->
+	<div style = "display:flex;    justify-content: center;     align-items: center;">			
+		<!--textarea class="prevent-select" id="idCajaPregunta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick = "cambiaBloque(indiceBloqueActual+1);" ondblclick = "cambiaBloque(indiceBloqueActual-1);document.getElementById('idCbVoz').checked=true;">idCajaPregunta </textarea-->
+		<textarea class="prevent-select" id="idCajaPregunta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid blue" readonly onclick = "cambiaBloque(indiceBloqueActual+1);">idCajaPregunta </textarea>
+	</div>
+	<br><hr>
+	
+	
+<!-- BOTONES MEDIO -->
+	<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
+		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
+		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>			
+		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema(arrayBloquesPregResp[indiceBloqueActual].numTema)">< Cap</button>
+		<button class="button"  style="width: 20%;" type="button" onclick="cambiaBloque(indiceBloqueActual-1);">P-</button>				
+	</div>		
+	<br><hr>
+	
+	
+<!-- CAJA RESPUESTA -->		
+	<div id="idDivCajaParrafoMio" style = "display:flex; justify-content: center; align-items: center;">
+		<textarea id="idCajaRespuesta" rows="10" style="width: 95%; color: white; background-color: black; font-size: 15pt; border: 0px solid grey;" readonly onclick="clickEnCajaRespuesta();">idCajaRespuesta </textarea>
+	</div>
+	<br><hr>
+	
+	
+<!-- BOTONERAS BLOQUES -->
+	<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">				
+		<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
+		document.querySelector('#idBtnSaved').innerHTML = indiceBloqueActual;">Store</button>		
+		<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="cambiaBloque(Number(document.querySelector('#idBtnSaved').innerHTML));">0</button>	
+		<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+		<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayBloquesPregResp[0].pregunta);">Info</button>
+	</div>	<br><hr>
+	
+	<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
+		<button id = "botonReverse" class="button"  style="width: 20%;" type="button" onclick="reverseModeClick()">Normal</button>				
+		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque();">Act</button>
+		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="clickEnCajaRespuesta();">Resp</button>
+		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="cambiaBloque(indiceBloqueActual+1);">P+</button>
+	</div> 	<br><hr>
+	
+	<div id ="idDivControlParrafoRepetido" style = "display:flex;    justify-content: space-between;     align-items: center;">
+		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
+		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>
+		<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
+		<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>
+	</div>	<br><hr>
+	
+	
+<!-- CONTROLES VARIOS -->
+	<br><br><br>
+	<div id="idDivExtra" style = "background: black; font-size: 20pt; padding: 20px;color:blue;">
+		<a href="https://pacodigo.github.io/pacodigo/DocuWeb/Docu.txt">Documento</a>
+		<a href="https://pacodigo.github.io/pacodigo/DocuWeb/Docu.txt" target="_blank"> Doc en NV</a>
+	
+		<p> <input type="file" id="file-input" /> </p>
+		<p><input style = "zoom:2;" type="checkbox" id="idCbAcortaTexto" checked> Acorta txt</input></p>
+		<label>Max palabras:</label>
+		<input id="idMaxPalabras" tabindex="-1" type="number" value="15" style="width: 20%; zoom: 1.5; text-align: center; margin: 5px;">
+		<p></p>
 		
+		<div id="rate-control">
+			<label for="rate">Voice Rate:</label>
+			<input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+		</div> <p></p>
 		
-		<hr><p></p>
-				
-	<button  type="button" onclick="startRecoSilbido()">Start Reco Silbido v2</button>
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivOpciones");>idDivOpciones</button>
+		<!--button class="btn" onclick = conmutaVisualizacionDiv("idDivControlSpeaking");>idDivControlSpeaking</button>
+		<button class="btn" onclick = conmutaVisualizacionDiv("idDivControlParrafo");>idDivControlParrafo</button-->		
+		<button class="btn" onclick = activarEventosMouse();>Eventos mouse</button>
+		<button class="btn" onclick = toggleBodyFullScreen();>Body FULL SCREEN</button>
+		<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+
+		<button class="btn" onclick = "decir ('Hola Paco.')"> Test Voz </button>
+		<button class="btn" onclick = "decir ('')"> Parar Voz </button>
+		<br>
+		<button id="idTestButton" class="btn" onclick = "irATema(1);"> Test </button>
+	</div>
+	
+	
+<!-- RECO SILVIDO -->
+	<hr><p></p>
+	<button  type="button" onclick="startRecoSilbido()">Start Reco Silbido</button>
 	<button  type="button" onclick="stopRecoSilbido()">Stop Reco Silbido</button>
 	<br><br>
 	<label style = "color:blue"> Sensibilidad: <span id="sensitivityValue">8</span> 
 		<input type="range" id="sensitivityRange" min="2" max="35" value="8">
 	</label>
+	
+<!-- WAKELOCK -->
 	<hr>
 	<button id="wakelock-button">Activar Wakelock</button>
-	<p></p>
+	<p></p> 
 	<hr>
+	
+<!-- ESPACIO EN NEGRO -->	
+	<div style="height: 150vh;"></div>
+        
+	
 				
 <script type="text/javascript" src="./whistleDetector.js"></script>
-		
-		
-		
-		
 					
 <script>
+	
+	
 	
 	
 	window.onload = function() {
@@ -188,13 +155,11 @@ https://es.javascript.info/debugging-chrome
 			.then((data) => {
 				console.log ("Datos recibidos de Internet: " + data);
 				procesadoParrafos(data);
-				/*
-				let parrafoSolicitado = getCookie("numParrafoCookie"); 
+				/* let parrafoSolicitado = getCookie("numParrafoCookie"); 
 				if (parrafoSolicitado != "" && parrafoSolicitado != null) {
 					document.querySelector('#idParrafo').value = parrafoSolicitado;	
 					cambiaBloque();
-				}
-*/				
+				}*/
 			})
 			.catch(err => {
 				alert("ERROR: " + err);
@@ -258,8 +223,7 @@ https://es.javascript.info/debugging-chrome
 	
 	
 	function cambiaBloque(nuevoBloqueSolicitado){
-		var parrafoSolicitado = nuevoBloqueSolicitado;	
-		//var parrafoSolicitado = document.querySelector('#idParrafo').value;		
+		var parrafoSolicitado = nuevoBloqueSolicitado;		
 		/*
 		if (parrafoSolicitado<0){		// Num párrafo negativo >> Ha metido una pagina
 			var paginaSolicitada = -parrafoSolicitado;
@@ -311,10 +275,7 @@ https://es.javascript.info/debugging-chrome
 	}
 
 	
-	
 
-	
-	
 	function activarEventosMouse(){
 		// Right-Click Mouse detection:
 		document.getElementById('idCajaPregunta').onmousedown = function(event) {
@@ -338,16 +299,6 @@ https://es.javascript.info/debugging-chrome
 			}
 	}	
 	
-	/*
-	function irInicioCapitulo(offset){
-		var parrafoSolicitado = document.querySelector('#idParrafo').value;	
-		var indiceMiParrafo = indicesParrafosDePaco[parrafoSolicitado-1];	
-		var capituloActual = arrayParrafos[indiceMiParrafo].capitulo;
-		parrafoSolicitado = devuelveRegistroDeCapitulo(capituloActual+offset);
-		document.querySelector('#idParrafo').value = parrafoSolicitado;
-		cambiaBloque();
-	}
-	*/
 	
 	function clickEnCajaRespuesta(){
 		console.log ("clickEnCajaRespuesta");
@@ -401,50 +352,14 @@ https://es.javascript.info/debugging-chrome
 			document.exitFullscreen();
 	}
 	
-
-
-
 /*
-	function devuelveRegistroDePagina (numPagina){
-		var encontrado = false;
-		var i=0;
-		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
-			var indiceParrafos = indicesParrafosDePaco[i];
-			if (arrayParrafos[indiceParrafos].pagina >= numPagina){			// Encontrado
-				encontrado = true; 
-				return (i+1);
-				}
-			i++;
-		}
-		return(1);
-	}
-	
-	function devuelveRegistroDeCapitulo (numCapitulo){
-		var encontrado = false;
-		var i=0;
-		while ((i < indicesParrafosDePaco.length) && (!encontrado)){
-			var indiceParrafos = indicesParrafosDePaco[i];
-			if (arrayParrafos[indiceParrafos].capitulo >= numCapitulo){			// Encontrado
-				encontrado = true; 
-				return (i+1);
-				}
-			i++;
-		}
-		return(1);
-	}
-*/
-
-	
-
-
-
 	function getTodaInfoDeParrafo(indiceParrafos){
 		var infoProcesada = (arrayParrafos[indiceParrafos].personaje + "\n" + arrayParrafos[indiceParrafos].texto);
 		infoProcesada = infoProcesada + ("\nCap.: " + arrayParrafos[indiceParrafos].capitulo + ".  Pág.: " + arrayParrafos[indiceParrafos].pagina);
 		infoProcesada = infoProcesada + ("\nNúm.Línea: " + arrayParrafos[indiceParrafos].numLineaParrafo);
 		return (infoProcesada);
 	}
-
+*/
 
 
 	// Fichero de entrada:
@@ -554,7 +469,32 @@ https://es.javascript.info/debugging-chrome
 
 
 
-
+	// __Reverse Mode__
+	
+	let reverseMode = false;
+	const botonReverse = document.getElementById("botonReverse");
+	function reverseModeClick(){
+		if (!reverseMode){
+			reverseMode = true;
+			botonReverse.textContent = "REVERSE";
+			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
+				let pregunta = arrayBloquesPregResp[indice].pregunta;
+				let respuesta = arrayBloquesPregResp[indice].respuesta;
+				arrayBloquesPregResp[indice].pregunta = respuesta;
+				arrayBloquesPregResp[indice].respuesta = pregunta;
+			}
+		}
+		else {
+			reverseMode = false;
+			botonReverse.textContent = "Normal";
+			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
+				let pregunta = arrayBloquesPregResp[indice].pregunta;
+				let respuesta = arrayBloquesPregResp[indice].respuesta;
+				arrayBloquesPregResp[indice].pregunta = respuesta;
+				arrayBloquesPregResp[indice].respuesta = pregunta;
+			}
+		}
+	}
 
 
 
@@ -640,5 +580,4 @@ button.addEventListener("click", () => {		// Añadimos un listener para el event
 			
 		</script>
     </body>
-
 </html>
