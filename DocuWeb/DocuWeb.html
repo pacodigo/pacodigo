@@ -65,14 +65,14 @@
 	<div id ="idDivControlParrafo_2" style = "display:flex;    justify-content: space-between;     align-items: center;">				
 		<button class="button"  style="width: 20%; background-color: #bf4390;" type="button" onclick="
 		document.querySelector('#idBtnSaved').innerHTML = indiceBloqueActual;">Store</button>		
-		<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #006633;" type="button" onclick="cambiaBloque(Number(document.querySelector('#idBtnSaved').innerHTML));">0</button>	
-		<button class="button"  style="width: 20%; background-color: red;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
+		<button id="idBtnSaved" class="button"  style="width: 20%; background-color: #004633;" type="button" onclick="cambiaBloque(Number(document.querySelector('#idBtnSaved').innerHTML));">0</button>	
+		<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="decir('');document.getElementById('idCbVoz').checked=false;">X</button>
 		<button class="button"  style="width: 20%; background-color: #9400d3;" type="button" onclick="alert (arrayBloquesPregResp[0].pregunta);">Info</button>
 	</div>	<br><hr>
 	
 	<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
-		<button id = "botonReverse" class="button"  style="width: 20%;" type="button" onclick="reverseModeClick()">Normal</button>				
-		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque();">Act</button>
+		<button id = "botonReverse" class="button"  style="width: 20%; background-color: green;" type="button" onclick="reverseModeClick()">Normal</button>				
+		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>
 		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="clickEnCajaRespuesta();">Resp</button>
 		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="cambiaBloque(indiceBloqueActual+1);">P+</button>
 	</div> 	<br><hr>
@@ -132,7 +132,7 @@
 	<hr>
 	
 <!-- ESPACIO EN NEGRO -->	
-	<div style="height: 150vh;"></div>
+	<div style="height: 150vh;" onclick = "cambiaBloque(indiceBloqueActual+1);"></div>
         
 	
 				
@@ -154,7 +154,7 @@
 			.then(response => response.text())
 			.then((data) => {
 				console.log ("Datos recibidos de Internet: " + data);
-				procesadoParrafos(data);
+				procesadoFichero(data);
 				/* let parrafoSolicitado = getCookie("numParrafoCookie"); 
 				if (parrafoSolicitado != "" && parrafoSolicitado != null) {
 					document.querySelector('#idParrafo').value = parrafoSolicitado;	
@@ -170,14 +170,11 @@
 	var arrayBloquesPregResp = [];
 	var indiceBloqueActual = 0;
 	
-	function procesadoParrafos(textoEnBruto){
-		console.log ("procesadoParrafos.");
-		let arrayDeParrafos = textoEnBruto.split(/\n\n+/);		// Expresión regular que divide en párrafos
-		procesadoPreguntaRespuesta (arrayDeParrafos);		
-	}
-	
-	function procesadoPreguntaRespuesta(arrayDeParrafos){
-		console.log ("procesadoPreguntaRespuesta");
+	function procesadoFichero(textoEnBruto){
+		console.log ("procesadoFichero");
+		
+		let arrayDeLineas = textoEnBruto.split('\n');		
+
 		let bloquePregResp = {					// Objeto "bloquePregResp"
 			pregunta: 			"Pregunta",		// Clave / Valor. En la Clave personaje se almacena el Valor NULO
 			respuesta: 			"Respuesta",
@@ -187,34 +184,35 @@
 			};
 		
 		var indiceArrayBloquesPregResp=1;
-		var nuevoTema ="NULO";
+		var temaActual ="";
 		var numTema = 0;
 		var numBloquesDeTema=0;
 		arrayBloquesPregResp[0] = { ...bloquePregResp};	// Aquí cargaremos datos inciales.
 		var infoProcesada = "";
+		var numRegistrosPorTema;
 		
-		for (let indiceBloques=0; indiceBloques<arrayDeParrafos.length; indiceBloques++){
-			var arrayDeLineas = arrayDeParrafos[indiceBloques].split('\n');
-			if (arrayDeLineas.length>1){		// Si hay más de una línea en el párrafo
+		for (let indiceLineas=0; indiceLineas<arrayDeLineas.length; indiceLineas++){
+			let divisionLinea = arrayDeLineas[indiceLineas].split(':');
+			if (divisionLinea.length > 1){			
 				arrayBloquesPregResp[indiceArrayBloquesPregResp] = { ...bloquePregResp};	// Creamos un nuevo objeto en el array en pos [0] y clonamos el objeto usando el operador de propagación. Copiamos su contenid
-				arrayBloquesPregResp[indiceArrayBloquesPregResp].pregunta = arrayDeLineas[0];
-				arrayBloquesPregResp[indiceArrayBloquesPregResp].respuesta = arrayDeLineas[1];
-				arrayBloquesPregResp[indiceArrayBloquesPregResp].tema = nuevoTema;
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].pregunta = divisionLinea[0];	
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].respuesta = divisionLinea[1].replace(/\t/g, '');	// Quitamos también posibles tabuladores.
+				arrayBloquesPregResp[indiceArrayBloquesPregResp].tema = temaActual;
 				arrayBloquesPregResp[indiceArrayBloquesPregResp].numTema = numTema;					
 				indiceArrayBloquesPregResp++;
 				numBloquesDeTema++;
 			}
-			else if (arrayDeLineas[0].length >2) {		// Única línea. Texto de control o Tema
-				nuevoTema = arrayDeLineas[0];
+			else if (arrayDeLineas[indiceLineas].length >2) {		// NUEVO TEMA. Única línea. Texto de control o Tema
+				if (numTema>0)	// Para no añadir el primer tema que está vació.
+				infoProcesada = infoProcesada + numTema.toString() + " - " + temaActual + "(" + numBloquesDeTema.toString()+ ")\n";
+				temaActual = arrayDeLineas[indiceLineas];
 				numTema++;
-				infoProcesada = infoProcesada + " (" + numBloquesDeTema.toString()+")\n";
-				infoProcesada = infoProcesada + numTema.toString() + " - " + nuevoTema;
 				numBloquesDeTema = 0;
 			}
 		}
 		
 		console.log (arrayBloquesPregResp);
-		infoProcesada = infoProcesada + ("\n\nTemas: " + numTema + "\nBloques Preg+Resp: " + arrayBloquesPregResp.length);
+		infoProcesada = infoProcesada + ("\n\nTemas: " + (numTema-1) + "\nBloques Preg+Resp: " + arrayBloquesPregResp.length);
 		console.log (infoProcesada);
 		//document.getElementById('idCajaPregunta').value = infoProcesada;
 		arrayBloquesPregResp[0].pregunta = infoProcesada;
@@ -275,7 +273,6 @@
 	}
 
 	
-
 	function activarEventosMouse(){
 		// Right-Click Mouse detection:
 		document.getElementById('idCajaPregunta').onmousedown = function(event) {
@@ -352,15 +349,6 @@
 			document.exitFullscreen();
 	}
 	
-/*
-	function getTodaInfoDeParrafo(indiceParrafos){
-		var infoProcesada = (arrayParrafos[indiceParrafos].personaje + "\n" + arrayParrafos[indiceParrafos].texto);
-		infoProcesada = infoProcesada + ("\nCap.: " + arrayParrafos[indiceParrafos].capitulo + ".  Pág.: " + arrayParrafos[indiceParrafos].pagina);
-		infoProcesada = infoProcesada + ("\nNúm.Línea: " + arrayParrafos[indiceParrafos].numLineaParrafo);
-		return (infoProcesada);
-	}
-*/
-
 
 	// Fichero de entrada:
 	document.getElementById('file-input').addEventListener('change', leerArchivo, false);
@@ -372,8 +360,7 @@
 		var lector = new FileReader();
 		lector.onload = function(e) {
 			var contenido = e.target.result;
-			textoObraEnBruto = contenido;
-			procesadoParrafos();
+			procesadoFichero(contenido);
 		}
 		lector.readAsText(archivo);
 	}
@@ -477,6 +464,7 @@
 		if (!reverseMode){
 			reverseMode = true;
 			botonReverse.textContent = "REVERSE";
+			botonReverse.style.backgroundColor = "red";
 			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
 				let pregunta = arrayBloquesPregResp[indice].pregunta;
 				let respuesta = arrayBloquesPregResp[indice].respuesta;
@@ -487,6 +475,7 @@
 		else {
 			reverseMode = false;
 			botonReverse.textContent = "Normal";
+			botonReverse.style.backgroundColor = "green";
 			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
 				let pregunta = arrayBloquesPregResp[indice].pregunta;
 				let respuesta = arrayBloquesPregResp[indice].respuesta;
