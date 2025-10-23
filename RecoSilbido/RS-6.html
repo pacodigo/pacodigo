@@ -65,6 +65,7 @@
 	var activoRecoSilvido = true;				// Flag de control para múltiples reconocimientos
 	
 	function startRecoSilbido(){
+		activoRecoSilvido = true;
 		whistleDetector.detect(function(){
 			if (activoRecoSilvido){
 				activoRecoSilvido = false;
@@ -275,3 +276,4 @@
     </div>
 </body>
 </html>
+
