@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reproducir MP3</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+	  background: #000;
+	  color: #FFF;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #0078d7;
+      color: white;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #005ea0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Reproductor de MP3</h2>
+  <button id="playBtn">Reproducir sonido</button>
+
+<!-- WAKELOCK -->	
+	  <hr><br>
+	  <button id="wakelock-button">Activar Wakelock</button>
+	
+<!-- FULLSCREEN -->	
+	<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+
+<!-- ESPACIO EN NEGRO -->	
+	<div style="height: 150vh;" onclick = "controlPlay();"></div>
+
+
+
+
+
+
+  <script>
+  
+  
+  
+    const audio = new Audio('audio.mp3'); 							// Cambia el nombre si tu fichero se llama distinto
+    const playBtn = document.getElementById('playBtn');
+
+    playBtn.addEventListener('click', () => {
+		controlPlay();
+    });
+	
+	
+	function controlPlay(){
+	    if (!audio.paused) {											// Si ya se está reproduciendo, lo reinicia
+			audio.pause();
+			audio.currentTime = 0;
+			playBtn.textContent = "Reproducir sonido";
+	  } else {
+			audio.play();
+			playBtn.textContent = "Detener";
+	  }
+	  // Cuando termine de reproducirse, vuelve el botón al estado inicial
+	  audio.addEventListener('ended', () => {
+		playBtn.textContent = "Reproducir sonido";
+	  });
+	}
+	
+	
+	// __FULLSCREEN__
+
+	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
+		if (!document.fullscreenElement) 
+			document.documentElement.requestFullscreen();
+		else 
+			document.exitFullscreen();
+	}
+	
+	
+	// __PARTE WAKELOCK__
+
+	const button = document.getElementById("wakelock-button");		// Obtenemos una referencia al botón
+	let wakelock = null;											// Declaramos una variable para guardar el objeto WakeLockSentinel
+
+	async function requestWakelock() {								// Definimos una función para solicitar un wakelock
+		try {
+			if ("wakeLock" in navigator) {					        // Comprobamos si el navegador soporta la Wakelock API
+				wakelock = await navigator.wakeLock.request("screen");
+				console.log("Wakelock activado");
+				button.textContent = "Desactivar Wakelock";
+				wakelock.addEventListener("release", () => {		// Añadimos un listener para el evento release, para cuando se libera el wakelock                
+					button.textContent = "Activar Wakelock";		// Cambiamos el texto del botón
+				});
+			} else {												// Mostramos un mensaje de error por consola
+				console.error("El navegador no soporta la Wakelock API");
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async function releaseWakelock() {				// Definimos una función para liberar un wakelock
+		if (wakelock) {								// Comprobamos si hay un wakelock activo
+			await wakelock.release();				// Y si es así lo liberamos
+			wakelock = null;						// Asignamos null a la variable wakelock				
+		}
+		console.log("Wakelock liberado");
+	}
+
+	button.addEventListener("click", () => {		// Añadimos un listener para el evento click del botón para activar o desactivar el wakelock
+		if (wakelock) {								// Si ya hay un wakelock activo...
+			releaseWakelock();						// ...llamamos a la función para liberar el wakelock
+		} else {
+			requestWakelock();						// Si no l ohay, llamamos a la función para solicitar el wakelock
+		}
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+  </script>
+</body>
+</html>
