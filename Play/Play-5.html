@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Play-4</title>
+  <title>Play-5</title>
   <style>
     body {
       font-family: sans-serif;
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <h2>Reproductor. v4</h2>
+    <h2>Reproductor. v5</h2>
   
     <button id="playBtn">Reproducir sonido</button>
     
@@ -37,6 +37,7 @@
     
 	<div><br> <input type="file" id="audioFile" accept="audio/*" style="zoom: 1.5"> </div> <br>
 	
+	<div><br><input style = "zoom:1.5;" type="checkbox" id="rotateEventId" checked>Rotate event</input></div><br>
 	
 
 <!-- WAKELOCK -->	
@@ -126,9 +127,8 @@
 	var changeOrientationEventActivo = true;
 	
 	window.addEventListener(orientationEvent, function() {
-		if (changeOrientationEventActivo){
-			//alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
-			controlPlay();
+		if (changeOrientationEventActivo && document.getElementById("rotateEventId").checked){
+			controlPlay();									//alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
 			changeOrientationEventActivo = false;
 			setTimeout (function(){changeOrientationEventActivo = true;}, 2*1000);
 		}
