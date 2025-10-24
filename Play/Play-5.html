@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Play-4</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 10px;
+	  background: #000;
+	  color: #FFF;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+	  margin: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #0078d7;
+      color: white;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #005ea0;
+    }
+
+  </style>
+</head>
+
+<body>
+    <h2>Reproductor. v4</h2>
+  
+    <button id="playBtn">Reproducir sonido</button>
+    
+	<input  style="background-color: #d1d1d1;width: 20%; zoom: 2; text-align: center; margin: 5px;" type="text"   inputmode="numeric" id="idRepeticiones"  value=6 />
+    
+	<div><br> <input type="file" id="audioFile" accept="audio/*" style="zoom: 1.5"> </div> <br>
+	
+	
+
+<!-- WAKELOCK -->	
+	  <br><hr><br>   <button id="wakelock-button">Activar Wakelock</button>
+	
+<!-- FULLSCREEN -->	
+	<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
+
+<!-- ESPACIO EN NEGRO -->	
+	<br><br><hr>  <div style="height: 150vh;" onclick = "controlPlay();"></div>
+
+
+
+  <script>
+  
+   
+    
+	let remainingRepeats = 0;
+	var audio;
+	
+	audio = new Audio('rblanco10min.mp3');		
+	
+	audio.addEventListener('error', (e) => {
+		alert("No se pudo cargar el archivo de audio: " + e);
+		});
+	
+	establecerQueHacerCuandoAudioTermina();
+	
+	const playBtn = document.getElementById('playBtn');
+	playBtn.addEventListener('click', () => {
+		controlPlay();
+    });
+	
+	function controlPlay(){
+	    if (!audio.paused) {			// Si ya se está reproduciendo, lo reinicia
+			audio.pause();
+			audio.currentTime = 0;
+			remainingRepeats = 0;
+			playBtn.textContent = "Reproducir sonido";
+		} else {
+			remainingRepeats = document.querySelector('#idRepeticiones').value;
+			audio.currentTime = 0;
+			audio.play();
+			playBtn.textContent = "Detener";
+		}
+	}
+	  
+	// Cuando termine de reproducirse, vuelve el botón al estado inicial
+	function establecerQueHacerCuandoAudioTermina(){
+		audio.addEventListener('ended', () => {
+			remainingRepeats--;
+			console.log ("Repeticiones restantes: " + remainingRepeats);
+			if (remainingRepeats > 0) {
+				audio.currentTime = 0;
+				audio.play();
+			} else {
+				playBtn.textContent = "Reproducir sonido";
+			}
+		});
+	}
+	
+	
+	// --- Cuando el usuario selecciona un archivo ---
+	const fileInput = document.getElementById('audioFile');
+
+    fileInput.addEventListener('change', (event) => {
+		const file = event.target.files[0];
+		if (file) {
+			const objectURL = URL.createObjectURL(file);
+			if (audio) {
+			  audio.pause();
+			  URL.revokeObjectURL(audio.src);
+			}
+		audio = new Audio(objectURL);
+		establecerQueHacerCuandoAudioTermina();	// Evento para manejar repeticiones
+      }
+    });
+	
+	
+	
+	// __CHANGE ORIENTATION EVENT__
+	// Detect whether device supports orientationchange event, otherwise fall back to the resize event.
+	
+	var supportsOrientationChange = "onorientationchange" in window,
+		orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+	
+	var changeOrientationEventActivo = true;
+	
+	window.addEventListener(orientationEvent, function() {
+		if (changeOrientationEventActivo){
+			//alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
+			controlPlay();
+			changeOrientationEventActivo = false;
+			setTimeout (function(){changeOrientationEventActivo = true;}, 2*1000);
+		}
+	}, false);
+	
+	
+	
+	// __FULLSCREEN__
+
+	function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
+		if (!document.fullscreenElement) 
+			document.documentElement.requestFullscreen();
+		else 
+			document.exitFullscreen();
+	}
+	
+	
+	// __PARTE WAKELOCK__
+
+	const button = document.getElementById("wakelock-button");		// Obtenemos una referencia al botón
+	let wakelock = null;											// Declaramos una variable para guardar el objeto WakeLockSentinel
+
+	async function requestWakelock() {								// Definimos una función para solicitar un wakelock
+		try {
+			if ("wakeLock" in navigator) {					        // Comprobamos si el navegador soporta la Wakelock API
+				wakelock = await navigator.wakeLock.request("screen");
+				console.log("Wakelock activado");
+				button.textContent = "Desactivar Wakelock";
+				wakelock.addEventListener("release", () => {		// Añadimos un listener para el evento release, para cuando se libera el wakelock                
+					button.textContent = "Activar Wakelock";		// Cambiamos el texto del botón
+				});
+			} else {												// Mostramos un mensaje de error por consola
+				console.error("El navegador no soporta la Wakelock API");
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async function releaseWakelock() {				// Definimos una función para liberar un wakelock
+		if (wakelock) {								// Comprobamos si hay un wakelock activo
+			await wakelock.release();				// Y si es así lo liberamos
+			wakelock = null;						// Asignamos null a la variable wakelock				
+		}
+		console.log("Wakelock liberado");
+	}
+
+	button.addEventListener("click", () => {		// Añadimos un listener para el evento click del botón para activar o desactivar el wakelock
+		if (wakelock) {								// Si ya hay un wakelock activo...
+			releaseWakelock();						// ...llamamos a la función para liberar el wakelock
+		} else {
+			requestWakelock();						// Si no l ohay, llamamos a la función para solicitar el wakelock
+		}
+	});
+	
+
+
+
+	
+	
+	
+  </script>
+</body>
+</html>
