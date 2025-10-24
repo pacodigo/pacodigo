@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <h2>Reproductor</h2>
+    <h2>Reproductor. v4</h2>
   
     <button id="playBtn">Reproducir sonido</button>
     
@@ -40,14 +40,13 @@
 	
 
 <!-- WAKELOCK -->	
-	  <hr><br>
-	  <button id="wakelock-button">Activar Wakelock</button>
+	  <hr><br>   <button id="wakelock-button">Activar Wakelock</button>
 	
 <!-- FULLSCREEN -->	
 	<button class="btn" onclick = toggleFullScreen();>FULL SCREEN</button>
 
 <!-- ESPACIO EN NEGRO -->	
-	<div style="height: 150vh;" onclick = "controlPlay();"></div>
+	<br><br><hr>  <div style="height: 150vh;" onclick = "controlPlay();"></div>
 
 
 
@@ -58,7 +57,7 @@
 	let remainingRepeats = 0;
 	var audio;
 	
-	audio = new Audio('audio.mp3');		//audio = new Audio('rblanco10min.mp3');
+	audio = new Audio('rblanco10min.mp3');		
 	
 	audio.addEventListener('error', (e) => {
 		alert("No se pudo cargar el archivo de audio: " + e);
