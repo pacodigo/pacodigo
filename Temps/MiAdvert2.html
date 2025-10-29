@@ -19,7 +19,7 @@
   
   <body>
 	<div style="height: auto; width: auto; text-align: center;">
-	<h1>Web Experimental Features!</h1>
+	<h1>Web Experimental Features! v2</h1>
  	#enable-experimental-web-platform-features may be needed to read MAC (copy link:
   	<a href=chrome://flags/#enable-experimental-web-platform-features>Chrome<a>,
  	<a href=opera://flags/#enable-experimental-web-platform-features>Opera<a>,
@@ -70,14 +70,15 @@ function onButtonClick() {
 }
 
 
-var miAbortController = new AbortController();
+var miAbortController;
 
 function recibirAnuncios(){
 	log("Solicitando recibir Anuncios de: " + miDevice.name);
-			miDevice.watchAdvertisements({ signal: miAbortController.signal })
-			.catch((error) => {
-				log("ERROR al solicitar recibir Anuncios:" + error);
-			});
+	miAbortController = new AbortController();
+	miDevice.watchAdvertisements({ signal: miAbortController.signal })
+	.catch((error) => {
+		log("ERROR al solicitar recibir Anuncios:" + error);
+	});
 }
 
 function detenerVerAnuncios(){
