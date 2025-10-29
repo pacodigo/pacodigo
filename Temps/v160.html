@@ -805,7 +805,7 @@ function calcularMediaFor(datos) {
 
 
 
-//  ______________ VINCULAR DISPOSITIVOS ______________
+//  ______________ VINCULAR DISPOSITIVOS BT______________
 
 var misBtDevicesVinculados;
 var miAbortController = new AbortController();
@@ -841,14 +841,16 @@ function asociarBTDeviceConFiltros() {
 function verBTsAsociodos(){		// o Vinculados
 	log('Getting existing permitted Bluetooth devices...');
 	
+	var cadenaInfo="";
 	navigator.bluetooth.getDevices()
 	.then(devices => {
-		log('> Got ' + devices.length + ' Bluetooth devices.');
-		for (const device of devices) {
-			log("Name:      " + device.name);   //			log("Id:        " + device.id);
-			log("Connected: " + device.gatt.connected);		//log ("eventListener asociado. NO ASOCIAR MAS VECES!!");
+		cadenaInfo = cadenaInfo + '> Got ' + devices.length + ' Bluetooth devices.';
+		for (const device of devices) {																			//log ("eventListener asociado. NO ASOCIAR MAS VECES!!");
+			cadenaInfo = cadenaInfo + ("\n Name: "+ device.name + "Connected: " + device.gatt.connected);  		//			log("Id:        " + device.id);	
 		}
+		log (cadenaInfo);
 		misBtDevicesVinculados = devices;
+		alert (cadenaInfo);
 	})
 	.catch(error => {
 		log('ERROR: ' + error);
@@ -908,8 +910,50 @@ function isBtAvailable(){
 }
 
 
+// ______________2. Configurar disparo de EVENTO advertisementreceived (device.addEventListener) ______________
+// the advertisementreceived Event will be fired on the device that it corresponds to
 
-// ______________ RECEPCIÓN DE ADVERTISEMENTS ______________
+function addEventListenerToDevices(){
+	log('addEventListenerToDevices...');
+	document.getElementById("addEventListenerToDevices").disabled=true;  // Lo deshabilito porque SÓLO SE DEBE ASOCIAR UNA VEZ el addEventListener al Device, si lo hacemos varias veces, entrará varias veces por cada evento.
+	navigator.bluetooth.getDevices()
+	.then(devices => {
+		log('> Got ' + devices.length + ' Bluetooth devices.');
+		misBtDevicesVinculados = devices;
+		for (const device of devices) {
+			log("addEventListener to: " + device.name);   //log ("eventListener asociado. NO ASOCIAR MAS VECES!!");
+			device.addEventListener("advertisementreceived", (event) => {
+				anuncioRecibido(event);
+			});		
+		}	
+	})
+	.catch(error => {
+		log('ERROR: ' + error);
+	});
+}
+
+
+// Sólo hay que definirla una vez por cada device
+function anuncioRecibido (event){
+	log("Advertisement received from: " + event.device.name);
+	event.serviceData.forEach((valueDataView, key) => {
+		log('Service '+ key +'. data: '+ valueDataView.getUint8());	//Service 0000181a-0000-1000-8000-00805f9b34fb. data: 245
+		logDataView(event.device.name, key, valueDataView);
+		/*
+		if(key == '0000181a-0000-1000-8000-00805f9b34fb') {
+			esperando=0;
+			detenerVerAnuncios();
+			callback();
+		}
+		*/
+	});
+}
+
+
+
+
+
+// ______________ 3. RECEPCIÓN DE ADVERTISEMENTS (device.watchAdvertisements) ______________
 
 function detenerVerAnuncios(){
 	log ("detenerVerAnuncios");
@@ -981,66 +1025,6 @@ function recibirAnuncios(){								// No se para por si solo
 }
 
 
-function addEventListenerToDevices(){
-	log('addEventListenerToDevices...');
-	document.getElementById("addEventListenerToDevices").disabled=true;  // Lo deshabilito porque SÓLO SE DEBE ASOCIAR UNA VEZ el addEventListener al Device, si lo hacemos varias veces, entrará varias veces por cada evento.
-	navigator.bluetooth.getDevices()
-	.then(devices => {
-		log('> Got ' + devices.length + ' Bluetooth devices.');
-		misBtDevicesVinculados = devices;
-		for (const device of devices) {
-			log("addEventListener to: " + device.name);   //log ("eventListener asociado. NO ASOCIAR MAS VECES!!");
-			device.addEventListener("advertisementreceived", (event) => {
-				anuncioRecibido(event);
-			});		
-		}	
-	})
-	.catch(error => {
-		log('ERROR: ' + error);
-	});
-}
-
-
-// Sólo hay que definirla una vez por cada device
-function anuncioRecibido (event){
-	log("Advertisement received from: " + event.device.name);
-	event.serviceData.forEach((valueDataView, key) => {
-		log('Service '+ key +'. data: '+ valueDataView.getUint8());	//Service 0000181a-0000-1000-8000-00805f9b34fb. data: 245
-		logDataView(event.device.name, key, valueDataView);
-		/*
-		if(key == '0000181a-0000-1000-8000-00805f9b34fb') {
-			esperando=0;
-			detenerVerAnuncios();
-			callback();
-		}
-		*/
-	});
-}
-
-
-
-// SÓLO FUNCIONA DURANTE 30 MINUTOS.
-// Me salió esto: https://github.com/WebBluetoothCG/web-bluetooth/blob/main/implementation-status.md
-// Creo que para esto se necesita: chrome://flags/#enable-web-bluetooth-new-permissions-backend
-
-async function verAnunciosFromMultipleDevices(){
-	log ("verAnunciosFromMultipleDevices...");
-	navigator.bluetooth.addEventListener("advertisementreceived", (event) => {
-		log ("Se ha recibido argo...");
-		log(`Advertisement received, device: ${event.name}, RSSI: ${event.rssi}dB`);
-		event.manufacturerData.forEach((valueDataView, key) => {
-		  log("Manufacturer data:", `0x${valueDataView.getUint16().toString(16)}`);
-		});
-		event.serviceData.forEach((valueDataView, key) => {
-		  log("Service data:", `0x${valueDataView.getUint16().toString(16)}`);
-		});
-	  });
-	
-	const options = { filters: [{ namePrefix: "ATC" }],};
-	//const options = { acceptAllAdvertisements: true }
-	await navigator.bluetooth.requestLEScan(options);
-	//navigator.bluetooth.requestLEScan(options);
-}
 
 
 // ______________ PROCESADO DE DATOS RECIBIDOS X ADVERTISEMENTS ______________
@@ -1526,7 +1510,12 @@ function conectarseConPromesas (device){
 
 
 
+/*
+https://github.com/WebBluetoothCG/web-bluetooth/blob/main/implementation-status.md
 
+- The getDevices() and watchAdvertisements() APIs are behind the chrome://flags/#enable-experimental-web-platform-features 🚩 flag.
+- The Persistent Device Permissions feature is behind the chrome://flags/#enable-web-bluetooth-new-permissions-backend 
+*/
 
 
 
