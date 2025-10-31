@@ -1566,6 +1566,12 @@ function conectarseConPromesas (device){
 		if ((comando.includes("2") || comando.includes("dos")) && comando.includes("enciende")){								
 			envioDatos('rf2on');
 		}
+		if ((comando.includes("5") || comando.includes("cinco")) && comando.includes("apaga")){								
+			envioDatos('rf5off');
+		}
+		if ((comando.includes("5") || comando.includes("cinco")) && comando.includes("enciende")){								
+			envioDatos('rf5on');
+		}
 		if (comando.includes("habitación") || (comando.includes("2") || comando.includes("dos")) && comando.includes("canal")){								
 			envioDatos('rf2on');
 			setTimeout (function(){envioDatos('rf2off');}, 10*1000);
