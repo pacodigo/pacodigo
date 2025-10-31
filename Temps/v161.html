@@ -563,7 +563,7 @@ function actualizaGraficaCada5min(){
 	log ("actualizaGraficaCada5min...: ");
 	document.getElementById("actualizaGraficaCada5min").disabled=true; 
 	actualizaGrafica(temperaturaDevice1, temperaturaDevice2, humedadDevice1);
-	setTimeout (actualizaGraficaCada5min, 5*60*1000);
+	setTimeout (actualizaGraficaCada5min, 100);     //5*60*1000
 }
 
 const FETCH_Timeout = 2500;
