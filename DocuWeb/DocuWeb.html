@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>  
-        <title>DocuWeb</title>
+        <title>DocuWeb v3</title>
 		<meta name="viewport" content="width=device-width">
     </head>
 	
@@ -71,7 +71,7 @@
 	</div>	<br><hr>
 	
 	<div id ="idDivControlParrafo_PC" style = "display:flex;    justify-content: space-between;     align-items: center;">
-		<button id = "botonReverse" class="button"  style="width: 20%; background-color: green;" type="button" onclick="reverseModeClick()">Normal</button>				
+		<button id = "botonReverse" class="button"  style="width: 20%; background-color: green;" type="button" onclick="reverseModeClick()">Norm</button>				
 		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>
 		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="clickEnCajaRespuesta();">Resp</button>
 		<button class="button"  style="width: 20%; background-color: grey;" type="button" onclick="cambiaBloque(indiceBloqueActual+1);">P+</button>
@@ -81,7 +81,7 @@
 		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
 		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>
 		<button class="button"  style="width: 20%; background-color: violet;" type="button" onclick="macroConcatena();">ConCa</button>
-		<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>
+		<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="macroCalle();">Calle</button>
 	</div>	<br><hr>
 	
 	
@@ -133,7 +133,8 @@
 	
 <!-- ESPACIO EN NEGRO -->	
 	<div style="height: 150vh;" onclick = "cambiaBloque(indiceBloqueActual+1);"></div>
-        
+     <hr>   
+	<div style="height: 50vh;" onclick="clickEnCajaRespuesta();"></div>
 	
 				
 <script type="text/javascript" src="./whistleDetector.js"></script>
@@ -463,7 +464,7 @@
 	function reverseModeClick(){
 		if (!reverseMode){
 			reverseMode = true;
-			botonReverse.textContent = "REVERSE";
+			botonReverse.textContent = "REVR";
 			botonReverse.style.backgroundColor = "red";
 			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
 				let pregunta = arrayBloquesPregResp[indice].pregunta;
@@ -474,7 +475,7 @@
 		}
 		else {
 			reverseMode = false;
-			botonReverse.textContent = "Normal";
+			botonReverse.textContent = "Norm";
 			botonReverse.style.backgroundColor = "green";
 			for (indice = 1 ; indice < arrayBloquesPregResp.length; indice++){
 				let pregunta = arrayBloquesPregResp[indice].pregunta;
@@ -486,7 +487,18 @@
 	}
 
 
-
+	function macroCalle(){
+		document.getElementById('idCbVoz').checked=true;
+		//document.getElementById("idSilenciarme").checked=false;
+		toggleFullScreen();
+		startRecoSilbido();
+		if (!wakelock) {								// Si NO ya hay un wakelock activo...
+            requestWakelock();
+		}
+		window.scrollTo(0, document.body.scrollHeight);	// Va al final de la página.
+	}
+	
+	
 
 // __ PARTE RECOSILVIDO__
 
