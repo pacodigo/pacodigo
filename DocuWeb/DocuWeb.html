@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>  
-        <title>DocuWeb v3</title>
+        <title>DocuWeb v4</title>
 		<meta name="viewport" content="width=device-width">
     </head>
 	
@@ -137,7 +137,7 @@
 	<div style="height: 50vh;" onclick="clickEnCajaRespuesta();"></div>
 	
 				
-<script type="text/javascript" src="./whistleDetector.js"></script>
+<script type="text/javascript" src="./whistleDetector2.js"></script>
 					
 <script>
 	
@@ -507,18 +507,26 @@
 		})
 	var activoRecoSilvido = true;
 	function startRecoSilbido(){
-		whistleDetector.detect(function(){
+		whistleDetector.detect(function(data){
 			if (activoRecoSilvido){
 				activoRecoSilvido = false;
-				console.log ("Silbido detectado.");
+				console.log ("Silbido detectado. Frec: " + data.frequency);
 				//stopRecoSilbido	();
-				document.body.style.background = "#ff0000";
+				//document.body.style.background = "#ff0000";
 				setTimeout (function(){
 					document.body.style.background = "#000000";
 					//startRecoSilbido();
 					activoRecoSilvido = true;
 					}, 3*1000);
-				cambiaBloque(indiceBloqueActual+1);
+				if (data.frequency>1000){
+					document.body.style.background = "#00ff00";
+					cambiaBloque(indiceBloqueActual+1);
+					}
+				else{
+					document.body.style.background = "#ff0000";
+					clickEnCajaRespuesta();
+					
+				}
 			}
 		});
 	}
