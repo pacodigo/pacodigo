@@ -318,8 +318,8 @@ function log(dataLog) {
 	if ($("verLog").checked)  {
 		var time = new Date().toLocaleTimeString();
 		var logString = time + ": " + dataLog;
-		//$("log").innerHTML += logString + "<br>";
-		$("log").innerHTML = logString + "<br>";
+		$("log").innerHTML += logString + "<br>";
+		//$("log").innerHTML = logString + "<br>";
 	}
 }
 
