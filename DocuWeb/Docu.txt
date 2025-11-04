@@ -1,4 +1,4 @@
-1 ACTORES. 22/10 
+1 ACTORES. 4/11 
 
 The tourist : 		Angelina Joly y Jony Deep
 Con quien viajas : 	Pol Monen
@@ -73,7 +73,15 @@ Atracción fatal : 	Michael Douglas
 2021 / 05:    47,    Ovi. Vacuna
 
 
-4 TEATRO
+4 PAÍS VASCO 
+ 
+Playa en Bilbao:           Playa de Muriola en Barrika
+Monte en Bilbao con antena:             Monte de Serantes
+Barrios desde Santurce:        Santurce, Portugalete, Sestao y Barakaldo.
+Provincias País Vasco:            Vizcaya (Bilbao), Álava (Vitoria) y Guipuzcoa (San Sebastián)
+
+
+5 TEATRO
 Ejercicio 1 : "Me siento como una pluma en el aire. Sin peso, sin preocupaciones, sin rumbo. Porque la vida no tiene guion, ¡y eso es lo más divertido del espectáculo!. Porque el aplauso más bonito es el de uno mismo. 
 
 
