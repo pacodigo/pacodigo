@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detección BLE con reinicio automático</title>
+</head>
+<body>
+  <h1>Detección de dispositivo Bluetooth</h1>
+  <button id="startBtn">Seleccionar y empezar</button>
+  <p id="status">Estado: esperando...</p>
+
+  <script>
+    let device = null;
+    let lastSeenTime = 0;
+    let presenceCheckInterval = null;
+    let restartTimeout = null;
+    const LOST_TIMEOUT = 1 * 60 * 1000;    // 2 minutos = 2 * 60 * 1000; 
+    const SCAN_DURATION = 20 * 60 * 1000;  // 20 minutos
+    const PAUSE_DURATION = 20 * 1000;      // 20 segundos
+
+    const statusElem = document.getElementById("status");
+    const startBtn = document.getElementById("startBtn");
+
+    function onDeviceLost() {
+      console.log("⚠️ Dispositivo perdido");
+      statusElem.textContent = "Estado: dispositivo no detectado ❌";
+    }
+
+    function onDeviceFound() {
+      console.log("✅ Dispositivo presente");
+      statusElem.textContent = "Estado: dispositivo presente ✅";
+    }
+
+    async function startScan() {
+      try {
+        if (!device) {
+          // Selecciona el dispositivo la primera vez
+          device = await navigator.bluetooth.requestDevice({
+            acceptAllDevices: true,
+            optionalServices: [],
+          });
+
+          device.addEventListener('advertisementreceived', event => {
+            console.log('Advertisement recibido de:', event.device.name || 'Sin nombre');
+            lastSeenTime = Date.now();
+
+            if (!device.isPresent) {
+              device.isPresent = true;
+              onDeviceFound();
+            }
+          });
+        }
+
+        await device.watchAdvertisements();
+        console.log('🔎 Escuchando anuncios de:', device.name || 'Sin nombre');
+        statusElem.textContent = `Escuchando a ${device.name || 'dispositivo sin nombre'}...`;
+        lastSeenTime = Date.now();
+
+        // Cada 10 segundos comprobamos si ha pasado más de LOST_TIMEOUT
+        if (!presenceCheckInterval) {
+          presenceCheckInterval = setInterval(() => {
+            const elapsed = Date.now() - lastSeenTime;
+            if (elapsed > LOST_TIMEOUT && device.isPresent) {
+              device.isPresent = false;
+              onDeviceLost();
+            }
+          }, 10000);
+        }
+
+        // Programa reinicio automático del escaneo
+        restartTimeout = setTimeout(async () => {
+          console.log("⏸️ Pausando escaneo...");
+          statusElem.textContent = "Pausando escaneo durante 20 segundos...";
+          try {
+            await device.unwatchAdvertisements(); // Detiene el escaneo
+          } catch (e) {
+            console.warn("No se pudo detener correctamente el escaneo:", e);
+          }
+
+          setTimeout(() => {
+            console.log("♻️ Reiniciando escaneo...");
+            startScan(); // Reinicia el escaneo
+          }, PAUSE_DURATION);
+        }, SCAN_DURATION);
+
+      } catch (error) {
+        console.error('Error:', error);
+        statusElem.textContent = 'Error: ' + error;
+      }
+    }
+
+    startBtn.addEventListener('click', startScan);
+  </script>
+</body>
+</html>
