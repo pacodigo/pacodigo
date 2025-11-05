@@ -132,7 +132,7 @@
 	<hr>
 	
 <!-- ESPACIO EN NEGRO -->	
-	<div style="height: 150vh;" onclick = "cambiaBloque(indiceBloqueActual+1);"></div>
+	<div style="height: 50vh;" onclick = "cambiaBloque(indiceBloqueActual+1);"></div>
      <hr>   
 	<div style="height: 50vh;" onclick="clickEnCajaRespuesta();"></div>
 	
@@ -518,7 +518,7 @@
 					//startRecoSilbido();
 					activoRecoSilvido = true;
 					}, 3*1000);
-				if (data.frequency>1000){
+				if (data.frequency>1100){								// Antes 1000 Hz
 					document.body.style.background = "#00ff00";
 					cambiaBloque(indiceBloqueActual+1);
 					}
@@ -589,4 +589,5 @@ button.addEventListener("click", () => {		// Añadimos un listener para el event
 			
 		</script>
     </body>
+
 </html>
