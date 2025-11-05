@@ -1571,6 +1571,12 @@ function conectarseConPromesas (device){
 			envioDatos('rf2on');
 			setTimeout (function(){envioDatos('rf2off');}, 10*1000);
 		}
+		if ((comando.includes("5") || comando.includes("cinco")) && comando.includes("apaga")){								
+			envioDatos('rf5off');
+		}
+		if ((comando.includes("5") || comando.includes("cinco")) && comando.includes("enciende")){								
+			envioDatos('rf5on');
+		}
 		
 		if (comando.includes("rojo")) {
           document.body.style.background = "red";
