@@ -161,7 +161,7 @@
 	
 	<!-- BLOQUE BOTONES A BT -->
 	<div id="parteBotones" style="margin-top: 50px; width:100%;float: left;height:auto;text-align: center;border: 2px solid black">		
-		<h1 id="textoCabecera">Versión: 165v3  Pruebas navigator.bluetooth.requestLEScan</h1>
+		<h1 id="textoCabecera">Versión: 166 </h1>
 		<hr></hr> <br></br>
 
 	<!-- Asociación dispositivos BT -->
@@ -1631,7 +1631,7 @@ https://github.com/WebBluetoothCG/web-bluetooth/blob/main/implementation-status.
 
 
 // __TESTS__
-
+/*
 let devicesList = []; // lista global de dispositivos activos
 
 function onButtonClick() {
@@ -1657,11 +1657,7 @@ function onButtonClick() {
       device.addEventListener("advertisementreceived", event => {
 		log ("anuncio recibido");
 		anuncioRecibido(event);
-	  /*
-        event.serviceData.forEach((valueDataView, key) => {
-          logDataView("ServiceData", key, valueDataView);
-        });
-		*/
+
       });
 
       // Empezar a recibir anuncios
@@ -1698,7 +1694,7 @@ function stopAllAdvertisements() {
   devicesList = [];
 }
 
-
+*/
 
 /*
 // Ejemplo de log (ajústalo según tu HTML)
@@ -1718,6 +1714,288 @@ function logDataView(label, key, dataView) {
   log(`${label} [${key}]: ${bytes}`);
 }
 */
+
+
+
+
+
+
+
+//// ************************
+
+
+
+/*
+
+// Lista de objetos { device, listener, active }
+let devicesList = [];
+
+// Botón -> start (pide al usuario seleccionar 1 dispositivo y comenzar a escuchar)
+async function onButtonClick() {
+  const deviceOptions = {
+    optionalServices: [0xfe95, 0x181a, 0x181c, 0x181e, 0xfdcd, 0xfff9, 0x1f11, 0x2aeb, 0xfcd2],
+    filters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz_#@!*';,.<>{}[]"
+      .split("")
+      .map(x => ({ namePrefix: "_" }))
+  };
+
+  log("Requesting Bluetooth Device...");
+
+  try {
+    const device = await navigator.bluetooth.requestDevice(deviceOptions);
+    log("> Requested " + (device.name || device.id || "sin nombre"));
+
+    // Si ya lo tenemos en la lista, no lo duplicamos
+    if (devicesList.some(d => d.device.id === device.id)) {
+      log("Dispositivo ya añadido: " + (device.name || device.id));
+      return;
+    }
+
+    // Marca local para controlar si el listener debe procesar eventos
+    const meta = { device, active: true };
+
+    // Listener que solo actúa si meta.active === true
+    const listener = (event) => {
+				log ("anuncio recibido");
+		anuncioRecibido(event);
+	
+      if (!meta.active) return; // ignorar eventos residuales
+      // Procesa serviceData (o lo que necesites)
+      if (event.serviceData && event.serviceData.size) {
+        event.serviceData.forEach((valueDataView, key) => {
+          logDataView("ServiceData", key, valueDataView);
+        });
+      } else {
+        log(`Anuncio recibido de ${event.device.name || event.device.id} (RSSI: ${event.rssi})`);
+      }
+    
+	
+	};
+
+    // Guardamos la referencia del listener en meta
+    meta.listener = listener;
+
+    // Añadimos el listener al device
+    device.addEventListener("advertisementreceived", listener);
+
+    // Intentamos iniciar watchAdvertisements (puede lanzar si no es soportado)
+    try {
+      await device.watchAdvertisements();
+      log('Watching advertisements from "' + (device.name || device.id) + '"...');
+    } catch (watchErr) {
+      log("watchAdvertisements() error: " + watchErr);
+      // Aun así añadimos el dispositivo para que pueda pararse correctamente más tarde
+    }
+
+    // Guardar meta en la lista global
+    devicesList.push(meta);
+
+  } catch (error) {
+    log("Argh! " + error);
+  }
+}
+
+// Función para parar TODOS los anuncios y limpiar listeners
+async function stopAllAdvertisements() {
+  if (devicesList.length === 0) {
+    log("No hay dispositivos activos.");
+    return;
+  }
+
+  log("Stopping all advertisements...");
+
+  // Iteramos sobre una copia porque vamos a mutar devicesList
+  const toStop = devicesList.slice();
+
+  for (const meta of toStop) {
+    const { device, listener } = meta;
+
+    // Marcar inactivo para que el listener ignore eventos residuales
+    meta.active = false;
+
+    // Intentar detener watchAdvertisements si está disponible
+    try {
+      if (typeof device.unwatchAdvertisements === "function") {
+        device.unwatchAdvertisements();
+        log("Called unwatchAdvertisements() for " + (device.name || device.id));
+      } else {
+        log("device.unwatchAdvertisements() no disponible para " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error calling unwatchAdvertisements on " + (device.name || device.id) + ": " + e);
+    }
+
+    // Quitar el listener explícitamente
+    try {
+      if (listener) {
+        device.removeEventListener("advertisementreceived", listener);
+        log("Removed advertisement listener for " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error removing listener for " + (device.name || device.id) + ": " + e);
+    }
+
+    // Opcional: desconectar GATT si estabas conectado (no siempre aplica)
+    try {
+      if (device.gatt && device.gatt.connected) {
+        device.gatt.disconnect();
+        log("Disconnected GATT for " + (device.name || device.id));
+      }
+    } catch (e) {
+      // ignorar si no aplica
+    }
+  }
+
+  // Vaciar la lista
+  devicesList = [];
+  log("All devices stopped and list cleared.");
+}
+
+*/
+
+
+
+//********************
+
+
+// Versión simple mejorada con AbortController
+let devicesList = []; // array de { device, abortController }
+
+function onButtonClick() {
+  const deviceOptions = {
+    optionalServices: [0xfe95, 0x181a, 0x181c, 0x181e, 0xfdcd, 0xfff9, 0x1f11, 0x2aeb, 0xfcd2],
+    filters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz_#@!*';,.<>{}[]"
+      .split("")
+      .map(x => ({ namePrefix: "_" }))
+  };
+
+  log("Requesting Bluetooth Device...");
+
+  navigator.bluetooth.requestDevice(deviceOptions)
+    .then(async device => {
+      log("> Requested " + (device.name || device.id || "sin nombre"));
+
+      // Si ya lo tenemos, no lo duplicamos
+      if (devicesList.some(m => m.device.id === device.id)) {
+        log("Dispositivo ya añadido: " + (device.name || device.id));
+        return;
+      }
+
+      // Creamos un AbortController para este dispositivo
+      const abortController = new AbortController();
+
+      // Listener que procesará los anuncios
+      const listener = (event) => {
+        // event puede llegar incluso justo al abortar; si el signal está abortado,
+        // el navegador ya habrá eliminado el listener, pero por seguridad no hacemos checks extra.
+        if (event.serviceData && event.serviceData.size) {
+          event.serviceData.forEach((valueDataView, key) => {
+            logDataView("ServiceData", key, valueDataView);
+          });
+        } else {
+          log("Anuncio recibido de ${event.device.name || event.device.id} (RSSI: ${event.rssi})");
+        }
+      };
+
+      // Añadir el listener pasando el signal del AbortController (esto permite removerlo con abort())
+      try {
+        device.addEventListener("advertisementreceived", listener, { signal: abortController.signal });
+      } catch (e) {
+        // Algunos entornos podrían no soportar la opción signal — lo registramos igualmente y guardamos listener
+        device.addEventListener("advertisementreceived", listener);
+      }
+
+      // Intentar empezar a ver anuncios
+      try {
+        await device.watchAdvertisements();
+        log('Watching advertisements from "' + (device.name || device.id) + '"...');
+      } catch (watchErr) {
+        log("watchAdvertisements() error: " + watchErr);
+        // Seguimos adelante; aun así podremos limpiar con abort + unwatch
+      }
+
+      // Guardar meta en la lista
+      devicesList.push({ device, abortController, listener });
+    })
+    .catch(error => {
+      log("Argh! " + error);
+    });
+}
+
+// Parar todos los anuncios usando AbortController + unwatch + desconexión GATT
+async function stopAllAdvertisements() {
+  if (devicesList.length === 0) {
+    log("No hay dispositivos activos.");
+    return;
+  }
+
+  log("Stopping all advertisements (using AbortController + unwatch + GATT disconnect)...");
+
+  // Iteramos sobre la copia porque vamos a vaciar devicesList
+  const toStop = devicesList.slice();
+
+  for (const meta of toStop) {
+    const { device, abortController, listener } = meta;
+
+    // 1) Abort — elimina listeners añadidos con { signal }
+    try {
+      if (abortController) {
+        abortController.abort();
+        log("Aborted listener for " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error aborting listener for " + (device.name || device.id) + ": " + e);
+    }
+
+    // 2) unwatchAdvertisements() si existe
+    try {
+      if (typeof device.unwatchAdvertisements === "function") {
+        device.unwatchAdvertisements();
+        log("Called unwatchAdvertisements() for " + (device.name || device.id));
+      } else {
+        log("device.unwatchAdvertisements() not available for " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error calling unwatchAdvertisements on " + (device.name || device.id) + ": " + e);
+    }
+
+    // 3) removeEventListener como redundancia para entornos que no soporten { signal }
+    try {
+      if (listener) {
+        device.removeEventListener("advertisementreceived", listener);
+        log("Removed advertisement listener for " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error removing listener for " + (device.name || device.id) + ": " + e);
+    }
+
+    // 4) desconectar GATT si estuviera conectado (opcional)
+    try {
+      if (device.gatt && device.gatt.connected) {
+        device.gatt.disconnect();
+        log("Disconnected GATT for " + (device.name || device.id));
+      }
+    } catch (e) {
+      log("Error disconnecting GATT for " + (device.name || device.id) + ": " + e);
+    }
+  }
+
+  // Vaciar la lista
+  devicesList = [];
+  log("All devices stopped and list cleared.");
+}
+
+/* -------------------------
+   Helpers (tu implementación)
+   ------------------------- */
+
+
+
+
+
+
+
+
 
 
 
