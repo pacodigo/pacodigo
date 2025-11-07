@@ -161,7 +161,7 @@
 	
 	<!-- BLOQUE BOTONES A BT -->
 	<div id="parteBotones" style="margin-top: 50px; width:100%;float: left;height:auto;text-align: center;border: 2px solid black">		
-		<h1 id="textoCabecera">Versión: 165v2  Pruebas navigator.bluetooth.requestLEScan</h1>
+		<h1 id="textoCabecera">Versión: 165v3  Pruebas navigator.bluetooth.requestLEScan</h1>
 		<hr></hr> <br></br>
 
 	<!-- Asociación dispositivos BT -->
@@ -250,7 +250,9 @@
 		
 	<!-- LOG controles -->	
 		<input type="button" id="botonTest" value="Test" onclick="onButtonClick()">
-		<input type="button"  value="startScan" onclick="startScan()">
+		<input type="button"  value="paraTe1" onclick="paraTe1()">
+		<input type="button"  value="paraTe2" onclick="paraTe2()">
+		
 		<button type="button" onclick="clearLog();">Clear Log</button>
 		<input type="radio" checked="" name="rm1" id="verLog">
 		<button type="button" onclick="vaciaLog();">Vacía log</button> <hr>
@@ -1671,11 +1673,13 @@ async function onButtonClick() {
 	
 	navigator.bluetooth.addEventListener('advertisementreceived', event => {
 		anuncioRecibido(event);
+		const device = event.device;
+		log("Anuncio recibido de: "+ device.name);
 	});	
 	
 	
-    setTimeout(stopScan, 30000);
-	setTimeout(onButtonClick, 40000);
+    //setTimeout(stopScan, 30000);
+	//setTimeout(onButtonClick, 40000);
     
 	function stopScan() {
       log('Stopping scan...');
@@ -1689,9 +1693,23 @@ async function onButtonClick() {
 
 
 
+let scan;
+async function paraTe1(){
+ scan = await navigator.bluetooth.requestLEScan({
+  acceptAllAdvertisements: true,
+	});
+	}
+
+
+
+async function paraTe2(){
+	scan.stop();
+}
+
+
 // IA:
 
-
+/*
 let bleScan = null;
 let scanActive = false;
 let restartTimer = null;
@@ -1747,7 +1765,7 @@ function stopScan() {
 //startScan();
 
 
-
+*/
 
 
 
