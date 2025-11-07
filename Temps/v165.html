@@ -161,7 +161,7 @@
 	
 	<!-- BLOQUE BOTONES A BT -->
 	<div id="parteBotones" style="margin-top: 50px; width:100%;float: left;height:auto;text-align: center;border: 2px solid black">		
-		<h1 id="textoCabecera">Versión: 165  Pruebas navigator.bluetooth.requestLEScan</h1>
+		<h1 id="textoCabecera">Versión: 165v2  Pruebas navigator.bluetooth.requestLEScan</h1>
 		<hr></hr> <br></br>
 
 	<!-- Asociación dispositivos BT -->
@@ -250,6 +250,7 @@
 		
 	<!-- LOG controles -->	
 		<input type="button" id="botonTest" value="Test" onclick="onButtonClick()">
+		<input type="button"  value="startScan" onclick="startScan()">
 		<button type="button" onclick="clearLog();">Clear Log</button>
 		<input type="radio" checked="" name="rm1" id="verLog">
 		<button type="button" onclick="vaciaLog();">Vacía log</button> <hr>
@@ -1631,9 +1632,7 @@ https://github.com/WebBluetoothCG/web-bluetooth/blob/main/implementation-status.
 
 async function onButtonClick() {
   let filters = [];
-
   filters.push({namePrefix: "_"});
-
   let options = {};
   options.filters = filters;
   
@@ -1688,6 +1687,64 @@ async function onButtonClick() {
   }
 }
 
+
+
+// IA:
+
+
+let bleScan = null;
+let scanActive = false;
+let restartTimer = null;
+
+// Duración del escaneo continuo (máximo 30 min → usa 20 min por seguridad)
+const SCAN_DURATION = 20 * 1000; // 20 minutos
+// Pausa entre escaneos
+const RESTART_DELAY = 10 * 1000; // 20 segundos
+
+async function startScan() {
+  try {
+    // Si ya hay un escaneo activo, no lo repitas
+    if (scanActive) return;
+    scanActive = true;
+
+    log("Iniciando escaneo BLE...");
+    bleScan = await navigator.bluetooth.requestLEScan({
+      // Puedes filtrar por servicios o manufacturerData
+      // filters: [{ services: ['battery_service'] }],
+	  filters:[{namePrefix: "_"}],
+      keepRepeatedDevices: true, // Para recibir múltiples anuncios del mismo dispositivo
+    });
+
+    navigator.bluetooth.addEventListener("advertisementreceived", event => {
+      const device = event.device;
+      log("Anuncio recibido de: "+ device.name);
+      // Aquí podrías procesar manufacturerData, RSSI, etc.
+    });
+
+    // Programar parada automática
+    restartTimer = setTimeout(stopScan, SCAN_DURATION);
+
+  } catch (error) {
+    log("Error al iniciar escaneo:", error);
+    scanActive = false;
+  }
+}
+
+function stopScan() {
+  if (bleScan) {
+    log("Deteniendo escaneo BLE...");
+    bleScan.stop();
+    bleScan = null;
+  }
+  scanActive = false;
+
+  // Reiniciar después de un pequeño descanso
+  log("Reiniciando en ${RESTART_DELAY / 1000} segundos...");
+  setTimeout(startScan, RESTART_DELAY);
+}
+
+// Iniciar por primera vez
+//startScan();
 
 
 
