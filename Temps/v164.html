@@ -204,8 +204,6 @@
 		<input type="button" value="rellenaArrayConDatosFijos" onclick="rellenaArrayConDatosFijos(temperaturaDevice1,temperaturaDevice2, humedadDevice1)">
 		<br><br>
 	<!-- Conexión HTTP -->
-		<input type="button"  value="enviaDatosADomoCadaMinutoInternet" onclick="conmutaEnviaDatosADomoCadaMinutoInternet()">
-		<input type="radio" id="Check_enviaDatosADomoCadaMinutoInternet">
 		<input type="button"  value="enviaDatosADomoCadaMinutoLocal" onclick="conmutaEnviaDatosADomoCadaMinutoLocal()">
 		<input type="radio" id="Check_enviaDatosADomoCadaMinutoLocal">	
 	</div>
@@ -586,32 +584,8 @@ function actualizaGraficaCada5min(){
 	setTimeout (actualizaGraficaCada5min, 5*60*1000);		//5*60*1000
 }
 
+
 const FETCH_Timeout = 2500;
-function conmutaEnviaDatosADomoCadaMinutoInternet(){
-	if ($("Check_enviaDatosADomoCadaMinutoInternet").checked) 
-		$("Check_enviaDatosADomoCadaMinutoInternet").checked= false;
-	else 
-		$("Check_enviaDatosADomoCadaMinutoInternet").checked= true;
-	enviaDatosADomoCadaMinutoInternet();
-}
-function enviaDatosADomoCadaMinutoInternet(){
-	if ($("Check_enviaDatosADomoCadaMinutoInternet").checked){ 
-		const IP_Server = "192.168.1.100";
-		log ("enviaDatosADomoCadaMinutoInternet...: ");
-		setTimeout (enviaDatosADomoCadaMinutoInternet, 1*60*1000);
-		
-		let cadenaConDatos = "Temperaturas:" + temperaturaDevice1.toFixed(1) + "_" + temperaturaDevice2.toFixed(1) + "_" + humedadDevice1.toFixed(0);
-		// Ejemplo de envio: 'Temperaturas:20.0#22.7#41'  		//alert (cadenaConDatos);
-		fetch("http://" + IP_Server + "/" + cadenaConDatos, { signal: AbortSignal.timeout(FETCH_Timeout)})			//"http://192.168.1.105/info"
-			.then(response => response.text()) 	//.then(response => response.text()) 
-			.then(respuesta => {				// Respuesta exitosa.
-				log (respuesta);
-				})
-			.catch(err => {
-				log("ERROR: " + err);
-				});	 	
-	}			
-}
 
 function conmutaEnviaDatosADomoCadaMinutoLocal(){
 	if ($("Check_enviaDatosADomoCadaMinutoLocal").checked) 
@@ -622,7 +596,7 @@ function conmutaEnviaDatosADomoCadaMinutoLocal(){
 }
 function enviaDatosADomoCadaMinutoLocal(){
 	if ($("Check_enviaDatosADomoCadaMinutoLocal").checked){ 
-		const IP_Server = "192.168.100.100";
+		const IP_Server = "192.168.1.100";
 		log ("enviaDatosADomoCadaMinutoLocal...: ");
 		setTimeout (enviaDatosADomoCadaMinutoLocal, 1*60*1000);
 		
