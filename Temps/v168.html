@@ -1562,11 +1562,11 @@ function conectarseConPromesas (device){
 		}
 		if ((comando.includes("dos") || comando.includes("2")) && comando.includes("tiempo")){								
 			envioDatos ('rf2on');
-			setTimeout (envioDatos ('rf2off');}, 60*1000);
+			setTimeout (function(){envioDatos ('rf2off');}, 60*1000);
 		}
 		if ((comando.includes("cinco") || comando.includes("5")) && comando.includes("tiempo")){								
 			envioDatos ('rf5on');
-			setTimeout (envioDatos ('rf5off');}, 30*60*1000);
+			setTimeout (function(){envioDatos ('rf5off');}, 30*60*1000);
 		}
 		
 	}
