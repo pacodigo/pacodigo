@@ -1582,7 +1582,7 @@ function conectarseConPromesas (device){
 		let ruta = "http://" + "192.168.1.100" + "/" + datos;
 		log (ruta);
 		fetch(ruta, {
-			signal: AbortSignal.timeout(5000),				// Antes 2500
+			signal: AbortSignal.timeout(2500),				// Antes 2500
 			method: "GET",
 			headers: {"Content-type": "text/html"}
 		})
