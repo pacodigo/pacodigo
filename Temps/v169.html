@@ -1568,7 +1568,7 @@ function conectarseConPromesas (device){
 		}
 		if ((comando.includes("cinco") || comando.includes("5")) && comando.includes("tiempo")){								
 			envioDatos ('rf5on');
-			setTimeout (function(){envioDatos ('rf5off');}, 7*60*1000);		//Antes 30*60*1000
+			setTimeout (function(){envioDatos ('rf5off');}, 10*60*1000);		//Antes 30*60*1000
 		}
 		
 	}
