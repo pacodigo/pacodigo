@@ -309,6 +309,7 @@ function envioDatos (datos){
 	fetch(ruta, {
 	    signal: AbortSignal.timeout(FETCH_Timeout),
 	    method: "GET",
+		mode: "no-cors",
 		headers: {"Content-type": "text/html"}
 	})
 
