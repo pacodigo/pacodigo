@@ -5,7 +5,7 @@
 <head>
 	<!meta name="viewport" content="user-scalable=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!https://blog.hubspot.es/website/estructura-html>
-	<title>v170</title>
+	<title>v170b</title>
 
 	<style>
 		/*.dygraph-legend { text-align: right; }*/
@@ -1583,7 +1583,8 @@ function conectarseConPromesas (device){
 		log (ruta);
 		fetch(ruta, {
 			signal: AbortSignal.timeout(5000),				// Antes 2500
-			method: "GET"
+			method: "GET",
+			mode: "no-cors"
 			//headers: {"Content-type": "text/html"}
 		})
 		.then(response => response.text()) 	
