@@ -1583,8 +1583,8 @@ function conectarseConPromesas (device){
 		log (ruta);
 		fetch(ruta, {
 			signal: AbortSignal.timeout(5000),				// Antes 2500
-			method: "GET",
-			headers: {"Content-type": "text/html"}
+			method: "GET"
+			//headers: {"Content-type": "text/html"}
 		})
 		.then(response => response.text()) 	
 		.then(respuesta => {log("Resp http: " + respuesta);	})
