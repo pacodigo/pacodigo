@@ -305,25 +305,12 @@ function envioDatos (datos){
 		document.body.style.background = "#000000";
 	}, "150");
 	
-
 	fetch(ruta, {
 	    signal: AbortSignal.timeout(FETCH_Timeout),
-	    method: "GET"
-		//mode: "no-cors",
+	    //method: "GET",
 		//headers: {"Content-type": "text/html"}
 	})
 
-	/*
-	fetch(ruta, {		//<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	    method: "GET",
-		headers: {
-			"Content-type": "text/html",
-			"http-equiv": "Content-Security-Policy",
-			"content":"upgrade-insecure-requests"
-			}
-		
-	})
-	*/
 	.then(response => response.text()) 	//.then(response => response.text()) 
 	.then(respuesta => {				// Respuesta exitosa.
 		console.log("Datos: " + respuesta);
