@@ -46,10 +46,10 @@
 	
 <!-- BOTONES MEDIO -->
 	<div id ="idDivControlParrafo" style = "display:flex;    justify-content: space-between;     align-items: center;">
-		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)-1);"><< Cap</button>
 		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema((arrayBloquesPregResp[indiceBloqueActual].numTema)+1);">>> Cap</button>			
-		<button class="button"  style="width: 20%; background-color: brown;" type="button" onclick="irATema(arrayBloquesPregResp[indiceBloqueActual].numTema)">< Cap</button>
-		<button class="button"  style="width: 20%;" type="button" onclick="cambiaBloque(indiceBloqueActual-1);">P-</button>				
+		<button class="button"  style="width: 20%; background-color: #bf0190;" type="button" onclick="irATema(arrayBloquesPregResp[indiceBloqueActual].numTema)">< Cap</button>
+		<button class="button"  style="width: 20%;" type="button" onclick="cambiaBloque(indiceBloqueActual-1);">P-</button>
+		<button class="button"  style="width: 20%; background-color: orange;" type="button" onclick="document.getElementById('idCbVoz').checked=true;cambiaBloque(indiceBloqueActual);">Act</button>		
 	</div>		
 	<br><hr>
 	
@@ -142,8 +142,6 @@
 <script>
 	
 	
-	var texto;
-	
 	window.onload = function() {
 		console.log("Página cargada...");
 		cargaDesdeInternet();
@@ -156,7 +154,6 @@
 			.then(response => response.text())
 			.then((data) => {
 				console.log ("Datos recibidos de Internet: " + data);
-				texto = data;
 				procesadoFichero(data);
 				/* let parrafoSolicitado = getCookie("numParrafoCookie"); 
 				if (parrafoSolicitado != "" && parrafoSolicitado != null) {
@@ -170,22 +167,6 @@
 	}
 
 
-function procesa(texto) {
-  // Dividimos cuando detectamos un salto de línea seguido de 3+ mayúsculas/espacios
-  const bloques = texto.split(/\n(?=[A-ZÁÉÍÓÚ]{2,})/);
-
-  return bloques.map(bloque => {
-    // Separamos la pregunta de la respuesta de Paco
-    const partes = bloque.split(/(?=EL SEGUNDO:)/);
-    
-    return {
-      pregunta: partes[0]?.trim(),
-      respuesta: partes[1]?.trim()
-    };
-  }).filter(item => item.pregunta && item.respuesta);
-}
-
-
 
 	
 	var arrayBloquesPregResp = [];
@@ -195,7 +176,7 @@ function procesa(texto) {
 		console.log ("procesadoFichero");
 		
 		//let arrayDeLineas = textoEnBruto.split('\n');		
-		let arrayDeLineas = textoEnBruto.split(/\n\s*\n/);
+		let arrayDeLineas = textoEnBruto.split(/\n\s*\n/);   //  \n: Busca un salto de línea. \s*: Permite que haya espacios o tabuladores invisibles entre los dos saltos de línea (muy común en archivos de texto). \n: Busca el segundo salto de línea.
 
 		let bloquePregResp = {					// Objeto "bloquePregResp"
 			pregunta: 			"Pregunta",		// Clave / Valor. En la Clave personaje se almacena el Valor NULO
@@ -240,30 +221,6 @@ function procesa(texto) {
 		arrayBloquesPregResp[0].pregunta = infoProcesada;
 		cambiaBloque(0);
 	}
-	
-	
-
-	
-	
-	
-	
-	
-	
-	function estructurarTexto(texto) {
-		// Dividimos el texto usando "PACO:" como separador, pero manteniéndolo en el resultado
-		const partes = texto.split(/(?=EL SEGUNDO:)/);
-		const resultado = [];
-
-		for (let i = 0; i < partes.length; i += 2) {
-			resultado.push({
-				pregunta: partes[i]?.trim(),
-				respuesta: partes[i + 1]?.trim()
-			});
-		}
-
-	return resultado;
-}
-	
 	
 	
 	function cambiaBloque(nuevoBloqueSolicitado){
