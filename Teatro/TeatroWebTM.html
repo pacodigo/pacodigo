@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>  
-        <title>DocuWeb v4</title>
+        <title>DocuWeb v20b-4-26</title>
 		<meta name="viewport" content="width=device-width">
     </head>
 	
@@ -592,12 +592,18 @@ button.addEventListener("click", () => {		// Añadimos un listener para el event
 // Pruebas pulsación larga y corta en la Caja Pregunta:
 const elDiv = document.getElementById('miCajaPregunta');
 let tiempoInicio;
+let haMovidoDedo = false; // Variable para detectar scroll en móviles
 
 // Definimos la función de inicio
 const iniciarPulsacion = (e) => {
     // Evita comportamientos extraños en móviles (como el menú contextual)
     // e.preventDefault(); 
     tiempoInicio = Date.now();
+};
+
+// Nueva función para detectar si el usuario desliza el dedo (scroll)
+const detectarMovimiento = () => {
+    haMovidoDedo = true; 
 };
 
 // Definimos la función de finalización
@@ -617,12 +623,16 @@ const finalizarPulsacion = () => {
 // Eventos para Ratón (PC)
 elDiv.addEventListener('mousedown', iniciarPulsacion);
 elDiv.addEventListener('mouseup', finalizarPulsacion);
-elDiv.addEventListener('mouseleave', finalizarPulsacion); // Por si el cursor sale del div
+elDiv.addEventListener('mouseleave', () => { tiempoInicio = null; }); // Si el ratón sale, cancelamos sin ejecutar
 
 // Eventos para Táctil (Móviles)
 elDiv.addEventListener('touchstart', iniciarPulsacion, { passive: true });
+elDiv.addEventListener('touchmove', detectarMovimiento, { passive: true }); // Detecta el desplazamiento
 elDiv.addEventListener('touchend', (e) => {
-    e.preventDefault(); // Evita que se dispare un "click" fantasma tras el touch
+    // Solo prevenimos el clic fantasma si el usuario NO estaba haciendo scroll
+    if (!haMovidoDedo) {
+        e.preventDefault(); 
+    }
     finalizarPulsacion();
 });
 
