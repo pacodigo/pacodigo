@@ -10,7 +10,7 @@
 
 .dygraph-legend {
   position: relative;
-  font-size: 12px;
+  font-size: 8px; /* Antes 12px */
   z-index: 10;
   width: 250px;  /* labelsDivWidth */
   /*
@@ -80,7 +80,7 @@
 }
 
 .dygraph-axis-label-x {
-	color: yellow;
+	color: brown;
 }
 
 .dygraph-axis-label-y {
@@ -125,7 +125,7 @@
   -ms-transform: rotate(-90deg);
 }
 </style>
-  <title>MemoGraph v3</title>
+  <title>MemoGraph v4</title>
   <script src="dygraph.min.js"></script>
   </head>
   <!--body-->
@@ -134,30 +134,34 @@
 	<h1>Memo Temperature, Humidity and Battery voltage</h1>
 	<hr>
 	<div style="height: auto; width: auto; text-align: center;">
-		<input type="button" id="butConnect" value="Connect" class="ok">
-	  	<label for="namePrefix">BLE device name prefix filter(s)</label>
-  		<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
-	  	<label for="namePrefix">Number of Samples</label>
-  		<input type="text" id="LoadSamples" value="100" placeholder="All">
-		<input type="button" value="Full Screen" onclick="toggleFullScreen()"><hr>
-		<br><br>
-		<input type="checkbox" id="setDevTime" checked>
-		<label for="setDevTime">Set device time</label>
-		<input type="checkbox" id="hideLoDate" checked>
-		<label for="hideLoDate">Hide old dates</label>
-		<br>
-		<span>Display:</span>
-		<input type="radio" id="show_temperature" name="displayed_graph" value="temperature" checked>
-		<label for="show_temperature">Temperature</label>
-		<input type="radio" id="show_temperature_and_humidity" name="displayed_graph" value="temperature_and_humidity">
-		<label for="show_temperature_and_humidity">Temperature + Humidity</label>
-		<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
-		<label for="show_battery_voltage">Battery Voltage</label>
-		<br><br>
-		<span id='info'>?</span>
-		<br>
+		<input type="button" id="butConnect" value="Connect" class="ok" style=" width: 50%; height: 50px;">
+		<input type="button" value="Full Screen" style=" width: 30%; height: 50px;" onclick="toggleFullScreen()">
 		
-		<hr><br><br>
+		<hr>
+		<span id='info'>?</span>
+		<br><br><hr>
+		
+		<div id ="idDivOpciones">
+			<label for="namePrefix">BLE device name prefix filter(s)</label>
+			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
+			<label for="namePrefix">Number of Samples</label>
+			<input type="text" id="LoadSamples" value="100" placeholder="All">
+			<input type="checkbox" id="setDevTime" checked>
+			<label for="setDevTime">Set device time</label>
+			<input type="checkbox" id="hideLoDate" checked>
+			<label for="hideLoDate">Hide old dates</label>
+			<br>
+			<span>Display:</span>
+			<input type="radio" id="show_temperature" name="displayed_graph" value="temperature" checked>
+			<label for="show_temperature">Temperature</label>
+			<input type="radio" id="show_temperature_and_humidity" name="displayed_graph" value="temperature_and_humidity">
+			<label for="show_temperature_and_humidity">Temperature + Humidity</label>
+			<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
+			<label for="show_battery_voltage">Battery Voltage</label>
+			<br>
+			<hr><br><br>
+		</div>
+		
 		<div id='div_v'></div>
 		<div id='labdiv'></div>
 	</div>
@@ -191,9 +195,16 @@ function ShowConnect() {
 }
 $("butConnect").onclick =  function() {
 	$("butConnect").disabled = true;
-	if(devcnn != 0) {$("butConnect").value = "Disconnect..."; disconnect();}
-	else {$("butConnect").value = "Connect..."; connect();};
-}
+	if(devcnn != 0) {
+		$("butConnect").value = "Disconnect..."; 
+		disconnect();
+		}
+	else {
+		$("butConnect").value = "Connect..."; 
+		connect();
+		conmutaVisualizacionDiv("idDivOpciones");
+		};
+	}
 var localOffset = (new Date()).getTimezoneOffset() * 60000;
 var show_on = 0;
 // Буфер входящих данных
@@ -228,8 +239,8 @@ function ShowGraph(graphType) {
 		showRangeSelector: true,
 		showRoller: false,			// antes: true
 		rollPeriod: 2,				// antes: 0
-		xlabel: 'Date',
-		ylabel: graphType.y_labels[0],
+		//xlabel: 'Date',				// antes xlabel: 'Date',
+		//ylabel: graphType.y_labels[0],
 		colors: graphType.colors,
 		labels: ['Date', ...graphType.y_labels],
 		labelsDiv: $('labdiv'),
@@ -527,6 +538,15 @@ function toggleFullScreen() {			// Mio: document.querySelector('body').requestFu
 	else 
 		document.exitFullscreen();
 }
+
+	function conmutaVisualizacionDiv(divID){
+	    var x = document.getElementById(divID);
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
 
 
 </script>
