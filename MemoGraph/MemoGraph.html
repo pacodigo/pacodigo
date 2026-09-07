@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="dygraph.min.css">
+  <!--link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dygraph.min.css"-->
 <style type="text/css">
 /**
  * Default styles for the dygraphs charting library.
@@ -12,40 +12,53 @@
   position: absolute;
   z-index: 10;
 }
-
 .dygraph-axis-label-x {
 	color: brown;
 }
-
 .dygraph-axis-label-y {
   color: green;
 }
-
 .dygraph-axis-label-y2 {
   color: blue;
 }
 
-.dygraph-title {
-  font-weight: bold;
-  z-index: 10;
-  text-align: left;
-  /* font-size: based on titleHeight option */
+.button {
+  //width: calc(100% / 2.5);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  //font-size: 3em;
+ // margin: 15px 15px 30px 30px;
+ //margin: 15px 10px 15px 10px;
+ height: 44px;						
+ margin: 8px 10px 8px 10px;
+ padding: 8px 12px;
+ //height: 110px;
 }
 
 
-
 </style>
-  <title>MemoGraph v5</title>
+  <title>MemoGraph v6</title>
   <script src="dygraph.min.js"></script>
+  
+    <meta name="viewport" content="width=device-width">
+  
   </head>
+  
   <!--body-->
   <!--body bgcolor="#000000" text="#FFFFFF" style="height:1000px;"-->
   <!--body bgcolor="#000000" text="#FFFFFF"-->
-	<h1>MemoGraph by Paco</h1>
+	
+	<!--h1>MemoGraph by Paco</h1-->
 	<hr>
-	<div style="height: auto; width: auto; text-align: left;">
-		<input type="button" id="butConnect" value="Connect" class="ok" style=" width: 50%; height: 100px;">
-		<input type="button" value="Full Screen" style=" width: 30%; height: 100px;" onclick="toggleFullScreen()">
+	<!--div style="height: auto; width: auto; text-align: left;"-->
+	<div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px">
+		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
+		<input type="button" class="button" value="Full Screen" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
+		
+		<input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="conmutaVisualizacionDiv('divGeneral');">
+		
 		
 		<hr>
 		<span id='info'>Info...</span>
@@ -55,7 +68,7 @@
 			<label for="namePrefix">BLE device name prefix filter(s)</label>
 			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
 			<label for="namePrefix">Number of Samples</label>
-			<input type="text" id="LoadSamples" value="100" placeholder="All">
+			<input type="text" id="LoadSamples" value="300" placeholder="All">
 			<input type="checkbox" id="setDevTime" checked>
 			<label for="setDevTime">Set device time</label>
 			<input type="checkbox" id="hideLoDate" checked>
@@ -68,19 +81,21 @@
 			<label for="show_temperature_and_humidity">Temperature + Humidity</label>
 			<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
 			<label for="show_battery_voltage">Battery Voltage</label>
-			<br>
-			<hr><br><br>
+			<br><hr><br><br>
 		</div>
-		
 		
 		<!--div id='labdiv'></div--><!--Etiquetas-->
 		<br><br>
-		<div id='div_v'></div>
 		
-	
+			
 	</div>
+	
+	<div id='div_v'></div>
+	
   </body>
 <script type="text/javascript">
+
+
 var $ = function(id) {
 	return document.getElementById(id);
 }
@@ -116,7 +131,7 @@ $("butConnect").onclick =  function() {
 	else {
 		$("butConnect").value = "Connect..."; 
 		connect();
-		conmutaVisualizacionDiv("idDivOpciones");
+		//conmutaVisualizacionDiv("idDivOpciones");
 		};
 	}
 var localOffset = (new Date()).getTimezoneOffset() * 60000;
@@ -149,7 +164,7 @@ function ShowGraph(graphType) {
     if (!(graphType instanceof GraphType)) throw Error('ShowGraph argument is not instance of GraphType');
 
 	let graph_config = {
-		title: 'Stored data from: ' + deviceName,
+		//title: 'Stored data from: ' + deviceName,
 		showRangeSelector: true,
 		showRoller: false,			// antes: true
 		rollPeriod: 2,				// antes: 0
@@ -425,6 +440,10 @@ function disconnect() {
 					deviceCache.removeEventListener('gattserverdisconnected', handleDisconnection);
 					deviceCache = null;
 					Clog('Disconnected. Load '+memo.length+' samples.' );
+					
+					conmutaVisualizacionDiv("divGeneral");
+					Clog("Hecho.");
+					
 					ShowConnect();
 				})
 				.catch(error => { Clog(error);
