@@ -39,7 +39,7 @@
 
 
 </style>
-  <title>MemoGraph v6</title>
+  <title>MemoGraph v7</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -53,7 +53,8 @@
 	<!--h1>MemoGraph by Paco</h1-->
 	<hr>
 	<!--div style="height: auto; width: auto; text-align: left;"-->
-	<div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px">
+	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
+	<div id="divGeneral" style="border: 2px solid white">
 		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
 		<input type="button" class="button" value="Full Screen" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
 		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="conmutaVisualizacionDiv('divGeneral');"-->
@@ -89,7 +90,7 @@
 			
 	</div>
 	
-	<div id='div_v' style="height:auto; width:100%;"></div>
+	<div id='div_v' style="height:auto; width:100%; border: 2px solid white"></div>
 	
   </body>
 <script type="text/javascript">
@@ -192,12 +193,24 @@ var renderChart = function() {
 	gu.updateOptions({'file': datau});
 }
 
+/*
 if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-120) + 'px';
 window.onresize = function(){
 	if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-120) + 'px';
 //	if(gu) gu.resize();
 //	$('div_v').style.width = (window.innerWidth-50) + 'px';
 }
+*/
+
+if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-10) + 'px';
+window.onresize = function(){
+	if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-10) + 'px';
+//	if(gu) gu.resize();
+//	$('div_v').style.width = (window.innerWidth-50) + 'px';
+}
+
+
+
 function hex(number, length) {
     var str = (number.toString(16)).toUpperCase();
     while (str.length < length) str = '0' + str;
