@@ -8,6 +8,11 @@
  * Default styles for the dygraphs charting library.
  */
 
+
+.dygraph-axis-label-y {
+  text-align: center;
+}
+
 .dygraph-roller {
   position: absolute;
   z-index: 10;
@@ -39,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v7</title>
+  <title>MemoGraph v8</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -54,7 +59,7 @@
 	<hr>
 	<!--div style="height: auto; width: auto; text-align: left;"-->
 	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
-	<div id="divGeneral" style="border: 2px solid white">
+	<div id="divGeneral" style="border: 2px solid white; text-align: center">
 		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
 		<input type="button" class="button" value="Full Screen" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
 		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="conmutaVisualizacionDiv('divGeneral');"-->
@@ -68,7 +73,7 @@
 			<label for="namePrefix">BLE device name prefix filter(s)</label>
 			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
 			<label for="namePrefix">Number of Samples</label>
-			<input type="text" id="LoadSamples" value="300" placeholder="All">
+			<input type="text" id="LoadSamples" value="30" placeholder="All">
 			<input type="checkbox" id="setDevTime" checked>
 			<label for="setDevTime">Set device time</label>
 			<input type="checkbox" id="hideLoDate" checked>
@@ -95,7 +100,7 @@
 	
 	<div id='div_v' style="height:auto; width:100%; border: 2px solid white"></div>
 	
-	<br><br>
+	<br>
 	
   </body>
 <script type="text/javascript">
@@ -179,11 +184,12 @@ function ShowGraph(graphType) {
 		colors: graphType.colors,
 		//labels: ['Date', ...graphType.y_labels],
 		labelsDiv: $('labdiv'),     // Esto es para mostrar los valores de x e y cundo pasas cursor encima gráfica
-		// legend: 'always',  // "follow"
+		legend: 'always',  // "follow"
 		digitsAfterDecimal: 1,		// ates: 3
 		
 		axisLabelFontSize: 20,		// Mio antes 24
 		strokeWidth: 9,			// Mio antes 11
+		
 	};
 
     // add more config for graphs with 2 series
