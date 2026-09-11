@@ -24,7 +24,7 @@
   color: blue;
 }
 .dygraph-axis-label-y2 {
-  color: orange;
+  color: #333300;
 }
 
 .button {
@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v10</title>
+  <title>MemoGraph v11</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -99,7 +99,7 @@
 	<div id='labdiv' style="text-align: right; height: 20px;"></div><!--Etiquetas-->
 	<br><br>
 	
-	<div id='div_v' style="height:auto; width:100%; border: 1px solid white; margin-bottom: 15px;"></div>
+	<div id='div_v' style="height:auto;  margin-bottom: 10px; margin-top: 10px; margin-left:10px"></div>
 	
 	
 	
@@ -179,7 +179,7 @@ function ShowGraph(graphType) {
 		//title: 'Stored data from: ' + deviceName,
 		showRangeSelector: true,
 		showRoller: false,			// antes: true
-		rollPeriod: 2,				// antes: 0
+		rollPeriod: 5,				// antes: 2
 		//xlabel: 'Date',				// antes xlabel: 'Date',
 		//ylabel: graphType.y_labels[0],
 
@@ -213,7 +213,6 @@ function ShowGraph(graphType) {
                 independentTicks: true    // Permite que calcule su propia escala según los datos
             }
         }
-
 		// **** FIN ***
 				
 	};
@@ -251,11 +250,11 @@ window.onresize = function(){
 }
 */
 
-if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-10) + 'px';
+if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-15) + 'px';
 window.onresize = function(){
 	if(window.innerHeight > 320) 
-		$('div_v').style.height = (window.innerHeight-10) + 'px';
-//	if(gu) gu.resize();
+		$('div_v').style.height = (window.innerHeight-15) + 'px';
+	if(gu) gu.resize();
 //	$('div_v').style.width = (window.innerWidth-50) + 'px';
 }
 
@@ -547,8 +546,14 @@ function toggleFullScreen() {			// Mio: document.querySelector('body').requestFu
 
 
 function bajarVisualizacion () {
-    const miDiv = document.getElementById('div_v');
-    miDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    //const miDiv = document.getElementById('div_v');
+    //miDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+	
+	window.scrollTo({
+		  top: document.body.scrollHeight,
+		  behavior: 'smooth' // Movimiento suave
+		});
+	
 };
 
 // Lo siguiente es porque cuando se recarga la página, ésta está abajo y no se ve el botón.
