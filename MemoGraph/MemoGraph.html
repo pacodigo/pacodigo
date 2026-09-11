@@ -21,10 +21,10 @@
 	color: brown;
 }
 .dygraph-axis-label-y {
-  color: #9400d3;
+  color: blue;
 }
 .dygraph-axis-label-y2 {
-  color: blue;
+  color: orange;
 }
 
 .button {
@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v8</title>
+  <title>MemoGraph v10</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -96,7 +96,7 @@
 			
 	</div>
 	
-	<div id='labdiv'></div><!--Etiquetas-->
+	<div id='labdiv' style="text-align: right; height: 20px;"></div><!--Etiquetas-->
 	<br><br>
 	
 	<div id='div_v' style="height:auto; width:100%; border: 1px solid white; margin-bottom: 15px;"></div>
@@ -182,23 +182,59 @@ function ShowGraph(graphType) {
 		rollPeriod: 2,				// antes: 0
 		//xlabel: 'Date',				// antes xlabel: 'Date',
 		//ylabel: graphType.y_labels[0],
+
 		colors: graphType.colors,
-		//labels: ['Date', ...graphType.y_labels],
+		labels: ['Date', ...graphType.y_labels],
 		labelsDiv: $('labdiv'),     // Esto es para mostrar los valores de x e y cundo pasas cursor encima gráfica
 		legend: 'always',  // "follow"
 		digitsAfterDecimal: 1,		// ates: 3
 		
 		axisLabelFontSize: 20,		// Mio antes 24
-		strokeWidth: 9,			// Mio antes 11
+		strokeWidth: 9,				// Mio antes 11
+		pixelsPerLabel: 80,			// Mio: Si ponemos 70 disminuye número de filas
+		//axisLabelWidth: 60,			// Mio: Anchura etiqueta de temperaturas
 		
+		
+		
+		// *** LO SIGUIENTE ES PARA QUE APAREZCA A LA DCHA. EN VEZ DE A LA IZDA. EN VALORES DE Y
+		// 1. Forzamos a que todas las series usen el eje 'y2' (el de la derecha)
+        series: graphType.y_labels.reduce((acc, label) => {
+            acc[label] = { axis: 'y2' };
+            return acc;
+        }, {}),
+        // 2. Configuramos los ejes
+        axes: {
+            y: {
+                drawAxis: false,          // Desactiva por completo el eje izquierdo
+                independentTicks: false   // Evita conflictos de escala con el eje izquierdo
+            },
+            y2: {
+                drawAxis: true,           // Asegura que el eje derecho esté visible
+                independentTicks: true    // Permite que calcule su propia escala según los datos
+            }
+        }
+
+		// **** FIN ***
+				
 	};
 
-    // add more config for graphs with 2 series
-    if (graphType.y_labels.length === 2) {
+    // ORIGINAL: add more config for graphs with 2 series
+    /*
+	if (graphType.y_labels.length === 2) {
         graph_config.y2label = graphType.y_labels[1];
         graph_config.series = {};
         graph_config.series[graphType.y_labels[1]] = {axis: 'y2'};
     }
+	*/
+
+    if (graphType.y_labels.length === 2) {
+        //graph_config.y2label = graphType.y_labels[0];
+        graph_config.series = {};
+        graph_config.series[graphType.y_labels[0]] = {axis: 'y2'};
+		
+		graph_config.axes.y.drawAxis = true;
+    }
+
 
 	gu = new Dygraph($("div_v"), datau, graph_config);
 }
