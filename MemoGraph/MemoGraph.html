@@ -21,7 +21,7 @@
 	color: brown;
 }
 .dygraph-axis-label-y {
-  color: green;
+  color: #9400d3;
 }
 .dygraph-axis-label-y2 {
   color: blue;
@@ -63,17 +63,15 @@
 		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
 		<input type="button" class="button" value="Full Screen" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
 		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="bajarVisualizacion();"-->
-		
-		
-		<hr>
-		<span id='info'>Info...</span>
+				
 		<br><br><hr>
 		
-		<div id ="idDivOpciones">
+		<div id ="idDivOpciones" style="text-align: left">
 			<label for="namePrefix">BLE device name prefix filter(s)</label>
 			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
 			<label for="namePrefix">Number of Samples</label>
 			<input type="text" id="LoadSamples" value="310" placeholder="All">
+			<br>
 			<input type="checkbox" id="setDevTime" checked>
 			<label for="setDevTime">Set device time</label>
 			<input type="checkbox" id="hideLoDate" checked>
@@ -86,8 +84,11 @@
 			<label for="show_temperature_and_humidity">Temperature + Humidity</label>
 			<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
 			<label for="show_battery_voltage">Battery Voltage</label>
-			<br><hr><br><br>
+			<br><hr><br>
 		</div>
+		
+		<span id='info' style="zoom: 1.5;color: brown;">Info...</span>
+		<br><br><hr>
 		
 		<!--div id='labdiv'></div--><!--Etiquetas-->
 		<br><br>
@@ -95,7 +96,7 @@
 			
 	</div>
 	
-	<div id='labdiv'></div>
+	<div id='labdiv'></div><!--Etiquetas-->
 	<br><br>
 	
 	<div id='div_v' style="height:auto; width:100%; border: 1px solid white; margin-bottom: 15px;"></div>
@@ -513,6 +514,18 @@ function bajarVisualizacion () {
     const miDiv = document.getElementById('div_v');
     miDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
 };
+
+// Lo siguiente es porque cuando se recarga la página, ésta está abajo y no se ve el botón.
+// 1. Desactiva el comportamiento del navegador de recordar la posición del scroll
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+// 2. Fuerza el scroll al inicio (0,0) al cargar la página
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
+
 
 
 </script>
