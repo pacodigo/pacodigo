@@ -44,15 +44,14 @@
 
 
 </style>
-  <title>MemoGraph v11</title>
+  <title>MemoGraph v12</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
   
   </head>
   
-  <!--body-->
-  <!--body bgcolor="#000000" text="#FFFFFF" style="height:1000px;"-->
+  <body>
   <!--body bgcolor="#000000" text="#FFFFFF"-->
 	
 	<!--h1>MemoGraph by Paco</h1-->
@@ -175,9 +174,14 @@ var gu;
 function ShowGraph(graphType) {
     if (!(graphType instanceof GraphType)) throw Error('ShowGraph argument is not instance of GraphType');
 
+
+	//const ventanaTiempoMs = 60 * 60 * 1000;	//treintaMinutosEnMs = 30 * 60 * 1000;
+	//const ahora = Date.now();
+
 	let graph_config = {
 		//title: 'Stored data from: ' + deviceName,
 		showRangeSelector: true,
+		//dateWindow: [ahora - ventanaTiempoMs, ahora],
 		showRoller: true,			// antes: true
 		rollPeriod: 5,				// antes: 2
 		//xlabel: 'Date',				// antes xlabel: 'Date',
@@ -212,8 +216,18 @@ function ShowGraph(graphType) {
                 drawAxis: true,           // Asegura que el eje derecho esté visible
                 independentTicks: true    // Permite que calcule su propia escala según los datos
             }
-        }
+        },
 		// **** FIN ***
+		
+		// Para detectar un click en el gráfico:
+		clickCallback: function(e, x, points) {
+			console.log("Hiciste clic en el gráfico");
+			console.log("Valor del eje X:", x);
+			console.log("Puntos más cercanos:", points);
+			// Aquí ejecutas la función que desees
+			miFuncionPersonalizada(x, points);
+		}
+		
 				
 	};
 
@@ -529,31 +543,30 @@ function disconnect() {
 
 
 function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
-	if (!document.fullscreenElement) 
+	if (!document.fullscreenElement){ 
 		document.documentElement.requestFullscreen();
+		}
 	else 
 		document.exitFullscreen();
 }
 
-	function conmutaVisualizacionDiv(divID){
-	    var x = document.getElementById(divID);
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
+function conmutaVisualizacionDiv(divID){
+	var x = document.getElementById(divID);
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
 	}
+}
 
 
 function bajarVisualizacion () {
     //const miDiv = document.getElementById('div_v');
     //miDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
-	
 	window.scrollTo({
 		  top: document.body.scrollHeight,
 		  behavior: 'smooth' // Movimiento suave
-		});
-	
+		});	
 };
 
 // Lo siguiente es porque cuando se recarga la página, ésta está abajo y no se ve el botón.
@@ -567,6 +580,18 @@ window.onload = function() {
 };
 
 
+
+function miFuncionPersonalizada(ejeX, puntos) {
+  //alert("Clic detectado en la posición X: " + ejeX);
+  toggleFullScreen();
+  // Usamos setTimeout para esperar un instante (50ms) a que el navegador termine de procesar el cambio a pantalla completa antes de hacer el scroll.
+  setTimeout(() => {
+	bajarVisualizacion();
+  }, 50);
+  
+  
+ 
+}
 
 
 </script>
