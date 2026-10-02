@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v12</title>
+  <title>MemoGraph v13</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -60,8 +60,8 @@
 	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
 	<div id="divGeneral" style="border: 2px solid white; text-align: center">
 		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
-		<input type="button" class="button" value="Full Screen" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
-		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="bajarVisualizacion();"-->
+		<input type="button" class="button" value="FullSC" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
+		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="conectarDispositivoRecordado();"-->
 				
 		<br><br><hr>
 		
@@ -519,7 +519,7 @@ function disconnect() {
 					//conmutaVisualizacionDiv("divGeneral");
 					bajarVisualizacion();
 					
-					Clog("Hecho.");
+					Clog("Hecho: " + deviceConnected );
 					
 					ShowConnect();
 				})
@@ -574,9 +574,11 @@ function bajarVisualizacion () {
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 }
-// 2. Fuerza el scroll al inicio (0,0) al cargar la página
+
 window.onload = function() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);	// 2. Fuerza el scroll al inicio (0,0) al cargar la página
+	
+	conectarDispositivoRecordado();
 };
 
 
@@ -592,6 +594,115 @@ function miFuncionPersonalizada(ejeX, puntos) {
   
  
 }
+
+/*
+// Ejecutado al hacer clic en tu botón (o al iniciar la web)
+async function conectarDispositivoRecordado() {
+  try {
+    // 1. Obtenemos la lista de dispositivos que el usuario YA autorizó previamente
+    const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+    
+    if (dispositivosPermitidos.length > 0) {
+      // Tomamos el primer dispositivo recordado
+      const miDispositivo = dispositivosPermitidos[0];
+      Clog("Dispositivo encontrado en memoria: " + miDispositivo.name);
+      
+      // 2. Nos conectamos DIRECTAMENTE sin abrir ninguna ventana emergente
+      const servidorGATT = await miDispositivo.gatt.connect();
+      Clog("¡Conectado directamente!");
+      
+    } else {
+      // Si es la primera vez, no queda otra opción que pedir permiso
+	  Clog("Si es la primera vez, no queda otra opción que pedir permiso");
+      connect();
+    }
+  } catch (error) {
+    console.error("Error en la auto-conexión:", error);
+	Clog("Error en la autoconexión");
+  }
+}
+
+*/
+
+
+/*
+NOTA: para la siguiente función:
+navigator.bluetooth.getDevices() es una función experimental y todavía está oculta detrás de una bandera (flag) de desarrollo en Chrome para Android.
+>>"Use the new permissions backend for Web Bluetooth" to Enable
+*/
+async function conectarDispositivoRecordado() {
+  try {
+    if (typeof navigator.bluetooth.getDevices === 'function') {
+      const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+      
+      if (dispositivosPermitidos.length > 0) {
+        const miDispositivo = dispositivosPermitidos[0];
+        Clog(miDispositivo.name + ": Encontrado. Escuchando...");
+
+        // 1. Si ya está conectado por algún motivo, no hacemos nada
+        if (miDispositivo.gatt.connected) {
+          Clog("Ya estaba conectado.");
+          return;
+        }
+
+        // 2. EVITAR EL ERROR: Escuchamos los anuncios del dispositivo para despertarlo en el navegador
+        //Clog("Escuchando señales del dispositivo...");
+        
+        // Creamos una promesa que se resolverá en cuanto el móvil capte al dispositivo
+        const esperarDispositivoEnRango = new Promise((resolve) => {
+          
+          // Esta función se ejecuta cuando el móvil recibe una señal de TU dispositivo
+          const alDetectarSenal = (evento) => {
+            Clog("¡Dispositivo en rango detectado por el escáner!");
+            // Dejamos de escuchar para no gastar batería
+            miDispositivo.removeEventListener('advertisementreceived', alDetectarSenal);
+            resolve();
+          };
+          
+          miDispositivo.addEventListener('advertisementreceived', alDetectarSenal);
+        });
+
+        // Activamos el escaneo nativo sobre este dispositivo específico
+        await miDispositivo.watchAdvertisements();
+
+        // 3. Esperamos a que aparezca físicamente en rango
+        await esperarDispositivoEnRango;
+
+        // 4. Ahora que sabemos con certeza que está en rango, nos conectamos de forma segura
+		Clog("sabemos con certeza que está en rango,...");
+		
+		deviceName = miDispositivo.name;
+		deviceCache = miDispositivo;
+		deviceConnected = miDispositivo.name;
+		deviceCache.addEventListener('gattserverdisconnected', handleDisconnection);
+		
+		connectDeviceAndCacheCharacteristic(miDispositivo);
+		/*
+        Clog("Estableciendo conexión GATT...");
+        await miDispositivo.gatt.connect();
+        Clog("¡Conectado automáticamente y con éxito!");
+		*/
+        return; 
+      }
+    }
+    
+    // Si no está soportado o la lista está vacía, abrimos el selector de siempre
+    Clog("No se puede autoconectar.");
+    //connect();
+
+  } catch (error) {
+    console.error("Error detallado en la auto-conexión:", error);
+	Clog("Error en la autoconexión.");
+    // Fallback: Si la auto-conexión falla por cualquier cosa, abre el selector manual para no bloquear al usuario
+    //connect();
+  }
+}
+
+
+
+
+
+
 
 
 </script>
