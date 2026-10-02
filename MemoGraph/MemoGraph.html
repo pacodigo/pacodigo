@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v13</title>
+  <title>MG v14</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -595,34 +595,6 @@ function miFuncionPersonalizada(ejeX, puntos) {
  
 }
 
-/*
-// Ejecutado al hacer clic en tu botón (o al iniciar la web)
-async function conectarDispositivoRecordado() {
-  try {
-    // 1. Obtenemos la lista de dispositivos que el usuario YA autorizó previamente
-    const dispositivosPermitidos = await navigator.bluetooth.getDevices();
-    
-    if (dispositivosPermitidos.length > 0) {
-      // Tomamos el primer dispositivo recordado
-      const miDispositivo = dispositivosPermitidos[0];
-      Clog("Dispositivo encontrado en memoria: " + miDispositivo.name);
-      
-      // 2. Nos conectamos DIRECTAMENTE sin abrir ninguna ventana emergente
-      const servidorGATT = await miDispositivo.gatt.connect();
-      Clog("¡Conectado directamente!");
-      
-    } else {
-      // Si es la primera vez, no queda otra opción que pedir permiso
-	  Clog("Si es la primera vez, no queda otra opción que pedir permiso");
-      connect();
-    }
-  } catch (error) {
-    console.error("Error en la auto-conexión:", error);
-	Clog("Error en la autoconexión");
-  }
-}
-
-*/
 
 
 /*
@@ -645,16 +617,18 @@ async function conectarDispositivoRecordado() {
           return;
         }
 
-        // 2. EVITAR EL ERROR: Escuchamos los anuncios del dispositivo para despertarlo en el navegador
-        //Clog("Escuchando señales del dispositivo...");
+        const controladorAbortar = new AbortController();				 // 1. CREAMOS EL CONTROLADOR PARA PODER APAGAR EL ESCANEO DESPUÉS
         
         // Creamos una promesa que se resolverá en cuanto el móvil capte al dispositivo
         const esperarDispositivoEnRango = new Promise((resolve) => {
-          
-          // Esta función se ejecuta cuando el móvil recibe una señal de TU dispositivo
-          const alDetectarSenal = (evento) => {
+          const alDetectarSenal = (evento) => {							// Esta función se ejecuta cuando el móvil recibe una señal de TU dispositivo
             Clog("¡Dispositivo en rango detectado por el escáner!");
-            // Dejamos de escuchar para no gastar batería
+            
+			// 2. APAGAMOS EL ESCANEO: Llamamos a abort() para desactivar watchAdvertisements
+            controladorAbortar.abort(); 
+            Clog("Escaneo nativo desactivado para ahorrar batería.");
+			
+			// Dejamos de escuchar para no gastar batería
             miDispositivo.removeEventListener('advertisementreceived', alDetectarSenal);
             resolve();
           };
@@ -662,11 +636,12 @@ async function conectarDispositivoRecordado() {
           miDispositivo.addEventListener('advertisementreceived', alDetectarSenal);
         });
 
-        // Activamos el escaneo nativo sobre este dispositivo específico
-        await miDispositivo.watchAdvertisements();
+        // 3. PASAMOS LA SEÑAL al activar el escaneo
+        await miDispositivo.watchAdvertisements({ signal: controladorAbortar.signal });
 
-        // 3. Esperamos a que aparezca físicamente en rango
-        await esperarDispositivoEnRango;
+        //await miDispositivo.watchAdvertisements();	  	// Activamos el escaneo nativo sobre este dispositivo específico
+   
+        await esperarDispositivoEnRango;				// 3. Esperamos a que aparezca físicamente en rango
 
         // 4. Ahora que sabemos con certeza que está en rango, nos conectamos de forma segura
 		Clog("sabemos con certeza que está en rango,...");
@@ -699,8 +674,61 @@ async function conectarDispositivoRecordado() {
 }
 
 
+/*
+async function conectarDispositivoRecordado() {
+  try {
+    if (typeof navigator.bluetooth.getDevices === 'function') {
+      const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+      
+      if (dispositivosPermitidos.length > 0) {
+        const miDispositivo = dispositivosPermitidos[0];
+        console.log("Dispositivo recordado encontrado:", miDispositivo.name);
 
+        if (miDispositivo.gatt.connected) {
+          console.log("Ya estaba conectado.");
+          return;
+        }
 
+        // 1. CREAMOS EL CONTROLADOR PARA PODER APAGAR EL ESCANEO DESPUÉS
+        const controladorAbortar = new AbortController();
+
+        console.log("Escuchando señales del dispositivo...");
+        
+        const esperarDispositivoEnRango = new Promise((resolve) => {
+          const alDetectarSenal = (evento) => {
+            console.log("¡Dispositivo en rango detectado!");
+            
+            // 2. APAGAMOS EL ESCANEO: Llamamos a abort() para desactivar watchAdvertisements
+            controladorAbortar.abort(); 
+            console.log("Escaneo nativo desactivado para ahorrar batería.");
+
+            miDispositivo.removeEventListener('advertisementreceived', alDetectarSenal);
+            resolve();
+          };
+          
+          miDispositivo.addEventListener('advertisementreceived', alDetectarSenal);
+        });
+
+        // 3. PASAMOS LA SEÑAL al activar el escaneo
+        await miDispositivo.watchAdvertisements({ signal: controladorAbortar.signal });
+
+        await esperarDispositivoEnRango;
+
+        console.log("Estableciendo conexión GATT...");
+        await miDispositivo.gatt.connect();
+        console.log("¡Conectado automáticamente y con éxito!");
+        return; 
+      }
+    }
+    
+    pedirPermisoNuevoDispositivo();
+
+  } catch (error) {
+    console.error("Error detallado en la auto-conexión:", error);
+    pedirPermisoNuevoDispositivo();
+  }
+}
+*/
 
 
 
