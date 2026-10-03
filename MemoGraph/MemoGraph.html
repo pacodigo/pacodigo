@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v20</title>
+  <title>MemoGraph v21</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -72,16 +72,18 @@
 		<br><br><hr>
 		
 		<div id ="idDivOpciones" style="text-align: left">
-			<label for="namePrefix">BLE device name prefix filter(s)</label>
+			<label for="namePrefix">BLE device name prefix filter(s):</label>
 			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
-			<br>
-			<label for="namePrefix">Number of Samples</label>
+			<br><br>
+			<label for="namePrefix">Number of Samples:</label>
 			<input type="text" id="LoadSamples" value="310" placeholder="All">
-			<br>
+			<div style="display: none;">
+			<br><br>
 			<input type="checkbox" id="setDevTime" checked>
 			<label for="setDevTime">Set device time</label>
 			<input type="checkbox" id="hideLoDate" checked>
 			<label for="hideLoDate">Hide old dates</label>
+			</div>
 			<br><br>
 			<span>Display:</span>
 			<input type="radio" id="show_temperature" name="displayed_graph" value="temperature" checked>
@@ -104,7 +106,7 @@
 		
 		
 		
-		<!--div id='labdiv'></div--><!--Etiquetas-->
+		<!--div id='labdiv'--></div><!--Etiquetas-->
 		<br><br>
 		
 			
@@ -682,7 +684,7 @@ async function enumerarDispositivosRecordados() {
 		  if (rotarBtdevices+1 > dispositivosPermitidos.length)
 			rotarBtdevices=0;
 		  
-		  Clog (dispositivosPermitidos[rotarBtdevices].name + ".    (" + dispositivosPermitidos.length+")");
+		  Clog (dispositivosPermitidos[rotarBtdevices].name + " (" + dispositivosPermitidos.length+")");
 		  $("butReconectar").value = dispositivosPermitidos[rotarBtdevices].name; 
 	   }
 	   else {										// No hay dispositivos recordados
@@ -716,7 +718,7 @@ async function borrarTodosLosDispositivosPermitidos() {
         for (const dispositivo of dispositivosPermitidos) {
           if (typeof dispositivo.forget === 'function') {
             await dispositivo.forget();
-            console.log(`Permiso revocado para: ${dispositivo.name}`);
+            console.log("Permiso revocado para: ${dispositivo.name}");
           }
         }
         alert("Todos los dispositivos han sido eliminados de la memoria.");
