@@ -82,14 +82,14 @@
 			<label for="setDevTime">Set device time</label>
 			<input type="checkbox" id="hideLoDate" checked>
 			<label for="hideLoDate">Hide old dates</label>
-			<br>
+			<br><br>
 			<span>Display:</span>
 			<input type="radio" id="show_temperature" name="displayed_graph" value="temperature" checked>
-			<label for="show_temperature">Temperature</label>
+			<label for="show_temperature">Temp</label>
 			<input type="radio" id="show_temperature_and_humidity" name="displayed_graph" value="temperature_and_humidity">
-			<label for="show_temperature_and_humidity">Temperature + Humidity</label>
+			<label for="show_temperature_and_humidity">Temp + Hum</label>
 			<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
-			<label for="show_battery_voltage">Battery Voltage</label>
+			<label for="show_battery_voltage">Batt</label>
 			<br><hr><br>
 		</div>
 		
@@ -682,7 +682,7 @@ async function enumerarDispositivosRecordados() {
 		  if (rotarBtdevices+1 > dispositivosPermitidos.length)
 			rotarBtdevices=0;
 		  
-		  Clog (dispositivosPermitidos[rotarBtdevices].name + ".    (De: " + dispositivosPermitidos.length+")");
+		  Clog (dispositivosPermitidos[rotarBtdevices].name + ".    (" + dispositivosPermitidos.length+")");
 		  $("butReconectar").value = dispositivosPermitidos[rotarBtdevices].name; 
 	   }
 	   else {										// No hay dispositivos recordados
