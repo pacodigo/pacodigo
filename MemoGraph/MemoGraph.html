@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v21</title>
+  <title>MemoGraph v22</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -72,12 +72,14 @@
 		<br><br><hr>
 		
 		<div id ="idDivOpciones" style="text-align: left">
+
+			<label for="namePrefix">Num. samples:</label>
+			<input type="text" id="LoadSamples" value="310" placeholder="All">
+			
+			<div style="display: none;">
+			<br><br>
 			<label for="namePrefix">BLE device name prefix filter(s):</label>
 			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
-			<br><br>
-			<label for="namePrefix">Number of Samples:</label>
-			<input type="text" id="LoadSamples" value="310" placeholder="All">
-			<div style="display: none;">
 			<br><br>
 			<input type="checkbox" id="setDevTime" checked>
 			<label for="setDevTime">Set device time</label>
@@ -622,7 +624,7 @@ async function conectarDispositivoRecordado() {
       
       if (dispositivosPermitidos.length > 0) {
         const miDispositivo = dispositivosPermitidos[rotarBtdevices];
-        Clog(miDispositivo.name + ": Encontrado. Escuchando...");
+        Clog(miDispositivo.name + ": Escuchando...");
   
         if (miDispositivo.gatt.connected) {								 // 1. Si ya está conectado por algún motivo, no hacemos nada
           Clog("Ya estaba conectado.");
