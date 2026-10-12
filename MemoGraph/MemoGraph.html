@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v22</title>
+  <title>MemoGraph v23</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -215,10 +215,16 @@ function ShowGraph(graphType) {
 		axisLabelFontSize: 20,		// Mio antes 24
 		strokeWidth: 9,				// Mio antes 11
 		pixelsPerLabel: 80,			// Mio: Si ponemos 70 disminuye número de filas
-		//axisLabelWidth: 60,			// Mio: Anchura etiqueta de temperaturas
+		//axisLabelWidth: 60,		// Mio: Anchura etiqueta de temperaturas  
+		//axisLineWidth: 3.0, 		// Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+        //rightGap: 0,				// 1. ELIMINA EL ESPACIO DE CORTESÍA INTERNO DE LA DERECHA
+		  
+        underlayCallback: function(canvas, area, g) {		// Para colorear el fondo
+            canvas.fillStyle = '#f4f4f4'; // Pon aquí el gris clarito que prefieras
+            canvas.fillRect(area.x, area.y, area.w, area.h);                 // area.x, area.y, area.w, area.h contienen las coordenadas exactas del rectángulo interno delimitado por los ejes X e Y.
+        },
 		
-		
-		
+			
 		// *** LO SIGUIENTE ES PARA QUE APAREZCA A LA DCHA. EN VEZ DE A LA IZDA. EN VALORES DE Y
 		// 1. Forzamos a que todas las series usen el eje 'y2' (el de la derecha)
         series: graphType.y_labels.reduce((acc, label) => {
@@ -227,14 +233,20 @@ function ShowGraph(graphType) {
         }, {}),
         // 2. Configuramos los ejes
         axes: {
-            y: {
+            y: {						  // Eje Y izquierdo 
                 drawAxis: false,          // Desactiva por completo el eje izquierdo
                 independentTicks: false   // Evita conflictos de escala con el eje izquierdo
+				//axisLineWidth: 3.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
             },
-            y2: {
+            y2: {						  // Eje Y2 derecho
                 drawAxis: true,           // Asegura que el eje derecho esté visible
-                independentTicks: true    // Permite que calcule su propia escala según los datos
-            }
+                independentTicks: true,    // Permite que calcule su propia escala según los datos
+				axisLineWidth: 2.5, 
+				 //  axisLabelWidth: 40     // 2. CONTROLA EL ANCHO DEL EJE DERECHO (Achícalo si tus números son cortos) El valor por defecto es 50. Pruébalo en 40 o 35 para pegarlo más al borde.
+            },
+			x: {
+				axisLineWidth: 2.5 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+			}
         },
 		// **** FIN ***
 		
