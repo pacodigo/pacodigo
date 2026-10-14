@@ -104,7 +104,7 @@
 		<input type="button" class="button" id="butReconectar" value="ReCon" class="ok" onclick="conectarDispositivoRecordado()" style="background-color: orange; width: 30%; height: 100px;">
 		<input type="button" class="button" value="Enum" style="background-color: purple; width: 30%; height: 100px;" onclick="enumerarDispositivosRecordados()">
 		<input type="button" class="button" value="X" style="background-color: red; width: 10%; height: 100px;" onclick="borrarTodosLosDispositivosPermitidos();">
-		<input type="button" class="button" value="Test" style="background-color: brown; width: 10%; height: 100px;" onclick="test();">
+		<!--input type="button" class="button" value="Test" style="background-color: brown; width: 10%; height: 100px;" onclick="test();"-->
 		<br><br><hr>
 		
 		
@@ -311,10 +311,10 @@ function ShowGraph(graphType) {
 			
 			// 3. Etiqueta de texto:
 			canvas.fillStyle = "brown";                  // Color del texto
-            canvas.font = "bold 45px sans-serif";      // Tamaño un poco mayor para la esquina
+            canvas.font = "bold 35px sans-serif";      // Tamaño un poco mayor para la esquina (45)
             canvas.textAlign = "left";                 // Alineado a la izquierda 👈
             canvas.textBaseline = "top";               // Posición vertical desde la parte superior 👇
-            var textoEtiqueta = Number(temperaturaActual).toFixed(1) + "º, " + humedadActual + "%";	
+            var textoEtiqueta = Number(temperaturaActual).toFixed(1) + "º  " + humedadActual + "%";	
             canvas.fillText(textoEtiqueta, area.x + 15, area.y + 15);			// Separamos el texto 15 píxeles del borde izquierdo (area.x + 15)  // Y 15 píxeles hacia abajo desde el techo de la gráfica (area.y + 15)	
         }
 
@@ -1004,6 +1004,12 @@ function obtenerLecturaActual(device) {
     });
 }
 
+
+
+// 1. Creamos la condición para escuchar el cambio de orientación
+var mediaQuery = window.matchMedia("(orientation: landscape)");
+// 2. Escuchamos el cambio de orientación (funciona al pasar a horizontal o vertical)
+mediaQuery.addEventListener("change", function(){setTimeout(bajarVisualizacion,200)});
 
 
 
