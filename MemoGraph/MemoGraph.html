@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v25</title>
+  <title>MemoGraph v26</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -66,7 +66,7 @@
 		
 		
 		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
-		<input type="button" class="button" value="FS" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
+		<input type="button" class="button" value="Full Scr" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
 		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="bajarVisualizacion();"-->
 				
 		<br><br><hr>
@@ -126,9 +126,14 @@
 <script type="text/javascript">
 
 
+// Búfer de datos de entrada
+var datau = [];			// Son los datos de memo[], quitando los datos antiguos si se ha pedido. Son los datos que se pasan a la gráfica
+var memo = [];			// Contiene los datos recibidos en este formato: memo.push([tc,tm,hm,vb]);
+
 var temperaturaActual = 0;					// Registra la temperatura actual del BT
 var temperaturaTendencia = 0;				// Acutal-Anterior. Si >0 Sube. Si <0 Baja.
 var humedadActual = 0;
+
 
 
 var $ = function(id) {
@@ -172,9 +177,7 @@ $("butConnect").onclick =  function() {
 var localOffset = (new Date()).getTimezoneOffset() * 60000;
 var show_on = 0;
 
-// Búfer de datos de entrada
-var datau = [];
-var memo = [];
+
 
 class GraphType {
     static TEMPERATURE = new GraphType('temperature', ['green'], ['Temp(\u00B0C)']);  // \u00B0 is the degree symbol
@@ -198,7 +201,6 @@ class GraphType {
 var gu;
 function ShowGraph(graphType) {
     if (!(graphType instanceof GraphType)) throw Error('ShowGraph argument is not instance of GraphType');
-
 
 	//const ventanaTiempoMs = 60 * 60 * 1000;	//treintaMinutosEnMs = 30 * 60 * 1000;
 	//const ahora = Date.now();
@@ -294,10 +296,13 @@ function ShowGraph(graphType) {
             // 2. Pintamos líneas
 			var top = g.toDomYCoord(temperaturaActual,1);
 			if (temperaturaTendencia>0){
-				canvas.fillStyle = "rgba(255, 120, 0, 0.7)"; 
-			}
-			else{
-				canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 
+				canvas.fillStyle = "rgba(255, 120, 0, 0.7)"; 		// Naranja
+				}
+			else if (temperaturaTendencia<0){
+				canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 		// Azúl
+				}
+			else {
+				canvas.fillStyle = "rgba(156, 156, 156, 0.9)"; 
 			}
 			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
 			
@@ -391,6 +396,17 @@ function ResponsePkt(value) {
 	Clog(s);
 }
 
+/*
+memo[0] es la última caputra de temperatura. Osea que el dispositivo primero envía la última captura y la final la mas vieja
+[
+    1792144808,
+    17.11,
+    55.14,
+    2729
+]
+
+*/
+
 function show_graph() {
 	if (memo.length > 1) {
 		let hideldate = $('hideLoDate').checked;
@@ -398,10 +414,10 @@ function show_graph() {
         let graphType = GraphType.getSelectedType();
 		datau = [];
 
-		memo.reduceRight(function (a, b) {
+		memo.reduceRight(function (a, b) {		// La función recorre el arreglo memo desde el último elemento hasta el primero (al revés) usando reduceRight. Cada registro b contiene un arreglo con cuatro posiciones: b[0]: Marca de tiempo (timestamp en segundos). b[1]: Temperatura. b[2]: Humedad. b[3]: Voltaje de la batería.
 			// in this context variable b contains row of data from sensor
 			// b[0] = timestamp; b[1] = temperature; b[2] = humidity; b[3] = battery voltage
-			if (!hideldate || (b[0] > 1609459200 && b[0] < 2255486400)) {
+			if (!hideldate || (b[0] > 1609459200 && b[0] < 2255486400)) {     // Si el checkbox de ocultar fechas (hideldate) no está marcado, el dato pasa directamente. Si sí está marcado, el registro solo se procesa si su marca de tiempo está dentro del rango Unix entre el 1 de enero de 2021 y el 15 de mayo de 2041.
 				let data = []
 				switch (graphType) {
                     case GraphType.TEMPERATURE:
@@ -416,7 +432,7 @@ function show_graph() {
 					default:
 						throw Error('Invalid GraphType instance ' + graphType);
 				}
-				datau.push([new Date(b[0] * 1000.0 + localOffset), ...data]);
+				datau.push([new Date(b[0] * 1000.0 + localOffset), ...data]);		// Cuidado: Intercambia orden. el localOffset es x lo de la hora UTC
 			}
 			return a + 1;
 		}, 1);
@@ -502,7 +518,7 @@ function connectDeviceAndCacheCharacteristic(device) {
   	return Promise.resolve(null);
   }
   Clog('Connecting to GATT server...');
-  return device.gatt.connect().
+  return device.gatt.connect().									// Device >> Server >> Service >> Characteristic 
 	then(server => {
 		Clog('GATT server connected, getting service...');
 		return server.getPrimaryService(0x1F10);
@@ -526,13 +542,13 @@ function connectDeviceAndCacheCharacteristic(device) {
 					let blkid = value.getUint8(0);
 					
 					if(blkid == 0x35) {						// Caso -B-: Recepción historial temperaturas. ---------------------------------------------
-						ResponsePkt(value);
-						if(len >= 13) {
-							let cnt = value.getUint16(1, true);
-							let tc = value.getUint32(3, true);				// Hora
-							let tm = value.getInt16(7, true) / 100.0;		// Temperatura
-							let hm = value.getUint16(9, true) / 100.0;		// Humedad
-							let vb = value.getUint16(11, true);				// Batería
+						ResponsePkt(value);									// Imprime los valores en el Log
+						if(len >= 13) {										// msg:   35, 16, 01, 02, A7, CE, 6A, 05, 0A, 82, 12, 73, 09   (en este caso len=13)
+							let cnt = value.getUint16(1, true);				// 16, 01: > 0116Hex > En hexadecimal. Contador del número de dato enviado. Último=36Hex = 
+							let tc = value.getUint32(3, true);				// Hora > 02, A7, CE, 6A (pone 32 asique 8 bytes)
+							let tm = value.getInt16(7, true) / 100.0;		// Temperatura > 05, 0A
+							let hm = value.getUint16(9, true) / 100.0;		// Humedad > 82, 12
+							let vb = value.getUint16(11, true);				// Batería > 73, 09
 							/* Slow speed on some devices!
 							let dt = new Date(tc*1000);
 							console.log('Memo '+((dt.toISOString().slice(0, -1)).replace('T',' ')).replace('.000','')+' - Vbat: '+vb+' mV , Temp: '+tm+'°C, Humi: '+hm+'%, Count: '+cnt);
@@ -540,29 +556,29 @@ function connectDeviceAndCacheCharacteristic(device) {
 							log('Read Count: '+cnt);
 							memo.push([tc,tm,hm,vb]);
 							show_on = 1;
-						} else if(len >= 3) {
-							console.log('Read count: '+ memo.length);
-							console.log('Read time: ' + ((Date.now() - start_time)/1000).toFixed(3) + ' sec');
+						} else if(len >= 3) {								// msg:  35, 00, 00			Creo que es el fin del envio de datos.
+							console.log('Read count: '+ memo.length);		// Read count: 310
+							console.log('Read time: ' + ((Date.now() - start_time)/1000).toFixed(3) + ' sec');		// Read time: 0.315 sec
 							let time = Date.now()/1000;
 							time -= (new Date()).getTimezoneOffset() * 60;
-							blk = new Uint8Array(5);
-							blk[0] = 0x23;
+							blk = new Uint8Array(5);						// Construimos cadena con datos a enviar 
+							blk[0] = 0x23;									// Comando de establecer hora: 0x23
 							blk[1] = time & 0xff;
 							blk[2] = (time >> 8) & 0xff;
 							blk[3] = (time >> 16) & 0xff;
 							blk[4] = (time >> 24) & 0xff;
-							console.log("Send cmd Set DevTime ("+dump(blk, blk.length)+")...");
+							console.log("Send cmd Set DevTime ("+dump(blk, blk.length)+")...");		// Send cmd Set DevTime (236EECCF6A)...
 							characteristicVTH.writeValue(blk).then(_ => {
-								console.log('Send new DevTime ok');
+								console.log('Send new DevTime ok');									// Send new DevTime ok
 							});
-						} else if(len == 2) {
+						} else if(len == 2) {								// Esto no se lo que es.
 							 memogetcont = value.getUint16(1, true);
 						}
 					} else if(blkid == 0x23 && len >= 4) {		// Caso -C-: El dispositivo devuelve su hora. ---------------------------------------------
 						let time = value.getUint32(1,true);
-						console.log('Device Time: 0x' + hex(time,8));
+						console.log('Device Time: 0x' + hex(time,8));		// Device Time: 0x6ACFEC6E
 						let dt = new Date(time*1000);
-						console.log('Device Date: '+(dt.toISOString().slice(0, -1)).replace('T',' '));
+						console.log('Device Date: '+(dt.toISOString().slice(0, -1)).replace('T',' '));		// Device Date: 2026-10-14 20:56:14.000
 						
 						// MODIFICACIÓN: En lugar de desconectar directo, pedimos la lectura actual
 						Clog('Sincronización de hora lista. Solicitando temperatura actual...');
@@ -570,24 +586,23 @@ function connectDeviceAndCacheCharacteristic(device) {
 							Clog('Error al solicitar lectura actual: ' + error);
 							disconnect();
 						});
-					} else if(blkid == 0x33 && len >= 7) {		// NUEVO CASO: Captura y muestra de datos en tiempo real
+					} else if(blkid == 0x33 && len >= 7) {		// NUEVO CASO -D-: Captura y muestra de datos en tiempo real. ---------------------------------------------
 						let tm = value.getInt16(3, true) / 100.0;
 						let hm = value.getUint16(5, true) / 100.0;
 						let vb = value.getUint16(7, true);
 						
-						console.log(`🌡️ Temperatura Actual: ${tm.toFixed(1)} °C`);
-						console.log(`💧 Humedad Actual: ${hm.toFixed(0)} %`);
-						console.log(`🔋 Batería: ${vb} mV`);
-												
+						console.log(`Temperatura Actual: ${tm.toFixed(1)} °C`);
+						console.log(`Humedad Actual: ${hm.toFixed(0)} %`);
+						console.log(`Batería: ${vb} mV`);						
 						temperaturaActual = tm.toFixed(2);
-						temperaturaTendencia = temperaturaActual - memo[memo.length-2][1];
+						//temperaturaTendencia = temperaturaActual - memo[memo.length-2][1];
+						temperaturaTendencia = (temperaturaActual - memo[1][1]).toFixed(2);	// memo[0][1], es el registro mas reciente, el [1][1] el 5 minutos anterior.
 						humedadActual =  hm.toFixed(0);
-						
-						//Clog('Lectura guardada con éxito. Procediendo a desconectar...');
 						Clog ("Temp: " + temperaturaActual + "ºC");
+						
 						disconnect();							// >>> Desconexión final trasladada aquí
 					
-					} else if(blkid == 0x55){ 		// CASO -A- Configuración del dispositivo. ---------------------------------------------
+					} else if(blkid == 0x55){ 		// CASO -A- Recepción Configuración del dispositivo. ---------------------------------------------
 						if(len >= 12) {
 							memo = new Array();
 							datau = new Array();
@@ -618,24 +633,15 @@ function connectDeviceAndCacheCharacteristic(device) {
 			Clog('Get device config...');
 			setTimeout(function() {
 				console.log('Send command "get config"...');
-				characteristicVTH.writeValue(new Uint8Array([0x55])).catch(error => {log(error); disconnect();})
+				characteristicVTH.writeValue(new Uint8Array([0x55])).catch(error => {
+					log(error); 
+					disconnect();
+					})
 			}, 1500);
 		  	return Promise.resolve(null);
 		});
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
