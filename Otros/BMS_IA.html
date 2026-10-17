@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Batería JBD Oficial</title>
+    <style>
+        body { font-family: system-ui, sans-serif; text-align: center; background: #f0f2f5; padding: 40px; color: #333; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block; min-width: 280px; }
+        button { background: #007bff; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        .soc { font-size: 64px; font-weight: bold; margin: 20px 0; color: #28a745; }
+        .info { font-size: 18px; color: #666; margin-top: 10px; }
+        #status { font-style: italic; color: #888; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Mi Batería MasterBatery</h2>
+    <p id="status">Asegúrate de cerrar la app de MasterBatery primero.</p>
+    <button id="btn-conectar">Leer % de Capacidad</button>
+    
+    <div id="datos" style="display:none;">
+        <div class="soc"><span id="val-soc">--</span>%</div>
+        <div class="info">Voltaje Total: <strong id="val-volt">--</strong> V</div>
+    </div>
+</div>
+
+<script>
+// IDs estándar globales de la electrónica JBD / Xiaoxiang
+const JBD_SERVICE_UUID = 0xff00;
+const JBD_CHAR_UUID    = 0xff01;
+
+document.getElementById('btn-conectar').addEventListener('click', async () => {
+    const labelStatus = document.getElementById('status');
+    const divDatos = document.getElementById('datos');
+    let device = null;
+    
+    try {
+        labelStatus.textContent = "Buscando batería...";
+        
+        // 1. Escaneo del hardware
+        device = await navigator.bluetooth.requestDevice({
+            filters: [{ services: [JBD_SERVICE_UUID] }]
+        });
+
+        labelStatus.textContent = "Conectando al chip JBD...";
+        const server = await device.gatt.connect();
+        const service = await server.getPrimaryService(JBD_SERVICE_UUID);
+        const characteristic = await service.getCharacteristic(JBD_CHAR_UUID);
+        
+        labelStatus.textContent = "Enviando comando de lectura...";
+        
+        // Trama oficial JBD para solicitar "Información Básica" (Comando 0x03)
+        // Estructura: [Inicio (0xDD), Leer (0xA5), Reg (0x03), Longitud (0x00), Checksum, Fin (0x77)]
+        const comandoLectura = new Uint8Array([0xDD, 0xA5, 0x03, 0x00, 0xFF, 0xFD, 0x77]);
+        
+        // Enviamos la petición y esperamos los datos que escupe el BMS
+        await characteristic.writeValue(comandoLectura);
+        labelStatus.textContent = "Recibiendo capacidad...";
+        
+        const value = await characteristic.readValue();
+        
+        // Decodificación de los bytes según la estructura oficial V4 de JBD
+        const totalVoltRaw = (value.getUint8(4) << 8) | value.getUint8(5);
+        const totalVoltage = (totalVoltRaw / 100).toFixed(2);
+        
+        // El SoC % real viene ubicado en la posición 23 del array de bytes de Jiabaida
+        const soc = value.getUint8(23); 
+
+        // Pintamos el resultado
+        document.getElementById('val-soc').textContent = soc;
+        document.getElementById('val-volt').textContent = totalVoltage;
+        divDatos.style.display = "block";
+        
+        labelStatus.textContent = "Cerrando sesión de forma segura... 🔒";
+
+        // Desconexión limpia inmediata para no dejar el canal Bluetooth ocupado
+        if (device && device.gatt.connected) {
+            await device.gatt.disconnect();
+            labelStatus.textContent = "¡Completado! Datos leídos y Bluetooth liberado.";
+        }
+        
+    } catch (error) {
+        console.error(error);
+        labelStatus.textContent = "Error de comunicación o vinculación cancelada.";
+        if (device && device.gatt.connected) {
+            device.gatt.disconnect();
+        }
+    }
+});
+</script>
+
+</body>
+</html>
