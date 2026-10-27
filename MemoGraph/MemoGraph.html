@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v26</title>
+  <title>MemoGraph v27</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -248,7 +248,11 @@ function ShowGraph(graphType) {
 				 //  axisLabelWidth: 40     // 2. CONTROLA EL ANCHO DEL EJE DERECHO (Achícalo si tus números son cortos) El valor por defecto es 50. Pruébalo en 40 o 35 para pegarlo más al borde.
             },
 			x: {
-				axisLineWidth: 2.5 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+				axisLineWidth: 2.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+				axisLabelFormatter : function(d){ 
+					var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
+					return hora + "h";
+					}		
 			}
         },
 		// **** FIN ***
