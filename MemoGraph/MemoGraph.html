@@ -250,9 +250,14 @@ function ShowGraph(graphType) {
 			x: {
 				axisLineWidth: 2.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
 				axisLabelFormatter : function(d){ 
-					var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
-					return hora + "h";
-					}		
+					if (d.getMinutes=0){
+						var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
+						return hora + "h";
+					}
+					else {
+						return d;
+					}
+				}		
 			}
         },
 		// **** FIN ***
