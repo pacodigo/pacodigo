@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dygraph.min.css"-->
+<style type="text/css">
+/**
+ * Default styles for the dygraphs charting library.
+ */
+
+
+.dygraph-axis-label-y {
+  text-align: center;
+}
+
+.dygraph-roller {
+  position: absolute;
+  z-index: 10;
+}
+.dygraph-axis-label-x {
+	;color: brown;
+	color: yellow;
+}
+.dygraph-axis-label-y {
+  color: #90fc1f;
+}
+.dygraph-axis-label-y2 {
+  ;color: #800080;
+  color: orange;
+}
+
+.button {
+  //width: calc(100% / 2.5);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  //font-size: 3em;
+ // margin: 15px 15px 30px 30px;
+ //margin: 15px 10px 15px 10px;
+ height: 44px;						
+ margin: 8px 10px 8px 10px;
+ padding: 8px 12px;
+ //height: 110px;
+}
+
+
+</style>
+  <title>MG v39</title>
+  <script src="dygraph.min.js"></script>
+  
+    <meta name="viewport" content="width=device-width">
+  
+  </head>
+  
+  <!--body-->
+  <body bgcolor="#000000" text="#FFFFFF">
+	
+	<!--h1>MemoGraph by Paco</h1-->
+	<!--div style="height: auto; width: auto; text-align: left;"-->
+	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
+	<div id="divGeneral" style="text-align: center">
+		<hr>
+		<input type="button" class="button" id="butConnect" value="Connect" class="ok" style="background-color: green; width: 50%; height: 100px;">
+		<input type="button" class="button" value="Full Scr" style="background-color: blue; width: 30%; height: 100px;" onclick="toggleFullScreen()">
+		<!--input type="button" class="button" value="Test" style="background-color: orante; width: 10%; height: 100px;" onclick="bajarVisualizacion();"-->
+				
+		<br><br><hr>
+		
+		<br>
+		<span id='info' style="zoom: 1.5;color: brown;">Info...</span>
+		<br><br><hr>
+		
+		
+		
+		<div id ="idDivOpciones" style="text-align: left">
+
+			<label for="namePrefix">Num. samples:</label>
+			<input type="text" id="LoadSamples" value="310" placeholder="All">
+			
+			<div style="display: none;">
+			<br><br>
+			<label for="namePrefix">BLE device name prefix filter(s):</label>
+			<input type="text" id="namePrefix" value="_" placeholder="LYWSD03,ATC">
+			<br><br>
+			<input type="checkbox" id="setDevTime" checked>
+			<label for="setDevTime">Set device time</label>
+			<input type="checkbox" id="hideLoDate" >
+			<label for="hideLoDate">Hide old dates</label>
+			</div>
+			<br><br>
+			<span>Display:</span>
+			<input type="radio" id="show_temperature" name="displayed_graph" value="temperature" checked>
+			<label for="show_temperature">Temp</label>
+			<input type="radio" id="show_temperature_and_humidity" name="displayed_graph" value="temperature_and_humidity">
+			<label for="show_temperature_and_humidity">Temp + Hum</label>
+			<input type="radio" id="show_battery_voltage" name="displayed_graph" value="battery_voltage">
+			<label for="show_battery_voltage">Batt</label>
+			<br><hr><br>
+		</div>
+		
+		<!--span id='info2' style="zoom: 1.5;color: brown;">Info...</span>
+		
+		
+		<br><br><hr-->
+		<input type="button" class="button" id="butReconectar" value="ReCon" class="ok" onclick="conectarDispositivoRecordado()" style="background-color: orange; width: 30%; height: 100px;">
+		<input type="button" class="button" value="Enum" style="background-color: purple; width: 30%; height: 100px;" onclick="enumerarDispositivosRecordados()">
+		<input type="button" class="button" value="X" style="background-color: red; width: 10%; height: 100px;" onclick="borrarTodosLosDispositivosPermitidos();">
+		<input type="button" class="button" value="RecAnun" style="background-color: brown; width: 10%; height: 100px;" onclick="recAnuncios();">
+		<br><br><hr>
+		
+		
+
+		
+		
+		<!--div id='labdiv'></div--><!--Etiquetas-->
+		<br><br>
+		
+			
+	</div>
+	
+	
+	<!-- CINTA SUPERIOR -->
+	<div id="header" style="height:100px; position: sticky; top: 0; padding: 5px;" >
+		<div id="left" style="float:left">
+			<label id="labelIzda1" style="color: orange; margin-left: 0px;; width:1000px; font-size: 7.5vw;; font-weight: 900">
+				88.8º  </label>
+			<label id="labelIzda1Humedad" style="color: orange; width:1000px; font-size:4.5vw; font-weight: 900">
+				88%		</label>
+			<label id="labelIzda2" style="; color: #90fc1f; margin-left: 50px; font-size:7.5vw; font-weight: 900">
+					</label>
+			<label id="labelIzda2Humedad" style=" color: #90fc1f; ; font-size:4.5vw; font-weight: 900">
+				 	</label>	
+		</div>
+		<div id="derecha" style="float:right">
+			<label id="labelDcha" style="font-size:8.5vw; font-weight: 900">
+				88:88h </label>
+		</div> 	<br>
+	</div>
+	
+	
+	
+	
+	<div id='labdiv' style="text-align: right; height: 20px;"></div><!--Etiquetas-->
+	<br><br>
+	
+	<div id='div_v' style="height:auto;  margin-bottom: 10px; margin-top: 10px; margin-left:10px;  pointer-events:none"></div>
+	
+	
+	
+	
+  </body>
+<script type="text/javascript">
+
+
+// Búfer de datos de entrada
+//var datau = [];			// Son los datos de memo[], quitando los datos antiguos si se ha pedido. Son los datos que se pasan a la gráfica
+//var memo = [];			// Contiene los datos recibidos en este formato: memo.push([tc,tm,hm,vb]);
+var arrayDatosHistorico = [];
+
+var arrayDatosRecientes =  new Array(15);		// 15 = 15 últimos minutos
+var graficaDatosRecientes;
+
+var temperaturaActual = 10.1;					// Registra la temperatura actual del BT
+var temperaturaTendencia = 0;				// Acutal-Anterior. Si >0 Sube. Si <0 Baja.
+var humedadActual = 0;
+var temperaturaActual_Sensor2 = 10.1;
+
+var deviceNameMain = "_SALON_";
+
+
+
+var $ = function(id) {
+	return document.getElementById(id);
+}
+
+// Muestra de datos en terminal
+function log(data) {$('info').innerHTML=data};
+function Clog(data) {$('info').innerHTML=data; console.log(data)};
+var deviceName;
+var devcnn = 0, redevcnn = 0;
+const MAX_MEMORES = 65535;
+var memogetcont = MAX_MEMORES;
+var deviceConnected = '';
+$("LoadSamples").onchange = function() {
+	memogetcont = parseInt($("LoadSamples").value);
+	if(isNaN(memogetcont) || memogetcont > MAX_MEMORES) memogetcont = MAX_MEMORES;
+	else if(memogetcont < 3) memogetcont = 3;
+	$("LoadSamples").value = memogetcont;
+}
+function ShowConnect() {
+	if(devcnn==0)  {
+		$("butConnect").value = "Connect";
+		$("butConnect").classList.remove("danger");}
+	else {
+		$("butConnect").value = "Disconnect " +  deviceConnected;
+		$("butConnect").classList.add("danger");}
+	$("butConnect").disabled = false;
+}
+$("butConnect").onclick =  function() {
+	$("butConnect").disabled = true;
+	if(devcnn != 0) {
+		$("butConnect").value = "Disconnect..."; 
+		disconnect();
+		}
+	else {
+		$("butConnect").value = "Connect..."; 
+		connect();
+		};
+	}
+var localOffset = (new Date()).getTimezoneOffset() * 60000;
+var show_on = 0;
+
+
+
+class GraphType {
+    //static TEMPERATURE = new GraphType('temperature', ['green'], ['Temp(\u00B0C)']);  // \u00B0 is the degree symbol
+	static TEMPERATURE = new GraphType(
+		'temperature', 			// Name
+		['green'], 				// Colors
+		['.']					// y_labels
+		);  // \u00B0 is the degree symbol
+    static TEMPERATURE_AND_HUMIDITY = new GraphType('temperature_and_humidity', ['green', 'blue'], ['Temp(\u00B0C)', 'H(%)']);
+    static BATTERY_VOLTAGE = new GraphType('battery_voltage', ['red'], ['V']);
+    static VALUES = [this.TEMPERATURE, this.TEMPERATURE_AND_HUMIDITY, this.BATTERY_VOLTAGE];
+
+    static getSelectedType() {
+        const radioButtons = document.querySelectorAll('input[name="displayed_graph"]');
+        let selectedRadioValue = Array.from(radioButtons).find(elem => elem.checked).value;
+        return this.VALUES.find(elem => selectedRadioValue === elem.name)
+    }
+
+    constructor(name, colors, y_labels) {
+        this.name = name;
+        this.colors = colors;
+        this.y_labels = y_labels;
+    }
+}
+
+var gu;
+function ShowGraph(graphType) {
+    if (!(graphType instanceof GraphType)) throw Error('ShowGraph argument is not instance of GraphType');
+
+	//const ventanaTiempoMs = 60 * 60 * 1000;	//treintaMinutosEnMs = 30 * 60 * 1000;
+	//const ahora = Date.now();
+
+	let graph_config = {
+		//title: 'Stored data from: ' + deviceName,
+		showRangeSelector: false,
+		//dateWindow: [ahora - ventanaTiempoMs, ahora],
+		showRoller: false,			// antes: true
+		rollPeriod: 0,				// antes: 5
+		//xlabel: 'Date',				// antes xlabel: 'Date',
+		//ylabel: graphType.y_labels[0],
+
+		colors: graphType.colors,
+		//labels: ['Date', ...graphType.y_labels],
+		labelsDiv: $('labdiv'),     // Esto es para mostrar los valores de x e y cundo pasas cursor encima gráfica
+		legend: 'always',  // "follow"
+		digitsAfterDecimal: 1,		// ates: 3
+		
+		axisLabelFontSize: 20,		// Mio antes 24
+		strokeWidth: 9,				// Mio antes 11
+		pixelsPerLabel: 80,			// Mio: Si ponemos 70 disminuye número de filas
+		//axisLabelWidth: 60,		// Mio: Anchura etiqueta de temperaturas  
+		//axisLineWidth: 3.0, 		// Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+        //rightGap: 0,				// 1. ELIMINA EL ESPACIO DE CORTESÍA INTERNO DE LA DERECHA
+		
+		gridLineColor: "#A0A0A0",  // Gris claro
+		gridLineWidth: 0.5,        // Grosor en píxeles
+			
+			
+		// *** LO SIGUIENTE ES PARA QUE APAREZCA A LA DCHA. EN VEZ DE A LA IZDA. EN VALORES DE Y
+		// 1. Forzamos a que todas las series usen el eje 'y2' (el de la derecha)
+        series: graphType.y_labels.reduce((acc, label) => {
+            acc[label] = { axis: 'y2' };
+            return acc;
+        }, {}),
+        // 2. Configuramos los ejes
+        axes: {
+            y: {						  // Eje Y izquierdo 
+                drawAxis: false,          // Desactiva por completo el eje izquierdo
+                independentTicks: false   // Evita conflictos de escala con el eje izquierdo
+				//axisLineWidth: 3.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+            },
+            y2: {						  // Eje Y2 derecho
+                drawAxis: true,           // Asegura que el eje derecho esté visible
+                independentTicks: true,    // Permite que calcule su propia escala según los datos
+				axisLineWidth: 2.5, 
+				axisLineColor: "#B0B0B0",
+				//  axisLabelWidth: 40     // 2. CONTROLA EL ANCHO DEL EJE DERECHO (Achícalo si tus números son cortos) El valor por defecto es 50. Pruébalo en 40 o 35 para pegarlo más al borde.
+            },
+			x: {
+				axisLineWidth: 2.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+				axisLineColor: "#B0B0B0"
+			}
+        },
+		// **** FIN ***
+		
+		/*
+		// Para detectar un click en el gráfico:
+		clickCallback: function(e, x, points) {
+			console.log("Hiciste clic en el gráfico");
+			console.log("Valor del eje X:", x);
+			console.log("Puntos más cercanos:", points);
+			// Aquí ejecutas la función que desees
+			  setTimeout(() => {
+					bajarVisualizacion();
+			  }, 50);
+		},
+*/
+        // FUNCIONES PARA PINTAR EL FONDO Y LA LÍNEA:
+        underlayCallback: function(canvas, area, g) {
+            // 1. Pintamos el fondo gris clarito (Esto siempre funciona sin importar los datos)
+            //canvas.fillStyle = '#f4f4f4';  
+            //canvas.fillRect(area.x, area.y, area.w, area.h);		// Esto lo he quitado hace poco
+
+            // 2. Pintamos líneas
+			var top = g.toDomYCoord(temperaturaActual,1);
+			if (temperaturaTendencia>0){
+				canvas.fillStyle = "rgba(255, 120, 0, 0.7)"; 		// Naranja
+				}
+			else if (temperaturaTendencia<0){
+				canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 		// Azúl
+				}
+			else {
+				canvas.fillStyle = "rgba(156, 156, 156, 0.9)"; 
+			}
+			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
+			
+			/*
+			//var bottom = g.toDomYCoord(0,1);			// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			canvas.fillStyle = "rgba(255, 120, 0, 0.7)";     		//canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			//canvas.fillRect(area.x, top, area.w, bottom - top);
+			//canvas.fillRect(area.x, top, area.w, area.y - top);		//https://www.w3schools.com/jsref/canvas_fillrect.asp
+			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
+			//canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 			//canvas.fillStyle = "rgba(30, 40, 200, 1.0)"; 
+			//canvas.fillRect(area.x, bottom, area.w, 5);
+			*/
+			
+			/*
+			// 3. Etiqueta de texto:
+			canvas.fillStyle = "#E0E0E0";                  // Color del texto brown
+            canvas.font = "bold 65px sans-serif";      // 35px perfecto para movil. Tamaño un poco mayor para la esquina (45)
+            canvas.textAlign = "left";                 // Alineado a la izquierda 👈
+            canvas.textBaseline = "top";               // Posición vertical desde la parte superior 👇
+            
+			var momentoActual = new Date();
+			var hora = momentoActual.getHours();
+			var minuto = momentoActual.getMinutes();
+			var horaImprimible = hora + ":" + (minuto.toString()).padStart(2, "0") + "h";
+			
+			var textoEtiqueta = horaImprimible + "       " + Number(temperaturaActual).toFixed(1) + "º  " + humedadActual + "%";	
+            canvas.fillText(textoEtiqueta, area.x + 15, area.y + 15);			// Separamos el texto 15 píxeles del borde izquierdo (area.x + 15)  // Y 15 píxeles hacia abajo desde el techo de la gráfica (area.y + 15)	
+			*/
+		}
+	
+	};
+
+    // ORIGINAL: add more config for graphs with 2 series
+    /*
+	if (graphType.y_labels.length === 2) {
+        graph_config.y2label = graphType.y_labels[1];
+        graph_config.series = {};
+        graph_config.series[graphType.y_labels[1]] = {axis: 'y2'};
+    }
+	*/
+    if (graphType.y_labels.length === 2) {
+        //graph_config.y2label = graphType.y_labels[0];
+        graph_config.series = {};
+        graph_config.series[graphType.y_labels[0]] = {axis: 'y2'};
+		
+		graph_config.axes.y.drawAxis = true;
+    }
+
+	//gu = new Dygraph($("div_v"), datau, graph_config);
+	gu = new Dygraph($("div_v"), arrayDatos, graph_config);
+}
+
+// De v170
+function inicializarGrafica(){
+	log ("Inicializando Objeto de Grafica...");
+	
+	//arrayDatosHistorico.push([new Date(), 20, 30]);				// Tenemos que iniciar el Array
+	//rellenaArrayConDatosFijos(temperaturaDevice1, temperaturaDevice2, humedadDevice1); 								// Tenemos que iniciar el Array
+	miGrafica = new Dygraph(document.getElementById("div_v"),arrayDatosHistorico,{
+		title: "",
+		//showRangeSelector: true,  						// antes true. La barra de desplazamiento de abajo. Hay que quitar  pointer-events:none ; para que se pueda usar
+		showRoller: false,									// antes true. Muestra cuadrado con valor Roller (media)
+		rollPeriod: 3,										// Para hacer la media. Antes 7
+		//colors: ["green", "orange", "blue"],				// Se le pueden agregar mas colores por si hubiera mas series
+		colors: ["orange", "blue", "#90fc1f"],
+		labels: ['Date', 'Sensor-1', 'Sensor-2', 'Hum'],
+		//legend: 'always',  								// "follow" o 'always'
+		digitsAfterDecimal: 1,								// Antes 3
+		axisLabelFontSize: 24,								// Antes 24
+		//axisLabelPadding: 10,
+        //ylabel: 'Primary y-axis',
+        //y2label: 'Secondary y-axis',
+		
+		gridLineColor: "#A0A0A0",  // Parrila. Gris claro
+		gridLineWidth: 0.5,        // Parrila. Grosor en píxeles
+
+		series : {
+            'Sensor-1': {
+				axis: 'y2'
+            },
+            'Sensor-2': {
+				axis: 'y2'
+            },
+            'Hum': {
+				axis: 'y'
+            }
+          },
+	
+		axes:{
+			x:{										// Horizontal: Tiempos
+				pixelsPerLabel: 60,					// 100 te salen cuatro tiempos (divisiones). En tablet gorda 50. 70. 60=intervalo de 2h. 70= Intervalo 4horas
+				axisLabelWidth: 70,					// Si ponemos 40 se corta y sólo sale la hora
+				
+				axisLineWidth: 2.5, 	  			// Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+				axisLineColor: "#B0B0B0",
+				
+				axisLabelFormatter : function(d){ 
+					if (d.getMinutes()==0){
+						var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
+						return hora + "h";
+					}
+					else {
+						return (d.getHours().toString() + ":" + d.getMinutes().toString());
+					}
+				}
+			},				
+				
+			y:{									// Configuración eje Vertical: __Humedad__
+				pixelsPerLabel: 190,			// Si ponemos 70 disminuye número de filas
+				axisLabelWidth: 50,
+				drawGrid: true,	
+				drawAxis: false,
+				//color: 'blue',
+				drawPoints: true,
+				pointSize: 4,					//4
+				//independentTicks: false,
+				digitsAfterDecimal: 0,
+				
+				rollPeriod: 0,
+				connectSeparatedPoints: true,
+				},
+			
+			y2:{								// Eje Vertical: __Temperaturas__
+				axisLabelFontSize: 30,			// Movido aquí desde arriba
+				pixelsPerLabel: 60,				// Si ponemos 70 disminuye número de filas
+				axisLabelWidth: 60,				// Anchura etiqueta de temperaturas
+				drawGrid: true,					// Así no muestra las líneas			
+				//color: 'yellow',
+				strokeWidth: 8, 				// 8
+				independentTicks: true,
+				//axisLabelPadding: 30			// Margen entre gráfica y valores. No me funciona.
+				axisLineWidth: 2.5, 			// Pinta eje
+				axisLineColor: "#B0B0B0",		// Pinta eje		
+				},
+			},
+		
+		//valueRange: [19,22]
+		//customBars: true,					// NO FUNCIONA: Para que salga difuminado
+		//colorValue: 0.9,					// Tiene que ver con el color de los customBars
+        //fillAlpha: 0.4					// Tiene que ver con el color de los customBars
+		
+		//	axisLabelFormatter = 'function(d){return d.toString().fontsize(4);}', // makes them bigger
+		
+		/*
+		// Franja central:
+		underlayCallback: function (canvas, area, g) {
+			var bottom = g.toDomYCoord(limiteTempFrio,1);	// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			var top = g.toDomYCoord(limiteTempCalor,1);
+			canvas.fillStyle = "rgba(30, 40, 30, 1.0)";     //canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			canvas.fillRect(area.x, top, area.w, bottom - top);
+		},
+		// Franja superior (roja) e inferior (azúl)
+		underlayCallback: function (canvas, area, g) {
+			var bottom = g.toDomYCoord(limiteTempFrio,1);	// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			var top = g.toDomYCoord(limiteTempCalor,1);
+			canvas.fillStyle = "rgba(70, 40, 30, 1.0)";     //canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			//canvas.fillRect(area.x, top, area.w, bottom - top);
+			canvas.fillRect(area.x, top, area.w, area.y - top);		//https://www.w3schools.com/jsref/canvas_fillrect.asp		
+			canvas.fillStyle = "rgba(30, 40, 70, 1.0)"; 
+			canvas.fillRect(area.x, bottom, area.w, bottom);
+		},
+		*/
+
+		// Líneas superior (roja) e inferior (azúl) QUITADO EN MG
+		/*
+		underlayCallback: function (canvas, area, g) {
+			var bottom = g.toDomYCoord(20,1);			// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			var top = g.toDomYCoord(21,1);
+			canvas.fillStyle = "rgba(255, 120, 0, 0.7)";     		//canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			//canvas.fillRect(area.x, top, area.w, bottom - top);
+			//canvas.fillRect(area.x, top, area.w, area.y - top);		//https://www.w3schools.com/jsref/canvas_fillrect.asp
+			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
+			canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 			//canvas.fillStyle = "rgba(30, 40, 200, 1.0)"; 
+			canvas.fillRect(area.x, bottom, area.w, 5);
+		},
+		*/
+		
+		// 2. Pintamos líneas  (AÑADIDO)
+		// FUNCIONES PARA PINTAR EL FONDO Y LA LÍNEA:
+        underlayCallback: function(canvas, area, g) {	
+			
+			// Franja central:
+			let limiteTempCalor = 21;
+			let limiteTempFrio = 20;
+			var bottom = g.toDomYCoord(limiteTempFrio,1);	// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			var top = g.toDomYCoord(limiteTempCalor,1);
+			canvas.fillStyle = "rgba(30, 40, 30, 1.0)";     //canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			canvas.fillRect(area.x, top, area.w, bottom - top);		
+			
+			// Pintado de línea tendencia:                       (Este despúes para que pinte encima de lo anterior)
+			var top = g.toDomYCoord(temperaturaActual,1);
+			if (temperaturaTendencia>0)
+				canvas.fillStyle = "rgba(255, 0, 0, 0.7)"; 		// Naranja= rgba(255, 120, 0, 0.7)
+			else 
+				canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 		// Azúl
+			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
+		}
+		
+	/*		
+		miGrafica.canvas_ctx_.fillStyle="blue";
+		miGrafica.canvas_ctx_.fillRect(20,20,150,100);
+	*/		
+	});
+}
+
+
+
+
+
+
+
+var renderChart = function() {
+	//gu.updateOptions({'file': datau});
+	gu.updateOptions({'file': arrayDatos});
+}
+
+/*
+if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-120) + 'px';
+window.onresize = function(){
+	if(window.innerHeight > 320) $('div_v').style.height = (window.innerHeight-120) + 'px';
+//	if(gu) gu.resize();
+//	$('div_v').style.width = (window.innerWidth-50) + 'px';
+}
+*/
+
+if (window.innerHeight > 320) 
+	$('div_v').style.height = (window.innerHeight-100) + 'px';	//Antes -15, pero se quedaba muy cerca del borde arriba
+
+window.onresize = function(){
+	if(window.innerHeight > 320) 
+		$('div_v').style.height = (window.innerHeight-100) + 'px';
+	if(gu) 
+		gu.resize();
+	//$('div_v').style.width = (window.innerWidth-50) + 'px';
+}
+
+
+
+function hex(number, length) {
+    var str = (number.toString(16)).toUpperCase();
+    while (str.length < length) str = '0' + str;
+    return str;
+}
+function dump(ar, len) {
+	let s = '';
+	for(let i=0; i < len; i++) {
+		s += hex(ar[i],2);
+	}
+	return s;
+}
+function ResponsePkt(value) {
+	let ds = value.byteLength;
+	let s = 'msg: ';
+    for(let i=0; i < ds; i++) {
+		s+=' '+hex(value.getUint8(i),2);
+		if(i<ds-1) s+=',';
+	}
+	Clog(s);
+}
+
+/*
+memo[0] es la última caputra de temperatura. Osea que el dispositivo primero envía la última captura y la final la mas vieja
+[
+    1792144808,
+    17.11,
+    55.14,
+    2729
+]
+
+*/
+
+/*
+function show_graph() {
+	//ShowGraph(GraphType.TEMPERATURE);
+	inicializarGrafica();
+	/*
+	if (numGraficas>1)
+		ShowGraph(GraphType.TEMPERATURE_AND_HUMIDITY);
+	else 
+		ShowGraph(GraphType.TEMPERATURE);
+	*/
+	/*
+	if (memo.length > 1) {
+		let hideldate = $('hideLoDate').checked;
+		// let displayed_graph = document.getElementsByName('displayed_graph'); // 'temperature' / 'temperature_and_humidity' / 'battery_voltage'
+        let graphType = GraphType.getSelectedType();
+		datau = [];
+
+		memo.reduceRight(function (a, b) {		// La función recorre el arreglo memo desde el último elemento hasta el primero (al revés) usando reduceRight. Cada registro b contiene un arreglo con cuatro posiciones: b[0]: Marca de tiempo (timestamp en segundos). b[1]: Temperatura. b[2]: Humedad. b[3]: Voltaje de la batería.
+			// in this context variable b contains row of data from sensor
+			// b[0] = timestamp; b[1] = temperature; b[2] = humidity; b[3] = battery voltage
+			if (!hideldate || (b[0] > 1609459200 && b[0] < 2255486400)) {     // Si el checkbox de ocultar fechas (hideldate) no está marcado, el dato pasa directamente. Si sí está marcado, el registro solo se procesa si su marca de tiempo está dentro del rango Unix entre el 1 de enero de 2021 y el 15 de mayo de 2041.
+				let data = []
+				switch (graphType) {
+                    case GraphType.TEMPERATURE:
+						data = [b[1]];
+						break;
+                    case GraphType.TEMPERATURE_AND_HUMIDITY:
+						data = [b[1], b[2]];
+						break;
+                    case GraphType.BATTERY_VOLTAGE:
+						data = [b[3] / 1000.0];
+						break;
+					default:
+						throw Error('Invalid GraphType instance ' + graphType);
+				}
+				datau.push([new Date(b[0] * 1000.0 + localOffset), ...data]);		// Cuidado: Intercambia orden. el localOffset es x lo de la hora UTC
+			}
+			return a + 1;
+		}, 1);
+
+		//Clog('Loaded ' + datau.length + ' samples.')
+		if (datau.length > 1) {
+            ShowGraph(graphType);
+		} else Clog('No samples!')
+	}
+	*/
+//}
+
+
+const radioButtons = document.querySelectorAll('input[name="displayed_graph"]');
+radioButtons.forEach(radio => radio.addEventListener('change', inicializarGrafica));
+
+// ========== BLE ========== de GraphMemo.html
+
+let deviceCache = null;
+var characteristicVTH = null;		// Caché de Características
+
+function DevConnected() {
+		devcnn = 1;
+		redevcnn = 66;
+		Clog('Device connected ok.');
+		ShowConnect()
+       	stage_read = 0;
+}
+
+// Inicia la selección del dispositivo Bluetooth y conéctese al dispositivo seleccionado.
+function connect() {
+	devcnn = 0;
+	redevcnn = 0;
+	return (deviceCache ? Promise.resolve(deviceCache) :
+		requestBluetoothDevice()).
+		then(device => connectDeviceAndCacheCharacteristic(device)).
+		catch(error => {
+			Clog(error); 
+			ShowConnect();});
+}
+
+// Solicitud de selección de dispositivo Bluetooth
+function requestBluetoothDevice() {
+	var deviceOptions = {optionalServices: [0xfe95, 0x181a, 0x1f10]};
+	const namePrefix = $('namePrefix').value;
+	if (namePrefix) {
+		deviceOptions.acceptAllDevices = false;
+		deviceOptions.filters = namePrefix.split(",")
+			.map((x) => ({ namePrefix: x }));
+	} else {
+		deviceOptions.filters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz_#@!*0123456789';,.<>{}[]"
+		.split("").map((x) => ({namePrefix:x}));
+	}
+	// deviceOptions.filters.services = [0xfe95, 0x181a, 0x1f10];
+	Clog('Requesting bluetooth device...');
+	return navigator.bluetooth.requestDevice(deviceOptions).	// Solicitud al usuario de seleccionar dispositivo BT
+	then(device => {
+		Clog('"' + device.name + '" bluetooth device selected');
+		deviceName = device.name;
+		deviceCache = device;
+		deviceConnected = device.name;
+		deviceCache.addEventListener('gattserverdisconnected', handleDisconnection);
+		return deviceCache;
+	});
+}
+// Gestión de la desconexión del dispositivo BT
+function handleDisconnection(event) {
+	let device = event.target;
+    ShowConnect();
+	if(devcnn == 0 && ++redevcnn < 5) {
+		Clog('"' + device.name + '" bluetooth device disconnected, trying to reconnect...');
+		connectDeviceAndCacheCharacteristic(device).
+		catch(error => Clog(error));};
+}
+
+//  API Web Bluetooth para comunicarse con un dispositivo físico (como un termómetro) desde el navegador web
+var start_time;
+// Conexión a un dispositivo específico, obtención de un servicio y características
+function connectDeviceAndCacheCharacteristic(device) {
+  if (device.gatt.connected && characteristicVTH) {
+  	return Promise.resolve(null);
+  }
+  Clog('Connecting to GATT server...');
+  return device.gatt.connect().									// Device >> Server >> Service >> Characteristic 
+	then(server => {
+		Clog('GATT server connected, getting service...');
+		return server.getPrimaryService(0x1F10);
+	}).then(service => {
+		Clog('Service found, getting characteristic...');
+		return service.getCharacteristic(0x1F1F);
+	}).
+	then(characteristic => {
+		Clog('Characteristic found');
+		characteristicVTH = characteristic;		// Guarda la característica en una variable global
+		devcnn = 1;								// Bandera de estado: Dispositivo conectado
+		ShowConnect();							// Actualiza la interfaz gráfica de la web
+		Clog('Start Notifications...');
+		deviceNameMain = device.name;
+		console.log ("Device main: " + deviceNameMain);
+		return characteristicVTH.startNotifications().		//  Le dice al termómetro que, cada vez que cambie la temperatura o el estado, envíe el dato automáticamente sin que la web tenga que preguntarle continuamente.
+		then(_ => {
+			Clog('Notifications Started');
+			characteristicVTH.addEventListener('characteristicvaluechanged', event => {			// Cada vez que el dispositivo envía datos, se dispara este evento.
+				var value = event.target.value;
+				let len = value.byteLength;
+				if(len > 0) {								// El código mira el primer byte (blkid) para saber qué tipo de información ha llegado.
+					let blkid = value.getUint8(0);
+					
+					if(blkid == 0x35) {						// Caso -B-: Recepción historial temperaturas. ---------------------------------------------
+						ResponsePkt(value);									// Imprime los valores en el Log
+						if(len >= 13) {										// msg:   35, 16, 01, 02, A7, CE, 6A, 05, 0A, 82, 12, 73, 09   (en este caso len=13)
+							let cnt = value.getUint16(1, true);				// 16, 01: > 0116Hex > En hexadecimal. Contador del número de dato enviado. Último=36Hex = 
+							let tc = value.getUint32(3, true);				// Hora > 02, A7, CE, 6A (pone 32 asique 8 bytes)
+							let tm = value.getInt16(7, true) / 100.0;		// Temperatura > 05, 0A
+							let hm = value.getUint16(9, true) / 100.0;		// Humedad > 82, 12
+							let vb = value.getUint16(11, true);				// Batería > 73, 09
+							/* Slow speed on some devices!
+							let dt = new Date(tc*1000);
+							console.log('Memo '+((dt.toISOString().slice(0, -1)).replace('T',' ')).replace('.000','')+' - Vbat: '+vb+' mV , Temp: '+tm+'°C, Humi: '+hm+'%, Count: '+cnt);
+							*/
+							log('Read Count: '+cnt);
+							//memo.push([tc,tm,hm,vb]);
+							
+							var localOffset = (new Date()).getTimezoneOffset() * 60000;
+							let dt = new Date(tc*1000 + localOffset);
+							
+							//arrayDatosHistorico.unshift([dt, tm]);	//añade el nuevo dato al principio, desplazando los demás hacia el final.
+							//arrayDatosHistorico.unshift([dt, tm, null, 15]);
+							arrayDatosHistorico.unshift([dt, tm, null, null]);
+							
+							//show_on = 1;
+						} else if(len >= 3) {								// msg:  35, 00, 00			Creo que es el fin del envio de datos.
+							//console.log('Read count: '+ memo.length);		// Read count: 310
+							console.log('Read time: ' + ((Date.now() - start_time)/1000).toFixed(3) + ' sec');		// Read time: 0.315 sec
+							/*
+							let time = Date.now()/1000;
+							time -= (new Date()).getTimezoneOffset() * 60;
+							blk = new Uint8Array(5);						// Construimos cadena con datos a enviar 
+							blk[0] = 0x23;									// Comando de establecer hora: 0x23
+							blk[1] = time & 0xff;
+							blk[2] = (time >> 8) & 0xff;
+							blk[3] = (time >> 16) & 0xff;
+							blk[4] = (time >> 24) & 0xff;
+							console.log("Send cmd Set DevTime ("+dump(blk, blk.length)+")...");		// Send cmd Set DevTime (236EECCF6A)...
+							characteristicVTH.writeValue(blk).then(_ => {
+								console.log('Send new DevTime ok');									// Send new DevTime ok
+							});
+							*/
+							// En esta versión quitamos lo de actualizar la hora. Saltamos -C- y vamos directamente a -D-
+							Clog('Solicitando temperatura actual...');
+							characteristicVTH.writeValue(new Uint8Array([0x33])).catch(error => {
+								Clog('Error al solicitar lectura actual: ' + error);
+								disconnect();
+							});
+						} else if(len == 2) {								// Esto no se lo que es.
+							 memogetcont = value.getUint16(1, true);
+						}
+					} else if(blkid == 0x23 && len >= 4) {		// Caso -C-: El dispositivo devuelve su hora. ---------------------------------------------
+						let time = value.getUint32(1,true);
+						console.log('Device Time: 0x' + hex(time,8));		// Device Time: 0x6ACFEC6E
+						let dt = new Date(time*1000);
+						console.log('Device Date: '+(dt.toISOString().slice(0, -1)).replace('T',' '));		// Device Date: 2026-10-14 20:56:14.000
+						
+						// MODIFICACIÓN: En lugar de desconectar directo, pedimos la lectura actual
+						Clog('Sincronización de hora lista. Solicitando temperatura actual...');
+						characteristicVTH.writeValue(new Uint8Array([0x33])).catch(error => {
+							Clog('Error al solicitar lectura actual: ' + error);
+							disconnect();
+						});
+					} else if(blkid == 0x33 && len >= 7) {		// NUEVO CASO -D-: Captura y muestra de datos en tiempo real. ---------------------------------------------
+						let tm = value.getInt16(3, true) / 100.0;
+						let hm = value.getUint16(5, true) / 100.0;
+						let vb = value.getUint16(7, true);
+						
+						console.log(`Temperatura Actual: ${tm.toFixed(1)} °C`);
+						console.log(`Humedad Actual: ${hm.toFixed(0)} %`);
+						console.log(`Batería: ${vb} mV`);						
+						temperaturaActual = tm.toFixed(2);
+						//temperaturaTendencia = temperaturaActual - memo[memo.length-2][1];
+						//temperaturaTendencia = (temperaturaActual - memo[1][1]).toFixed(2);	// memo[0][1], es el registro mas reciente, el [1][1] el 5 minutos anterior.
+						temperaturaTendencia = (temperaturaActual - arrayDatosHistorico[arrayDatosHistorico.length-2][1]).toFixed(2);	// memo[0][1], es el registro mas reciente, el [1][1] el 5 minutos anterior.
+						humedadActual =  hm.toFixed(0);
+						Clog ("Temp: " + temperaturaActual + "ºC");
+						
+						// 5. Actualizamos datos:
+						$("labelIzda1").innerHTML = tm.toFixed(1) + "° ";
+						$("labelIzda1Humedad").innerHTML = hm.toFixed(0) + "% ";
+						actualizaReloj();
+						
+						disconnect();							// >>> Desconexión final trasladada aquí. Luego muestra gráfica.
+						
+						
+					} else if(blkid == 0x55){ 		// CASO -A- Recepción Configuración del dispositivo. ---------------------------------------------
+						if(len >= 12) {
+							//memo = new Array();
+							//datau = new Array();
+							/* let av_meas_mem = value.getUint8(6) * 62.5 * value.getUint8(7) * value.getUint8(12);
+							if(av_meas_mem == 0) av_meas_mem = 600;
+							av_meas_mem /= 1000;
+							console.log('Memos storage interval: ' + av_meas_mem + ' sec'); */
+							memogetcont = parseInt($("LoadSamples").value);
+							if(isNaN(memogetcont) || memogetcont > MAX_MEMORES) memogetcont = MAX_MEMORES;
+							else if(memogetcont < 5) memogetcont = 5;
+							if(memogetcont == MAX_MEMORES)
+								Clog('Send command "get-memo all samples"...');
+							else
+								Clog('Send command "get-memo '+memogetcont+' samples"...');
+							start_time = Date.now();
+							characteristicVTH.writeValue(new Uint8Array([0x35,memogetcont&0xff, (memogetcont>>8)&0xff,0,0]))		// Le decimos que nos mande los "memogetcont" valores
+							.catch(error => {Clog(error); disconnect();});
+						} else {
+							Clog('Error device config!');
+							disconnect();
+						}
+					} else {
+						ResponsePkt(value);
+					}
+				}
+			});
+			DevConnected();
+			Clog('Get device config...');
+			setTimeout(function() {
+				console.log('Send command "get config"...');
+				characteristicVTH.writeValue(new Uint8Array([0x55])).catch(error => {
+					log(error); 
+					disconnect();
+					})
+			}, 1500);
+		  	return Promise.resolve(null);
+		});
+	});
+}
+
+
+
+
+
+// Отключиться от подключенного устройства
+function disconnect() {
+	devcnn = 0;
+	redevcnn = 55;
+	if (deviceCache) {
+		Clog('Disconnecting from "' + deviceCache.name + '" bluetooth device...');
+		if (deviceCache.gatt.connected) {
+			if (characteristicVTH) {
+				characteristicVTH.stopNotifications()
+                .then(_ => {
+					Clog('Notifications stopped');
+					characteristicVTH = null;
+				  	if (deviceCache.gatt.connected) {
+						deviceCache.gatt.disconnect();
+					}
+					deviceCache.removeEventListener('gattserverdisconnected', handleDisconnection);
+					deviceCache = null;
+					Clog('Disconnected. Load '+ arrayDatosHistorico.length +' samples.' );
+					
+					bajarVisualizacion();
+					
+					Clog("Temp: " + temperaturaActual);	
+					ShowConnect();
+				})
+				.catch(error => { Clog(error);
+					if (characteristicVTH) {
+						characteristicVTH.removeEventListener('characteristicvaluechanged', handleCharacteristicValueChanged);
+						characteristicVTH = null;
+					}
+					deviceCache.removeEventListener('gattserverdisconnected', handleDisconnection);
+					deviceCache = null;
+					ShowConnect();
+				});
+			}
+		}
+		//if (show_on != 0) show_graph();
+		inicializarGrafica();
+	}
+	else
+		Clog('"' + deviceCache.name + '" bluetooth device is already disconnected');
+}
+
+
+
+
+function toggleFullScreen() {			// Mio: document.querySelector('body').requestFullscreen();
+	if (!document.fullscreenElement){ 
+		document.documentElement.requestFullscreen();
+		}
+	else 
+		document.exitFullscreen();
+}
+
+
+function bajarVisualizacion () {
+    //const miDiv = document.getElementById('div_v');
+    //miDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+	window.scrollTo({
+		  top: document.body.scrollHeight,
+		  behavior: 'smooth' // Movimiento suave
+		});	
+};
+
+// Lo siguiente es porque cuando se recarga la página, ésta está abajo y no se ve el botón.
+// 1. Desactiva el comportamiento del navegador de recordar la posición del scroll
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+window.onload = function() {
+    window.scrollTo(0, 0);					// 2. Fuerza el scroll al inicio (0,0) al cargar la página
+	enumerarDispositivosRecordados();
+};
+
+
+
+/*
+NOTA: para la siguiente función:
+navigator.bluetooth.getDevices() es una función experimental y todavía está oculta detrás de una bandera (flag) de desarrollo en Chrome para Android.
+>>"Use the new permissions backend for Web Bluetooth" to Enable
+*/
+async function conectarDispositivoRecordado() {
+  try {
+    if (typeof navigator.bluetooth.getDevices === 'function') {
+      const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+      
+      if (dispositivosPermitidos.length > 0) {
+        const miDispositivo = dispositivosPermitidos[rotarBtdevices];
+        Clog(miDispositivo.name + ": Escuchando...");
+  
+        if (miDispositivo.gatt.connected) {								 // 1. Si ya está conectado por algún motivo, no hacemos nada
+          Clog("Ya estaba conectado.");
+          return;
+        }
+
+        const controladorAbortar = new AbortController();				 // 1. CREAMOS EL CONTROLADOR PARA PODER APAGAR EL ESCANEO DESPUÉS
+              
+        const esperarDispositivoEnRango = new Promise((resolve) => {	// Creamos una promesa que se resolverá en cuanto el móvil capte al dispositivo
+          const alDetectarSenal = (evento) => {							// Esta función se ejecuta cuando el móvil recibe una señal de TU dispositivo
+            Clog("¡Dispositivo en rango detectado por el escáner!");			
+            controladorAbortar.abort(); 								// 2. APAGAMOS EL ESCANEO: Llamamos a abort() para desactivar watchAdvertisements
+            Clog("Escaneo nativo desactivado para ahorrar batería.");
+            miDispositivo.removeEventListener('advertisementreceived', alDetectarSenal);	// Dejamos de escuchar para no gastar batería
+            resolve();
+          };
+          
+          miDispositivo.addEventListener('advertisementreceived', alDetectarSenal);
+        });
+  
+        await miDispositivo.watchAdvertisements({ signal: controladorAbortar.signal });		// 3. PASAMOS LA SEÑAL al activar el escaneo nativo sobre este dispositivo específico   
+        await esperarDispositivoEnRango;								// 3. Esperamos a que aparezca físicamente en rango
+
+        // 4. Ahora que sabemos con certeza que está en rango, nos conectamos de forma segura
+		Clog("sabemos con certeza que está en rango,...");
+		
+		deviceName = miDispositivo.name;
+		deviceCache = miDispositivo;
+		deviceConnected = miDispositivo.name;
+		deviceCache.addEventListener('gattserverdisconnected', handleDisconnection);
+		
+		connectDeviceAndCacheCharacteristic(miDispositivo);
+		/*
+        await miDispositivo.gatt.connect();					// Estableciendo conexión GATT...
+        Clog("¡Conectado automáticamente y con éxito!");
+		*/
+        return; 
+      }
+    }
+    
+    // Si no está soportado o la lista está vacía... (Abrir el conector de siempre)
+    Clog("No se puede autoconectar.");
+
+  } catch (error) {
+    console.error("Error detallado en la auto-conexión:", error);
+	Clog("Error en la autoconexión: " + error);
+  }
+}
+
+
+var rotarBtdevices=0;
+
+async function enumerarDispositivosRecordados() {
+  try {
+    if (typeof navigator.bluetooth.getDevices === 'function') {
+      const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+	  if (dispositivosPermitidos.length > 0) {
+		  rotarBtdevices = rotarBtdevices + 1;
+		  if (rotarBtdevices+1 > dispositivosPermitidos.length)
+			rotarBtdevices=0;
+		  
+		  Clog (dispositivosPermitidos[rotarBtdevices].name + " (" + dispositivosPermitidos.length+")");
+		  $("butReconectar").value = dispositivosPermitidos[rotarBtdevices].name; 
+	   }
+	   else {										// No hay dispositivos recordados
+		$("butReconectar").value = "NO HAY";
+		}
+	  return;
+	  /*
+	  if (dispositivosPermitidos.length > 0) {
+        const miDispositivo = dispositivosPermitidos[0];
+        Clog(miDispositivo.name + ": Encontrado. Escuchando...");
+		*/
+	}
+    
+    // Si no está soportado o la lista está vacía... (Abrir el conector de siempre)
+    Clog("No se puede autoconectar.");
+
+  } catch (error) {
+    console.error("Error detallado en la auto-conexión:", error);
+	Clog("Error en la autoconexión: " + error);
+  }
+}
+
+
+async function borrarTodosLosDispositivosPermitidos() {
+  try {
+    if (typeof navigator.bluetooth.getDevices === 'function') {
+      const dispositivosPermitidos = await navigator.bluetooth.getDevices();
+      
+      if (dispositivosPermitidos.length > 0) {
+        // Recorremos la lista y olvidamos uno por uno
+        for (const dispositivo of dispositivosPermitidos) {
+          if (typeof dispositivo.forget === 'function') {
+            await dispositivo.forget();
+            console.log("Permiso revocado para: ${dispositivo.name}");
+          }
+        }
+        alert("Todos los dispositivos han sido eliminados de la memoria.");
+      } else {
+        console.log("No había ningún dispositivo guardado en la lista.");
+      }
+    } else {
+      console.log("getDevices() no está soportado.");
+    }
+  } catch (error) {
+    console.error("Error al limpiar los dispositivos:", error);
+  }
+}
+
+
+// Detectamos Cambio de orientación (más limpio que arriba)
+window.matchMedia("(orientation: landscape)")
+      .addEventListener("change", function() { 
+			setTimeout(bajarVisualizacion, 200); 
+			});
+			
+function actualizaReloj(){
+	momentoActual = new Date();
+	hora = momentoActual.getHours();
+	minuto = momentoActual.getMinutes();
+    //horaImprimible = hora + ":" + (minuto.toString()).padStart(2, "0") + "h";
+	horaImprimible = hora + ":" + (minuto.toString()).padStart(2, "0");
+	$("labelDcha").innerHTML = horaImprimible;
+}
+
+
+
+
+// ******************************* RECIBIR ANUNCIOS *******************************
+
+function recAnuncios_ANT(){						// Nota: He desactivado el hideldate ese
+	Clog("recAnuncios progressing...");
+
+	if (arrayDatosHistorico.length<3){	// Si está vacío:
+		var numMuestras = 310;
+		console.log ("Rellenando Array con " + numMuestras + " muestras...");
+		var indice = 0;
+		var date1 = new Date();
+		for (var i = numMuestras; i > 0; i--) {
+			var date2 = new Date(date1.getTime() - (i*5*60*1000));		// Crea una muestra cada 5 minutos
+			//arrayDatosHistorico[indice]=[date2, 22,25,50];    		// arrayDatosHistorico[indice]=[date2, temp1,temp2,humedad];
+			arrayDatosHistorico[indice]=[date2, (22-(indice*0.1)), null, (20+ (indice*0.1))];    		// arrayDatosHistorico[indice]=[date2, temp1,temp2,humedad];
+			//memo.push([date2,25,85,55]);		// memo.push([tc,tm,hm,vb]);
+			indice++;
+		}
+		inicializarGrafica();
+	 }
+
+	// Últimos datos	
+	inicializarGraficaDatosRecientes();
+	
+	
+	recibirAnunciosConAutoParada();
+	setInterval(() => {		// Actualización del reloj. Repite la acción.
+		actualizaReloj();
+		}, 20000);	// Redibujamos cada minuto para actualizar reloj.
+	setInterval(() => {
+		//arrayDatosHistorico.push([new Date(), temperaturaActual]); // push() para añadir el dato al final
+		arrayDatosHistorico.push([new Date(), temperaturaActual, null, temperaturaActual_Sensor2]); // push() para añadir el dato al final
+		arrayDatosHistorico.shift();		//shift() para eliminar el primero:
+		inicializarGrafica();			// Actualizamos info de gráfica
+		}, 5*60*1000);			// 5*60*1000 = 5 minutos
+		
+}
+
+
+// Incluir nuevo BT-Device para recibir Anuncios:  (Actualmente no se usa)
+function recibirAnuncios() {
+    const deviceOptions = {
+        filters: [{
+            namePrefix: '_'
+        }],
+        optionalServices: [0xfe95, 0x181a, 0x1f10]
+    };
+    return navigator.bluetooth.requestDevice(deviceOptions)
+        .then(device => {
+            log('> Requested ' + device.name);
+
+            device.addEventListener('advertisementreceived', event => {
+                event.serviceData.forEach((valueDataView, key) => {
+                    logDataView(device.name, key, valueDataView);
+                });
+            });
+            log('Watching advertisements from "' + device.name + '"...');
+            return device.watchAdvertisements();
+        });
+}
+
+// chrome://flags/#enable-experimental-web-platform-features
+var miAbortController = new AbortController();
+function recibirAnunciosConAutoParada(){							//Se desconecta a los 20 segundos.
+	miAbortController = new AbortController(); 
+	navigator.bluetooth.getDevices()
+	.then(devices => {
+		console.log('> Got ' + devices.length + ' Bluetooth devices.');
+		for (const device of devices) {
+			console.log("Solicitando recibir Anuncios de: " + device.name);
+			device.watchAdvertisements({ signal: miAbortController.signal })
+			.catch((error) => {
+				log("ERROR al solicitar recibir Anuncios:" + error);
+			});
+			device.addEventListener('advertisementreceived', event => {
+                event.serviceData.forEach((valueDataView, key) => {
+                    logDataView(device.name, key, valueDataView);
+                });
+            });
+            console.log('Watching advertisements from "' + device.name + '"...');		
+		}
+	})
+	.catch(error => {
+		console.log('ERROR al recibir getDevices(): ' + error);
+	});
+	
+	setTimeout (function(){							// Parte de Auto-Repetición
+		console.log ("Ha pasado el tiempo...");
+		detenerVerAnuncios();
+		setTimeout (function(){
+			recibirAnunciosConAutoParada();
+		},30*1000); 			// Tiempo Off (Sin buscar). Antes a 5/20 y tablet se atascaba
+	},10*1000);    	// Tiempo On (Buscando)
+}
+
+function detenerVerAnuncios(){
+	console.log ("detenerVerAnuncios");
+	miAbortController.abort();
+}
+
+const logDataView = (deviceName, key, b) => {
+	if ((key == '0000181a-0000-1000-8000-00805f9b34fb') && (b.byteLength >= 15)) {   // 15 =pvvx   	// 70 58 56 38 C1 A4 69 0A 60 09 25 0B 48 70 04	
+		let temp = b.getInt16(6, true) / 100.0;
+		let humi = b.getInt16(8, true) / 100.0;
+		let vbat = b.getUint16(10, true);
+		let bat = b.getUint8(12);
+		let cnt = b.getUint8(13);
+		let flg = b.getUint8(14);
+		let s = deviceName + ':  Bat: '+bat+'%, Vbat: '+vbat+' mV , Temp: '+temp+'°C, Humi: '+humi+'%, Count: '+cnt+', Flg: '+flg;
+		console.log(s); 
+		const hora = new Date().toLocaleTimeString('es-ES', {hour12: false});
+		let s2 = deviceName + ": " + temp + "ºC " + humi.toFixed(0) + "%,  " + hora + "h";
+		Clog(s2);
+		
+		if (deviceName == deviceNameMain){ 
+			temperaturaActual = Number (temp.toFixed(2));
+			temperaturaTendencia = (temperaturaActual - arrayDatosHistorico[arrayDatosHistorico.length-2][1]).toFixed(2);	// memo[0][1], es el registro mas reciente, el [1][1] el 5 minutos anterior.
+			humedadActual =  Number (humi.toFixed(0));	
+			$("labelIzda1").innerHTML = temp.toFixed(1) + "° ";
+			$("labelIzda1Humedad").innerHTML = humi.toFixed(0) + "% ";
+		}else{
+			$("labelIzda2").innerHTML = temp.toFixed(1) + "° ";
+			$("labelIzda2Humedad").innerHTML = humi.toFixed(0) + "% ";	
+			temperaturaActual_Sensor2 = Number (temp.toFixed(2));
+		}
+	}
+}
+
+
+
+// ******************************************* DATOS RECIENTES *******************************************
+
+function inicializarGraficaDatosRecientes(){
+	console.log ("Inicializando Objeto de GraficaDatosRecientes...");								// Tenemos que iniciar el Array
+	
+	if (arrayDatosRecientes[0] == null){	// Si está vacío:
+		console.log ("Rellenando arrayDatosRecientes con " + arrayDatosRecientes.length + " muestras...");
+		var date1 = new Date();
+		for (var i = arrayDatosRecientes.length; i > 0; i--) {
+			var date2 = new Date(date1.getTime() - (i*60*1000));		// Crea una muestra cada 5 minutos			
+			arrayDatosRecientes[arrayDatosRecientes.length-i]=[date2, (19-(0.1*i)), (15+(0.05*i))];    		// arrayDatosHistorico[indice]=[date2, temp1,temp2,humedad];
+		}
+	 }
+	
+	graficaDatosRecientes = new Dygraph(document.getElementById("div_datosRecientes"),arrayDatosRecientes,{
+		/*
+		labels: ["Fecha", "temperatura1", "temperatura2"],
+		series: {
+            temperatura1: { axis: "y2" },
+            temperatura2: { axis: "y" }
+        },
+		*/
+		rollPeriod: 0,					// Para hacer la media. Antes 7
+		colors: ["orange", "#90fc1f"],		// Se le pueden agregar mas colores por si hubiera mas series
+		digitsAfterDecimal: 1,			// Antes 3 
+		strokeWidth: 2.0,
+        drawPoints: true,
+        pointSize: 5,					// Antes 4 
+        highlightCircleSize: 6,
+		drawAxis: false,					//Antes false 
+		drawGrid: false,
+	});
+	
+	setInterval(function () {			// Ejecuta la función cada tiempo especificado.
+		actualizaGraficaDatosRecientes();
+		console.log ("Acutalizando: actualizaGraficaDatosRecientes."); 
+		}, 60*1000);			// 60*1000
+}
+
+
+function actualizaGraficaDatosRecientes(){
+	console.log ("actualizando GraficaDatosRecientes...: ");
+	arrayDatosRecientes.push([new Date(), temperaturaActual, temperaturaActual_Sensor2]);	//arrayDatos_2.push([new Date(), valor1, null]);
+	arrayDatosRecientes.shift();
+	graficaDatosRecientes.updateOptions({'file': arrayDatosRecientes});
+	// Limitar rango vertical
+	let suma = 0;
+	for (let i = 0; i < arrayDatosRecientes.length; i++){
+		suma += arrayDatosRecientes[i][1];
+		}
+	let mediaArrayDatos = suma / arrayDatosRecientes.length;
+	graficaDatosRecientes.updateOptions({ valueRange: [mediaArrayDatos - 0.25, mediaArrayDatos + 0.25] });
+}
+
+
+
+
+// *************************************************************************************************
+
+
+function recAnuncios(){						// Nota: He desactivado el hideldate ese
+	Clog("recAnuncios progressing...");
+	// Array Datos históricos (último día, cada 5 minutos)
+	if (arrayDatosHistorico.length<3){	// Si está vacío:
+		var numMuestras = 310;
+		console.log ("Rellenando Array con " + numMuestras + " muestras...");
+		var indice = 0;
+		var date1 = new Date();
+		for (var i = numMuestras; i > 0; i--) {
+			var date2 = new Date(date1.getTime() - (i*5*60*1000));		// Crea una muestra cada 5 minutos
+			//arrayDatosHistorico[indice]=[date2, (22-(indice*0.1)), null, (20+ (indice*0.1))];    		// arrayDatosHistorico[indice]=[date2, temp1,temp2,humedad];
+			arrayDatosHistorico[indice]=[date2, (22-(indice*0.1)), null, null];
+			indice++;
+		}
+		//inicializarGrafica();
+	 }
+	// Array Datos Recientes  (últimos 15 minutos cada minuto)
+	if (arrayDatosRecientes[0] == null){	// Si está vacío:
+		console.log ("Rellenando arrayDatosRecientes con " + arrayDatosRecientes.length + " muestras...");
+		var date1 = new Date();
+		for (var i = arrayDatosRecientes.length; i > 0; i--) {
+			var date2 = new Date(date1.getTime() - (i*60*1000));		// Crea una muestra cada 5 minutos			
+			arrayDatosRecientes[arrayDatosRecientes.length-i]=[date2, (19-(0.1*i)), (15+(0.05*i))];    		// arrayDatosHistorico[indice]=[date2, temp1,temp2,humedad];
+		}
+	 }
+
+	// Últimos datos	
+	//inicializarGraficaDatosRecientes();
+	
+	
+	recibirAnunciosConAutoParada();
+	procesadoDatos();
+	
+	setInterval(() => {		// Actualización del reloj. Repite la acción.
+		actualizaReloj();
+		}, 20000);	// Redibujamos cada minuto para actualizar reloj.
+	setInterval(() => {
+		//arrayDatosHistorico.push([new Date(), temperaturaActual]); // push() para añadir el dato al final
+		arrayDatosHistorico.push([new Date(), temperaturaActual, null, temperaturaActual_Sensor2]); // push() para añadir el dato al final
+		arrayDatosHistorico.shift();		//shift() para eliminar el primero:
+		//inicializarGrafica();			// Actualizamos info de gráfica
+		}, 5*60*1000);			// 5*60*1000 = 5 minutos
+		
+	setInterval(() => {
+		console.log ("actualizando DatosRecientes...: ");
+		arrayDatosRecientes.push([new Date(), temperaturaActual, temperaturaActual_Sensor2]);	//arrayDatos_2.push([new Date(), valor1, null]);
+		arrayDatosRecientes.shift();
+		//graficaDatosRecientes.updateOptions({'file': arrayDatosRecientes});
+		
+		procesadoDatos();
+	
+		}, 1*60*1000);
+}
+
+function procesadoDatos(){
+	console.log ("Procesando Arrays...");
+	
+	for (let i = 0; i < arrayDatosHistorico.length; i++) {		// Borramos datos de pasadas anteriores
+		arrayDatosHistorico[i][3] = null;
+	}
+	
+	var paso = Math.floor (arrayDatosHistorico.length / arrayDatosRecientes.length);
+	var indiceArrayDatosRecientes=0;
+	for (i=4; ((i< arrayDatosHistorico.length) && (indiceArrayDatosRecientes< arrayDatosRecientes.length)); i=i+paso){
+		arrayDatosHistorico[i][3]=arrayDatosRecientes[indiceArrayDatosRecientes][1];
+		indiceArrayDatosRecientes++;
+	}
+	inicializarGrafica();
+}
+
+
+
+
+
+
+
+/*
+
+
+MemoGraph.html:135 Requesting bluetooth device...
+MemoGraph.html:135 "_HABIT_" bluetooth device selected
+MemoGraph.html:135 Connecting to GATT server...
+MemoGraph.html:135 GATT server connected, getting service...
+MemoGraph.html:135 Service found, getting characteristic...
+MemoGraph.html:135 Characteristic found
+MemoGraph.html:135 Start Notifications...
+MemoGraph.html:135 Notifications Started
+MemoGraph.html:135 Device connected ok.
+MemoGraph.html:135 Get device config...
+MemoGraph.html:531 Send command "get config"...
+MemoGraph.html:135 Send command "get-memo 310 samples"...
+MemoGraph.html:135 msg:  35, 01, 00, ED, 43, CF, 6A, 7F, 09, D2, 13, 2E, 0B
+MemoGraph.html:135 msg:  35, 02, 00, C0, 42, CF, 6A, 80, 09, D8, 13, 2E, 0B
+...
+MemoGraph.html:135 msg:  35, 36, 01, 0A, D9, CD, 6A, 59, 09, 60, 13, 30, 0B
+MemoGraph.html:135 msg:  35, 00, 00
+MemoGraph.html:479 Read count: 310
+MemoGraph.html:480 Read time: 1.185 sec
+MemoGraph.html:489 Send cmd Set DevTime (23AE44CF6A)...
+MemoGraph.html:491 Send new DevTime ok
+MemoGraph.html:498 Device Time: 0x6ACF44AE
+MemoGraph.html:500 Device Date: 2026-10-14 09:00:30.000
+MemoGraph.html:135 Disconnecting from "_HABIT_" bluetooth device...
+MemoGraph.html:135 Loaded 310 samples.
+MemoGraph.html:135 Notifications stopped
+MemoGraph.html:135 Disconnected. Load 310 samples.
+MemoGraph.html:135 Hecho.
+
+
+
+*/
+
+</script>
+</html>
