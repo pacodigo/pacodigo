@@ -44,7 +44,7 @@
 
 
 </style>
-  <title>MemoGraph v27</title>
+  <title>MemoGraph v29</title>
   <script src="dygraph.min.js"></script>
   
     <meta name="viewport" content="width=device-width">
@@ -58,7 +58,7 @@
 	<hr>
 	<!--div style="height: auto; width: auto; text-align: left;"-->
 	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
-	<div id="divGeneral" style="border: 2px solid white; text-align: center">
+	<div id="divGeneral" style="border: 2px solid white; text-align: center" onclick="obtenerInfo();">
 		<br>
 		<span id='info' style="zoom: 1.5;color: brown;">Info...</span>
 		<br><br><hr>
@@ -249,15 +249,27 @@ function ShowGraph(graphType) {
             },
 			x: {
 				axisLineWidth: 2.5, 	  // Configura el grosor de los ejes (por ejemplo, 3 píxeles)
+				
 				axisLabelFormatter : function(d){ 
 					if (d.getMinutes()==0){
-						var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
-						return hora + "h";
+						if (d.getHours()==0){
+							const dia = d.getDate();
+							const mes = d.getMonth() + 1; // Sumamos 1 porque van de 0 a 11
+							return dia + "/" + mes;
+						}
+						else{
+							var hora = d.getHours().toString();		//https://stackoverflow.com/questions/38429892/dygraph-with-r-how-to-use-axislabelformatter-for-labels-character-size
+							return hora + "h";
+						}
 					}
 					else {
 						return (d.getHours().toString() + ":" + d.getMinutes().toString());
 					}
-				}		
+				}
+				
+		
+
+				
 			}
         },
 		// **** FIN ***
@@ -296,7 +308,8 @@ function ShowGraph(graphType) {
             canvas.stroke();
         }
 */
-        // FUNCIONES PARA PINTAR EL FONDO Y LA LÍNEA:
+      /*  
+		// FUNCIONES PARA PINTAR EL FONDO Y LA LÍNEA:
         underlayCallback: function(canvas, area, g) {
             // 1. Pintamos el fondo gris clarito (Esto siempre funciona sin importar los datos)
             canvas.fillStyle = '#f4f4f4'; 
@@ -315,16 +328,6 @@ function ShowGraph(graphType) {
 			}
 			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
 			
-			/*
-			//var bottom = g.toDomYCoord(0,1);			// el ,1 es para especificar el eje número dos (0 y 1) = y2 
-			canvas.fillStyle = "rgba(255, 120, 0, 0.7)";     		//canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
-			//canvas.fillRect(area.x, top, area.w, bottom - top);
-			//canvas.fillRect(area.x, top, area.w, area.y - top);		//https://www.w3schools.com/jsref/canvas_fillrect.asp
-			canvas.fillRect(area.x, top, area.w, 5);				//https://www.w3schools.com/jsref/canvas_fillrect.asp
-			//canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 			//canvas.fillStyle = "rgba(30, 40, 200, 1.0)"; 
-			//canvas.fillRect(area.x, bottom, area.w, 5);
-			*/
-			
 			// 3. Etiqueta de texto:
 			canvas.fillStyle = "brown";                  // Color del texto
             canvas.font = "bold 35px sans-serif";      // Tamaño un poco mayor para la esquina (45)
@@ -333,6 +336,42 @@ function ShowGraph(graphType) {
             var textoEtiqueta = Number(temperaturaActual).toFixed(1) + "º  " + humedadActual + "%";	
             canvas.fillText(textoEtiqueta, area.x + 15, area.y + 15);			// Separamos el texto 15 píxeles del borde izquierdo (area.x + 15)  // Y 15 píxeles hacia abajo desde el techo de la gráfica (area.y + 15)	
         }
+
+*/
+
+		// FUNCIONES PARA PINTAR EL FONDO Y LA LÍNEA:
+        underlayCallback: function(canvas, area, g) {	
+			
+			// Franja central:
+			let limiteTempCalor = 21;
+			let limiteTempFrio = 20;
+			var bottom = g.toDomYCoord(limiteTempFrio,1);	// el ,1 es para especificar el eje número dos (0 y 1) = y2 
+			var top = g.toDomYCoord(limiteTempCalor,1);
+			//canvas.fillStyle = "rgba(30, 40, 30, 1.0)";     //canvas.fillStyle = "rgba(255, 255, 102, 1.0)";	//0, 77, 64 //93, 67, 64
+			canvas.fillStyle = "rgba(255, 210, 160, 0.5)";
+			canvas.fillRect(area.x, top, area.w, bottom - top);		
+			
+			// Pintado de línea tendencia:                       (Este despúes para que pinte encima de lo anterior)
+			var top = g.toDomYCoord(temperaturaActual,1);
+			if (temperaturaTendencia>0)
+				canvas.fillStyle = "rgba(255, 0, 0, 0.9)"; 		// Naranja= rgba(255, 120, 0, 0.7)	Ultimo valor cuanto de opaco 0-1
+			else 
+				canvas.fillStyle = "rgba(128, 0, 200, 0.9)"; 		// Azúl
+			canvas.fillRect(area.x, top - 4, area.w, 8);		// Para que quede cetrada restamo la mitad a top
+			
+			// 3. Etiqueta de texto:
+			canvas.fillStyle = "brown";                  // Color del texto
+            canvas.font = "bold 35px sans-serif";      // Tamaño un poco mayor para la esquina (45)
+            canvas.textAlign = "left";                 // Alineado a la izquierda 👈
+            canvas.textBaseline = "top";               // Posición vertical desde la parte superior 👇
+            var textoEtiqueta = Number(temperaturaActual).toFixed(1) + "º  " + humedadActual + "%";	
+            canvas.fillText(textoEtiqueta, area.x + 15, area.y + 15);			// Separamos el texto 15 píxeles del borde izquierdo (area.x + 15)  // Y 15 píxeles hacia abajo desde el techo de la gráfica (area.y + 15)	
+       
+		}
+
+
+
+
 
 
 
@@ -1020,6 +1059,47 @@ function obtenerLecturaActual(device) {
         }
     });
 }
+
+
+function obtenerInfo(){
+	if (memo.length<3){
+		return;
+	}	
+	// 1. Extraemos solo las temperaturas (posición 1 del array interno)
+	const temperaturas = memo.map(registro => registro[1]);
+
+	// 2. Obtenemos el máximo y el mínimo usando el operador de propagación (...)
+	const maxTemp = Math.max(...temperaturas);
+	const minTemp = Math.min(...temperaturas);
+
+	console.log(`Máxima: ${maxTemp}, Mínima: ${minTemp}`);
+
+	// Encontrar los registros completos [tc, tm, hm, vb]
+	const registroMax = memo.find(registro => registro[1] === maxTemp);
+	const registroMin = memo.find(registro => registro[1] === minTemp);
+/*
+	console.log(`El máximo fue de ${maxTemp} el día ${registroMax[0]}`);
+	console.log(`El mínimo fue de ${minTemp} el día ${registroMin[0]}`);
+*/
+	// Convertimos los timestamps de segundos a milisegundos multiplicando por 1000
+	const fechaMax = new Date(registroMax[0] * 1000);
+	const fechaMin = new Date(registroMin[0] * 1000);
+
+	// Formateamos las fechas a texto legible en español
+	const opciones = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+	const fechaMaxTexto = fechaMax.toLocaleString('es-ES', opciones);
+	const fechaMinTexto = fechaMin.toLocaleString('es-ES', opciones);
+
+	console.log(`El máximo fue de ${maxTemp}°C el día ${fechaMaxTexto}`);
+	console.log(`El mínimo fue de ${minTemp}°C el día ${fechaMinTexto}`);
+	
+	s="";
+	s=s+(`Máxima de ${maxTemp}°C el día ${fechaMaxTexto}`);
+	s=s+(`\nMínima de ${minTemp}°C el día ${fechaMinTexto}`);
+	alert (s);
+}
+
+
 
 
 /*
