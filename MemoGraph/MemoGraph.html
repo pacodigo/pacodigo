@@ -58,7 +58,7 @@
 	<hr>
 	<!--div style="height: auto; width: auto; text-align: left;"-->
 	<!--div id="divGeneral" style="height: auto; width: 100%; text-align: center;padding-top:10px"-->
-	<div id="divGeneral" style="border: 2px solid white; text-align: center" onclick="obtenerInfo();">
+	<div id="divGeneral" style="border: 2px solid white; text-align: center">
 		<br>
 		<span id='info' style="zoom: 1.5;color: brown;">Info...</span>
 		<br><br><hr>
@@ -71,7 +71,7 @@
 				
 		<br><br><hr>
 		
-		<div id ="idDivOpciones" style="text-align: left">
+		<div id ="idDivOpciones" style="text-align: left" onclick="obtenerInfo();">
 
 			<label for="namePrefix">Num. samples:</label>
 			<input type="text" id="LoadSamples" value="310" placeholder="All">
@@ -120,6 +120,12 @@
 	
 	<div id='div_v' style="height:auto;  margin-bottom: 10px; margin-top: 10px; margin-left:10px"></div>
 	
+	
+	<!--VENTANA DIALOG-->
+	<dialog id="miDialogo">
+		<p id="textoDialogo" style="white-space: pre-line;"></p>
+		<button onclick="miDialogo.close()">Aceptar</button>
+	</dialog>
 	
 	
   </body>
@@ -1063,6 +1069,9 @@ function obtenerLecturaActual(device) {
 
 function obtenerInfo(){
 	if (memo.length<3){
+		//alert ("Sin datos.");	
+		document.getElementById("textoDialogo").textContent = "Sin datos.";
+		document.getElementById("miDialogo").showModal();
 		return;
 	}	
 	// 1. Extraemos solo las temperaturas (posición 1 del array interno)
@@ -1086,7 +1095,7 @@ function obtenerInfo(){
 	const fechaMin = new Date(registroMin[0] * 1000);
 
 	// Formateamos las fechas a texto legible en español
-	const opciones = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+	const opciones = { day: 'numeric', month: 'numeric', hour: 'numeric', minute: '2-digit' };
 	const fechaMaxTexto = fechaMax.toLocaleString('es-ES', opciones);
 	const fechaMinTexto = fechaMin.toLocaleString('es-ES', opciones);
 
@@ -1094,9 +1103,12 @@ function obtenerInfo(){
 	console.log(`El mínimo fue de ${minTemp}°C el día ${fechaMinTexto}`);
 	
 	s="";
-	s=s+(`Máxima de ${maxTemp}°C el día ${fechaMaxTexto}`);
-	s=s+(`\nMínima de ${minTemp}°C el día ${fechaMinTexto}`);
-	alert (s);
+	s=s+(`Máx: ${maxTemp}°   el ${fechaMaxTexto}h`);
+	s=s+(`\nMín: ${minTemp}°   el ${fechaMinTexto}h`);
+	//alert (s);
+	document.getElementById("textoDialogo").textContent = s;
+	document.getElementById("miDialogo").showModal();
+	
 }
 
 
